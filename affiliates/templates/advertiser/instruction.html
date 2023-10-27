@@ -1,0 +1,1400 @@
+{% extends 'affiliate/affiliate_campaign.html' %}
+ {% load static %}
+{% block title%} 
+<title>Influencer Hiring | Advertisers Instruction</title>
+ {% endblock %}
+ 
+ {%block sidebar%}
+
+
+{% if request.user.roles == 'client' %}
+
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+   <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+     <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+       <div class="menu-item"> <a class="menu-link" href="/User-Dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+         </svg>
+         </span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+   <!--begin:Menu item-->
+   <div class="menu-item pt-5">
+     <!--begin:Menu content-->
+       <div class="menu-content">
+         <span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+       </div>
+       <!--end:Menu content-->
+       </div>
+     <!--end:Menu item-->
+
+       <div data-kt-menu-trigger="click" class="menu-item here menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+           <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+         </svg>
+         </span> </span> <span class="menu-title">My Business</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Completed-Project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Complete Orders</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Pending-Project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pending Orders</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Cancel-Project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Cancel Orders</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/Active-Project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Active Orders</span></a></div>
+            
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+ <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+ </svg>
+ </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/BlogHome/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs</span></a></div>
+    
+ </div>
+ </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor"></path>
+     <rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor"></rect>
+ </svg>
+ </span> </span> <span class="menu-title">Profile Settings</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/Profile-Setting/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Profile Settings</span></a></div>
+ </div>
+ </div>
+
+       <div data-kt-menu-trigger="click" class="menu-item  menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+           <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+           <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+         </svg>
+         </span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Group-Chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title"> Group Chat</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/client-influencer-chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Influencer chat</span></a></div>
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="currentColor"></path>
+   <path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="currentColor"></path>
+ </svg>
+ </span> </span> <span class="menu-title">Referral</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/Client-Referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Referral</span></a></div>
+    
+ </div>
+ </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+   <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+   </svg>
+ </span> </span> <span class="menu-title">Affiliates</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-campaign/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Campaigns</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-lead/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Leads</span></a></div>
+   
+ </div>
+ </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+  <!--begin:Menu link-->
+  <span class="menu-link">
+    <span class="menu-icon">
+    <!--begin::Svg Icon | path: icons/duotune/finance/fin002.svg-->
+    <span class="svg-icon svg-icon-2">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22 7H2V11H22V7Z" fill="currentColor" />
+      <path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="currentColor" />
+      </svg>
+    </span>
+    <!--end::Svg Icon-->
+    </span>
+    <span class="menu-title">Bank Details</span>
+    <span class="menu-arrow"></span>
+  </span>
+  <!--end:Menu link-->
+  <!--begin:Menu sub-->
+  <div class="menu-sub menu-sub-accordion">
+    <!--begin:Menu item-->
+    <div class="menu-item">
+    <!--begin:Menu link-->
+    <a class="menu-link" href="/bankdetail/">
+      <span class="menu-bullet">
+      <span class="bullet bullet-dot"></span>
+      </span>
+      <span class="menu-title">Bank Details</span>
+    </a>
+    <!--end:Menu link-->
+    </div>
+    <!--end:Menu item-->
+  </div>
+  <!--end:Menu sub-->
+  </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+             <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+             <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+             <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+             </svg>
+           </span> </span> <span class="menu-title">Advertisers</span><span class="menu-arrow"></span></span>
+           <div class="menu-sub menu-sub-accordion">
+             <div class="menu-item"> <a class="menu-link active" href="/advertiser-instruction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Instructions</span></a></div>
+             <div class="menu-item"> <a class="menu-link" href="/advertiser-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+             <div class="menu-item"> <a class="menu-link" href="/advertiser-withdrawal-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Withdrawal Requests</span></a></div>
+           </div>
+           </div>
+
+       <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="">
+           <path d="M11.7 8L7.49998 15.3L4.59999 20.3C3.49999 18.4 3.1 17.7 2.3 16.3C1.9 15.7 1.9 14.9 2.3 14.3L8.8 3L11.7 8Z" fill="currentColor"></path>
+           <path opacity="0.3" d="M11.7 8L8.79999 3H13.4C14.1 3 14.8 3.4 15.2 4L20.6 13.3H14.8L11.7 8ZM7.49997 15.2L4.59998 20.2H17.6C18.3 20.2 19 19.8 19.4 19.2C20.2 17.7 20.6 17 21.7 15.2H7.49997Z" fill="currentColor"></path>
+         </svg>
+         </span> </span> <span class="menu-title">Casting Calls</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Insert-Casting-Call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Insert Casting Call</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Total-Casting-Call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Casting Call</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/Casting-Call-Pitching-Details/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Pitching List</span></a></div>
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+   <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+   </svg>
+ </span> </span> <span class="menu-title">My Wishlist</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/My-Wishlist/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Wishlist</span></a></div>
+    
+ </div>
+ </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z" fill="currentColor"></path>
+ </svg>
+         </span> </span> <span class="menu-title">My Cart</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/My-Cart/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">My Cart</span></a></div>
+         </div>
+       </div>
+
+     </div>
+   </div>
+</div>  
+
+{% elif request.user.roles == 'agency'%}
+
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+  <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+	<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+	  <div class="menu-item"> <a class="menu-link " href="/agency-dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+		  <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+		  <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+		  <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+		</svg>
+		</span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+  <div class="menu-item pt-5">
+  <!--begin:Menu content-->
+			<div class="menu-content">
+				<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+			</div>
+			<!--end:Menu content-->
+			</div>
+		<!--end:Menu item-->
+
+	  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+		  <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+		</svg>
+		</span> </span> <span class="menu-title">My Business</span><span class="menu-arrow"></span></span>
+		<div class="menu-sub menu-sub-accordion">
+		  <div class="menu-item"> <a class="menu-link" href="/completed_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Complete Orders</span></a></div>
+		  <div class="menu-item"> <a class="menu-link" href="/pending_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pending Orders</span></a></div>
+		  <div class="menu-item"> <a class="menu-link" href="/cancel_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Cancel Orders</span></a></div>
+		  <div class="menu-item"> <a class="menu-link" href="/active_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Active Orders</span></a></div>
+		</div>
+	  </div>
+
+	  
+	   
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+		  <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+		</svg>
+		  </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/bloghome/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs</span></a></div>
+			 
+		  </div>
+		</div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				  <path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor"></path>
+				  <rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor"></rect>
+		</svg>
+		  </span> </span> <span class="menu-title">Profile Settings</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/profile_setting/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Profile Settings</span></a></div>
+			 
+		  </div>
+		</div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+			<rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+			<rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+		  </svg>
+		  </span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/Group-Chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Orders chat</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/client-influencer-chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Influencer chat</span></a></div>
+		  </div>
+		</div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="currentColor"></path>
+			<path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="currentColor"></path>
+		  </svg>
+		  </span> </span> <span class="menu-title">Referral</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/agency_referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Referral</span></a></div>
+			 
+		  </div>
+		</div>
+
+
+<div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+			<path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+			</svg>
+		  </span> </span> <span class="menu-title">Advertisers</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link active" href="/advertiser-instruction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Instructions</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/advertiser-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/advertiser-withdrawal-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Withdrawal Requests</span></a></div> 
+		  </div>
+		  </div>
+
+      <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+				  <span class="menu-icon">
+					<!--begin::Svg Icon | path: icons/duotune/finance/fin002.svg-->
+					<span class="svg-icon svg-icon-2">
+					  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22 7H2V11H22V7Z" fill="currentColor" />
+						<path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="currentColor" />
+					  </svg>
+					</span>
+					<!--end::Svg Icon-->
+				  </span>
+				  <span class="menu-title">Bank Details</span>
+				  <span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+				  <!--begin:Menu item-->
+				  <div class="menu-item">
+					<!--begin:Menu link-->
+					<a class="menu-link" href="/bankdetail/">
+					  <span class="menu-bullet">
+						<span class="bullet bullet-dot"></span>
+					  </span>
+					  <span class="menu-title">Bank Details</span>
+					</a>
+					<!--end:Menu link-->
+				  </div>
+				  <!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			  </div>
+
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="">
+			<path d="M11.7 8L7.49998 15.3L4.59999 20.3C3.49999 18.4 3.1 17.7 2.3 16.3C1.9 15.7 1.9 14.9 2.3 14.3L8.8 3L11.7 8Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M11.7 8L8.79999 3H13.4C14.1 3 14.8 3.4 15.2 4L20.6 13.3H14.8L11.7 8ZM7.49997 15.2L4.59998 20.2H17.6C18.3 20.2 19 19.8 19.4 19.2C20.2 17.7 20.6 17 21.7 15.2H7.49997Z" fill="currentColor"></path>
+		  </svg>
+		  </span> </span> <span class="menu-title">Casting Calls</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/insert_casting_call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Insert Casting Call</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/total_casting_call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Casting Call</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/casting_call_pitching_details/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Pitching List</span></a></div>
+		  </div>
+		</div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+		  <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+		  <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+		  <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+		</svg>
+		  </span> </span> <span class="menu-title">My Wishlist</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/my_wishlist/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Wishlist</span></a></div>
+			 
+		  </div>
+		  </div>
+
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z" fill="currentColor"></path>
+			</svg>
+		</span> </span> <span class="menu-title">My Cart</span><span class="menu-arrow"></span></span>
+		<div class="menu-sub menu-sub-accordion">
+		  <div class="menu-item"> <a class="menu-link" href="/my_cart/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">My Cart</span></a></div>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+{%else%}
+
+<p>
+
+{% endif %}
+ 
+<!--begin::Footer-->
+     <div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
+       <a href="/terms-of-service/" target="_blank" class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="platform term and service">
+         <span class="btn-label">Terms of Services</span>
+         <!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
+         <span class="svg-icon btn-icon svg-icon-2 m-0">
+           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z" fill="currentColor" />
+             <rect x="7" y="17" width="6" height="2" rx="1" fill="currentColor" />
+             <rect x="7" y="12" width="10" height="2" rx="1" fill="currentColor" />
+             <rect x="7" y="7" width="6" height="2" rx="1" fill="currentColor" />
+             <path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="currentColor" />
+           </svg>
+         </span>
+         <!--end::Svg Icon-->
+       </a>
+     </div>
+     <!--end::Footer-->
+</div>
+{%endblock%}
+
+
+{%block body%}
+        <!--begin::Main-->
+          <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+            <!--begin::Content wrapper-->
+            <div class="d-flex flex-column flex-column-fluid">
+              <!--begin::Toolbar-->
+              <div id="kt_app_toolbar" class="app-toolbar px-8 py-10">
+                <div class="card card-flush w-100 p-10 mb-5 how-It-work">
+                  <div class="row">
+                    <div class="col-lg-5 how-it_left">
+                      <h2>How it works</h2>
+                      <p class="how-it-content">7 steps on how to get sales in the affiliate marketing. Listen to the slides</p>
+                      <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">1. Deal and account meeting <span class="arrow"></span>
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">2. Integration <span class="arrow"></span>
+                        </button>
+                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">3. Offer testing <span class="arrow"></span>
+                        </button>
+                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">4. Offer release and promo <span class="arrow"></span>
+                        </button>
+                        <button class="nav-link" id="v-pills-tab5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab5" type="button" role="tab" aria-controls="v-pills-tab5" aria-selected="false">5. Scaling up the volume <span class="arrow"></span>
+                        </button>
+                        <button class="nav-link" id="v-pills-tab6-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab6" type="button" role="tab" aria-controls="v-pills-tab6" aria-selected="false">6. Payment rules <span class="arrow"></span>
+                        </button>
+                        <button class="nav-link" id="v-pills-tab7-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab7" type="button" role="tab" aria-controls="v-pills-tab7" aria-selected="false">7. Accounting <span class="arrow"></span>
+                        </button>
+                        <button class="nav-link" id="v-pills-tab8-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab8" type="button" role="tab" aria-controls="v-pills-tab8" aria-selected="false">8. Hidden <span class="arrow"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <div class="how-it-work_bg bg-secondary">
+                        <div class="tab-content" id="v-pills-tabContent">
+                          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                            <img src="{%static 'asset/media/pic_adv_3_1.png'%}" alt="" class="img-fluid how-it-img">
+                            <div class="py-5 px-10 text-start">
+                              <p class="fw-bold title">1. Deal and account meeting</p>
+                              <p>Register on the platform and get a personal manager, which organize you the maximum volume of sales, which you can process.</p>
+                              <p>We will help you to choose the products and terms of the commission that will be the most attractive for publishers.</p>
+                              <p>You already know in the first step what volume of sales you will receive, how to increase it and how much it cost.</p>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                            <img src="{%static 'asset/media/pic_adv_3_2.png'%}" alt="" class="img-fluid how-it-img">
+                            <div class="py-5 px-10 text-start">
+                          
+                              <p class="fw-bold title">2. Integration</p>
+                              <p>Account manager already makes attractive offers from your products and initiates the creation of prelandings and landings.</p>
+                              <p>We need to organize the transfer of leads from landings to your CRM using API and update lead statuses by postback technology.</p>
+                            </div>
+
+                            <p class="fw-bold title text-start">Example Code</p>
+                            <div class="ide">
+                              <div class="ide-bar"></div>
+                              <div class="ide-tabs-menu w-tab-menu">
+                              	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Python</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ruby</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Node.js</button>
+                                </li>
+                              </ul>
+                              </div>
+
+                              <div class="w-tab-content">
+                              <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                	<div class="ide-tab-pane-inner">
+									  <div class="line-number-column">1 <br>2 <br>3 <br>4 <br>5 <br>6 <br>7 <br>8 <br>9 <br>10 <br>11 <br>12 </div>
+									  <div class="code-column">
+                      <p>import requests</p>
+<p>def success(request):</p>
+<p>&nbsp; &nbsp; # utm_source=&quot;fff&quot;</p>
+<p>&nbsp; &nbsp; sys.stdout = open(&quot;infocat.txt&quot;, &quot;a&quot;)</p>
+<p>&nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp; &nbsp; utm_source=request.session.get(&apos;utm_source&apos;)</p>
+<p>&nbsp; &nbsp; affiliate_id=request.session.get(&apos;affiliate_id&apos;)</p>
+<p>&nbsp; &nbsp; print(&apos;Trying to send webhook . . . &apos;)</p>
+<p>&nbsp; &nbsp; print(&quot;utm_source : &quot;,utm_source, &quot;affiliate_id : &quot;,affiliate_id)</p>
+<p>&nbsp; &nbsp; if utm_source == &apos;tradingbot&apos;: &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # request.session[&apos;utm_source&apos;] = utm_source</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # request.session[&apos;affiliate_id&apos;] = affiliate_id&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # utm_source=request.session.get(&apos;utm_source&apos;)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; # affiliate_id = request.session.get(&apos;affiliate_id&apos;)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; webhookdata = {</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &apos;utm_source&apos;: utm_source,</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &apos;affiliate_id&apos;: affiliate_id</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; print(&apos;sending webhookdata ...&apos;,webhookdata)</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; requests.post(url=&apos;<a data-fr-linked="true" href="http://trading.24x7bot.com/webhook1/">http://trading.24x7bot.com/webhook1/</a>&apos;, data=json.dumps(webhookdata))</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; del request.session[&apos;utm_source&apos;]</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; del request.session[&apos;affiliate_id&apos;]</p>
+<p>&nbsp; &nbsp; else:</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; print(&quot; utm_source is not &apos;tradingbot&apos;&quot;)</p>
+<p>&nbsp; &nbsp; return render(request, &apos;success.html&apos;)</p>
+<p><br></p>
+<p><br></p>
+<p>&nbsp; &nbsp; def Login(request, infoname=None):</p>
+<p>&nbsp; &nbsp; ####################################</p>
+									    <span class="keyword">from</span> recallai <span class="keyword">import</span> RecallAi <br>
+									    <br>client <span class="operator">=</span> RecallAi <span class="punctuation">(</span>auth_token <span class="operator">=</span>
+									    <span class="string">"******************"</span>
+									    <span class="punctuation">)</span>
+									    <br>
+									    <br>bot <span class="operator">=</span> client <span class="punctuation">.</span>send_bot_to_meeting <span class="punctuation">(</span>
+									    <br> &nbsp;platform <span class="operator">=</span>
+									    <span class="string">"zoom"</span>
+									    <span class="punctuation">,</span>
+									    <br> &nbsp;meeting_id <span class="operator">=</span>
+									    <span class="string">"88598588695"</span>
+									    <span class="punctuation">,</span>
+									    <br> &nbsp;meeting_password <span class="operator">=</span>
+									    <span class="string">"******************"</span>
+									    <span class="punctuation">,</span>
+									    <br>
+									    <span class="punctuation">)</span>
+									    <br>
+									    <br>
+									    <span class="keyword">for</span> part <span class="keyword">in</span> bot <span class="punctuation">.</span>stream_transcription <span class="punctuation">()</span>
+									    <span class="operator">:</span>
+									    <br> &nbsp;print <span class="punctuation">(</span>
+									    <span class="string">f"</span>
+									    <span class="punctuation">{</span>part <span class="punctuation">.</span>speaker <span class="punctuation">}</span>
+									    <span class="string">:</span>
+									    <span class="punctuation">{</span>part <span class="punctuation">.</span>text <span class="punctuation">}</span>
+									    <span class="string">"</span>
+									    <span class="punctuation">)</span>
+									  </div>
+									</div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                	<div class="ide-tab-pane-inner">
+									  <div class="line-number-column">1 <br>2 <br>3 <br>4 <br>5 <br>6 <br>7 <br>8 <br>9 <br>10 <br>11 <br>
+									  </div>
+									  <div class="code-column">
+									    <span class="keyword">require</span>
+									    <span class="string">"recallai"</span>
+									    <br>
+									    <br>client <span class="operator">=</span> RecallAi <span class="punctuation">::</span>Client <span class="punctuation">.</span>
+									    <span class="keyword">new</span>
+									    <span class="string">"******************"</span>
+									    <br>
+									    <br>bot <span class="operator">=</span> client <span class="punctuation">.</span>send_bot_to_meeting <span class="punctuation">({</span>
+									    <br> &nbsp;platform <span class="operator">=&gt;</span>
+									    <span class="string">"zoom"</span>
+									    <span class="punctuation">,</span>
+									    <br> &nbsp;meeting_id <span class="operator">=&gt;</span>
+									    <span class="string">"88598588695"</span>
+									    <span class="punctuation">,</span>
+									    <br> &nbsp;meeting_password <span class="operator">=&gt;</span>
+									    <span class="string">"******************"</span>
+									    <span class="punctuation">,</span>
+									    <br>
+									    <span class="punctuation">})</span>
+									    <br>
+									    <br>puts bot <span class="punctuation">.</span>id
+									  </div>
+									</div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                                	<div class="ide-tab-pane-inner">
+									  <div class="line-number-column">1 <br>2 <br>3 <br>4 <br>5 <br>6 <br>7 <br>8 <br>9 <br>10 <br>11 </div>
+									  <div class="code-column">
+									    <span class="keyword">import</span>
+									    <span class="punctuation">{</span> RecallAi <span class="punctuation">}</span>
+									    <span class="keyword">from</span>
+									    <span class="string">"@recallai/recallai"</span>
+									    <br>
+									    <br>
+									    <span class="keyword">const</span> client <span class="operator">=</span> RecallAi <span class="punctuation">({</span>
+									    <br> &nbsp;authorizationToken <span class="operator">:</span>
+									    <span class="string">"******************"</span>
+									    <br>
+									    <span class="punctuation">})</span>
+									    <br>
+									    <br>
+									    <span class="keyword">const</span>
+									    <span class="punctuation">{</span> id <span class="punctuation">}</span>
+									    <span class="operator">=</span> client <span class="punctuation">.</span>sendBotToMeeting <span class="punctuation">({</span>
+									    <br> &nbsp;platform <span class="operator">:</span>
+									    <span class="string">"zoom"</span>
+									    <span class="punctuation">,</span>
+									    <br> &nbsp;meeting_id <span class="operator">:</span>
+									    <span class="string">"88598588695"</span>
+									    <span class="punctuation">,</span>
+									    <br> &nbsp;meeting_password <span class="operator">:</span>
+									    <span class="string">"******************"</span>
+									    <span class="punctuation">,</span>
+									    <br>
+									    <span class="punctuation">})</span>
+									    <br>
+									  </div>
+									</div>
+                                </div>
+                                
+                              </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+                            <img src="{%static 'asset/media/pic_adv_3_3.png'%}" alt="" class="img-fluid how-it-img">
+                            <div class="py-5 px-10 text-start">
+                              <p class="fw-bold title">3. Offer testing</p>
+                              <p>Our mediabuying dept test your offer from various traffic sources and polishing promo materials to the best conversion rates.</p>
+                              <p>Here we can check the quality of leads, call center scripts, clear the leads approval and CR rate, stability of the technical part.</p>
+                              <p>As a result: we have to get a battle-tested offer, with clear conditions.</p>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+                            <img src="{%static 'asset/media/pic_adv_3_4.png'%}" alt="" class="img-fluid how-it-img">
+                            <div class="py-5 px-10 text-start">
+                              <p class="fw-bold title">4. Offer release and promo</p>
+                              <p>Next step: make sure that thousands of marketing specialists and teams are aware of your offer.</p>
+                              <p>We doing global promotions for affiliate community and our support team negotiate individually with publishers to drive traffic flows to your offers.</p>
+                              <p>The better the conditions of your offer, the more leads you will receive.</p>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-tab5" role="tabpanel" aria-labelledby="v-pills-tab5-tab" tabindex="0">
+                            <img src="{%static 'asset/media/pic_adv_3_5.png'%}" alt="" class="img-fluid how-it-img">
+                            <div class="py-5 px-10 text-start">
+                              <p class="fw-bold title">5. Scaling up the volume</p>
+                              <p>The leads volume on your products depends on lots of variables: country, niche, affiliate commission, conversion and landing prices, your call-center awesomes.</p>
+                              <p>Good news: your account manager is motivated by a single goal: to make you as many leads as possible every day and knows how to achieve this.</p>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-tab6" role="tabpanel" aria-labelledby="v-pills-tab6-tab" tabindex="0">
+                            <img src="{%static 'asset/media/pic_adv_3_6.png'%}" alt="" class="img-fluid how-it-img">
+                            <div class="py-5 px-10 text-start">
+                              <p class="fw-bold title">6. Payment rules</p>
+                              <p>As mentioned above, you only pay for the result, the sales (leads confirmed by you) commission you set. Zero prepayments, zero additional payments.</p>
+                              <p>As a rule, we provide a grace period of 7-14 days. It is very important to keep the punctuality in payment, on this depends the attractiveness of your offers.</p>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-tab7" role="tabpanel" aria-labelledby="v-pills-tab7-tab" tabindex="0">
+                            <img src="{%static 'asset/media/pic_adv_3_7.png'%}" alt="" class="img-fluid how-it-img">
+                            <div class="py-5 px-10 text-start">
+                              <p class="fw-bold title">7. Accounting</p>
+                              <p>Your manager is your guide from the first sale to the full scale. Any questions: integration, more volume, new product or GEO launch, delayed payment — he is available 24/7.</p>
+                              <p>We earn on your volumes and understand that you need profitability to increase. We will do our best to make you earn a lot and grow.</p>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-tab8" role="tabpanel" aria-labelledby="v-pills-tab8-tab" tabindex="0">
+                            <img src="{%static 'asset/media/pic_adv_3_7.png'%}" alt="" class="img-fluid how-it-img">
+                            <div class="py-5 px-10 text-start">
+                              <p class="fw-bold title">7. Accounting</p>
+                              <p>Your manager is your guide from the first sale to the full scale. Any questions: integration, more volume, new product or GEO launch, delayed payment — he is available 24/7.</p>
+                              <p>We earn on your volumes and understand that you need profitability to increase. We will do our best to make you earn a lot and grow.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end::Toolbar-->
+              <div class="app-toolbar px-8">
+                <div class="card card-flush w-100 p-10 mb-5 mb-xl-10 d-block text-center">
+                  <h2 class="font-40 fw-bold mb-10">Place your product on influencerhiring.com and get the necessary amount of leads in any country of the world</h2>
+                  <a class="btn btn-primary" href="#">Contact manager</a>
+                </div>
+              </div>
+            </div>
+            <!--end::Content wrapper-->
+          </div>
+          <!--end:::Main-->
+
+           <!--begin::Chat drawer-->
+ <div id="kt_drawer_chat" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle" data-kt-drawer-close="#kt_drawer_chat_close">
+  <!--begin::Messenger-->
+  <div class="card w-100 rounded-0 border-0" id="kt_drawer_chat_messenger">
+    <!--begin::Card header-->
+    <div class="card-header pe-5" id="kt_drawer_chat_messenger_header">
+      <!--begin::Title-->
+      <div class="card-title">
+        <!--begin::User-->
+        <div class="d-flex align-items-center mb-2">
+          <!--begin::Avatar-->
+          <div class="symbol symbol-35px symbol-circle">
+            <img alt="rmpic" src="/media/{{image}}/">
+          </div>
+          <!--end::Avatar-->
+          <!--begin::Details-->
+          <div class="ms-3">
+            <a id="RMuserName" href="#" class="fs-4 fw-bold text-gray-900 text-hover-danger me-1 mb-2 lh-1">RM</a>
+            <span class="badge badge-light-primary">Relationship Manager</span>
+          </div>
+          <!--end::Details-->
+        </div>
+        <!--end::User-->
+      </div>
+      <!--end::Title-->
+      <!--begin::Card toolbar-->
+      <div class="card-toolbar">
+        <!--begin::Close-->
+        <div class="btn btn-sm btn-icon btn-active-light-primary" id="kt_drawer_chat_close">
+          <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+          <span class="svg-icon svg-icon-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+              <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+            </svg>
+          </span>
+          <!--end::Svg Icon-->
+        </div>
+        <!--end::Close-->
+      </div>
+      <!--end::Card toolbar-->
+    </div>
+    <!--end::Card header-->
+    <!--begin::Card body-->
+    <div class="card-body">
+      <!--begin::Messages-->
+      <div id="kt_drawer_chat_messenger_body" class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer" data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">						
+      </div>
+      <!--end::Messages-->
+    </div>
+    <!--end::Card body-->
+    <!--begin::Card footer-->
+    <div class="card-footer pt-4" id="kt_drawer_chat_messenger_footer">
+      <!--begin:Toolbar-->
+      <div class="d-flex flex-stack">
+        <!--begin::Actions-->
+        <div class="d-flex align-items-center me-2">
+          <input id="fileUploaderInput" type="file" hidden />
+          <button id="fileUploader" class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Select File to upload...">
+            <i class="bi bi-paperclip fs-3"></i>
+          </button>
+        </div>
+        <!--end::Actions-->
+        <!--begin::Input-->
+        <textarea id="input_textarea" class="form-control form-control-flush mb-3 me-3" rows="1" data-kt-element="input" placeholder="Type a message"></textarea>
+        <!--end::Input-->
+        <!--begin::Send-->
+        <button id="kuchbhi" class="btn btn-primary" type="button" data-kt-element="send">Send</button>
+        <!--end::Send-->
+      </div>
+      <!--end::Toolbar-->
+      <div id="fileprogresscontainer" class="w-100 position-relative"> 
+        <!--<div id="fileprogressbar" class="progress my-5">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 50%" aria-valuenow="${precent}" aria-valuemin="0" aria-valuemax="100">${precent}%</div>
+        <a href="javascript:void(0);" class="delete_btn text-hover-primary p-0">x</a>
+        </div>-->
+      </div>
+    </div>
+    <!--end::Card footer-->
+  </div>
+  <!--end::Messenger-->
+</div>
+<!--end::Chat drawer-->
+
+
+<script>
+
+  function updatenotificanblink(status) {
+    var notificatoinblinkcontainer = document.getElementById('notification-blink')
+    var notiblinkobj = document.getElementById('notification-unread-blink')
+    var notiblink = `<span id="notification-unread-blink" class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>`
+    if (status === true && notiblinkobj === null) {
+      notificatoinblinkcontainer.insertAdjacentHTML('beforeend', notiblink)
+    } else {
+      if (status === false && notiblinkobj === null) {
+        notiblinkobj.remove()
+      }
+    }
+  }
+  
+  //// start js for inapp notifications
+  
+  var notificationcontainer = document.getElementById('kt_topbar_notifications_1')
+  console.log('This is container---', notificationcontainer)
+  
+  var notificationbutton = document.getElementById('notificatonbutton')
+  console.log('this is notification button', notificationbutton)
+  
+  //notificationbutton.addEventListener('click', updatenotificationreadstatus());
+  window.onload = getnotificationdata();
+  function updatenotificationreadstatus() {
+    fetch('/updatenotificatoinreadstatus/',{
+      method:'GET'
+    })
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {console.log(data);})
+  }
+  
+  //add or remove 
+  
+  function getnotificationdata() {
+    fetch('/updatenotificationdata/',{
+    method:"GET"})
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {console.log(data);
+      updatenotificanblink(data.unread_status)
+      var notificationcontainer = document.getElementById('notificationcontainer')
+      notificationcontainer.innerHTML = '';
+    for (var data of data.data) {
+      additeminnotificationcontainer(data)
+      }})
+    .catch(error => console.error('not getting the data of latest notification', error));
+  }
+  
+  
+  function additeminnotificationcontainer(data) {
+    console.log('ABCD')
+    var notificationcontainer = document.getElementById('notificationcontainer')
+    console.log('A BIYSATCVH',notificationcontainer)
+      var elementofhtml = `<!--begin::Item-->
+              <div class="d-flex flex-stack py-4">
+                <!--begin::Section-->
+                <div class="d-flex align-items-center">
+                  <!--begin::Symbol-->
+                  <div class="symbol symbol-35px me-4">
+                    ${data['icon']}
+                  </div>
+                  <!--end::Symbol-->
+                  <!--begin::Title-->
+                  <div class="mb-0 me-2">
+                    <a href="/${data['redirect_link']}/" class="fs-6 text-gray-800 text-hover-primary fw-bold">${data['title']}</a>
+                    <div class="text-gray-400 fs-7">${data['message']}</div>
+                  </div>
+                  <!--end::Title-->
+                </div>
+                <!--end::Section-->
+                <!--begin::Label-->
+                <span class="badge badge-light fs-8">${formatTimeAgotoutc(data['timestamp'])}</span>
+                <!--end::Label-->
+              </div>
+              <!--end::Item-->`
+      notificationcontainer.insertAdjacentHTML('afterbegin', elementofhtml);
+  }
+  
+  function formatTimeAgotoutc(timestamp) {
+          // Parse the timestamp to create a Luxon DateTime object
+          const dateTime = luxon.DateTime.fromISO(timestamp);
+  
+          // Get the current time in the user's local timezone
+          const currentTime = luxon.DateTime.local();
+  
+          // Check if the timestamp is from today
+          const isToday = dateTime.hasSame(currentTime, 'day');
+  
+          if (!isToday) {
+              // Format the date in dd/mm/yy format
+              const formattedDate = dateTime.toFormat('dd/MM/yy');
+  
+              // Format the time in hh:mm AM/PM format
+              const formattedTime = dateTime.toFormat('hh:mm a');
+  
+              return `${formattedDate}`;
+          } else {
+              // Format the time in hh:mm AM/PM format
+              const formattedTime = dateTime.toFormat('hh:mm a');
+  
+              return formattedTime;
+          }
+      }
+  
+  
+  
+  //// end js for inapp notifications scroll-y mh-325px my-5
+    // file uploading functionality
+  
+    /// function to make true cancle upload
+          function stopFileUpload() {
+            stopUpload = true;
+          }
+  
+          let stopUpload = false;
+          //////// end calncel uplaod...
+            
+          //// add and remove progress bar start
+  
+  function addorremoveprogressbar() {
+  
+    var progressbar = `<div id="fileprogressbar" class="progress my-5">
+              <div id="updatebar" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">0%</div>
+              <a href="javascript:void(0);" class="delete_btn text-hover-primary p-0" onclick="stopFileUpload()">x</a>
+              </div>`
+  
+    var progressbaritemcontainer = document.getElementById('fileprogresscontainer')
+  
+    var progressbaritemindom = document.getElementById('fileprogressbar')
+  
+    if (progressbaritemindom !== null) {
+      progressbaritemindom.remove()
+      stopUpload = false;
+    } else {
+      progressbaritemcontainer.insertAdjacentHTML('beforeend', progressbar)
+    }
+  }
+  
+  ///// add and remove progress bar end
+  //// update progress bar start
+  
+  function updateprogressbartodom(precent) {
+    var progressbaritemindom = document.getElementById('updatebar')
+  
+    progressbaritemindom.style.width = precent + '%';
+      progressbaritemindom.textContent = precent + '%';
+      progressbaritemindom.setAttribute('aria-valuenow', precent);
+    
+    
+  }
+  
+  /// update progress bar end
+  
+            document.getElementById('fileUploader').addEventListener('click', openDialog);
+  
+            function openDialog() {
+              if (channel) {
+                document.getElementById('fileUploaderInput').click();
+              }
+            }
+  
+            document.getElementById('fileUploaderInput').addEventListener('change', function () {
+              //console.log('ABCD')
+              let stopUpload = false;
+              var fileInput = document.getElementById('fileUploaderInput');
+              var file = fileInput.files[0];
+              fileInput.value = '';
+              console.log('file', file)
+              console.log('getting here A!!')
+              fetch('/chat-file-upload/', {
+                method: 'POST',
+                body: JSON.stringify({
+                  filename: file.name,
+                  contentType: file.type,
+                  channel: channel['channelId']
+                }),
+                headers: {
+                  'Content-Type': 'application/json'
+                }
+              })
+                .then(response => response.json())
+                .then(data => {
+                  console.log(data.signedUrl)
+                  uploadfiletogcschunking(file, data.signedUrl);
+                  addorremoveprogressbar();
+                })
+                .catch(error => {
+                  console.log('unable to get signedURL!!', error);
+                });
+  
+  
+            });
+            // upload abort
+            // Create an AbortController instance
+            const abortController = new AbortController();
+  
+            // Create an AbortSignal from the AbortController
+            const abortSignal = abortController.signal;
+  
+            // cancle file upload
+            function cancelFileUpload() {
+              abortSignal.abort();
+            }
+            // upload data by chunking progress
+  
+  
+            function uploadfiletogcschunking(file, signedUrl) {
+              var strem = file.stream({ locked: false });
+              console.log('this is strem---', strem);
+              var reader = strem.getReader();
+              console.log('this is reader---', reader);
+              let bytesuploaded = 0;
+              let totalBytes = file.size;
+  
+              function uploadchunk() {
+                reader.read().then(({ value, done }) => {
+                  //console.log('thhi is the value',value)
+                  //console.log('this is the done check',done)
+                  //reader.cancel()
+                  if (done) {
+                    console.log('file uploaded sucessfully!');
+                    const splites = signedUrl.split('/')[5].split('?')[0]
+                    //console.log(splites)
+                    getdownloadableurl(splites);
+                    addorremoveprogressbar();
+                    //alert(`file uploaded : ${totalBytes}`);
+                    return;
+                  }
+                  fetch(signedUrl, {
+                    method: 'PUT',
+                    body: value,
+                    headers: {
+                      'Content-Type': file.type,
+                    },
+                  })
+                    .then(response => {
+                      if (response.ok) {
+                        bytesuploaded += value.byteLength;
+                        const percentComplete = parseInt((bytesuploaded / totalBytes) * 100);
+                        console.log(`upload progress: ${percentComplete}%`);
+                        updateprogressbartodom(percentComplete)
+                        if (stopUpload === true) {
+                          console.log('gettin here BBbbBBBB!!!!!')
+                          console.log('canclled the uploading!!')
+                          addorremoveprogressbar();
+                          return;
+                        } else {
+                          console.log('gettin here AAaaAAAA!!!!!')
+                          uploadchunk();
+                        }
+                      } else {
+                        console.error('file upload failed!!', response.statusText);
+                      }
+                    })
+                    .catch(error => {
+                      console.error('File Upload Error', error);
+                    });
+                });
+              }
+              uploadchunk();
+  
+            }
+            function getdownloadableurl(fileName) {
+              console.log(fileName)
+              foldername = channel['channelId']
+              console.log(foldername)
+              fetch('/get-file-download-url/' + fileName + '/' + foldername,{
+                method: 'GET',
+              })
+                .then(response => response.json())
+                .then(data => {
+                  console.log(data.download_url);
+                  if (data.download_url !== '') {
+                    submitData(data.download_url, ChatuserName)
+                  }
+                })
+  
+            }
+  
+            //end file uploading functionlity
+    
+    ///// RM chat js start
+      const APP_ID = "4e226a8c0c724e20aab4e504951a33eb"
+      const token = null
+      //{% comment %} '2c329178083c4d4492ec7abe11949e00' {% endcomment %}
+      const uid = String(Math.floor(Math.random() * 232 ))
+      console.log('uid below')
+      console.log(uid);
+      var ChatuserName = "{{request.user.username}}"
+      console.log(ChatuserName)
+      
+      ///////
+      
+      let iniateRTM = async (channel_name) => {
+      if (typeof client === 'undefined') {
+      client = await AgoraRTM.createInstance(APP_ID);
+      await client.login({ uid, token });
+      }
+      
+      if (typeof channel !== 'undefined') {
+        channel.leave();
+        channel = await client.createChannel(channel_name);
+      await channel.join();
+      } else {
+      channel = await client.createChannel(channel_name);
+      await channel.join();
+      }
+      
+      channel.on('ChannelMessage', (message, peerId) => {
+        post = JSON.parse(message.text);
+        console.log('this is the post on recive', post)
+        console.log("sidhfiuohjiodfoihoiiohsadhoihsd this  is  posthuhuih" + peerId);
+        addMessageToDom(post);
+        //AddMessageAndTime(post)
+      });
+      //console.clear();
+      };
+  
+      //   setInterval(getunreadstatus, 5000);
+  
+  function getunreadstatus() {
+    fetch('/get-unread-status/',{
+    method: 'POST',
+      headers: {
+      'Content-Type': 'application/json',
+      }
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('this is the data:---',data)
+    chatBlinkadd(data.status)
+   })
+  .catch(error => {
+     console.log('These are error',error)
+   });
+  }
+  
+  window.addEventListener('resize', function() {
+    reduceheightofchatbody()
+      let chatContainer = document.getElementById('kt_drawer_chat_messenger_body');
+      console.log('bijioahsdiofhioah----')
+      document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM is fully loaded');
+    reduceheightofchatbody()
+  });
+      //chatContainer.style.maxHeight = window.innerHeight * 0.8 + 'px';  // 80% of viewport height
+  });
+  
+  document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM is fully loaded');
+    reduceheightofchatbody()
+  });
+  
+  
+  function reduceheightofchatbody() {
+  var chatWindow = document.getElementById('kt_drawer_chat_messenger_body')
+        var heightofwindow = chatWindow.style.height
+        let newheight = parseInt(heightofwindow, 10) - 65;
+        chatWindow.style.height = newheight + 'px'
+        console.log('This is container style i want to see---',heightofwindow)
+        console.log('new height is here---',newheight)
+      }
+  
+  function chatBlinkadd(status) {
+    var chatButton = document.getElementById('kt_drawer_chat_toggle')
+    var chatBlink = document.getElementById('unread-blink');
+    if (status === true && chatBlink === null) {
+      let chatBlinkHtml = `<span id="unread-blink" class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>`
+      chatButton.insertAdjacentHTML('beforeend', chatBlinkHtml)
+    }
+  }
+      
+      const chatButton = document.getElementById('kt_drawer_chat_toggle')
+      
+      chatButton.addEventListener('click', handleClick);
+      
+  
+      function handleClick(event) {
+        let channel_name = "{{channel_name}}";
+        if (channel_name !== 'None') {
+        var clickedElement = event.target;
+      console.log(clickedElement);
+      console.log(ChatuserName);
+      //reduceheightofchatbody()
+      iniateRTM(channel_name);
+      getRmChat(channel_name);
+      var chatBlink = document.getElementById('unread-blink');
+      if (chatBlink !== null) {
+        chatBlink.remove()
+      }
+      }
+      }
+      
+      
+      var chatDOM = document.getElementById('kt_drawer_chat')
+      console.log(chatDOM)
+      console.log('This is the status of unread script',"{{unread_status}}");
+      
+      /// get chat data
+      
+      function getRmChat(channel_name) {
+        fetch('/get-RM-chat/', {
+          method: 'POST',
+          headers: {
+          'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+          'name': ChatuserName,
+          'channel': channel_name
+          })
+        })
+          .then(response => {
+          console.log('A');
+          //console.log(response);
+          return response.json();
+          })
+          .then(data => {
+          // Process the response data here
+          console.log(data);
+          postList.innerHTML = '';
+          AddRMuserName(data['RM']);
+        if (data['data'].length !== 0) {
+          
+        for (var msg of data["data"]) {
+          addMessageToDom(msg);
+        }
+        }else{
+        // Step 1: Get a reference to the HTML tag
+        let container = document.getElementById('kt_drawer_chat_messenger_body');
+      
+        // Step 2: Create a new <div> element
+        let divElement = document.createElement('div');
+      
+        // Step 3: Set height and width
+        divElement.style.height = '400px';
+        divElement.style.width = '400px';
+        divElement.textContent = "your chat will be shown here!!";
+        // Step 4: Append the <div> element to the container
+        container.appendChild(divElement);
+      
+        }
+          })
+          .catch(error => {
+          // Handle any errors here
+          console.error('Fetch error:', error);
+          });
+        }
+      
+      // end get chat data
+      
+      ////// add RMuserName
+      
+      function AddRMuserName(RMuser) {
+        var RMuserNameElement = document.getElementById('RMuserName')
+        RMuserNameElement.innerHTML = RMuser;
+      }
+      
+      ///// end add RMuserName
+      
+      ///////////////////start send message button to send messages
+      var sendButton = document.getElementById('kuchbhi');
+      function buttonSendMessage() {
+        //console.log("chanekjioajd : "+channel_name)
+        var textarea = document.getElementById('input_textarea');
+        var message = textarea.value;
+        textarea.value = "";
+        //console.log('submit buser', username);
+        //console.log('message body :  '+message)
+        if (message !== "") {
+          console.log('B','senderName')
+        submitData(message, ChatuserName);
+        }
+      };
+      
+      sendButton.addEventListener('click', buttonSendMessage);
+      ////////////////////// end message button to send messages
+      
+      ////////////////////// start message submiting
+      
+      let submitData = async (bodyText,senderName) => {
+        var channel_name = channel['channelId']
+        console.log(channel_name)
+          let response = await fetch('/single-chat-add/', {
+              method:'POST',
+              headers:{
+                  'Content-Type':'application/json'
+              },
+              body:JSON.stringify({'body':bodyText, 'sender':senderName, 'channel':channel_name})
+          })
+      
+          let data = await response.json()
+          data['sender'] = senderName
+      
+        //console.log('after username', username);
+      
+      
+          channel.sendMessage({text:JSON.stringify(data), type:'text'})
+          console.log('Data:', data )
+          addMessageToDom(data)
+        //AddMessageAndTime(data)
+      };
+      
+      ////////////////////// end message submit
+      
+  
+      
+      let postList = document.getElementById('kt_drawer_chat_messenger_body')
+      
+      let addMessageToDom  = async (message) => {
+        
+      
+        let timeSince = new Intl.RelativeTimeFormat('en')
+      
+        let messageTime = new Date(message['created'])
+      
+          let diff = new Date() - new Date(messageTime)
+          let ago = timeSince.format(- diff/(1000*60*60*24), 'seconds')
+          
+          if (message['sender'] === "{{request.user.username}}"){
+            var post_wrapper = `<!--begin::Message(out)-->
+            <div class="d-flex justify-content-end mb-10">
+              <!--begin::Wrapper-->
+              <div class="d-flex flex-column align-items-end">
+                <!--begin::User-->
+                <div class="d-flex align-items-center mb-2">
+                  <!--begin::Details-->
+                  <div class="me-3">
+                    <span class="text-muted fs-7 mb-1">${formatTimeAgo(messageTime)}</span>
+                    <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-danger ms-1">You</a>
+                  </div>
+                  <!--end::Details-->
+                  <!--begin::Avatar-->
+                  <div class="symbol symbol-35px symbol-circle">
+                    <span class="symbol-label bg-light-success text-success fs-6 fw-bolder" style="z-index: 0;">${message['sender'].slice(0,1).toUpperCase()}</span>
+                    <!--<img alt="Pic" src="{%static 'asset/media/avatars/300-1.jpg'%}" />-->
+                  </div>
+                  <!--end::Avatar-->
+                </div>
+                <!--end::User-->
+                <!--begin::Text-->
+                <div class="p-5 rounded bg-light-primary text-dark fw-semibold mw-lg-400px text-end" data-kt-element="message-text">${ message['body'] }</div>
+                <!--end::Text-->
+              </div>
+              <!--end::Wrapper-->
+            </div>
+            <!--end::Message(out)-->`
+          } else{ var post_wrapper = `
+            <!--begin::Message(in)-->
+                  <div class="d-flex justify-content-start mb-10">
+                    <!--begin::Wrapper-->
+                    <div class="d-flex flex-column align-items-start">
+                      <!--begin::User-->
+                      <div class="d-flex align-items-center mb-2">
+                        <!--begin::Avatar-->
+                        <div class="symbol symbol-35px symbol-circle">
+                          <span class="symbol-label bg-light-success text-success fs-6 fw-bolder" style="z-index: 0;">${message['sender'].slice(0,1).toUpperCase()}</span>
+                          <!--<img alt="Pic" src="{%static 'asset/media/avatars/300-25.jpg'%}" />-->
+                        </div>
+                        <!--end::Avatar-->
+                        <!--begin::Details-->
+                        <div class="ms-3">
+                          <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-danger me-1">${message['sender']}</a>
+                          <span class="text-muted fs-7 mb-1">${formatTimeAgo(messageTime)}</span>
+                        </div>
+                        <!--end::Details-->
+                      </div>
+                      <!--end::User-->
+                      <!--begin::Text-->
+                      <div class="p-5 rounded bg-light-info text-dark fw-semibold mw-lg-400px text-start" data-kt-element="message-text">${ message['body'] }</div>
+                      <!--end::Text-->
+                    </div>
+                    <!--end::Wrapper-->
+                  </div>
+                  <!--end::Message(in)-->`
+          }
+      
+          postList.insertAdjacentHTML('beforeend', post_wrapper)
+          postList.scrollIntoView(false);
+          scrollToBottom()
+          
+        }
+      
+      function scrollToBottom() {
+        var chatWindow = document.getElementById('kt_drawer_chat_messenger_body')
+        console.log('just clicked it!!')
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+        //const lastMessageforscroll = chatwindowforlastmsg.lastElementChild;
+        //lastMessageforscroll.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      function formatTimeAgo(timestamp) {
+        const currentTime = new Date();
+        const timeDifference = currentTime - timestamp;
+        
+        // Check if the timestamp is from today
+        const isToday = timestamp.getDate() === currentTime.getDate() &&
+          timestamp.getMonth() === currentTime.getMonth() &&
+          timestamp.getFullYear() === currentTime.getFullYear();
+        
+        if (!isToday) {
+          // Format the date in dd/mm/yy format
+          const formattedDate = `${timestamp.getDate().toString().padStart(2, '0')}/${
+          (timestamp.getMonth() + 1).toString().padStart(2, '0')}/${
+          timestamp.getFullYear().toString().slice(-2)}`;
+        
+          // Format the time in hh:mm AM/PM format
+          const formattedTime = `${timestamp.getHours() > 12 ? (timestamp.getHours() - 12) : timestamp.getHours()
+          }:${timestamp.getMinutes().toString().padStart(2, '0')} ${
+          timestamp.getHours() >= 12 ? 'PM' : 'AM'}`;
+        
+          return `${formattedDate} at ${formattedTime}`;
+        } else {
+          // Format the time in hh:mm AM/PM format
+          const formattedTime = `${timestamp.getHours() > 12 ? (timestamp.getHours() - 12) : timestamp.getHours()
+          }:${timestamp.getMinutes().toString().padStart(2, '0')} ${
+          timestamp.getHours() >= 12 ? 'PM' : 'AM'}`;
+        
+          return formattedTime;
+        }
+        }
+      </script>
+
+      {%endblock%}     
+   

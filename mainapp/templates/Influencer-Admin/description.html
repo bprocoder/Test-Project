@@ -1,0 +1,519 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"
+    />
+    <title>User Dashboard</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <link rel="shortcut icon" href="{%static 'assets1/images/favicon.ico'%}" />
+
+    <link rel="stylesheet" href="{%static 'plugins/morris/morris.css'%}" />
+
+    <link
+      href="{%static 'assets1/css/bootstrap.min.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/metismenu.min.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/icons.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/style.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- Top Bar Start -->
+      <div class="topbar">
+        <!-- LOGO -->
+        <div class="topbar-left">
+          <a href="/index1/" class="logo">
+            <span>
+              <img
+                src="{%static 'assets1/images/logo-light.png'%}"
+                alt=""
+                height="60"
+              />
+            </span>
+            <i>
+              <img
+                src="{%static 'assets1/images/logo-sm.png'%}"
+                alt=""
+                height="42"
+              />
+            </i>
+          </a>
+        </div>
+
+        <nav class="navbar-custom">
+          <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li class="dropdown notification-list d-none d-sm-block">
+              <form role="search" class="app-search">
+                <div class="form-group mb-0">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search.."
+                  />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </form>
+            </li>
+
+            <li class="dropdown notification-list">
+              <a
+                class="nav-link dropdown-toggle arrow-none waves-effect"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <i class="ti-bell noti-icon"></i>
+                <span class="badge badge-pill badge-danger noti-icon-badge"
+                  >3</span
+                >
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                <!-- item-->
+                <h6 class="dropdown-item-text">Notifications (258)</h6>
+                <div class="slimscroll notification-item-list">
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item active"
+                  >
+                    <div class="notify-icon bg-success">
+                      <i class="mdi mdi-cart-outline"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your order is placed<span class="text-muted"
+                        >Dummy text of the printing and typesetting
+                        industry.</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-warning">
+                      <i class="mdi mdi-message"></i>
+                    </div>
+                    <p class="notify-details">
+                      New Message received<span class="text-muted"
+                        >You have 87 unread messages</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-info">
+                      <i class="mdi mdi-martini"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your item is shipped<span class="text-muted"
+                        >It is a long established fact that a reader will</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-primary">
+                      <i class="mdi mdi-cart-outline"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your order is placed<span class="text-muted"
+                        >Dummy text of the printing and typesetting
+                        industry.</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-danger">
+                      <i class="mdi mdi-message"></i>
+                    </div>
+                    <p class="notify-details">
+                      New Message received<span class="text-muted"
+                        >You have 87 unread messages</span
+                      >
+                    </p>
+                  </a>
+                </div>
+                <!-- All-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item text-center text-primary"
+                >
+                  View all <i class="fi-arrow-right"></i>
+                </a>
+              </div>
+            </li>
+            <li class="dropdown notification-list">
+              <div class="dropdown notification-list nav-pro-img">
+                <a
+                  class="dropdown-toggle nav-link arrow-none waves-effect nav-user"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="{%static 'assets1/images/users/user-4.jpg'%}"
+                    alt="user"
+                    class="rounded-circle"
+                  />
+                </a>
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                  <!-- item-->
+                  <a class="dropdown-item" href="/profile/"
+                    ><i class="mdi mdi-account-circle m-r-5"></i> Profile</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a
+                  >
+                  <a class="dropdown-item d-block" href="#"
+                    ><span class="badge badge-success float-right">11</span
+                    ><i class="mdi mdi-settings m-r-5"></i> Settings</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock
+                    screen</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="/login/"
+                    ><i class="mdi mdi-power text-danger"></i> Logout</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="list-inline menu-left mb-0">
+            <li class="float-left">
+              <button class="button-menu-mobile open-left waves-effect">
+                <i class="mdi mdi-menu"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Top Bar End -->
+
+      <!-- ========== Left Sidebar Start ========== -->
+
+      <div class="left side-menu">
+        <div class="slimscroll-menu" id="remove-scroll">
+          <div id="sidebar-menu">
+            <ul class="metismenu" id="side-menu">
+              <li>
+                <a href="/index1/" class="waves-effect">
+                  <i class="mdi mdi-view-dashboard"></i
+                  ><span class="badge badge-primary badge-pill float-right"
+                    >2</span
+                  ><span>Dashboard</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="javascript:void(0);" class="waves-effect"
+                  ><i class="mdi mdi-email-outline"></i
+                  ><span
+                    >Our Business<span class="float-right menu-arrow"
+                      ><i class="mdi mdi-chevron-right"></i
+                    ></span> </span
+                ></a>
+                <ul class="submenu">
+                  <li><a href="/current-order/">Orders</a></li>
+                  <li><a href="/buyer-requests/">Buyer Requests</a></li>
+                  <li><a href="/earnings/">Earnings</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/profile/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i><span>Profile</span></a
+                >
+              </li>
+              <li><a href="/profile-preview/" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>Clients View</span></a></li>
+              <li>
+                <a href="/accounts/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>Accounts</span></a
+                >
+              </li>
+              <li>
+                <a href="/photo-gallery/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>Photo Gallery</span></a
+                >
+              </li>
+              <li>
+                <a href="/video-gallery/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>video Gallery</span></a
+                >
+              </li>
+              <li>
+                <a href="/chat/" class="waves-effect"
+                  ><i class="mdi mdi-email-outline"></i
+                  ><span>Chat us</span></a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <!-- Left Sidebar End -->
+
+      <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 white-wrap-shadow">
+                <div class="v-effect-link">
+                  <ul>
+                    <li><a href="/profile/"> Account Security</a></li>
+                    <li><a href="/personal-info/"> Personal Info</a></li>
+                    <li><a href="/service_plans/">Service Plans</a></li>
+                    <li><a href="/categories/"> Categories</a></li>
+                    <li class="active">
+                      <a href="/description/"> Description & FAQ</a>
+                    </li>
+                    <li><a href="/gallery/"> Gallery</a></li>
+                  </ul>
+                </div>
+
+           
+                <form method="post" action="" class="verify-gcaptcha">
+                  {% csrf_token %}
+ <div class="form">
+                  <div class="box_b">
+                    <div class="form-group text-left">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h3>Frequently Asked Questions</h3>
+                        </div>
+
+                        <div class="col-lg-3">
+                          <h4>Type Title</h4>
+                          <input type="text" name="Faq_title" class="form-control" id="Faq_title" />
+                        </div>
+
+                        <div class="col-lg-6">
+                          <h4>Add Questions & Answers for Your Buyers.</h4>
+                          <input type="text" name="ques_and_ans" id="ques_and_ans" class="form-control" />
+                        </div>
+
+                        <div class="col-lg-12">
+                          <hr />
+                          <p>
+                            <button type="submit"  class="btn btn-info">
+                              + Add More Questions
+                            </button>
+                          </p>
+                        </div>
+
+                        <div class="col-lg-12 mrgi_top">
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <h4>About This Gig</h4>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="type here"
+                                name="gig"
+                                id="gig"
+                              />
+                            </div>
+
+                            <div class="col-lg-3">
+                              <h4>Experience</h4>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="type here"
+                                name="exp"
+                                id="exp"
+                              />
+                            </div>
+
+                            <div class="col-lg-12 mrgi_top"><hr /></div>
+
+                            <div
+                              class="col-lg-6"
+                              style="margin: 10px 0; float: right"
+                            >
+                              <h4>Why choose me?</h4>
+                              <p>
+                                {%for i in choose%}
+                                <label>
+                                  <input
+                                    type="checkbox"
+                                    name="row-check"
+                                    value="{{i.whychoosemeid}}"
+                                    id="row-check"
+                                  />
+                                 {{i.Whychoosetext}}
+                                  </label
+                                >
+                                {%endfor%}
+                              </p>
+
+                              <p>
+                                <input type="text" name="addchoose" id="addchoose" class="form-control" />
+                                <br/>
+                                <button type="submit"  class="btn btn-info">
+                                  + Add More
+                                </button>
+                              </p>
+                            </div>
+
+                            <div
+                              class="col-lg-6"
+                              style="margin: 10px 0; float: right"
+                            >
+                              <h4>Rules for this Gig:</h4>
+
+                              <p>
+                                {%for i in rules%}
+                                <label>
+                                  <input
+                                    type="checkbox"
+                                    name="row-check1"
+                                    value="{{i.rulesid}}"
+                                    id="row-check1"
+                                  />
+                                  {{i.rulesforgig}}</label
+                                >
+                                {%endfor%}
+                              
+                              </p>
+
+                              <p>
+                                <input type="text" name="addrules" id="addrules" class="form-control" />
+                                <br/>
+                                <button type="submit"  class="btn btn-info">
+                                  + Add More
+                                </button>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="submit" id="btn1" class="btn btn-success">
+                          Save & Continue
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				
+				     </form>
+           
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">© 2022 - 2023 All Right Resvered.</footer>
+      </div>
+    </div>
+    <!-- END wrapper -->
+    <script>
+      document.getElementById("btn1").onclick = function() {
+        var markedCheckbox = document.getElementsByName('row-check');
+        var markedCheckbox1 = document.getElementsByName('row-check1');
+        var checkresult=[];
+        for (var checkbox of markedCheckbox) {
+          if (checkbox.checked){
+            document.body.append(checkbox.value + ' ');
+            checkresult.push(checkbox.value);
+          }
+        }
+        var checkresult1=[];
+        for (var checkbox of markedCheckbox1) {
+          if (checkbox.checked){
+            document.body.append(checkbox.value + ' ');
+            checkresult1.push(checkbox.value);
+          }
+        }
+        class EasyHTTP {
+            async post(url, data) {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {"X-CSRFToken": $crf_token ,'Content-type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+                const resData = await response.json();
+                return resData;
+            }
+        }
+   
+    const http = new EasyHTTP;
+    var $crf_token = $('[name="csrfmiddlewaretoken"]').attr('value');   
+        const data = {
+            "choose": checkresult,
+            "rules": checkresult1
+            }
+           
+        const response = http.post(
+            'http://influencerhiring.com/checkbox/',
+            data)
+            console.log(response)
+            checkresult.splice(0,checkresult.length);
+            checkresult1.splice(0,checkresult1.length);
+      }
+     
+      </script>
+    <!-- jQuery  -->
+    <script src="{%static 'assets1/js/jquery.min.js'%}"></script>
+    <script src="{%static 'assets1/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets1/js/metisMenu.min.js'%}"></script>
+    <script src="{%static 'assets1/js/jquery.slimscroll.js'%}"></script>
+    <script src="{%static 'assets1/js/waves.min.js'%}"></script>
+
+    <script src="{%static 'plugins/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+
+    <!--Morris Chart-->
+    <script src="{%static 'plugins/morris/morris.min.js'%}"></script>
+    <script src="{%static 'plugins/raphael/raphael-min.js'%}"></script>
+    <script src="{%static 'assets1/pages/dashboard.js'%}"></script>
+
+    <!-- App js -->
+    <script src="{%static 'assets1/js/app.js'%}"></script>
+  </body>
+</html>

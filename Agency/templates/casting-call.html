@@ -1,0 +1,1352 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | Casting Calls</title>
+{% endblock %}
+
+
+
+{%block sidebar1%}
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+  <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+	<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+	  <div class="menu-item"> <a class="menu-link " href="/agency_dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+		  <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+		  <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+		  <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+		</svg>
+		</span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+  <div class="menu-item pt-5">
+  <!--begin:Menu content-->
+			<div class="menu-content">
+				<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+			</div>
+			<!--end:Menu content-->
+			</div>
+		<!--end:Menu item-->
+
+	  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+		  <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+		</svg>
+		</span> </span> <span class="menu-title">My Business</span><span class="menu-arrow"></span></span>
+		<div class="menu-sub menu-sub-accordion">
+		  <div class="menu-item"> <a class="menu-link" href="/completed_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Complete Orders</span></a></div>
+		  <div class="menu-item"> <a class="menu-link" href="/pending_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pending Orders</span></a></div>
+		  <div class="menu-item"> <a class="menu-link" href="/cancel_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Cancel Orders</span></a></div>
+		  <div class="menu-item"> <a class="menu-link" href="/active_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Active Orders</span></a></div>
+		</div>
+	  </div>
+
+	  
+	   
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+		  <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+		</svg>
+		  </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/bloghome/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs</span></a></div>
+			 
+		  </div>
+		</div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				  <path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor"></path>
+				  <rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor"></rect>
+		</svg>
+		  </span> </span> <span class="menu-title">Profile Settings</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/profile_setting/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Profile Settings</span></a></div>
+			 
+		  </div>
+		</div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+			<rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+			<rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+		  </svg>
+		  </span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/Group-Chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Orders chat</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/client-influencer-chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Influencer chat</span></a></div>
+		  </div>
+		</div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="currentColor"></path>
+			<path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="currentColor"></path>
+		  </svg>
+		  </span> </span> <span class="menu-title">Referral</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/agency_referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Referral</span></a></div>
+			 
+		  </div>
+		</div>
+
+
+
+<div data-kt-menu-trigger="click" class="menu-item  menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+			<path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+			</svg>
+		  </span> </span> <span class="menu-title">Advertisers</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/advertiser-instruction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Instructions</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/advertiser-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/advertiser-withdrawal-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Withdrawal Requests</span></a></div> 
+		  </div>
+		  </div>
+
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+			<!--begin:Menu link-->
+			<span class="menu-link">
+			  <span class="menu-icon">
+				<!--begin::Svg Icon | path: icons/duotune/finance/fin002.svg-->
+				<span class="svg-icon svg-icon-2">
+				  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M22 7H2V11H22V7Z" fill="currentColor" />
+					<path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="currentColor" />
+				  </svg>
+				</span>
+				<!--end::Svg Icon-->
+			  </span>
+			  <span class="menu-title">Bank Details</span>
+			  <span class="menu-arrow"></span>
+			</span>
+			<!--end:Menu link-->
+			<!--begin:Menu sub-->
+			<div class="menu-sub menu-sub-accordion">
+			  <!--begin:Menu item-->
+			  <div class="menu-item">
+				<!--begin:Menu link-->
+				<a class="menu-link" href="/bankdetail/">
+				  <span class="menu-bullet">
+					<span class="bullet bullet-dot"></span>
+				  </span>
+				  <span class="menu-title">Bank Details</span>
+				</a>
+				<!--end:Menu link-->
+			  </div>
+			  <!--end:Menu item-->
+			</div>
+			<!--end:Menu sub-->
+		  </div>
+
+
+		<div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="">
+			<path d="M11.7 8L7.49998 15.3L4.59999 20.3C3.49999 18.4 3.1 17.7 2.3 16.3C1.9 15.7 1.9 14.9 2.3 14.3L8.8 3L11.7 8Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M11.7 8L8.79999 3H13.4C14.1 3 14.8 3.4 15.2 4L20.6 13.3H14.8L11.7 8ZM7.49997 15.2L4.59998 20.2H17.6C18.3 20.2 19 19.8 19.4 19.2C20.2 17.7 20.6 17 21.7 15.2H7.49997Z" fill="currentColor"></path>
+		  </svg>
+		  </span> </span> <span class="menu-title">Casting Calls</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link active" href="/insert_casting_call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Insert Casting Call</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/total_casting_call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Casting Call</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/casting_call_pitching_details/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Pitching List</span></a></div>
+		  </div>
+		</div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+		  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+		  <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+		  <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+		  <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+		</svg>
+		  </span> </span> <span class="menu-title">My Wishlist</span><span class="menu-arrow"></span></span>
+		  <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/my_wishlist/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Wishlist</span></a></div>
+			 
+		  </div>
+		  </div>
+
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z" fill="currentColor"></path>
+			<path opacity="0.3" d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z" fill="currentColor"></path>
+			</svg>
+		</span> </span> <span class="menu-title">My Cart</span><span class="menu-arrow"></span></span>
+		<div class="menu-sub menu-sub-accordion">
+		  <div class="menu-item"> <a class="menu-link" href="/my_cart/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">My Cart</span></a></div>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+</div>
+{%endblock%}
+
+{% block body %}
+                    <!--begin::Main-->
+                    <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+                        <div class="d-flex flex-column flex-column-fluid">
+                          <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+                            <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+                              <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                                        <!--begin::Title-->
+                                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Casting Call</h1>
+                                        <!--end::Title-->
+                                        <!--begin::Breadcrumb-->
+                                        <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                                            <!--begin::Item-->
+                                            <li class="breadcrumb-item text-muted">
+                                                <a href="/User-Dashboard/" class="text-muted text-hover-primary">Home</a>
+                                            </li>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <li class="breadcrumb-item">
+                                                <span class="bullet bg-gray-400 w-5px h-2px"></span>
+                                            </li>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <li class="breadcrumb-item text-muted">Insert Post</li>
+                                            <!--end::Item-->
+                                        </ul>
+                                        <!--end::Breadcrumb-->
+                                    </div>
+                                    <!--end::Page title-->
+                                   
+                                </div>
+                                <!--end::Toolbar container-->
+                            </div>
+                            <!--end::Toolbar-->
+							
+                            <!--begin::Content-->
+                            <div id="kt_app_content" class="app-content flex-column-fluid">
+                                <div id="kt_app_content_container" class="app-container container-fluid">
+									{% for message in messages %}
+									{% if messages %}
+								<div class="alert alert-{{message.tags}}" role="alert">
+								  <strong>{{message}}</strong>
+		 							 </div>
+									{%endif%}
+									{%endfor%}
+                                    <!--begin::Basic info-->
+                                    <!--begin::Form-->     
+                                    <div class="card mb-2 mb-xl-10">
+                                        <!--begin::Card header-->
+                                        <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+                                            <!--begin::Card title-->
+                                            <div class="card-title m-0">
+                                                <h3 class="fw-bold m-0">Upload Casting Call Post</h3>
+                                            </div>
+                                            <!--end::Card title-->
+                                        </div>
+                                        <!--begin::Card header-->
+                                        <!--begin::Content-->
+                                        <div id="kt_account_settings_profile_details" class="collapse show">
+                                            <!--begin::Form-->
+                                            <form id="kt_account_profile_details_form" class="form" method="post"  action="" enctype="multipart/form-data">
+                                                {% csrf_token %}
+                                                <!--begin::Card body-->
+                                                <div class="card-body border-top p-9">
+                                                    <!--begin::Input group-->
+                                                    <div class="row mb-10">
+                                                        <div class="col-lg-4">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-6 col-form-label fw-semibold fs-6">
+                                                            <span class="required">Brand Logo</span>
+                                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="The maximum file pixels is 32x32. Add the defined image"></i>
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-8">
+                                                            <!--begin::Image input-->
+                                                            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/mainapp/static/asset/media/svg/avatars/blank.svg')">
+                                                                <!--begin::Preview existing avatar-->
+                                                                <div class="image-input-wrapper w-125px h-125px" style="background-image: url('/mainapp/static/asset/media/svg/avatars/blank.svg')"></div>
+                                                                <!--end::Preview existing avatar-->
+                                                                <!--begin::Label-->
+                                                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change image">
+                                                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                                                    <!--begin::Inputs-->
+                                                                    <input type="file" name="brandlogo" id="iamge" accept=".png, .jpg, .jpeg, .webp" onchange="getImageDimensions()" required/>
+                                                                    <!--end::Inputs-->
+                                                                </label>
+                                                                <!--end::Label-->
+                                                                <!--begin::Cancel-->
+                                                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel image">
+                                                                    <i class="bi bi-x fs-2"></i>
+                                                                </span>
+                                                                <!--end::Cancel-->
+                                                                <!--begin::Remove-->
+                                                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove image">
+                                                                    <i class="bi bi-x fs-2"></i>
+                                                                </span>
+                                                                <!--end::Remove-->
+                                                            </div>
+                                                            <!--end::Image input-->
+                                                            <!--begin::Hint-->
+                                                            <div class="form-text">Allowed file types: png, jpg, jpeg, webp.</div>
+														<div class="form-text">The maximum file pixels is 32x32</div>
+														
+                                                            <!--end::Hint-->
+                                                        </div>
+                                                        <!--end::Col-->
+                                                    </div>
+                                                    <!--end::Input group-->
+
+
+                                                    <!--begin::Input group-->
+                                                    <div class="col-lg-4">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-6 col-form-label fw-semibold fs-6">
+                                                            <span class="required">Brand Banner</span>
+                                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="The maximum file pixels is 1920x450. Add the defined image."></i>
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-8">
+                                                            <!--begin::Image input-->
+                                                            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/mainapp/static/asset/media/svg/avatars/blank.svg')">
+                                                                <!--begin::Preview existing avatar-->
+                                                                <div class="image-input-wrapper w-125px h-125px" style="background-image: url('/mainapp/static/asset/media/svg/avatars/blank.svg')"></div>
+                                                                <!--end::Preview existing avatar-->
+                                                                <!--begin::Label-->
+                                                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change image">
+                                                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                                                    <!--begin::Inputs-->
+                                                                    <input type="file" name="bandbanner" id="iamge1" accept=".png, .jpg, .jpeg, .webp" onchange="getImageDimensions1()" required/>
+                                                                   
+                                                                    <!--end::Inputs-->
+                                                                </label>
+                                                                <!--end::Label-->
+                                                                <!--begin::Cancel-->
+                                                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel image">
+                                                                    <i class="bi bi-x fs-2"></i>
+                                                                </span>
+                                                                <!--end::Cancel-->
+                                                                <!--begin::Remove-->
+                                                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove image">
+                                                                    <i class="bi bi-x fs-2"></i>
+                                                                </span>
+                                                                <!--end::Remove-->
+                                                            </div>
+                                                            <!--end::Image input-->
+                                                            <!--begin::Hint-->
+                                                            <div class="form-text">Allowed file types: png, jpg, jpeg, webp.</div>
+															<div class="form-text">The maximum file pixels is 1920x450.</div>
+                                                            <!--end::Hint-->
+                                                        </div>
+                                                        <!--end::Col-->
+                                                    </div>
+                                                    <!--end::Input group-->
+                                                   
+                                                    <!--begin::Input group-->
+                                                    <div class="col-lg-4">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-6 col-form-label fw-semibold fs-6">
+                                                            <span class="required">Product Image</span>
+                                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="The maximum file pixels is 365x382. Add the defined image."></i>
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-8">
+                                                            <!--begin::Image input-->
+                                                            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/mainapp/static/asset/media/svg/avatars/blank.svg')">
+                                                                <!--begin::Preview existing avatar-->
+                                                                <div class="image-input-wrapper w-125px h-125px" style="background-image: url('/mainapp/static/asset/media/svg/avatars/blank.svg')"></div>
+                                                                <!--end::Preview existing avatar-->
+                                                                <!--begin::Label-->
+                                                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change image">
+                                                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                                                    <!--begin::Inputs-->
+                                                                    <input type="file" name="productimage" id="iamge2" accept=".png, .jpg, .jpeg, .webp" onchange="getImageDimensions2()" required/>
+                                                                   
+                                                                    <!--end::Inputs-->
+                                                                </label>
+                                                                <!--end::Label-->
+                                                                <!--begin::Cancel-->
+                                                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel image">
+                                                                    <i class="bi bi-x fs-2"></i>
+                                                                </span>
+                                                                <!--end::Cancel-->
+                                                                <!--begin::Remove-->
+                                                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove image">
+                                                                    <i class="bi bi-x fs-2"></i>
+                                                                </span>
+                                                                <!--end::Remove-->
+                                                            </div>
+                                                            <!--end::Image input-->
+                                                            <!--begin::Hint-->
+                                                            <div class="form-text">Allowed file types: png, jpg, jpeg, webp.</div>
+															<div class="form-text">The maximum file pixels is 365x382.</div>
+                                                            <!--end::Hint-->
+                                                        </div>
+                                                        <!--end::Col-->
+                                                    </div>
+                                                </div>
+                                                    <!--end::Input group-->
+                                                
+                                                    <script>
+                                                        function validateForm() {
+                                                            var fileInput = document.getElementById('iamge');
+                                                            var filePath = fileInput.value;
+                                                            console.log(filePath);
+                                                            if (filePath.length >= 1){
+                                                            var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.webp)$/i;
+                                                            if (!allowedExtensions.exec(filePath)) {
+                                                                alert('Please upload file having extensions .jpeg/.jpg/.png/ .wepb only.');
+                                                                fileInput.value = '';
+                                                                return false;
+                                                            }
+                                                            return true;
+                                                        }
+            
+                                                        }
+            
+            
+                                                        function check1(){
+                                                            var fileInput = document.getElementById('iamge1');
+                                                            var filePath = fileInput.value;
+                                                            if (filePath.length >= 1){
+                                                               var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.webp)$/i;
+                                                               if (!allowedExtensions.exec(filePath)) {
+                                                                   alert('Please upload file having extensions .jpeg/.jpg/.png/ .wepb only.');
+                                                                   fileInput.value = '';
+                                                                   return false;
+                                                               }
+                                                               else {
+                                                                   var fileSize = fileInput.files[0].size;
+                                                                   // set maximum image size in bytes
+                                                                   var maxSize = 1920 * 450; // 1MB
+                                                                   if (fileSize > maxSize) {
+                                                                       alert('The maximum file pixels is 1920x450. Add the defined image.');
+                                                                       fileInput.value = '';
+                                                                       return false;
+                                                                   }
+                                                               }
+                                                               return true;
+                                                           }
+                                                        }
+
+                                                        
+                                                        function check2(){
+                                                            var fileInput = document.getElementById('iamge2');
+                                                            var filePath = fileInput.value;
+                                                            if (filePath.length >= 1){
+                                                               var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.webp)$/i;
+                                                               if (!allowedExtensions.exec(filePath)) {
+                                                                   alert('Please upload file having extensions .jpeg/.jpg/.png/ .wepb only.');
+                                                                   fileInput.value = '';
+                                                                   return false;
+                                                               }
+                                                               else {
+                                                                   var fileSize = fileInput.files[0].size;
+                                                                   // set maximum image size in bytes
+                                                                   var maxSize = 365 * 280; // 1MB
+                                                                   if (fileSize > maxSize) {
+                                                                       alert('The maximum file pixels is 365x280. Add the defined image.');
+                                                                       fileInput.value = '';
+                                                                       return false;
+                                                                   }
+                                                               }
+                                                               return true;
+                                                           }
+                                                        }
+            
+            
+                                                        const form = document.querySelector('#kt_account_profile_details_form');
+            
+                                                        form.addEventListener('submit', function(event) {
+                                                            event.preventDefault(); // prevent the form from submitting normally
+                                                            // do some processing on the form data
+                                                        const res=validateForm();
+                                                        // const res1=check1();
+                                                        // const res2=check2();
+
+                                                        if (res===false) {
+                                                            console.log('Not submit form');
+                                                        }
+                                                        else{
+                                                            form.submit();
+                                                        }
+                                                         
+                                                          });
+            
+            
+                                                        </script>               
+
+
+                                                     <!--begin::Input group-->
+                                                    <div class="row ">
+                                                        <div class="col-lg-6">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                                                            <span class="required">Post Title</span>
+                                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="maximum 20 letters title"></i>
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-11 fv-row mb-2">
+															<input type="text" name="posttiltle" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" id="titleInput" placeholder="Post Title" value="" autocomplete="off" required/>
+															<span id="error-message" style="color: red;"></span>
+														  </div>
+														  
+														  <script>
+														  $(document).ready(function() {
+															var isTitleTaken = false;  // Flag to keep track of whether the title is taken
+														  
+															$('#titleInput').on('input', function() {
+															  var title = $(this).val();
+															  
+															  $.ajax({
+																url: '/ajax/check_title/',
+																data: {
+																  'title': title
+																},
+																dataType: 'json',
+																success: function(data) {
+																  if (data.is_taken) {
+																	isTitleTaken = true;  // Set the flag to true if the title is already taken
+																  } else {
+																	isTitleTaken = false; // Reset the flag if the title is not taken
+																	$('#error-message').text("");
+																  }
+																}
+															  });
+															});
+														  
+															// Check the flag when the input loses focus
+															$('#titleInput').blur(function() {
+															  if (isTitleTaken) {
+																alert('Title is already in use. Please use another title.');
+																$('#titleInput').val(''); // Optionally clear the input field
+																isTitleTaken = false;      // Reset the flag
+															  }
+															});
+														  });
+														  </script>
+														  
+                                                        <!--end::Col-->
+                                                    </div>
+                                                    <!--end::Input group-->
+                                                   
+                                                    <!--begin::Input group-->
+                                                    <div class="col-lg-6">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Brand Name</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-11 fv-row mb-2">
+                                                            <input type="text" name="brandname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Brand Name" value="" required/>
+                                                        </div>
+                                                        <!--end::Col-->
+                                                    </div>
+                                                    <!--end::Input group-->
+
+													<div class="col-lg-6">
+                                                   
+                                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                                                            <span class="required">Required Platforms</span>
+                                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="choose any one"></i>
+                                                        </label>
+                                                   
+                                                        <div class="col-lg-11 fv-row mb-2">
+                                                            <select name="requiredplat" aria-label="Select a Platform" data-control="select2" data-placeholder="Select a Platform" class="form-select form-select-solid form-select-lg fw-semibold" required>
+                                                                <option value="">Select Platform</option>
+                                                                {%for i in platform%}
+                                                                <option value="{{i.platform_name}}">{{i.platform_name}}</option>
+																{%endfor%}
+                                                            </select>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <!--end::Input group-->
+                                                        <!--end::Input group-->
+                                                    <!--begin::Input group-->
+                                                    <div class="col-lg-6">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6" data-bs-toggle="tooltip" title="Date should be in YYYY-MM-DD format.">Expiry Date</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-11 fv-row mb-2">
+															<input type="date" id="date" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" name="start_date" required>
+                                                        </div>
+                                                        <!--end::Col-->
+                                                    </div>
+                                                    <!--end::Input group-->
+
+                                                    <div class="col-lg-6">
+                                                   
+                                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                                                            <span class="required">Compensation</span>
+                                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="choose any one" required></i>
+                                                        </label>
+                                                   
+                                                        <div class="col-lg-11 fv-row mb-2">
+                                                            <select name="compensation" aria-label="Select a Compensation" data-control="select2" data-placeholder="Select a Compensation" class="form-select form-select-solid form-select-lg fw-semibold">
+                                                                <option value="">Select Compensation</option>
+                                                                <option value="Cash">Cash</option>
+                                                                <option value="Products">Products</option>
+                                                                <option value="Both">Both</option>
+                                                            </select>
+                                                        </div>
+                                                       
+                                                    </div>
+
+
+                                                    <div class="col-lg-6">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                                                            <span class="required">Post Category</span>
+                                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="choose any one"></i>
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-11 fv-row mb-2">
+                                                            <select name="categpryid" aria-label="Select a Category" data-control="select2" data-placeholder="Select a Post Category" class="form-select form-select-solid form-select-lg fw-semibold" required>
+                                                                <option value="">Select Category</option>
+                                                                        {%for i in cat%}
+                                                                <option value="{{i.castingcallcategorieid}}">{{i.categoryname}}</option>
+                                                                {%endfor%}
+                                                            </select>
+                                                        </div>
+                                                        <!--end::Col-->
+                                                    </div>
+                                                    <!--end::Input group-->
+
+                                                    <!--begin::Input group-->
+                                                    <div class="col-lg-6">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-6 col-form-label required fw-semibold fs-6" >Post Related Keywords</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-11 fv-row mb-2">
+                                                            <input type="text" name="keywords" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"   placeholder="keywords" value="" required/>
+															
+                                                        </div>
+                                                        <!--end::Col-->
+                                                    </div>
+                                                    <!--end::Input group-->
+													<div class="col-lg-6">
+
+														<label class="col-lg-4 col-form-label required fw-semibold fs-6">Country</label>
+														 <div class="col-lg-11 fv-row"> 
+	
+															<select class="form-select mb-2 form-select-solid form-select-lg" data-control="select2" data-placeholder="Select an option" data-allow-clear="true" multiple="multiple" name="country" required>
+	
+																<option value="">Select a Country...</option>
+																		<option data-kt-flag="flags/afghanistan.svg" value="Afghanistan">Afghanistan</option>
+																		<option data-kt-flag="flags/aland-islands.svg" value="Aland Islands">Aland Islands</option>
+																		<option data-kt-flag="flags/albania.svg" value="Albania">Albania</option>
+																		<option data-kt-flag="flags/algeria.svg" value="Albania">Algeria</option>
+																		<option data-kt-flag="flags/american-samoa.svg" value="American Samoa">American Samoa</option>
+																		<option data-kt-flag="flags/andorra.svg" value="Andorra">Andorra</option>
+																		<option data-kt-flag="flags/angola.svg" value="Angola">Angola</option>
+																		<option data-kt-flag="flags/anguilla.svg" value="Anguilla">Anguilla</option>
+																		<option data-kt-flag="flags/antigua-and-barbuda.svg" value="Antigua and Barbuda">Antigua and Barbuda</option>
+																		<option data-kt-flag="flags/argentina.svg" value="Argentina">Argentina</option>
+																		<option data-kt-flag="flags/armenia.svg" value="Armenia">Armenia</option>
+																		<option data-kt-flag="flags/aruba.svg" value="Aruba">Aruba</option>
+																		<option data-kt-flag="flags/australia.svg" value="Australia">Australia</option>
+																		<option data-kt-flag="flags/austria.svg" value="Austria">Austria</option>
+																		<option data-kt-flag="flags/azerbaijan.svg" value="Azerbaijan">Azerbaijan</option>
+																		<option data-kt-flag="flags/bahamas.svg" value="Bahamas">Bahamas</option>
+																		<option data-kt-flag="flags/bahrain.svg" value="Bahrain">Bahrain</option>
+																		<option data-kt-flag="flags/bangladesh.svg" value="Bangladesh">Bangladesh</option>
+																		<option data-kt-flag="flags/barbados.svg" value="Barbados">Barbados</option>
+																		<option data-kt-flag="flags/belarus.svg" value="Belarus">Belarus</option>
+																		<option data-kt-flag="flags/belgium.svg" value="Belgium">Belgium</option>
+																		<option data-kt-flag="flags/belize.svg" value="Belize">Belize</option>
+																		<option data-kt-flag="flags/benin.svg" value="Benin">Benin</option>
+																		<option data-kt-flag="flags/bermuda.svg" value="Bermuda">Bermuda</option>
+																		<option data-kt-flag="flags/bhutan.svg" value="Bhutan">Bhutan</option>
+																		<option data-kt-flag="flags/bolivia.svg" value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+																		<option data-kt-flag="flags/bonaire.svg" value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+																		<option data-kt-flag="flags/bosnia-and-herzegovina.svg" value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+																		<option data-kt-flag="flags/botswana.svg" value="Botswana">Botswana</option>
+																		<option data-kt-flag="flags/brazil.svg" value="Brazil">Brazil</option>
+																		<option data-kt-flag="flags/british-indian-ocean-territory.svg" value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+																		<option data-kt-flag="flags/brunei.svg" value="Brunei Darussalam">Brunei Darussalam</option>
+																		<option data-kt-flag="flags/bulgaria.svg" value="Bulgaria">Bulgaria</option>
+																		<option data-kt-flag="flags/burkina-faso.svg" value="Burkina Faso">Burkina Faso</option>
+																		<option data-kt-flag="flags/burundi.svg" value="Burundi">Burundi</option>
+																		<option data-kt-flag="flags/cambodia.svg" value="Cambodia">Cambodia</option>
+																		<option data-kt-flag="flags/cameroon.svg" value="Cameroon">Cameroon</option>
+																		<option data-kt-flag="flags/canada.svg" value="Canada">Canada</option>
+																		<option data-kt-flag="flags/cape-verde.svg" value="Cape Verde">Cape Verde</option>
+																		<option data-kt-flag="flags/cayman-islands.svg" value="Cayman Islands">Cayman Islands</option>
+																		<option data-kt-flag="flags/central-african-republic.svg" value="Central African Republic">Central African Republic</option>
+																		<option data-kt-flag="flags/chad.svg" value="Chad">Chad</option>
+																		<option data-kt-flag="flags/chile.svg" value="Chile">Chile</option>
+																		<option data-kt-flag="flags/china.svg" value="China">China</option>
+																		<option data-kt-flag="flags/christmas-island.svg" value="Christmas Island">Christmas Island</option>
+																		<option data-kt-flag="flags/cocos-island.svg" value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+																		<option data-kt-flag="flags/colombia.svg" value="Colombia">Colombia</option>
+																		<option data-kt-flag="flags/comoros.svg" value="Comoros">Comoros</option>
+																		<option data-kt-flag="flags/cook-islands.svg" value="Cook Islands">Cook Islands</option>
+																		<option data-kt-flag="flags/costa-rica.svg" value="Costa Rica">Costa Rica</option>
+																		<option data-kt-flag="flags/ivory-coast.svg" value="Côte d'Ivoire">Côte d'Ivoire</option>
+																		<option data-kt-flag="flags/croatia.svg" value="Croatia">Croatia</option>
+																		<option data-kt-flag="flags/cuba.svg" value="Cuba">Cuba</option>
+																		<option data-kt-flag="flags/curacao.svg" value="Curaçao">Curaçao</option>
+																		<option data-kt-flag="flags/czech-republic.svg" value="Czech Republic">Czech Republic</option>
+																		<option data-kt-flag="flags/denmark.svg" value="Denmark">Denmark</option>
+																		<option data-kt-flag="flags/djibouti.svg" value="Djibouti">Djibouti</option>
+																		<option data-kt-flag="flags/dominica.svg" value="Dominica">Dominica</option>
+																		<option data-kt-flag="flags/dominican-republic.svg" value="Dominican Republic">Dominican Republic</option>
+																		<option data-kt-flag="flags/ecuador.svg" value="Ecuador">Ecuador</option>
+																		<option data-kt-flag="flags/egypt.svg" value="Egypt">Egypt</option>
+																		<option data-kt-flag="flags/el-salvador.svg" value="El Salvador">El Salvador</option>
+																		<option data-kt-flag="flags/equatorial-guinea.svg" value="Equatorial Guinea">Equatorial Guinea</option>
+																		<option data-kt-flag="flags/eritrea.svg" value="Eritrea">Eritrea</option>
+																		<option data-kt-flag="flags/estonia.svg" value="Estonia">Estonia</option>
+																		<option data-kt-flag="flags/ethiopia.svg" value="Ethiopia">Ethiopia</option>
+																		<option data-kt-flag="flags/falkland-islands.svg" value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+																		<option data-kt-flag="flags/fiji.svg" value="Fiji">Fiji</option>
+																		<option data-kt-flag="flags/finland.svg" value="Finland">Finland</option>
+																		<option data-kt-flag="flags/france.svg" value="France">France</option>
+																		<option data-kt-flag="flags/french-polynesia.svg" value="French Polynesia">French Polynesia</option>
+																		<option data-kt-flag="flags/gabon.svg" value="Gabon">Gabon</option>
+																		<option data-kt-flag="flags/gambia.svg" value="Gambia">Gambia</option>
+																		<option data-kt-flag="flags/georgia.svg" value="Georgia">Georgia</option>
+																		<option data-kt-flag="flags/germany.svg" value="Germany">Germany</option>
+																		<option data-kt-flag="flags/ghana.svg" value="Ghana">Ghana</option>
+																		<option data-kt-flag="flags/gibraltar.svg" value="Gibraltar">Gibraltar</option>
+																		<option data-kt-flag="flags/greece.svg" value="Greece">Greece</option>
+																		<option data-kt-flag="flags/greenland.svg" value="Greenland">Greenland</option>
+																		<option data-kt-flag="flags/grenada.svg" value="Grenada">Grenada</option>
+																		<option data-kt-flag="flags/guam.svg" value="Guam">Guam</option>
+																		<option data-kt-flag="flags/guatemala.svg" value="Guatemala">Guatemala</option>
+																		<option data-kt-flag="flags/guernsey.svg" value="Guernsey">Guernsey</option>
+																		<option data-kt-flag="flags/guinea.svg" value="Guinea">Guinea</option>
+																		<option data-kt-flag="flags/guinea-bissau.svg" value="Guinea-Bissau">Guinea-Bissau</option>
+																		<option data-kt-flag="flags/haiti.svg" value="Haiti">Haiti</option>
+																		<option data-kt-flag="flags/vatican-city.svg" value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+																		<option data-kt-flag="flags/honduras.svg" value="Honduras">Honduras</option>
+																		<option data-kt-flag="flags/hong-kong.svg" value="Hong Kong">Hong Kong</option>
+																		<option data-kt-flag="flags/hungary.svg" value="Hungary">Hungary</option>
+																		<option data-kt-flag="flags/iceland.svg" value="Iceland">Iceland</option>
+																		<option data-kt-flag="flags/india.svg" value="India">India</option>
+																		<option data-kt-flag="flags/indonesia.svg" value="Indonesia">Indonesia</option>
+																		<option data-kt-flag="flags/iran.svg" value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+																		<option data-kt-flag="flags/iraq.svg" value="Iraq">Iraq</option>
+																		<option data-kt-flag="flags/ireland.svg" value="Ireland">Ireland</option>
+																		<option data-kt-flag="flags/isle-of-man.svg" value="Isle of Man">Isle of Man</option>
+																		<option data-kt-flag="flags/israel.svg" value="Israel">Israel</option>
+																		<option data-kt-flag="flags/italy.svg" value="Italy">Italy</option>
+																		<option data-kt-flag="flags/jamaica.svg" value="Jamaica">Jamaica</option>
+																		<option data-kt-flag="flags/japan.svg" value="Japan">Japan</option>
+																		<option data-kt-flag="flags/jersey.svg" value="Jersey">Jersey</option>
+																		<option data-kt-flag="flags/jordan.svg" value="Jordan">Jordan</option>
+																		<option data-kt-flag="flags/kazakhstan.svg" value="Kazakhstan">Kazakhstan</option>
+																		<option data-kt-flag="flags/kenya.svg" value="Kenya">Kenya</option>
+																		<option data-kt-flag="flags/kiribati.svg" value="Kiribati">Kiribati</option>
+																		<option data-kt-flag="flags/north-korea.svg" value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+																		<option data-kt-flag="flags/kuwait.svg" value="Kuwait">Kuwait</option>
+																		<option data-kt-flag="flags/kyrgyzstan.svg" value="Kyrgyzstan">Kyrgyzstan</option>
+																		<option data-kt-flag="flags/laos.svg" value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+																		<option data-kt-flag="flags/latvia.svg" value="Latvia">Latvia</option>
+																		<option data-kt-flag="flags/lebanon.svg" value="Lebanon">Lebanon</option>
+																		<option data-kt-flag="flags/lesotho.svg" value="Lesotho">Lesotho</option>
+																		<option data-kt-flag="flags/liberia.svg" value="Liberia">Liberia</option>
+																		<option data-kt-flag="flags/libya.svg" value="Libya">Libya</option>
+																		<option data-kt-flag="flags/liechtenstein.svg" value="Liechtenstein">Liechtenstein</option>
+																		<option data-kt-flag="flags/lithuania.svg" value="Lithuania">Lithuania</option>
+																		<option data-kt-flag="flags/luxembourg.svg" value="Luxembourg">Luxembourg</option>
+																		<option data-kt-flag="flags/macao.svg" value="Macao">Macao</option>
+																		<option data-kt-flag="flags/madagascar.svg" value="Madagascar">Madagascar</option>
+																		<option data-kt-flag="flags/malawi.svg" value="Malawi">Malawi</option>
+																		<option data-kt-flag="flags/malaysia.svg" value="Malaysia">Malaysia</option>
+																		<option data-kt-flag="flags/maldives.svg" value="Maldives">Maldives</option>
+																		<option data-kt-flag="flags/mali.svg" value="Mali">Mali</option>
+																		<option data-kt-flag="flags/malta.svg" value="Malta">Malta</option>
+																		<option data-kt-flag="flags/marshall-island.svg" value="Marshall Islands">Marshall Islands</option>
+																		<option data-kt-flag="flags/martinique.svg" value="Martinique">Martinique</option>
+																		<option data-kt-flag="flags/mauritania.svg" value="Mauritania">Mauritania</option>
+																		<option data-kt-flag="flags/mauritius.svg" value="Mauritius">Mauritius</option>
+																		<option data-kt-flag="flags/mexico.svg" value="Mexico">Mexico</option>
+																		<option data-kt-flag="flags/micronesia.svg" value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+																		<option data-kt-flag="flags/moldova.svg" value="Moldova, Republic of">Moldova, Republic of</option>
+																		<option data-kt-flag="flags/monaco.svg" value="Monaco">Monaco</option>
+																		<option data-kt-flag="flags/mongolia.svg" value="Mongolia">Mongolia</option>
+																		<option data-kt-flag="flags/montenegro.svg" value="Montenegro">Montenegro</option>
+																		<option data-kt-flag="flags/montserrat.svg" value="Montserrat">Montserrat</option>
+																		<option data-kt-flag="flags/morocco.svg" value="Morocco">Morocco</option>
+																		<option data-kt-flag="flags/mozambique.svg" value="Mozambique">Mozambique</option>
+																		<option data-kt-flag="flags/myanmar.svg" value="Myanmar">Myanmar</option>
+																		<option data-kt-flag="flags/namibia.svg" value="Namibia">Namibia</option>
+																		<option data-kt-flag="flags/nauru.svg" value="Nauru">Nauru</option>
+																		<option data-kt-flag="flags/nepal.svg" value="Nepal">Nepal</option>
+																		<option data-kt-flag="flags/netherlands.svg" value="Netherlands">Netherlands</option>
+																		<option data-kt-flag="flags/new-zealand.svg" value="New Zealand">New Zealand</option>
+																		<option data-kt-flag="flags/nicaragua.svg" value="Nicaragua">Nicaragua</option>
+																		<option data-kt-flag="flags/niger.svg" value="Niger">Niger</option>
+																		<option data-kt-flag="flags/nigeria.svg" value="Nigeria">Nigeria</option>
+																		<option data-kt-flag="flags/niue.svg" value="Niue">Niue</option>
+																		<option data-kt-flag="flags/norfolk-island.svg" value="Norfolk Island">Norfolk Island</option>
+																		<option data-kt-flag="flags/northern-mariana-islands.svg" value="Northern Mariana Islands">Northern Mariana Islands</option>
+																		<option data-kt-flag="flags/norway.svg" value="Norway">Norway</option>
+																		<option data-kt-flag="flags/oman.svg" value="Oman">Oman</option>
+																		<option data-kt-flag="flags/pakistan.svg" value="Pakistan">Pakistan</option>
+																		<option data-kt-flag="flags/palau.svg" value="Palau">Palau</option>
+																		<option data-kt-flag="flags/palestine.svg" value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+																		<option data-kt-flag="flags/panama.svg" value="Panama">Panama</option>
+																		<option data-kt-flag="flags/papua-new-guinea.svg" value="Papua New Guinea">Papua New Guinea</option>
+																		<option data-kt-flag="flags/paraguay.svg" value="Paraguay">Paraguay</option>
+																		<option data-kt-flag="flags/peru.svg" value="Peru">Peru</option>
+																		<option data-kt-flag="flags/philippines.svg" value="Philippines">Philippines</option>
+																		<option data-kt-flag="flags/poland.svg" value="Poland">Poland</option>
+																		<option data-kt-flag="flags/portugal.svg" value="Portugal">Portugal</option>
+																		<option data-kt-flag="flags/puerto-rico.svg" value="Puerto Rico">Puerto Rico</option>
+																		<option data-kt-flag="flags/qatar.svg" value="Qatar">Qatar</option>
+																		<option data-kt-flag="flags/romania.svg" value="Romania">Romania</option>
+																		<option data-kt-flag="flags/russia.svg" value="Russian Federation">Russian Federation</option>
+																		<option data-kt-flag="flags/rwanda.svg" value="Rwanda">Rwanda</option>
+																		<option data-kt-flag="flags/st-barts.svg" value="Saint Barthélemy">Saint Barthélemy</option>
+																		<option data-kt-flag="flags/saint-kitts-and-nevis.svg" value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+																		<option data-kt-flag="flags/st-lucia.svg" value="Saint Lucia">Saint Lucia</option>
+																		<option data-kt-flag="flags/sint-maarten.svg" value="Saint Martin (French part)">Saint Martin (French part)</option>
+																		<option data-kt-flag="flags/st-vincent-and-the-grenadines.svg" value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+																		<option data-kt-flag="flags/samoa.svg" value="Samoa">Samoa</option>
+																		<option data-kt-flag="flags/san-marino.svg" value="San Marino">San Marino</option>
+																		<option data-kt-flag="flags/sao-tome-and-prince.svg" value="Sao Tome and Principe">Sao Tome and Principe</option>
+																		<option data-kt-flag="flags/saudi-arabia.svg" value="Saudi Arabia">Saudi Arabia</option>
+																		<option data-kt-flag="flags/senegal.svg" value="Senegal">Senegal</option>
+																		<option data-kt-flag="flags/serbia.svg" value="Serbia">Serbia</option>
+																		<option data-kt-flag="flags/seychelles.svg" value="Seychelles">Seychelles</option>
+																		<option data-kt-flag="flags/sierra-leone.svg" value="Sierra Leone">Sierra Leone</option>
+																		<option data-kt-flag="flags/singapore.svg" value="Singapore">Singapore</option>
+																		<option data-kt-flag="flags/sint-maarten.svg" value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+																		<option data-kt-flag="flags/slovakia.svg" value="Slovakia">Slovakia</option>
+																		<option data-kt-flag="flags/slovenia.svg" value="Slovenia">Slovenia</option>
+																		<option data-kt-flag="flags/solomon-islands.svg" value="Solomon Islands">Solomon Islands</option>
+																		<option data-kt-flag="flags/somalia.svg" value="Somalia">Somalia</option>
+																		<option data-kt-flag="flags/south-africa.svg" value="South Africa">South Africa</option>
+																		<option data-kt-flag="flags/south-korea.svg" value="South Korea">South Korea</option>
+																		<option data-kt-flag="flags/south-sudan.svg" value="South Sudan">South Sudan</option>
+																		<option data-kt-flag="flags/spain.svg" value="Spain">Spain</option>
+																		<option data-kt-flag="flags/sri-lanka.svg" value="Sri Lanka">Sri Lanka</option>
+																		<option data-kt-flag="flags/sudan.svg" value="Sudan">Sudan</option>
+																		<option data-kt-flag="flags/suriname.svg" value="Suriname">Suriname</option>
+																		<option data-kt-flag="flags/swaziland.svg" value="Swaziland">Swaziland</option>
+																		<option data-kt-flag="flags/sweden.svg" value="Sweden">Sweden</option>
+																		<option data-kt-flag="flags/switzerland.svg" value="Switzerland">Switzerland</option>
+																		<option data-kt-flag="flags/syria.svg" value="Syrian Arab Republic">Syrian Arab Republic</option>
+																		<option data-kt-flag="flags/taiwan.svg" value="Taiwan, Province of China">Taiwan, Province of China</option>
+																		<option data-kt-flag="flags/tajikistan.svg" value="Tajikistan">Tajikistan</option>
+																		<option data-kt-flag="flags/tanzania.svg" value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+																		<option data-kt-flag="flags/thailand.svg" value="Thailand">Thailand</option>
+																		<option data-kt-flag="flags/togo.svg" value="Togo">Togo</option>
+																		<option data-kt-flag="flags/tokelau.svg" value="Tokelau">Tokelau</option>
+																		<option data-kt-flag="flags/tonga.svg" value="Tonga">Tonga</option>
+																		<option data-kt-flag="flags/trinidad-and-tobago.svg" value="Trinidad and Tobago">Trinidad and Tobago</option>
+																		<option data-kt-flag="flags/tunisia.svg" value="Tunisia">Tunisia</option>
+																		<option data-kt-flag="flags/turkey.svg" value="Turkey">Turkey</option>
+																		<option data-kt-flag="flags/turkmenistan.svg" value="Turkmenistan">Turkmenistan</option>
+																		<option data-kt-flag="flags/turks-and-caicos.svg" value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+																		<option data-kt-flag="flags/tuvalu.svg" value="Tuvalu">Tuvalu</option>
+																		<option data-kt-flag="flags/uganda.svg" value="Uganda">Uganda</option>
+																		<option data-kt-flag="flags/ukraine.svg" value="Ukraine">Ukraine</option>
+																		<option data-kt-flag="flags/united-arab-emirates.svg" value="United Arab Emirates">United Arab Emirates</option>
+																		<option data-kt-flag="flags/united-kingdom.svg" value="United Kingdom">United Kingdom</option>
+																		<option data-kt-flag="flags/united-states.svg" value="United States">United States</option>
+																		<option data-kt-flag="flags/uruguay.svg" value="Uruguay">Uruguay</option>
+																		<option data-kt-flag="flags/uzbekistan.svg" value="Uzbekistan">Uzbekistan</option>
+																		<option data-kt-flag="flags/vanuatu.svg" value="Vanuatu">Vanuatu</option>
+																		<option data-kt-flag="flags/venezuela.svg" value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+																		<option data-kt-flag="flags/vietnam.svg" value="Vietnam">Vietnam</option>
+																		<option data-kt-flag="flags/virgin-islands.svg" value="Virgin Islands">Virgin Islands</option>
+																		<option data-kt-flag="flags/yemen.svg" value="Yemen">Yemen</option>
+																		<option data-kt-flag="flags/zambia.svg" value="Zambia">Zambia</option>
+																		<option data-kt-flag="flags/zimbabwe.svg" value="Zimbabwe">Zimbabwe</option>
+															</select>
+	
+														 
+																	  
+																   </select>
+														 </div>
+														  </div>
+                                                    <!--begin::Input group-->
+                                                    <div class="col-lg-6">
+                                                        <!--begin::Label-->
+                                                        
+                                                    </div>
+                                                    <!--end::Input group-->
+                                                </div>
+									
+												<div class="row mb-10"> 
+													
+													<label class="col-lg-4 col-form-label required fw-semibold fs-6">Post Description
+														<a href="#" class="btn btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target1628">View Casting Call Dummy</a>
+													</label>
+													
+													<!--end::Label-->
+													<!--begin::Col-->
+													<div class="col-lg-12 fv-row">
+														<textarea type="text" name="postdes" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" id="textInput1" placeholder="Post Description" value="" required></textarea>
+														<p id="errorMessage1" style="color: red; display: none;">Emojis are not allowed!</p>
+													</div>
+													<!--end::Col-->
+                                                     
+												</div>
+													
+
+
+                                                    <div class="row mb-6">
+                                                        <!--begin::Label-->
+                                                        <label class="col-lg-8 col-form-label fw-semibold fs-6">
+                                                            <span class="required">Questions</span>
+                                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Click on Add Button"></i>
+                                                        </label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Col-->
+                                                        <div class="col-lg-22 fv-row mb-2">
+                                                            <div id="req_input" class="datainputs">
+                                                                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 " name="fname" placeholder="Question" type="text" required></textarea>
+                                                                <textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0 " name="lname" placeholder="Description" type="text" required></textarea>
+                                                            </div>
+                                                           
+                                                            <a href="javascript:void(0)" id="addmore" class="btn btn-sm fw-bold btn-primary mt-5">Add more</a>
+                                                            <!-- <button type="submit" class="btn btn-primary add_input" id="kt_account_profile_details_submit">Save Changes</button> -->
+                                                        </div>
+                                                        <!--end::Col-->
+                                                    </div>
+                                                    <!--end::Input group-->
+                                                
+
+                                                </div>
+                                                <!--end::Card body-->
+                                                <!--begin::Actions-->
+                                                <div class="card-footer d-flex justify-content-end py-6 px-9">                                  
+                                                    <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Save Changes</button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            </form>
+                                            <!--end::Form-->
+                                        </div>
+                                        <!--end::Content-->
+                                    </div>
+                        </div>
+                    </div>
+                 
+                </div>
+                 
+            </div>
+         
+        </div>
+		
+     
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#addmore").click(function() {
+                $("#req_input").append('<div id="req_input" class="datainputs"><textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" name="fname" placeholder="Question" type="text"></textarea><textarea class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" name="lname" placeholder="Discription" type="text"></textarea></div>');
+                });
+                $('body').on('click','.inputRemove',function() {
+                $(this).parent('div.required_inp').remove()
+                });
+            });
+        </script>  
+
+        <!--begin::Chat drawer-->
+		<div id="kt_drawer_chat" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle" data-kt-drawer-close="#kt_drawer_chat_close">
+			<!--begin::Messenger-->
+			<div class="card w-100 rounded-0 border-0" id="kt_drawer_chat_messenger">
+				<!--begin::Card header-->
+				<div class="card-header pe-5" id="kt_drawer_chat_messenger_header">
+					<!--begin::Title-->
+					<div class="card-title">
+						<!--begin::User-->
+						<div class="d-flex align-items-center mb-2">
+							<!--begin::Avatar-->
+							<div class="symbol symbol-35px symbol-circle">
+								<img alt="rmpic" src="/media/{{image}}/">
+							</div>
+							<!--end::Avatar-->
+							<!--begin::Details-->
+							<div class="ms-3">
+								<a id="RMuserName" href="#" class="fs-4 fw-bold text-gray-900 text-hover-danger me-1 mb-2 lh-1">RM</a>
+								<span class="badge badge-light-primary">Relationship Manager</span>
+							</div>
+							<!--end::Details-->
+						</div>
+						<!--end::User-->
+					</div>
+					<!--end::Title-->
+					<!--begin::Card toolbar-->
+					<div class="card-toolbar">
+						<!--begin::Close-->
+						<div class="btn btn-sm btn-icon btn-active-light-primary" id="kt_drawer_chat_close">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+							<span class="svg-icon svg-icon-2">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Close-->
+					</div>
+					<!--end::Card toolbar-->
+				</div>
+				<!--end::Card header-->
+				<!--begin::Card body-->
+				<div class="card-body">
+					<!--begin::Messages-->
+					<div id="kt_drawer_chat_messenger_body" class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer" data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">
+						
+					</div>
+					<!--end::Messages-->
+				</div>
+				<!--end::Card body-->
+				<!--begin::Card footer-->
+				<div class="card-footer pt-4" id="kt_drawer_chat_messenger_footer">
+					<!--begin:Toolbar-->
+					<div class="d-flex flex-stack">
+						<!--begin::Actions-->
+						<div class="d-flex align-items-center me-2">
+              <input id="fileUploaderInput" type="file" hidden/>
+							<button id="fileUploader" class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Select File to upload...">
+								<i class="bi bi-paperclip fs-3"></i>
+							</button>
+						</div>
+						<!--end::Actions-->
+            <!--begin::Input-->
+            <textarea id="input_textarea" class="form-control form-control-flush mb-3 me-3" rows="1" data-kt-element="input" placeholder="Type a message"></textarea>
+            <!--end::Input-->
+						<!--begin::Send-->
+						<button id="kuchbhi" class="btn btn-primary" type="button" data-kt-element="send">Send</button>
+						<!--end::Send-->
+					</div>
+					<!--end::Toolbar-->
+          <div id="fileprogresscontainer" class="w-100 position-relative"> 
+						<!--<div id="fileprogressbar" class="progress my-5">
+						<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 50%" aria-valuenow="${precent}" aria-valuemin="0" aria-valuemax="100">${precent}%</div>
+						<a href="javascript:void(0);" class="delete_btn text-hover-primary p-0">x</a>
+						</div>-->
+					</div>
+				</div>
+				<!--end::Card footer-->
+			</div>
+			<!--end::Messenger-->
+		</div>
+		<!--end::Chat drawer-->
+
+
+<script>
+
+	const inputField = document.getElementById('textInput');
+	const errorMessage = document.getElementById('errorMessage');
+	var button = document.getElementById('kt_account_profile_details_submit');
+
+	
+	inputField.addEventListener('input', function() {
+	  const userInput = inputField.value;
+	  const hasEmoji = containsEmoji(userInput);
+	  
+	  if (hasEmoji) {
+		errorMessage.style.display = 'block';
+		//
+		if (button) {
+			button.style.display = 'none';
+		}
+
+	
+			
+
+
+
+		
+	  } else {
+		errorMessage.style.display = 'none';
+		button.style.display = '';
+	  }
+	});
+
+
+
+
+	const inputField1 = document.getElementById('textInput1');
+	const errorMessage1 = document.getElementById('errorMessage1');
+
+	inputField1.addEventListener('input', function() {
+		const userInput1 = inputField1.value;
+		const hasEmoji1 = containsEmoji(userInput1);
+		 
+		
+		if (hasEmoji1) {
+		  errorMessage1.style.display = 'block';
+		  //
+		  if (button) {
+			  button.style.display = 'none';
+		  }
+  
+	  
+			  
+  
+  
+  
+		  
+		} else {
+		  errorMessage1.style.display = 'none';
+		  button.style.display = '';
+		}
+	  });
+
+	
+	function containsEmoji(text) {
+	  // Regular expression to match emojis
+	  const emojiPattern = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
+	  return emojiPattern.test(text);
+	}
+	
+	</script>
+
+<script>
+
+var usernameinputcreater = document.getElementById("titleInput");
+// var tooltipSpan = document.querySelector('.tooltiptext');
+
+usernameinputcreater.addEventListener("keypress", function(event) {
+  
+  let username = this.value + event.key; // The username if this key is allowed
+
+    let key = event.key; // The key that was pressed
+
+	 // Define a regular expression for special characters you want to catch
+	 const specialCharPattern = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+    // Rule for special characters: Prevent them
+    if (specialCharPattern.test(username)) {
+      alert('Post Title should not contain spacial characters.')
+        event.preventDefault();
+        return;
+    }
+	
+	 // Regular expression to find double spaces
+	 const doubleSpacePattern = /  /;
+
+	if (doubleSpacePattern.test(username)) {
+      alert('Post Title should not contain double spaces.')
+      //tooltipSpan.textContent = 'Username should not contain spaces.';
+      
+        event.preventDefault();
+        return;
+    }
+    
+});
+
+// Prevent pasting into the input field
+usernameinputcreater.addEventListener("paste", function(event) {
+  alert('please type Post Title manually.')
+    event.preventDefault();
+});
+
+</script>
+<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('postdes');
+
+function getImageDimensions() {
+var fileInput = document.getElementById('iamge');
+var file = fileInput.files[0];
+var imageType = /image.*/;
+
+if (file.type.match(imageType)) {
+	var reader = new FileReader();
+
+	reader.onload = function(e) {
+		var img = new Image();
+
+		img.onload = function() {
+			var width = img.width;
+			var height = img.height;
+
+			console.log("Width: " + width + ", Height: " + height);
+			if (width !== 32 || height !== 32) {
+				fileInput.value = "";
+				alert('InfluencerHiring.com recommends that the file should have dimensions of 32x32 pixels.')
+			}
+		};
+
+		img.src = reader.result;
+	};
+
+	reader.readAsDataURL(file);
+} else {
+	console.log('File not supported');
+}
+}
+
+function getImageDimensions1() {
+var fileInput = document.getElementById('iamge1');
+var file = fileInput.files[0];
+var imageType = /image.*/;
+
+if (file.type.match(imageType)) {
+	var reader = new FileReader();
+
+	reader.onload = function(e) {
+		var img = new Image();
+
+		img.onload = function() {
+			var width = img.width;
+			var height = img.height;
+
+			console.log("Width: " + width + ", Height: " + height);
+			if (width!==1920 || height !== 450) {
+				fileInput.value = "";
+				alert('InfluencerHiring.com recommends that the file should have dimensions of 1920x450 pixels.')
+			}
+		};
+
+		img.src = reader.result;
+	};
+
+	reader.readAsDataURL(file);
+} else {
+	console.log('File not supported');
+}
+}
+
+function getImageDimensions2() {
+var fileInput = document.getElementById('iamge2');
+var file = fileInput.files[0];
+var imageType = /image.*/;
+
+if (file.type.match(imageType)) {
+	var reader = new FileReader();
+
+	reader.onload = function(e) {
+		var img = new Image();
+
+		img.onload = function() {
+			var width = img.width;
+			var height = img.height;
+
+			console.log("Width: " + width + ", Height: " + height);
+			if (width!==365 || height !== 382) {
+				fileInput.value = "";
+				alert('InfluencerHiring.com recommends that the file should have dimensions of 365x382 pixels.')
+			}
+		};
+
+		img.src = reader.result;
+	};
+
+	reader.readAsDataURL(file);
+} else {
+	console.log('File not supported');
+}
+}
+</script>
+
+<div class="modal fade" id="kt_modal_new_target1628" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered mw-900px">
+	   <div class="modal-content rounded">
+		  <div class="modal-header pb-0 border-0 justify-content-end">
+			 <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+				<span class="svg-icon svg-icon-1">
+				   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					  <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+					  <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+				   </svg>
+				</span>
+			 </div>
+		  </div>
+		  <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+			 <form id="kt_modal_new_target_form" class="form" action="" method="post">
+				{% csrf_token %}
+				<div class="mb-13 text-center">
+				   <h1 class="mb-3">Casting Call Dummy</h1>
+				   <div class="fs-5 fw-semibold mb-2" style="color: #009ef7;">You can also set up your casting call with the help of this dummy casting call..!</div>
+				</div>
+				<div id="contentToCopy">
+				<div>
+					<h2><span style="font-size: 20px;">Influencer Casting Call: Boost Your Influencer Career with InfluencerHiring.com!</span></h2>
+					<h3><span style="font-size: 16px;">Are You an Influencer Looking for the Next Big Opportunity?</span><strong><br></strong></h3>
+					<p style="text-align: justify;">No matter your niche - Whether you&apos;re into fashion, fitness, food, or anything in between, we invite you to collaborate with us to promote InfluencerHiring.com, your one-stop platform for connecting creators with brands!</p>
+					<p><br></p>
+					<h3><strong><span style="font-size: 16px;">Perks &amp; Rewards</span></strong></h3>
+					<p>&bull; Points &amp; Top Ratings: Be featured as a top-rated influencer on our platform.</p>
+					<p>&nbsp;&bull; Zero Commission: Enjoy zero commission fees on your first 10 brand deals through InfluencerHiring.com.</p>
+					<p>&nbsp;&bull; Network: Gain exposure to a broad spectrum of brands looking for partnerships.</p>
+					<p><br></p>
+					<h3><strong><span style="font-size: 16px;">Requirements:</span></strong></h3>
+					<p>1.Create a Video:</p>
+					<p>&bull; Objective:<strong>&nbsp;</strong>Showcase how InfluencerHiring.com helps you connect with brands and monetize your content.</p>
+					<p>&bull; Must Include:<strong>&nbsp;</strong>A walk-through of our platform, highlighting features you find most useful.</p>
+					<p>&nbsp;&bull; Make it engaging and authentic to your style!</p>
+					<p><br></p>
+					<p><strong>2.Design a Cover Photo:</strong>&nbsp;</p>
+					<p>&bull; Objective: Grab your audience&apos;s attention.&nbsp;</p>
+					<p>&bull; Must Include: The InfluencerHiring.com logo and a catchy headline.</p>
+					<p><br></p>
+					<p><strong>3.Promotion:&nbsp;</strong></p>
+					<p>&bull; In your video caption and verbal call-to-action, direct your followers to visit InfluencerHiring.com.</p>
+					<p><br></p>
+					<h3><strong><span style="font-size: 16px;">Creative Guidelines</span></strong></h3>
+					<p>&bull; Please keep your content authentic and true to your style.</p>
+					<p>&nbsp;&bull; No profanity, controversial topics or negative tone.</p>
+					<p>&nbsp;&bull; High-resolution images and videos only.</p>
+					<p><br></p>
+					<h3><strong><span style="font-size: 16px;">How to Participate:</span></strong></h3>
+					<p>1.Apply: Head over to InfluencerHiring.com to apply for the campaign.</p>
+					<p>2.Create: Once selected, you will receive further details on content creation and deadlines.</p>
+					<p>3.Promote: Upload your video and cover photo on your social media and tag us @InfluencerHiring (or your specific handle).</p>
+					<p>Don&apos;t Miss Out on This Game-Changing Opportunity!</p>
+					<p>To join the campaign, apply today at InfluencerHiring.com!</p>
+					<p>We&apos;re excited to see the amazing content you create! If you have any questions, feel free to reach out with chat</p>
+					<p>Best regards, The InfluencerHiring.com Team</p>
+				</div>
+			    </div>
+				
+				
+				
+			 </form>
+			 <div class="d-flex justify-content-end">
+			 <button class="btn btn-sm btn-primary" onclick="copyContent()"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy Content</button>
+			 </div>
+		  </div>
+	   </div>
+	</div>
+ </div>
+
+ <script>
+	function copyContent() {
+		// Get the content to copy
+		var contentToCopy = document.querySelector("#contentToCopy");
+
+		// Create a range to select the content
+		var range = document.createRange();
+		range.selectNode(contentToCopy);
+
+		// Create a selection to hold the range
+		var selection = window.getSelection();
+		selection.removeAllRanges();
+		selection.addRange(range);
+
+		// Copy the selected content to the clipboard
+		document.execCommand("copy");
+
+		// Deselect the content
+		selection.removeAllRanges();
+
+		// Provide user feedback (optional)
+		alert("Content copied to clipboard!");
+	}
+</script>
+
+   
+{%endblock%}

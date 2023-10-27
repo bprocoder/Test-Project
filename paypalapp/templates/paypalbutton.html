@@ -1,0 +1,15 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paypal Test</title>
+    </head>
+    <body>
+        {{ form.render }}
+        <script>
+            // Trigger form submission on page load
+            window.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').submit();
+            });
+        </script>
+    </body>
+    </html>

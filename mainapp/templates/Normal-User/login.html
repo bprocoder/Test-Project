@@ -1,0 +1,435 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="yandex-verification" content="48b8e8a2024a6e63" />
+{% for i in Seo1 %}
+{% if i.page.pagename == 'Login'%}
+<title>{{i.title}}</title>
+<meta name="title" content="{{i.title}}">
+<meta name="description" content="{{i.description}}">
+<meta name="keywords" content="{{i.keyword}}">
+{% endif %}
+{%endfor%}
+
+{% block canonical%}
+<link rel="canonical" href="{{base_url}}">
+{%endblock%}
+
+<meta name="robots" content="{{Seo.0.robot}}">
+<meta name="google-site-verification" content="{{Seo.0.google_site_verification}}">
+<meta name="twitter:card" content="{{Seo.0.twitter_card}}">
+<meta name="twitter:site" content="{{Seo.0.twitter_site}}">
+<meta name="twitter:creator" content="{{Seo.0.twitter_creator}}">
+<meta name="twitter:title" content="{{Seo.0.twitter_title}}">
+<meta name="twitter:image" content="{{Seo.0.twitter_image_url}}">
+<meta name="twitter:image:alt" content="{{Seo.0.twitter_image_alt}}">
+<meta name="twitter:player" content="{{Seo.0.twitter_player}}">
+<meta name="twitter:player:width" content="{{Seo.0.twitter_player_width}}">
+<meta name="twitter:player:height" content="{{Seo.0.twitter_player_height}}">
+<meta name="fb:app_id" content="{{Seo.0.fb_app_id}}">
+<meta property="og:title" content="{{Seo.0.og_title}}">
+<meta property="og:url" content="{{Seo.0.og_url}}">
+<meta property="og:image" content="{{Seo.0.og_img_url}}">
+<meta property="og:image:type" content="{{Seo.0.og_img_type}}">
+<meta property="og:image:width" content="{{Seo.0.og_img_width}}">
+<meta property="og:image:height" content="{{Seo.0.og_img_height}}">
+<meta property="og:type" content="{{Seo.0.og_type}}">
+<meta property="og:locale" content="{{Seo.0.og_locale}}">
+<meta name="og:image:url" content="{{Seo.0.og_image_url}}">
+<meta name="og:image:secure_url" content="{{Seo.0.og_img_secure_url}}">
+<meta name="og:site_name" content="{{Seo.0.og_site_name}}">
+<meta name="og:see_also" content="{{Seo.0.og_see_also}}">
+<meta name="article:author" content="{{Seo.0.aticle_author}}">
+<meta name="format-detection" content="{{Seo.0.format_detecation}}">
+<link rel="shortcut icon" type="image/x-icon" href="{%static 'images/logoIcon/favicon.ico'%}">
+<link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+<!-- <link rel="stylesheet" href="{%static 'css/all.min.css'%}"> -->
+<link rel="stylesheet" href="{%static 'css/line-awesome.min.css'%}">
+<link rel="stylesheet" href="{%static 'css/lib/animate.css'%}">
+
+<!-- Plugin Link -->
+<link rel="stylesheet" href="{%static 'css/lib/slick.css'%}">
+<link rel="stylesheet" href="{%static 'css/lib/magnific-popup.css'%}">
+<!-- Main css -->
+<link rel="stylesheet" href="{%static 'css/main.css'%}">
+<link rel="stylesheet" href="{%static 'css/login.css'%}">
+<link rel="stylesheet" href="{%static 'css/custom.css'%}">
+<link rel="stylesheet" href="{%static 'css/colore31b.css'%}">
+<link rel="stylesheet" href="{%static 'css/services.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+<link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+</head>
+
+<body>
+
+<progress value="0"></progress>
+<!-- Overlay -->
+<div class="overlay"></div>
+
+<button type="button" class="btn btn-primary Add2Cart_btn" data-bs-toggle="modal" data-bs-target="#exampleModal_language">
+  <i class="fas fa-language"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal fade main_add2Cart" id="exampleModal_language" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="close_btn">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body add2Cart_body">
+        <div id="translate"></div>
+      </div>
+  
+
+    </div>
+  </div>
+</div>
+
+<a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+<div class="header dash-header">
+  <div class="header-bottom">
+    <div class="container">
+      <div class="header-bottom-area align-items-center">
+        <div class="logo"><a href="/"><img src="{%static 'assets/images/logoIcon/logo.webp'%}" alt="influencerhiring.com_logo"></a></div>
+        <ul class="menu">
+          <li class="d-lg-none p-0 border-0 header-close "> <span class="fs--20px text-white"><i class="las la-times"></i></span> </li>
+          <li> <a href="/" class="">Home</a> </li>
+          <li> <a href="/influencers/" class="">Explore</a> </li>
+          <li> <a href="/blogs/" class="">Blogs</a> </li>
+          <li> <a href="/webstories/">Web-Stories</a> </li>
+          <li> <a href="/casting-call/">Casting Call</a> </li>
+          <li> <a href="/whitepaper/" class="">White Paper</a> </li>
+          <li class="d-lg-none"> <a href="/login/" class="btn btn-md btn--base">Login</a> </li>
+          <li class="d-lg-none"> <a href="/register/" class="btn btn-md btn--base">Register</a> </li>
+        </ul>
+        <div class="header-trigger-wrapper d-flex align-items-center">
+          <div class="button-wrapper d-flex align-items-center flex-wrap" style="gap:8px 15px">
+            <ul class="d-flex align-items-center flex-wrap" style="gap:8px 15px">
+              <li class="me-0">
+                {%if request.user.is_authenticated%}
+                <a href="/logout/" class="login-btn btn btn--md btn--outline-base d-none d-sm-grid text-white">Logout</a>
+                {%else%} 
+                <a href="/login/" class="login-btn btn btn--md btn--outline-base d-none d-sm-grid text-white">Login</a> 
+                {%endif%}
+                </li>
+              <li class="me-0"> <a href="/register/" class="login-btn btn btn--md btn--outline-base d-none d-sm-grid text-white">Register</a> </li>
+            </ul>
+            <div id="google_translate_element"></div>
+          </div>
+          <div class="header-trigger d-lg-none"> <span></span> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="login-section pt-80 pb-80">
+  <div class="container">
+    <div class="account-wrapper">
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <div class="account-thumb-wrapper"> <img src="/media/{{ban.0.Loginimage}}" alt="image" class="Loginimage img-fluid"> </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="account-content">
+            <div class="d-flex justify-content-between flex-wrap gap-3 pb-5">
+              <div class="account-content-left">
+                <h1 style="margin-top: 20px; margin-bottom:-30px;" class="section-header__title">Login <span>Here !</span></h1>
+              </div>
+            </div>
+            {% for message in messages %}
+                {% if messages %}
+                <div class="alert alert-{{message.tags}}" role="alert">
+                  <strong>{{message}}</strong>
+                  </div>
+                {%endif%}
+                {%endfor%}
+
+            <form accept="#" method="POST">
+              
+              {% csrf_token %}
+              {% comment %} <input type="hidden" name="_token" value="PchRRgyJ0vxTpHa6z8M5eGIhXw52cWLUVQt5zXNp"> {% endcomment %}
+              <div class="form-group">
+                <label class="form-label">Username or Email </label>
+                <input type="text" name="username" value="" class="form-control form--control" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label for="password" class="form-label">Password </label>
+                <input type="password" name="password" id="password" class="form-control form--control" required autocomplete="off">
+              </div>
+              <div class="mb-3">
+                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <div class="g-recaptcha" data-sitekey="6LdWu9YiAAAAAH2hGK-j7Psucc7gTwwAYzh4dkjA" data-callback="verifyCaptcha"></div>
+                <div id="g-recaptcha-error"></div>
+              </div>
+              <div class="d-flex justify-content-between flex-wrap">
+                <div class="form-group custom--checkbox">
+                </div>
+                <a class="dark_color forgot-url" href="/reset/">Forgot Password?</a> </div>
+              <button type="submit" id="recaptcha" class="btn btn--base w-100">Submit</button>
+            </form>
+                    <div class="text-center">
+              <p class="mt-4">Don't have an account? <a href="/register/" class="dark_color register-url">Create an account</a> </p>
+              <div class="or-seperator"><i>or</i></div>
+    <p class="text-center">Login with your social media account</p>
+    <div class="text-center social-btn">
+        <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-secondary"><i class="fab fa-facebook-f"></i>&nbsp; Facebook</a>
+        <a href="https://wa.me/message/UIAC7TQWUH6SH1" target="_blank" class="btn btn-infor"><i class="fab fa-whatsapp"></i>&nbsp; Whatsapp</a>
+        <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-danger"><i class="fab fa-google"></i>&nbsp; Google</a>
+    </div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg--accent footer pt-80">
+  <div class="container">
+    <div class="row gy-4 justify-content-between">
+      <div class="col-lg-3 col-sm-6 col-md-5">
+        <div class="footer-widget"> <a class="logo mb-4" href="/"><img src="{%static 'assets/images/logoIcon/logo.webp'%}" alt="influencerhiring.com_logo"></a>
+          <p>{{footer.0.Footer_Quotes}}</p>
+          <ul class="social-links d-flex mt-4 flex-wrap gap-3">
+            <li> <a href="{{footer.0.FacebookLink}}" target="_blank"> <i class="fab fa-facebook-f"></i> </a> </li>
+            <li> <a href="{{footer.0.TwitterLink}}" target="_blank"> <i class="fab fa-twitter"></i> </a> </li>
+            <li> <a href="{{footer.0.InstagramLink}}" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+            <li> <a href="{{footer.0.LinkedinLink}}" target="_blank"> <i class="fab fa-linkedin-in"></i> </a> </li>
+            <li> <a href="{{footer.0.WhatsappLink}}" target="_blank"> <i class="fab fa-whatsapp"></i> </a> </li>
+            <li> <a href="{{footer.0.YoutubeLink}}" target="_blank"> <i class="fab fa-youtube"></i> </a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-5">
+        <div class="footer-widget">
+          <h5 class="footer-widget__title mb-sm-3 mb-2 pb-1">Quick Links</h5>
+          <ul class="footer-links">
+            <li> <i class="fas fa-chevron-right"></i> <a href="/influencers/" class="" target="_blank">Explore</a> </li>
+            <li><i class="fas fa-chevron-right"></i> <a href="/career/" class="" target="_blank">Career</a></li>
+            <li> <i class="fas fa-chevron-right"></i> <a href="/about/" class="" target="_blank">About Us</a> </li>
+            <li><i class="fas fa-chevron-right"></i> <a href="/faq/" class="" target="_blank">FAQ</a></li>
+            <li><i class="fas fa-chevron-right"></i> <a href="/whitepaper/" target="_blank"> White Paper </a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-5">
+        <div class="footer-widget">
+          <h5 class="footer-widget__title mb-sm-3 mb-2 pb-1">Usefull Links</h5>
+          <ul class="footer-links">
+            <li><i class="fas fa-chevron-right"></i> <a href="/privacy-policy/" target="_blank"> Privacy Policy </a> </li>
+            <li><i class="fas fa-chevron-right"></i> <a href="/terms-of-service/" target="_blank"> Terms of Service </a> </li>
+            <li><i class="fas fa-chevron-right"></i> <a href="/refund-policy/" target="_blank"> Refund Policy </a> </li>
+            <li><i class="fas fa-chevron-right"></i> <a href="/affilate-marketing-for-brand/" target="_blank">Affilate Marketing for Brand</a> </li>
+				<li><i class="fas fa-chevron-right"></i> <a href="/affilate-marketing-for-influencer/" target="_blank">Affilate Marketing for Influencer</a> </li>
+          </ul>
+        </div>
+      </div>
+     
+      <div class="col-lg-3 col-sm-6 col-md-5">
+        <div class="footer-widget">
+          <div class="footer-widget__title text--base mb-sm-4 mb-2 pb-1">Contacts Info</div>
+          <ul class="footer-links">
+            <li> <a href="/contact/" class="" target="_blank">Contact</a> </li>
+            <li><a href="mailto:{{footer.0.Emailid}}" target="_blank"><i class="far fa-envelope-open"></i> <span class="__cf_email__">{{footer.0.Emailid}}</span></a></li>
+            <li><a href="tel:+1 719-111-2222" target="_blank"><i class="fas fa-phone-alt"></i> {{footer.0.Phone1}}</a></li>
+            <li><a href="tel:+1 719-111-2222" target="_blank"><i class="fas fa-phone-alt"></i> {{footer.0.Phone2}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="text-center border-top my-4 flex-wrap pt-4 Copyright"> Copyright &copy; 2022. All Rights Reserved </p>
+  </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script src="{%static 'js/jquery-3.6.0.min.js'%}"></script> 
+<script src="{%static 'js/bootstrap.bundle.min.js'%}"></script> 
+ 
+<link rel="stylesheet" href="{%static 'css/iziToast.min.css'%}">
+<script src="{%static 'js/iziToast.min.js'%}"></script> 
+ 
+
+<!-- Pluglin Link --> 
+<script src="{%static 'js/lib/slick.min.js'%}"></script> 
+<script src="{%static 'js/lib/magnific-popup.min.js'%}"></script> 
+<script>
+        "use strict";
+        (function($) { 
+            $('.actionBtn').on('click', function() {
+                let action;
+                let loginUrl;
+                let pageTitle;
+
+                if ($(this).data('type') == 'client') {
+                    action = `/client/register`;
+                    loginUrl = `/client/login`;
+                    pageTitle = `Register as Client`;
+                } else {
+                    action = `/influencer/register`;
+                    loginUrl = `/influencer/login`;
+                    pageTitle = `Register as Influencer`;
+                }
+                $('form')[0].action = action;
+
+                $(this).addClass('active');
+                $('.login-url').attr('href', loginUrl);
+                $('.this-page-title').text(pageTitle);
+                $('.actionBtn').not($(this)).removeClass('active');
+            });
+
+        })(jQuery);
+    </script>
+<!-- Main js -->   
+<script src="{%static 'js/main.js'%}"></script> 
+<script>
+  
+        (function($) {
+            
+            $('.showFilterBtn').on('click', function() {
+                $('.responsive-filter-card').slideToggle();
+            });
+
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+
+            // Sticky Menu
+            let logo = '{%static 'images/logoIcon/logo.webp'%}';
+            let logoDark = '{%static 'images/logoIcon/logo.webp'%}';
+            window.addEventListener("scroll", function () {
+                var header = document.querySelector(".header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+
+                if($('.header').hasClass('dash-header')){
+                    $('.header .logo img').attr('src',logoDark);
+                }else{
+
+                    if($('.header').hasClass('sticky')){
+                        $('.header .logo img').attr('src',logoDark)
+                    }else{
+                        $('.header .logo img').attr('src',logo);
+                    }
+                }
+            });
+
+        })(jQuery);
+    </script> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script>
+      var Cookie = {
+      set: function (name, value, days) {
+        var domain, domainParts, date, expires, host;
+    
+        if (days) {
+          date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toGMTString();
+        } else {
+          expires = "";
+        }
+    
+        host = location.host;
+        if (host.split(".").length === 1) {
+          // no "." in a domain - it's localhost or something similar
+          document.cookie = name + "=" + value + expires + "; path=/";
+        } else {
+          
+          domainParts = host.split(".");
+          domainParts.shift();
+          domain = "." + domainParts.join(".");
+    
+          document.cookie =
+            name + "=" + value + expires + "; path=/; domain=" + domain;
+    
+          
+          if (Cookie.get(name) == null || Cookie.get(name) != value) {
+            // append "." to current domain
+            domain = "." + host;
+            document.cookie =
+              name + "=" + value + expires + "; path=/; domain=" + domain;
+          }
+        }
+      },
+    
+      get: function (name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1, c.length);
+          }
+    
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      },
+    
+      erase: function (name) {
+        Cookie.set(name, "", -1);
+      }
+    };
+    
+    function googleTranslateElementInit() {
+      let url = new URL(window.location);
+      let lang = url.searchParams.get("lang");
+      if (lang) {
+        console.log(lang);
+        Cookies.set("googtrans", `/en/${lang}`, { path: "" });
+        Cookie.set("googtrans", `/en/${lang}`);
+        Cookies.set("googtrans", `/en/${lang}`, { path: "", domain: location.host });
+      } else {
+        Cookie.erase("googtrans");
+        Cookies.remove("googtrans", { path: "" });
+      }
+      new google.translate.TranslateElement({ pageLanguage: "en" }, "translate");
+      // add event listener to change url param on language selection change
+      let langSelector = document.querySelector(".goog-te-combo");
+      langSelector.addEventListener("change", function () {
+        let lang = langSelector.value;
+        var newurl =
+          window.location.protocol +
+          "//" +
+          window.location.host +
+          window.location.pathname +
+          "?lang=" +
+          lang;
+        window.history.pushState({ path: newurl }, "", newurl);
+      });
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      (function () {
+        Cookie.erase("googtrans");
+        var googleTranslateScript = document.createElement("script");
+        googleTranslateScript.type = "text/javascript";
+        googleTranslateScript.async = true;
+        googleTranslateScript.src =
+          "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(googleTranslateScript);
+      })();
+    });
+    
+    </script>
+
+
+</body> 
+</head>
+</html>
+
+
+ 

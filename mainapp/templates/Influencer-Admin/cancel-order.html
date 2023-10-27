@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>User Dashboard</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <link rel="shortcut icon" href="{%static 'assets1/images/favicon.ico'%}">
+
+        <link rel="stylesheet" href="{%static 'plugins/morris/morris.css'%}">
+
+        <link href="{%static 'assets1/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+        <link href="{%static 'assets1/css/metismenu.min.css'%}" rel="stylesheet" type="text/css">
+        <link href="{%static 'assets1/css/icons.css'%}" rel="stylesheet" type="text/css">
+        <link href="{%static 'assets1/css/style.css'%}" rel="stylesheet" type="text/css">
+        
+        <link href="{%static 'plugins/datatables/dataTables.bootstrap4.min.css'%}" rel="stylesheet" type="text/css" />
+        <link href="{%static 'plugins/datatables/buttons.bootstrap4.min.css'%}" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="{%static 'plugins/datatables/responsive.bootstrap4.min.css'%}" rel="stylesheet" type="text/css" />
+ 
+        
+        
+    </head>
+
+    <body>
+ 
+ <div id="wrapper">  
+  <div class="topbar"> 
+   <div class="topbar-left">
+   <a href="/index1/" class="logo">
+    <span><img src="{%static 'assets1/images/logo-light.png'%}" alt="" height="60"></span>
+     <i><img src="{%static 'assets1/images/logo-sm.png'%}" alt="" height="42"></i>
+      </a></div>
+
+      <nav class="navbar-custom">
+       <ul class="navbar-right d-flex list-inline float-right mb-0">
+        <li class="dropdown notification-list d-none d-sm-block">
+         <form role="search" class="app-search">
+          <div class="form-group mb-0"> 
+          <input type="text" class="form-control" placeholder="Search..">
+           <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+             </form> 
+              </li>
+
+<li class="dropdown notification-list">
+<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+         
+<i class="ti-bell noti-icon"></i><span class="badge badge-pill badge-danger noti-icon-badge">3</span></a>
+ <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+
+ <h6 class="dropdown-item-text">Notifications (258)</h6>
+  <div class="slimscroll notification-item-list">
+
+ <a href="javascript:void(0);" class="dropdown-item notify-item active">
+ <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+  <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+   </a>
+ 
+ <a href="javascript:void(0);" class="dropdown-item notify-item">
+  <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
+   <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span></p></a>
+ 
+ <a href="javascript:void(0);" class="dropdown-item notify-item">
+ <div class="notify-icon bg-info"><i class="mdi mdi-martini"></i></div>
+  <p class="notify-details">Your item is shipped<span class="text-muted">It is a long established fact that a reader will</span></p></a>
+                                   
+ <a href="javascript:void(0);" class="dropdown-item notify-item">
+  <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
+  <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+   </a>
+
+ <a href="javascript:void(0);" class="dropdown-item notify-item">
+  <div class="notify-icon bg-danger"><i class="mdi mdi-message"></i></div>
+   <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span></p></a>
+    </div>
+                                
+ <a href="javascript:void(0);" class="dropdown-item text-center text-primary">View all <i class="fi-arrow-right"></i></a>
+ </div>   
+ </li>
+
+		   <li class="dropdown notification-list">
+                            <div class="dropdown notification-list nav-pro-img">
+                                <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="{%static 'assets1/images/users/user-4.jpg'%}" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                    <a class="dropdown-item" href="/profile/"><i class="mdi mdi-account-circle m-r-5"></i> Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a>
+                                    <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings m-r-5"></i> Settings</a>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock screen</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="/login/"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                                </div>                                                                    
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left waves-effect">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                        </li>
+                         
+                    </ul>
+
+                </nav>
+
+            </div>
+            <!-- Top Bar End -->
+
+<!-- ========== Left Sidebar Start ========== -->
+            
+ <div class="left side-menu">
+  <div class="slimscroll-menu" id="remove-scroll"> 
+   <div id="sidebar-menu">
+    <ul class="metismenu" id="side-menu"> 
+     <li><a href="/index1/" class="waves-effect">
+      <i class="mdi mdi-view-dashboard"></i><span class="badge badge-primary badge-pill float-right">2</span><span>Dashboard</span>
+       </a></li>        
+        
+    <li><a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-email-outline"></i><span>Our Business<span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+       <ul class="submenu"> 
+         <li><a href="/current-order/">Orders </a></li>
+         <li><a href="/buyer-requests/">Buyer Requests</a></li>
+         <li><a href="/earnings/">Earnings</a></li>  
+         </ul>
+        </li>
+        
+        
+   <li><a href="/profile/" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>Profile</span></a></li>
+   <li><a href="/profile-preview/" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>Clients View</span></a></li>
+   <li><a href="/accounts/" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>Accounts</span></a></li>
+   <li><a href="/photo-gallery/" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>Photo Gallery</span></a></li>
+   <li>
+                <a href="/video-gallery/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>video Gallery</span></a
+                >
+              </li>
+              <li>
+                <a href="/chat/" class="waves-effect"
+                  ><i class="mdi mdi-email-outline"></i
+                  ><span>Chat us</span></a
+                >
+              </li>
+   
+   </ul>
+ </div>
+ 
+  <div class="clearfix"></div>
+  </div>
+  </div>
+           
+<!-- Left Sidebar End -->
+ 
+            
+            
+            
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+ 
+ 
+            <div class="row">
+      <div class="col-md-12 white-wrap-shadow">
+        
+  	
+  <div class="v-effect-link">
+  <ul>
+  <li><a href="/current-order/"> Current Order</a></li>
+  <li><a href="/completed-order/"> Completed Order</a></li>
+  <li class="active"><a href="/cancel-order/"> Cancel Order</a></li> 
+  </ul>
+      </div>	
+	 
+  
+ 
+ 	
+		
+ <div class="form"> 
+  <div class="box_b"> 
+    <div class="row">
+   
+   <div class="col-lg-12"> 
+    <table id="datatable2" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>		
+		<th>Phone</th>		
+		<th>Tagline</th>
+		<th>Description</th>		
+		<th>date</th>
+		<th>Images</th>
+		<th>Video</th>
+		<th>Action</th>
+	</tr>
+	</thead>
+
+
+	<tbody>
+	<tr>
+		<td>Mukesh Kumar</td>
+		<td>mukeshkuamrk66@gmail.com</td>
+		<td>+91-8285887066</td>
+		<td><strong>Lorem Ipsum</strong></td>
+		<td>Lorem Ipsum is dummy text here</td>		
+		<td>18/10/2022</td>
+		<td><img src="{%static 'assets1/images/influncer_img1.jpg'%}" style="max-width: 60px; height: auto;"> <img src="{%static 'assets1/images/influncer_img1.jpg'%}" style="max-width: 60px; height: auto;"></td>
+		<td><iframe width="80" height="60" src="https://www.youtube.com/embed/UleaQtDCwwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+		<td><a href="/view/" class="btn btn-warning">View</a> <a href="" class="btn btn-danger">Cancel</a></td>
+	</tr>
+ </tbody>
+</table>
+   </div>
+   
+    </div> 
+  </div>
+   </div>
+   
+   
+    </div>
+     </div> 
+      </div>  
+
+ <footer class="footer">© 2022 - 2023 All Right Resvered.</footer>
+  </div>
+   </div>
+       
+<!-- END wrapper -->
+ <!-- jQuery  -->
+ <script src="{%static 'assets1/js/jquery.min.js'%}"></script>
+ <script src="{%static 'assets1/js/bootstrap.bundle.min.js'%}"></script>
+ <script src="{%static 'assets1/js/metisMenu.min.js'%}"></script>
+ <script src="{%static 'assets1/js/jquery.slimscroll.js'%}"></script>
+ <script src="{%static 'assets1/js/waves.min.js'%}"></script>
+
+ <script src="{%static 'plugins/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+
+ <!-- Required datatable js -->
+ <script src="{%static 'plugins/datatables/jquery.dataTables.min.js'%}"></script>
+ <script src="{%static 'plugins/datatables/dataTables.bootstrap4.min.js'%}"></script>
+ 
+ <!-- Buttons examples -->
+ <script src="{%static 'plugins/datatables/dataTables.buttons.min.js'%}"></script>
+ <script src="{%static 'plugins/datatables/buttons.bootstrap4.min.js'%}"></script>
+ <script src="{%static 'plugins/datatables/jszip.min.js'%}"></script>
+ <script src="{%static 'plugins/datatables/pdfmake.min.js'%}"></script>
+ <script src="{%static 'plugins/datatables/vfs_fonts.js'%}"></script>
+ <script src="{%static 'plugins/datatables/buttons.html5.min.js'%}"></script>
+ <script src="{%static 'plugins/datatables/buttons.print.min.js'%}"></script>
+ <script src="{%static 'plugins/datatables/buttons.colVis.min.js'%}"></script>
+       
+ <!-- Responsive examples -->
+ <script src="{%static 'plugins/datatables/dataTables.responsive.min.js'%}"></script>
+ <script src="{%static 'plugins/datatables/responsive.bootstrap4.min.js'%}"></script>
+
+ <!-- Datatable init js -->
+ <script src="{%static 'assets1/pages/datatables.init.js'%}"></script>
+ 
+ <!-- App js -->
+ <script src="{%static 'assets1/js/app.js'%}"></script>
+
+</body>
+
+</html>

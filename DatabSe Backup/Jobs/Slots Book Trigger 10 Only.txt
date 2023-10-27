@@ -1,0 +1,56 @@
+CREATE OR REPLACE FUNCTION public.dividesubslotso()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+DECLARE
+    starttime timestamp;
+    endtime timestamp;
+    duration interval;
+    counter integer := 0; -- Initialize counter to zero
+BEGIN
+    -- Handling INSERT operation
+    IF TG_OP = 'INSERT' THEN
+        starttime := new.starttime;
+        duration := new.slotduration;
+        LOOP
+            EXIT WHEN duration < new.singleslotduration * INTERVAL '1 minute' OR counter >= 10; -- Check counter here
+            INSERT INTO mainapp_subslots (starttime, endtime, slotprice, slotduration, recordingrequired, isbooked, isreferenced, influencerid, slotid)
+            SELECT starttime, starttime + (new.singleslotduration * INTERVAL '1 minute'), new.singleslotduration * new.slotperminprice, new.singleslotduration * INTERVAL '1 minute', false, false, false, new.influencerid, new.slotid;
+            starttime := starttime + (new.singleslotduration * INTERVAL '1 minute');
+            duration := duration - (new.singleslotduration * INTERVAL '1 minute');
+            counter := counter + 1;  -- Increment counter
+        END LOOP;
+    END IF;
+
+    -- Reset counter for UPDATE operations
+    counter := 0;
+
+    -- Handling UPDATE operation when slotduration changes
+    IF TG_OP= 'UPDATE' AND new.slotduration != old.slotduration THEN
+        IF EXISTS (SELECT 1 FROM mainapp_subslots WHERE slotid = old.slotid AND isbooked) THEN
+            RAISE EXCEPTION 'Cannot update: slots are already booked';
+        ELSE
+            DELETE FROM mainapp_subslots WHERE slotid = old.slotid;
+            starttime := new.starttime;
+            duration := new.slotduration;
+            LOOP
+                EXIT WHEN duration < new.singleslotduration * INTERVAL '1 minute' OR counter >= 10; -- Check counter here
+                INSERT INTO mainapp_subslots (starttime, endtime, slotprice, slotduration, recordingrequired, isbooked, isreferenced, influencerid, slotid)
+                SELECT starttime, starttime + (new.singleslotduration * INTERVAL '1 minute'), new.singleslotduration * new.slotperminprice, new.singleslotduration * INTERVAL '1 minute', false, false, false, new.influencerid, new.slotid;
+                starttime := starttime + (new.singleslotduration * INTERVAL '1 minute');
+                duration := duration - (new.singleslotduration * INTERVAL '1 minute');
+                counter := counter + 1;  -- Increment counter
+            END LOOP;
+        END IF;
+    END IF;
+
+    -- Similar counter logic can be applied for other UPDATE conditions like the ones for singleslotduration and starttime.
+
+    RETURN NEW;
+END;
+$BODY$;
+
+ALTER FUNCTION public.dividesubslotso()
+    OWNER TO influencer;

@@ -1,0 +1,855 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="yandex-verification" content="48b8e8a2024a6e63" />
+  {% for i in Seo1 %}
+  {% if i.page.pagename == 'Register'%}
+  <title>{{i.title}}</title>
+  <meta name="title" content="{{i.title}}">
+  <meta name="description" content="{{i.description}}">
+  <meta name="keywords" content="{{i.keyword}}">
+  {% endif %}
+  {%endfor%}
+
+
+{% block canonical%}
+<link rel="canonical" href="https://www.influencerhiring.com/register/">
+
+{%endblock%}
+
+
+
+  <meta name="robots" content="{{Seo.0.robot}}">
+  <meta name="google-site-verification" content="{{Seo.0.google_site_verification}}">
+  <meta name="twitter:card" content="{{Seo.0.twitter_card}}">
+  <meta name="twitter:site" content="{{Seo.0.twitter_site}}">
+  <meta name="twitter:creator" content="{{Seo.0.twitter_creator}}">
+  <meta name="twitter:title" content="{{Seo.0.twitter_title}}">
+  <meta name="twitter:image" content="{{Seo.0.twitter_image_url}}">
+  <meta name="twitter:image:alt" content="{{Seo.0.twitter_image_alt}}">
+  <meta name="twitter:player" content="{{Seo.0.twitter_player}}">
+  <meta name="twitter:player:width" content="{{Seo.0.twitter_player_width}}">
+  <meta name="twitter:player:height" content="{{Seo.0.twitter_player_height}}">
+  <meta name="fb:app_id" content="{{Seo.0.fb_app_id}}">
+  <meta property="og:title" content="{{Seo.0.og_title}}">
+  <meta property="og:url" content="{{Seo.0.og_url}}">
+  <meta property="og:image" content="{{Seo.0.og_img_url}}">
+  <meta property="og:image:type" content="{{Seo.0.og_img_type}}">
+  <meta property="og:image:width" content="{{Seo.0.og_img_width}}">
+  <meta property="og:image:height" content="{{Seo.0.og_img_height}}">
+  <meta property="og:type" content="{{Seo.0.og_type}}">
+  <meta property="og:locale" content="{{Seo.0.og_locale}}">
+  <meta name="og:image:url" content="{{Seo.0.og_image_url}}">
+  <meta name="og:image:secure_url" content="{{Seo.0.og_img_secure_url}}">
+  <meta name="og:site_name" content="{{Seo.0.og_site_name}}">
+  <meta name="og:see_also" content="{{Seo.0.og_see_also}}">
+  <meta name="article:author" content="{{Seo.0.aticle_author}}">
+  <meta name="format-detection" content="{{Seo.0.format_detecation}}">
+  <link rel="shortcut icon" type="image/x-icon" href="{%static 'images/logoIcon/favicon.ico'%}">
+  <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+  <!-- <link rel="stylesheet" href="{%static 'css/all.min.css'%}"> -->
+  <link rel="stylesheet" href="{%static 'css/line-awesome.min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/lib/animate.css'%}">
+
+  <!-- Plugin Link -->
+  <link rel="stylesheet" href="{%static 'css/lib/slick.css'%}">
+  <link rel="stylesheet" href="{%static 'css/lib/magnific-popup.css'%}">
+  <!-- Main css -->
+  <link rel="stylesheet" href="{%static 'css/main.css'%}">
+  <link rel="stylesheet" href="{%static 'css/login.css'%}">
+  <link rel="stylesheet" href="{%static 'css/custom.css'%}">
+  <link rel="stylesheet" href="{%static 'css/colore31b.css'%}">
+  <link rel="stylesheet" href="{%static 'css/services.css'%}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+  <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+
+</head>
+
+<body>
+  <!-- Overlay -->
+  <div class="overlay"></div>
+  
+  <button type="button" class="btn btn-primary Add2Cart_btn" data-bs-toggle="modal" data-bs-target="#exampleModal_language">
+    <i class="fas fa-language"></i>
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade main_add2Cart" id="exampleModal_language" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close_btn">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body add2Cart_body">
+          <div id="translate"></div>
+        </div>
+    
+  
+      </div>
+    </div>
+  </div>
+  
+  <a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+  <div class="header  dash-header ">
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-bottom-area align-items-center">
+          <div class="logo"><a href="/"><img src="{%static 'assets/images/logoIcon/logo.webp'%}"
+                alt="influencerhiring.com_logo"></a></div>
+          <ul class="menu">
+            <li> <a href="/" class="">Home</a> </li>
+            <li> <a href="/influencers/" class="">Explore</a> </li>
+            <li> <a href="/blogs/" class="">Blogs</a> </li>
+            <li> <a href="/webstories/">Web-Stories</a> </li>
+            <li> <a href="/casting-call/">Casting Call</a> </li>
+            <li> <a href="/whitepaper/" class="">White Paper</a> </li>
+            <li class="d-lg-none"> <a href="/login/" class="btn btn-md btn--base">Login</a> </li>
+          <li class="d-lg-none"> <a href="/register/" class="btn btn-md btn--base">Register</a> </li>
+          </ul>
+          <div class="header-trigger-wrapper d-flex align-items-center">
+            <div class="button-wrapper d-flex align-items-center flex-wrap" style="gap:8px 15px">
+              <ul class="d-flex align-items-center flex-wrap" style="gap:8px 15px">
+                <li class="me-0">
+                  {%if request.user.is_authenticated%}
+                  <a href="/logout/"
+                    class="login-btn btn btn--md btn--outline-base d-none d-sm-grid text-white">Logout</a>
+                  {%else%}
+                  <a href="/login/" class="login-btn btn btn--md btn--outline-base d-none d-sm-grid text-white">Login</a>
+                  {%endif%}
+                </li>
+                <li class="me-0"> <a href="/register/" class="login-btn btn btn--md btn--outline-base d-none d-sm-grid text-white">Register</a> </li>
+              </ul>
+            </div>
+            <div class="header-trigger d-lg-none"> <span></span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="login-section pt-80 pb-80">
+    <div class="container">
+      <div class="account-wrapper" style="padding: 30px 10px 30px 30px;">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-6">
+            <div class="account-thumb-wrapper"> <img src="/media/{{ban.0.signupimage}}" alt="signupimage" class="img-fluid"> </div>
+          </div>
+          <div class="col-lg-6 ragist">
+            <div class="lg_rg">
+              <ul class="tabs" style="text-align: center;">
+                <li class="tab-link current" data-tab="tab-1">User</li>
+                <li class="tab-link" data-tab="tab-3">Creator</li>  </ul>
+              <div id="tab-1" class="tab-content current">
+                {% for message in messages %}
+                {% if messages %}
+                <div class="alert alert-{{message.tags}}" role="alert">
+                  <strong>{{message}}</strong>
+                  </div>
+                {%endif%}
+                {%endfor%}
+                <form action="" method="post">
+                  {% csrf_token %}
+                  <input type="hidden" name="actype" id="actype" value="client">
+                  <div class="row" >
+                    <div class="col-lg-12" style="margin: 15px 0px;">
+                      <h1 class="section-header__title" style="text-align: center;">Join as <span>User</span></h1>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group tooltip-msg">
+                        <label class="form-label" for="username">Username</label>
+                        <input type="text" name="username" id="username1" value=""
+                          class="form-control form--control checkUser" required >
+                          <span class="tooltiptext">Username must be lowercase</span>
+                        <small class="text-danger usernameExist"></small>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" name="email" id="email" value=""
+                          class="form-control form--control checkUser" required>
+                      </div>
+                    </div>
+                   
+                    <div class="col-md-6 Password-message">
+                      <div class="form-group">
+                        <label class="form-label" for="password">Password</label>
+                          <input type="password" id="psw" class="form-control form--control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                      </div>
+                      <div id="message">
+                        <p id="length" class="invalid d-inline-block">8 Characters</b></p>
+                        <p id="capital" class="invalid d-inline-block">Uppercase</p>
+                        <p id="letter" class="invalid d-inline-block">Lowercase</p>
+                        <p id="number" class="invalid d-inline-block">Number</p>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="form-label" for="password_confirm">Confirm Password</label>
+                        <input type="password" id="password_confirm" name="password_confirmation"
+                          class="form-control form--control" required>
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                      <div class="g-recaptcha" data-sitekey="6LdWu9YiAAAAAH2hGK-j7Psucc7gTwwAYzh4dkjA"
+                        data-callback="verifyCaptcha" required ></div>
+                      <div id="g-recaptcha-error"></div>
+                    </div>
+                   
+                     <button type="submit" id="recaptcha" class="btn btn--base w-100">Submit</button> 
+                </form>
+                <div class="text-center">
+                  <p class="mt-3">Have an account? <a href="/login/" class="dark_color login-url">Login here</a> </p>
+                </div>
+              </div>
+            </div>  
+
+
+       
+
+
+            <div id="tab-3" class="tab-content">
+              {% for message in messages %}
+              {% if messages %}
+              <div class="alert alert-{{message.tags}}" role="alert">
+                <strong>{{message}}</strong>
+                </div>
+              {%endif%}
+              {%endfor%}
+              <form action="" method="post">
+                {% csrf_token %}
+             
+                <div class="row">
+                  <div class="col-lg-12" style="margin: 15px 0px;">
+                    <h2 class="section-header__title" style="text-align: center;">Join as <span>Creator</span></h2>
+                  </div>
+
+                  <div class="col-md-6" >
+                    <div class="form-group tooltip-msg">
+                       <label class="form-label" for="username">Username</label>
+                      <input type="text" name="username" id="username2" value=""
+                        class="form-control form--control checkUser" required>
+                        <span class="tooltiptext">Username must be lowercase</span>
+                      <small class="text-danger usernameExist"></small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label" for="email">Email Address</label>
+                      <input type="email" name="email" id="email" value="" class="form-control form--control checkUser"
+                        required>
+                        <input type="hidden" name="actype" id="actype" value="influencer">
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6 position-relative">
+                    <div class="form-group">
+                      <label class="form-label" for="password">Password</label>
+                      <input type="password" id="psw2" class="form-control form--control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    </div>
+                    <div id="message2">
+                      <p id="length2" class="invalid d-inline-block">8 Characters</b></p>
+                      <p id="capital2" class="invalid d-inline-block">Uppercase</p>
+                      <p id="letter2" class="invalid d-inline-block">Lowercase</p>
+                      <p id="number2" class="invalid d-inline-block">Number</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label" for="password_confirm">Confirm Password</label>
+                      <input type="password" id="password_confirm" name="password_confirmation"
+                        class="form-control form--control" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                    <div class="g-recaptcha" data-sitekey="6LdWu9YiAAAAAH2hGK-j7Psucc7gTwwAYzh4dkjA"
+                      data-callback="verifyCaptcha"></div>
+                    <div id="g-recaptcha-error"></div>
+                  </div>
+                  
+                  <button type="submit" id="recaptcha" class="btn btn--base w-100">Submit</button>
+              </form>
+              <div class="text-center">
+                <p class="mt-3">Have an account? <a href="/login/" class="text--base login-url">Login here</a> </p>
+              </div>
+            </div>
+            </div>
+            <div class="text-center">
+              <div class="or-seperator"><i>or</i></div>
+          <p class="text-center">Login with your social media account</p>
+          <div class="text-center social-btn">
+          <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-secondary"><i class="fab fa-facebook-f"></i>&nbsp; Facebook</a> 
+          <a href="https://wa.me/message/7CXRD6IP2DOZJ1" target="_blank" class="btn btn-infor"><i class="fab fa-whatsapp"></i>&nbsp; Whatsapp</a>
+           <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-danger"><i class="fab fa-google"></i>&nbsp; Google</a>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="modal fade" id="existModalCenter" tabindex="-1" role="dialog" aria-labelledby="existModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="existModalLongTitle">You are with us</h5>
+          <span type="button" class="close" data-bs-dismiss="modal" aria-label="Close"> <i class="fas fa-times"></i> </span> </div>
+        <div class="modal-body">
+          <h6 class="text-center">You already have an account please Login</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark btn--sm" data-bs-dismiss="modal">Close</button>
+          <a href="/login/" class="btn btn--base btn--sm">Login</a> </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <footer class="bg--accent footer pt-80">
+    <div class="container">
+      <div class="row gy-4 justify-content-between">
+        <div class="col-lg-3 col-sm-6 col-md-5">
+          <div class="footer-widget"> <a class="logo mb-4" href="/"><img src="{%static 'images/logoIcon/logo.webp'%}" alt="influencerhiring.com_logo"></a>
+            <p>{{footer.0.Footer_Quotes}}</p>
+            <ul class="social-links d-flex mt-4 flex-wrap gap-3">
+              <li> <a href="{{footer.0.FacebookLink}}"> <i class="fab fa-facebook-f"></i> </a> </li>
+              <li> <a href="{{footer.0.TwitterLink}}"> <i class="fab fa-twitter"></i> </a> </li>
+              <li> <a href="{{footer.0.InstagramLink}}"> <i class="fab fa-instagram"></i> </a> </li>
+              <li> <a href="{{footer.0.LinkedinLink}}"> <i class="fab fa-linkedin-in"></i> </a> </li>
+              <li> <a href="{{footer.0.WhatsappLink}}"> <i class="fab fa-whatsapp"></i> </a> </li>
+              <li> <a href="{{footer.0.YoutubeLink}}"> <i class="fab fa-youtube"></i> </a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-5">
+          <div class="footer-widget">
+            <h5 class="footer-widget__title mb-sm-3 mb-2 pb-1">Quick Links</h5>
+            <ul class="footer-links">
+              <li> <i class="fas fa-chevron-right"></i> <a href="/influencers/" class="" target="_blank">Explore</a> </li>
+              <li><i class="fas fa-chevron-right"></i> <a href="/career/" class="" target="_blank">Career</a></li>
+              <li> <i class="fas fa-chevron-right"></i> <a href="/about/" class="" target="_blank">About Us</a> </li>
+              <li><i class="fas fa-chevron-right"></i> <a href="/faq/" class="" target="_blank">FAQ</a></li>
+              <li><i class="fas fa-chevron-right"></i> <a href="/whitepaper/" target="_blank"> White Paper </a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-5">
+          <div class="footer-widget">
+            <h5 class="footer-widget__title mb-sm-3 mb-2 pb-1">Usefull Links</h5>
+            <ul class="footer-links">
+              <li><i class="fas fa-chevron-right"></i> <a href="/privacy-policy/" target="_blank"> Privacy Policy </a> </li>
+              <li><i class="fas fa-chevron-right"></i> <a href="/terms-of-service/" target="_blank"> Terms of Service </a> </li>
+              <li><i class="fas fa-chevron-right"></i> <a href="/refund-policy/" target="_blank"> Refund Policy </a> </li>
+              <li><i class="fas fa-chevron-right"></i> <a href="/affilate-marketing-for-brand/" target="_blank">Affilate Marketing for Brand</a> </li>
+          <li><i class="fas fa-chevron-right"></i> <a href="/affilate-marketing-for-influencer/" target="_blank">Affilate Marketing for Influencer</a> </li>
+            </ul>
+          </div>
+        </div>
+       
+        <div class="col-lg-3 col-sm-6 col-md-5">
+          <div class="footer-widget">
+            <div class="footer-widget__title text--base mb-sm-4 mb-2 pb-1">Contacts Info</div>
+            <ul class="footer-links">
+              <li> <a href="/contact/" class="" target="_blank">Contact</a> </li>
+              <li><a href="mailto:{{footer.0.Emailid}}" target="_blank"><i class="far fa-envelope-open"></i> <span class="__cf_email__">{{footer.0.Emailid}}</span></a></li>
+              <li><a href="tel:+1 719-111-2222" target="_blank"><i class="fas fa-phone-alt"></i> {{footer.0.Phone1}}</a></li>
+              <li><a href="tel:+1 719-111-2222" target="_blank"><i class="fas fa-phone-alt"></i> {{footer.0.Phone2}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="text-center border-top my-4 flex-wrap pt-4 Copyright"> Copyright &copy; 2022. All Rights Reserved </p>
+    </div>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <script src="{%static 'js/jquery-3.6.0.min.js'%}"></script>
+  <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
+  <link rel="stylesheet" href="{%static 'css/iziToast.min.css'%}">
+  <script src="{%static 'js/iziToast.min.js'%}"></script>
+ 
+  <!-- Pluglin Link -->
+  <script src="{%static 'js/lib/slick.min.js'%}"></script>
+  <script src="{%static 'js/lib/magnific-popup.min.js'%}"></script>
+  <script>
+    "use strict";
+      (function($) {
+          $('.actionBtn').on('click', function() {
+              let action;
+              let loginUrl;
+              let pageTitle;
+
+              if ($(this).data('type') == 'client') {
+                  action = `/client/register`;
+                  loginUrl = `/client/login`;
+                  pageTitle = `Register as Client`;
+              } else {
+                  action = `/influencer/register`;
+                  loginUrl = `/influencer/login`;
+                  pageTitle = `Register as Influencer`;
+              }
+              $('form')[0].action = action;
+
+              $(this).addClass('active');
+              $('.login-url').attr('href', loginUrl);
+              $('.this-page-title').text(pageTitle);
+              $('.actionBtn').not($(this)).removeClass('active');
+          });
+
+      })(jQuery);
+  </script>
+  <!-- Main js -->  
+  <script src="{%static 'js/main.js'%}"></script>
+  <script src="{%static 'js/language.js'%}"></script>
+  <script >
+    (function($) {
+        
+        $('.showFilterBtn').on('click', function() {
+            $('.responsive-filter-card').slideToggle();
+        });
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+
+        // Sticky Menu
+        let logo = "{%static 'images/logoIcon/logo.webp'%}";
+        let logoDark = "{%static 'images/logoIcon/logo.webp'%}";
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector(".header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+
+            if($('.header').hasClass('dash-header')){
+                $('.header .logo img').attr('src',logoDark);
+            }else{
+
+                if($('.header').hasClass('sticky')){
+                    $('.header .logo img').attr('src',logoDark)
+                }else{
+                    $('.header .logo img').attr('src',logo);
+                }
+            }
+        });
+
+    })(jQuery);
+</script>
+      
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script>
+  var Cookie = {
+	set: function (name, value, days) {
+		var domain, domainParts, date, expires, host;
+
+		if (days) {
+			date = new Date();
+			date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+			expires = "; expires=" + date.toGMTString();
+		} else {
+			expires = "";
+		}
+
+		host = location.host;
+		if (host.split(".").length === 1) {
+			// no "." in a domain - it's localhost or something similar
+			document.cookie = name + "=" + value + expires + "; path=/";
+		} else {
+			// Remember the cookie on all subdomains.
+			//
+			// Start with trying to set cookie to the top domain.
+			// (example: if user is on foo.com, try to set
+			//  cookie to domain ".com")
+			//
+			// If the cookie will not be set, it means ".com"
+			// is a top level domain and we need to
+			// set the cookie to ".foo.com"
+			domainParts = host.split(".");
+			domainParts.shift();
+			domain = "." + domainParts.join(".");
+
+			document.cookie =
+				name + "=" + value + expires + "; path=/; domain=" + domain;
+
+			// check if cookie was successfuly set to the given domain
+			// (otherwise it was a Top-Level Domain)
+			if (Cookie.get(name) == null || Cookie.get(name) != value) {
+				// append "." to current domain
+				domain = "." + host;
+				document.cookie =
+					name + "=" + value + expires + "; path=/; domain=" + domain;
+			}
+		}
+	},
+
+	get: function (name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(";");
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == " ") {
+				c = c.substring(1, c.length);
+			}
+
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+		}
+		return null;
+	},
+
+	erase: function (name) {
+		Cookie.set(name, "", -1);
+	}
+};
+
+function googleTranslateElementInit() {
+	let url = new URL(window.location);
+	let lang = url.searchParams.get("lang");
+	if (lang) {
+		console.log(lang);
+		Cookies.set("googtrans", `/en/${lang}`, { path: "" });
+		Cookie.set("googtrans", `/en/${lang}`);
+		Cookies.set("googtrans", `/en/${lang}`, { path: "", domain: location.host });
+	} else {
+		Cookie.erase("googtrans");
+		Cookies.remove("googtrans", { path: "" });
+	}
+	new google.translate.TranslateElement({ pageLanguage: "en" }, "translate");
+	
+  let langSelector = document.querySelector(".goog-te-combo");
+	langSelector.addEventListener("change", function () {
+		let lang = langSelector.value;
+		var newurl =
+			window.location.protocol +
+			"//" +
+			window.location.host +
+			window.location.pathname +
+			"?lang=" +
+			lang;
+		window.history.pushState({ path: newurl }, "", newurl);
+	});
+}
+
+
+
+
+
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+
+// Confirm Password Validation
+
+
+var myInputOne = document.getElementById("psw2");
+var letterOne = document.getElementById("letter2");
+var capitalOne = document.getElementById("capital2");
+var numberOne = document.getElementById("number2");
+var lengthOne = document.getElementById("length2");
+
+// When the user clicks on the password field, show the message box
+myInputOne.onfocus = function() {
+  document.getElementById("message2").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInputOne.onblur = function() {
+  document.getElementById("message2").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInputOne.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInputOne.value.match(lowerCaseLetters)) {  
+    letter2.classList.remove("invalid");
+    letter2.classList.add("valid");
+  } else {
+    letter2.classList.remove("valid");
+    letter2.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInputOne.value.match(upperCaseLetters)) {  
+    capital2.classList.remove("invalid");
+    capital2.classList.add("valid");
+  } else {
+    capital2.classList.remove("valid");
+    capital2.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInputOne.value.match(numbers)) {  
+    number2.classList.remove("invalid");
+    number2.classList.add("valid");
+  } else {
+    number2.classList.remove("valid");
+    number2.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInputOne.value.length >= 8) {
+    length2.classList.remove("invalid");
+    length2.classList.add("valid");
+  } else {
+    length2.classList.remove("valid");
+    length2.classList.add("invalid");
+  }
+}
+
+
+// Confirm Password Validation
+
+var myInputOne2 = document.getElementById("psw22");
+var letterOne2 = document.getElementById("letter22");
+var capitalOne2 = document.getElementById("capital22");
+var numberOne2 = document.getElementById("number22");
+var lengthOne2 = document.getElementById("length22");
+
+// When the user clicks on the password field, show the message box
+// myInputOne2.onfocus = function() {
+//   document.getElementById("message22").style.display = "block";
+// }
+
+// When the user clicks outside of the password field, hide the message box
+// myInputOne2.onblur = function() {
+//   document.getElementById("message22").style.display = "none";
+// }
+
+// When the user starts to type something inside the password field
+// myInputOne2.onkeyup = function() {
+//   // Validate lowercase letters
+//   var lowerCaseLetters = /[a-z]/g;
+//   if(myInputOne2.value.match(lowerCaseLetters)) {  
+//     letter22.classList.remove("invalid");
+//     letter22.classList.add("valid");
+//   } else {
+//     letter22.classList.remove("valid");
+//     letter22.classList.add("invalid");
+//   }
+  
+//   // Validate capital letters
+//   var upperCaseLetters = /[A-Z]/g;
+//   if(myInputOne2.value.match(upperCaseLetters)) {  
+//     capital22.classList.remove("invalid");
+//     capital22.classList.add("valid");
+//   } else {
+//     capital22.classList.remove("valid");
+//     capital22.classList.add("invalid");
+//   }
+
+//   // Validate numbers
+//   var numbers = /[0-9]/g;
+//   if(myInputOne2.value.match(numbers)) {  
+//     number22.classList.remove("invalid");
+//     number22.classList.add("valid");
+//   } else {
+//     number22.classList.remove("valid");
+//     number22.classList.add("invalid");
+//   }
+  
+//   // Validate length
+//   if(myInputOne2.value.length >= 8) {
+//     length22.classList.remove("invalid");
+//     length22.classList.add("valid");
+//   } else {
+//     length22.classList.remove("valid");
+//     length22.classList.add("invalid");
+//   }
+// }
+
+// username validations:- 
+var usernameinput = document.getElementById("username1");
+var tooltipSpan = document.querySelector('.tooltiptext');
+
+usernameinput.addEventListener("keypress", function(event) {
+  
+  let username = this.value + event.key; // The username if this key is allowed
+
+    let key = event.key; // The key that was pressed
+
+    // Rule 1: Username length should be <= 12
+    if (username.length > 25) {
+      alert('Username length should be less than 25 characters.')
+     // tooltipSpan.textContent = 'Username length should be less than 12 letters';
+        event.preventDefault();
+        return;
+    }
+
+    // Rule 2, 3, 4: First character should not be a number, uppercase letter, or space
+    if (this.value.length === 0) {
+        if (key.match(/[0-9]/)) {
+          alert('First character should not be a number.')
+      //    tooltipSpan.textContent = 'First character should not be a number, uppercase letter, or space.';
+            event.preventDefault();
+            return;
+        }
+    }
+
+    // Rule 2: Username should not contain uppercase letters
+    if (key.match(/[A-Z]/)) {
+      alert('Username should not contain uppercase letters.')
+    //  tooltipSpan.textContent = 'Username should not contain uppercase letters.';
+        event.preventDefault();
+        return;
+    }
+
+    // Rule 4: Username should not contain spaces
+    if (key === ' ') {
+      alert('Username should not contain spaces.')
+      //tooltipSpan.textContent = 'Username should not contain spaces.';
+      
+        event.preventDefault();
+        return;
+    }
+
+    // Rule for special characters: Prevent them
+    if (key.match(/\W|_/)) {
+      alert('Username should not contain spacial characters.')
+        event.preventDefault();
+        return;
+    }
+
+});
+
+// Prevent pasting into the input field
+usernameinput.addEventListener("paste", function(event) {
+  alert('please type username manually.')
+    event.preventDefault();
+});
+
+
+var usernameinputcreater = document.getElementById("username2");
+var tooltipSpan = document.querySelector('.tooltiptext');
+
+usernameinputcreater.addEventListener("keypress", function(event) {
+  
+  let username = this.value + event.key; // The username if this key is allowed
+
+    let key = event.key; // The key that was pressed
+
+    // Rule 1: Username length should be <= 12
+    if (username.length > 12) {
+      alert('Username length should be less than 12 letters.')
+     // tooltipSpan.textContent = 'Username length should be less than 12 letters';
+        event.preventDefault();
+        return;
+    }
+
+    // Rule 2, 3, 4: First character should not be a number, uppercase letter, or space
+    if (this.value.length === 0) {
+        if (key.match(/[0-9]/)) {
+          alert('First character should not be a number')
+      //    tooltipSpan.textContent = 'First character should not be a number, uppercase letter, or space.';
+            event.preventDefault();
+            return;
+        }
+    }
+
+    // Rule 2: Username should not contain uppercase letters
+    if (key.match(/[A-Z]/)) {
+      alert('Username should not contain uppercase letters.')
+    //  tooltipSpan.textContent = 'Username should not contain uppercase letters.';
+        event.preventDefault();
+        return;
+    }
+
+    // Rule 4: Username should not contain spaces
+    if (key === ' ') {
+      alert('Username should not contain spaces.')
+      //tooltipSpan.textContent = 'Username should not contain spaces.';
+      
+        event.preventDefault();
+        return;
+    }
+
+    // Rule for special characters: Prevent them
+    if (key.match(/\W|_/)) {
+      alert('Username should not contain spacial characters.')
+        event.preventDefault();
+        return;
+    }
+    
+});
+
+// Prevent pasting into the input field
+usernameinputcreater.addEventListener("paste", function(event) {
+  alert('please type username manually.')
+    event.preventDefault();
+});
+</script>
+   
+  </body>
+  </html>

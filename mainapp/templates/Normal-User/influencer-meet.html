@@ -1,0 +1,1168 @@
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | Influencer Acquisition</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+
+{% endblock %}
+{%block head%}
+<div class="header dash-header ">
+{%endblock%}
+{%block active%}
+<li> <a href="/" class="">Home</a> </li>
+<li> <a href="/influencers/" class="">Explore</a> </li>
+<li> <a href="/blogs/" class="">Blogs</a> </li>
+<li> <a href="/webstories/">Web-Stories</a> </li>
+<li> <a href="/casting-call/">Casting Call</a> </li>
+<li> <a href="/whitepaper/" class="">White Paper</a> </li>
+{%endblock%}
+
+{%block body%}
+
+<section class="influncr_package py-5">
+    <div class="container">
+        <div class="package_influncer_detail">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-3 mobile_center">
+                            <div class="index-banner-img pe-5 d-inline-block">
+                              <img src="/media/{{info.profileimage1}}" alt="{{info.fullname}}" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 heading-center-mobile">
+                            <h2 id="wish-video" class="sub_heading mb-3">
+                              <span class="main-color position-relative">Paying to </span> <p>{{info.fullname}}</p>
+                            </h2>
+                            <p>{{info.short_description}}</p>
+                            <input type="hidden" id="infouser" name="infouser" value="{{info.influencer_userid}}"/>
+                            <input type="hidden" id="bplanid" name="bplanid" value="{{vdct.planid}}"/>
+                            <input type="hidden" id="bserviceid" name="bserviceid" value="{{vdct.serviceid}}"/>
+                        </div>
+                    </div>
+
+                    <div class="booking_form p-3 bg-white rounded">
+                      <div class="row">
+                        <div class="col-lg-5">
+                          <img src="/media/images/eventcollaboration.webp" alt="influencer-meet" class="img-fluid rounded">
+                        </div>
+                        <div class="col-lg-7">
+                          <form id="myForm">
+                            <h3 class="fw-bold mb-3">{{cur}} {{vdct.increasedprice}} Per Hour </h3>
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="mb-3">
+                                  <label>Event Type: </label>
+                                      <select name="eventtype" class="form-select" id="eventtype">
+                                        <option value="" selected="selected">choose-event-type</option>
+                                        {%for i in event%}
+                                        <option value="{{i.eventtypeid}}">{{i.eventtype}}</option>
+                                        {%endfor%}
+                                      </select>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="mb-3">
+                                  <label>Event Name: </label>
+                                  <div class="input-group date" >
+                                      <input class="form-control" type="text" value="" placeholder="Enter the event name" name="eventname" id="eventname" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <div class="mb-3">
+                                  <label>Event Date: </label>
+                                  <div class="input-group date">
+                                    <input class="form-control" type="date" name="eventdate" id="datePicker" min="" required/>
+                                  </div>                                     
+                                </div>
+                              </div>
+                            </div>
+                            <script>
+                              const today = new Date();
+                              const tomorrow = new Date(today);
+                              tomorrow.setDate(today.getDate() + 1);
+                              const formattedTomorrow = tomorrow.toISOString().split('T')[0];
+                              document.getElementById('datePicker').setAttribute('min', formattedTomorrow);
+                          </script>
+                            <!-- <script>
+                              var currentDate = new Date();
+                              var year = currentDate.getFullYear();
+                              var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+                              var day = currentDate.getDate().toString().padStart(2, '0');
+                              var formattedDate = year + '-' + month + '-' + day;
+                              document.getElementById('eventdate').min = formattedDate;
+                          </script> -->
+                            <div class="d-flex justify-content-between gap-3">
+                              <div class="form-group mb-3 w-100">
+                              <label for="from">Time From :</label>
+                              <select name="from" class="form-select" id="select1" onchange="chnagetime();" >
+                                  <option value="0" selected="selected">Choose-Time</option>
+                                  {%for i in time1%}
+                                  <option value="{{i.eventtimeid}}">{{i.eventtime|time:"h:i A"}}</option>
+                                  {%endfor%}
+                                </select>
+                            </div>
+
+                            <script>
+
+                            function chnagetime(){
+                              // Assuming you have a reference to the <select> element with an id "mySelect"
+                            var selectElement = document.getElementById("select2");
+
+                            // Deselect (unselect) the currently selected option
+                            selectElement.selectedIndex = 0;
+
+                            }
+
+                            </script>
+
+
+                            <div class="form-group mb-3 w-100">
+                              <label for="to">Time To :</label>
+                              <select name="to" class="form-select" id="select2" onchange="chnageamount();removecode();">
+                                <option value="0" selected="selected">Choose-Time</option>
+                                {%for i in time1%}
+                                 <option value="{{i.eventtimeid}}">{{i.eventtime|time:"h:i A"}}</option>
+                                 {%endfor%}
+                               </select>
+                            </div>
+                            </div>
+                            <div class="mb-3 descrition_area">
+                              <label for="address">Address</label>
+                              <textarea class="form-control" name="address" id="address" required></textarea>
+                            </div>
+                            <div class="mb-3 descrition_area">
+                                <label for="description">Description</label>
+                                <textarea class="form-control" name="description" id="description" required></textarea>
+                            </div>
+                            <div class="main_color_text">Note: Travel and Stay Expenses are beared by the client.</div>
+                             {% comment %} <div class="guiz-awards-buttons p-0 py-1">
+                                <input type="button" class="btn btn-block btn--outline-base" id="submitUpdatePledge" value="Select Event" onclick="chnageamount();">
+                            </div>  {% endcomment %}
+
+                          </form>
+                        </div>
+                      </div>
+                        
+                    </div>
+
+                  <script>
+                    const select1 = document.getElementById("select1");
+                    const select2 = document.getElementById("select2");
+                    
+                    // Add event listeners to both select fields
+                    select1.addEventListener("change", function() {
+                      const selectedValue = select1.value;
+                      disableOption(select2, selectedValue);
+                    });
+                    
+                    select2.addEventListener("change", function() {
+                      const selectedValue = select2.value;
+                      disableOption1(select1, selectedValue);
+                    });
+                    
+                    // Function to disable options in other select fields
+                    function disableOption(selectField, value)
+                    {
+                      const options = selectField.options;
+                      for (let i = 0; i < options.length; i++) {
+                        if (parseInt(options[i].value) <= parseInt(value)) {
+                          options[i].disabled = true;
+                        }
+                        else{
+                          options[i].disabled = false;
+                        }
+                      }
+                    }
+
+                    function disableOption1(selectField, value)
+                    {
+                      const options = selectField.options;
+                      for (let i = 0; i < options.length; i++) {
+                        if (parseInt(options[i].value) >= parseInt(value)) {
+                          options[i].disabled = true;
+                        }
+                        else{
+                          options[i].disabled = false;
+                        }
+                      }
+                    }
+
+
+function chnageamount(){
+  refreshgateways();
+  var tmfrom=document.getElementById("select1").value;
+  var tmto =document.getElementById("select2").value;
+  var infoid='{{info.influencer_userid}}';
+  var taxa='{{taxpr}}';
+  var cur='{{cur}}';
+      $.ajax({
+          type:'POST',
+          url:'{% url "event" %}',
+          headers: {
+            'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+        },
+          data:
+          {
+              timefromid:tmfrom,
+              timetoid:tmto,
+              infoid:infoid,
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response['results']);
+            var total=response['results'];
+            var taxamount=total * (taxa/100);
+                                    taxamount=Math.ceil(taxamount * 100) / 100;
+                                    var grandtotal=total+taxamount;
+
+                                    grandtotal=Math.ceil(grandtotal).toFixed(2);
+                                    taxamount=cur +" "+ taxamount.toString();
+                                    grandtotal=cur +" "+ grandtotal.toString();
+                                    var amount=cur +" "+total.toString();
+                                    console.log('amount');
+                                    console.log(amount);
+                                    console.log('total');
+                                    console.log(total);
+                                    console.log('taxamount');
+                                    console.log(taxamount);
+                                    console.log('grandtotal');
+                                    console.log(grandtotal);
+                                    document.getElementById("bcpr").innerHTML=amount;
+                                    document.getElementById("taxamt").innerHTML=taxamount;
+                                    document.getElementById("gtotol").innerHTML=grandtotal;
+                                  //  getpaymentmethod();
+          }
+         
+         
+})
+
+};
+                  </script>
+
+                   <!-- <h3 class="mt-4 mb-2">Refund Policy</h3> -->
+                   <div class="card p-3 mt-4 rounded-5 border-0 refund-card">
+                    <p class=""><span class="main-color fw-bold fs-5">{{refund.0.Title}}</span> {{refund.0.Description |safe}}</p>
+                                   </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="quiz-window">
+                      <div class="quiz-window-header">
+                        <h5 class="footer-widget__title text-white ms-1">Event Booking</h5>
+                      </div>
+                      <div class="quiz-window-body">
+                        <div class="gui-window-awards">
+                          <ul class="guiz-awards-row guiz-awards-row-even">
+                            <li class="guiz-awards-title">Price :</li>
+                            <li class="guiz-awards-track" id="bcpr">{{cur}} 0</li>
+                          </ul>
+                          <ul class="guiz-awards-row guiz-awards-row-even">
+                            <li class="guiz-awards-title">Other Charges :</li>
+                            <li class="guiz-awards-track" id="orcs">{{cur}} 0</li>
+                          </ul>
+                          <ul class="guiz-awards-row guiz-awards-row-even">
+                            <li class="guiz-awards-title">Tax :</li> 
+                            {% comment %} (+{{taxpr}}%) {% endcomment %}
+                            <li class="guiz-awards-track" id="taxamt">{{cur}} 0</li>
+                          </ul>
+                         
+                          <ul class="guiz-awards-row guiz-awards-row-even d-flex justify-content-between">
+                            <li class="guiz-awards-title me-2">
+                              {% csrf_token %}
+                              <input type="text" name="couponcode" id="couponcode" class="form-control" placeholder="Gift card or discount code"></li>
+                            <li class="guiz-awards-track apply_code">
+                                <input type="button" class="btn btn-block btn--outline-base" onclick="filter1();" id="submitUpdatePledge" value="Apply">
+                                <input type="hidden" id="coupused" name="coupused" value='true'/>
+                            </li>
+                          </ul>
+                          <ul class="guiz-awards-row guiz-awards-row-even total-Payble">
+                            <li class="guiz-awards-title fw-bold">Amount Payable :</li>
+                            <li class="guiz-awards-track fw-bold" id="gtotol">{{cur}} 0</li>
+                          </ul>
+                          <ul class="guiz-awards-row guiz-awards-row-even" id="saveline">
+                            <li class="guiz-awards-title text saving_heading">You have to apply couponcode for total savings on this order.</li>
+                          </ul>
+                        </div>
+                    
+                      </div>
+                    </div>
+  
+  
+                    <script>
+  
+                      function removecode(){
+                        document.getElementById("couponcode").value = '';
+                        document.getElementById("saveline").innerHTML='<li class="guiz-awards-title text saving_heading" >You have to apply couponcode for total savings on this order.</li>';
+                      }
+  
+                      function filter1(){
+                          var ser=document.getElementById("couponcode").value;
+                          var bserviceid =document.getElementById("bserviceid").value;
+                          if (document.getElementById("coupused").value==='true'){
+                              $.ajax({
+                                  type:'POST',
+                                  url:'{% url "package" %}',
+                                  headers: {
+                                    'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+                                },
+                                  data:
+                                  {
+                                      coupon:ser,
+                                      serid:bserviceid,
+                                 //   csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                                  },
+                                  success: function(response){
+                                    console.log("Rahul");
+                                    console.log(response['results']);
+                      
+                                    
+                                    var total=document.getElementById("gtotol").innerHTML;
+                                    var cur=total.slice(0,3);
+                                    var rup=parseFloat(document.getElementById("bcpr").innerHTML.slice(4,))+parseFloat(document.getElementById("orcs").innerHTML.slice(4,))+parseFloat(document.getElementById("taxamt").innerHTML.slice(4,));
+                                    console.log("rupeesssssssssss");
+                                    console.log(rup);
+  
+                                    rup=Math.ceil(rup);
+                                    var dis=rup * (response['results']/100);
+                                    if (response['results']===0){
+                                      document.getElementById("saveline").innerHTML='<li class="guiz-awards-title text-danger saving_heading" >Your have already used this couponcode.</li>';
+                                    }
+                                    else if(response['results']===-2){
+                                      
+                                      document.getElementById("saveline").innerHTML='<li class="guiz-awards-title text-danger saving_heading" >Your have applied expired couponcode.</li>';
+                                      
+                                    }
+                                    else if(response['results']===-3){
+                                      
+                                      document.getElementById("saveline").innerHTML='<li class="guiz-awards-title text-danger saving_heading" >Your have applied wrong couponcode.</li>';
+                                     
+                                    }
+                                    else if(response['results']===-4){
+                                      
+                                      document.getElementById("saveline").innerHTML='<li class="guiz-awards-title text-danger saving_heading" >Your have applied couponcode exceeded the upper limit.</li>';
+                                     
+                                    }
+                                    else {
+                                      
+                                      
+                                      console.log("amount");
+                                      console.log(dis);
+  
+                                      dis=Math.ceil(dis * 100) / 100;
+                                      console.log("dis amount");
+                                      console.log(dis);
+                                      var grandtotal=parseInt(rup)-dis;
+                                      console.log('grandtotal');
+                                      console.log(grandtotal);
+                                      grandtotal=Math.ceil(grandtotal * 100) / 100;
+                                      dis=cur +" "+ dis.toString();
+                                      grandtotal=cur +" "+ grandtotal.toString();
+                                      console.log('total');
+                                      console.log(total);
+                                      console.log("discount");
+                                      console.log(dis);
+                                      console.log('grandtotal');
+                                      console.log(grandtotal);
+                                      document.getElementById("gtotol").innerHTML=grandtotal;
+                                      document.getElementById("saveline").innerHTML='<li class="guiz-awards-title text-success saving_heading" >Your Total Savings on this order '+dis+'</li>';
+                                      //getpaymentmethod();
+                                    }
+                                   
+                        
+                      
+                                  }
+                                 
+                                 
+              })
+            }
+      };
+  
+                      
+                      
+                      
+                                          </script>
+  
+  
+  
+
+                    <div class="payment_mode mt-4">
+                   <!--  <h5 class="footer-widget__title fs-4 text--base ms-1 mb-sm-3 mb-2 pb-1"></h5> -->
+                        <div class="row">
+                          <div class="quiz-window-header">
+                            <h5 class="footer-widget__title text-white ms-1">Payment Methods</h5>
+                          </div>
+                        <div class="col-md-12" >
+                            <div class="radio form-group" >
+                                <div class="d-flex" onclick="refreshbutton();">
+                                    <input id="CC-0" type="radio" name="availPayment" value="PayPal" >
+                                    <label for="CC-0" class="ms-2">PayPal</label>
+                                </div>
+                                <img src="{%static 'images/paypal.png'%}" alt="paypal" class="img-fluid">
+                            </div>
+                            
+                            <div class="radio form-group" >
+                                <div class="d-flex" onclick="refreshbutton();">
+                                    <input id="CC-1" type="radio" name="availPayment" value="Credit / Debit Card (Stripe)" checked >
+                                    <label for="CC-1" class="ms-2">Credit / Debit Card</label>
+                                </div>
+                                <img src="{%static 'images/strip.png'%}" alt="strip" class="img-fluid">
+                            </div>
+                            {%csrf_token%}
+                            
+                            <div class="radio form-group" >
+                                <div class="d-flex" onclick="refreshbutton();">
+                                    <input id="CC-2" type="radio" name="availPayment" value="UPI Payment"  disabled >
+                                    <label for="CC-2" class="ms-2">UPI Payments</label>
+                                </div>
+                                <img src="{%static 'images/upi-payment.png'%}" alt="UPI" class="img-fluid">
+                            </div>
+                            
+                            <div class="radio form-group" >
+                              <div class="d-flex" >
+                                  <input id="CC-3" type="checkbox" value="Wallet" onclick="freshvalue();refreshbutton();disableother();" >
+                                  <label for="CC-3" class="mx-2">Wallet</label>
+
+                                  <span>{{request.user.clientpayout.currency}} {{request.user.clientpayout.remaining_balance_bank}}</span>
+
+                              </div>
+                              <img src="{%static 'images/wallet.jpg'%}" alt="wallet" class="img-fluid">
+                              </div>
+
+                            
+                            <div class="guiz-awards-buttons p-0 pb-3">
+                              <button type="button"  class="btn btn-block btn--outline-base" id="checkout-button" > Pay Now </button>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <script src="https://js.stripe.com/v3/"></script>
+               <script type="text/javascript">
+                 
+               
+
+function refreshgateways(){
+  var maleRadio = document.getElementById("CC-1");
+
+// Set the 'checked' property to false to uncheck the radio button
+maleRadio.checked = "";
+//var// maleRadio1 = document.getElementById("CC-2");
+
+// Set the 'checked' property to "" to uncheck the radio button
+//maleRadio1.checked = true;
+var maleRadio2 = document.getElementById("CC-0");
+
+// Set the 'checked' property to "" to uncheck the radio button
+maleRadio2.checked = "";
+}
+
+
+function freshvalue(){
+  var maleRadio = document.getElementById("CC-1");
+    
+    // Set the 'checked' property to false to uncheck the radio button
+    maleRadio.checked = "";
+    //var// maleRadio1 = document.getElementById("CC-2");
+    
+    // Set the 'checked' property to "" to uncheck the radio button
+   // maleRadio1.checked = "";
+    var maleRadio2 = document.getElementById("CC-0");
+    
+    // Set the 'checked' property to "" to uncheck the radio button
+    maleRadio2.checked = "";
+}
+
+function disableother(){
+  wallamt = '{{request.user.clientpayout.remaining_balance_bank}}';
+  var reqamt = 0;
+  reqamt = parseFloat(document.getElementById("gtotol").innerHTML.slice(4,));
+  
+
+  var walletck = document.getElementById('CC-3');
+
+
+  if (walletck.checked) {
+
+  if (wallamt >= reqamt) {
+
+  var maleRadio = document.getElementById("CC-1");
+    
+    // Set the 'checked' property to false to uncheck the radio button
+    maleRadio.disabled = true;
+    //var// maleRadio1 = document.getElementById("CC-2");
+    
+    // Set the 'checked' property to "" to uncheck the radio button
+    ////////maleRadio1.disabled = true;
+    console.log('rahualcczx csdfradio ');
+
+  }
+
+ 
+}
+else
+{
+  var maleRadio = document.getElementById("CC-1");
+  
+  // Set the 'checked' property to false to uncheck the radio button
+  maleRadio.disabled = false;
+  //var// maleRadio1 = document.getElementById("CC-2");
+  
+  // Set the 'checked' property to "" to uncheck the radio button
+ //// maleRadio1.disabled = false;
+}
+
+}
+
+
+
+function wallchnage(){
+
+  var walletid = 0;
+var wallamt = 0;
+  var buttonClicked = false; 
+  walletid = `{{request.user.clientpayout.payoutid}}`;
+  wallamt = '{{request.user.clientpayout.remaining_balance_bank}}';
+  var reqamt = 0;
+  reqamt = parseFloat(document.getElementById("gtotol").innerHTML.slice(4,));
+  
+  if (wallamt >= reqamt) {
+
+    
+
+              // Your custom click event handler code here
+              var infoid = document.getElementById("infouser").value;
+              var bserviceid = document.getElementById("bserviceid").value;
+              var bplanid = document.getElementById("bplanid").value;
+              var othercharges = document.getElementById("orcs").innerHTML;
+              othercharges = othercharges.slice(4);
+
+              $.ajax({
+                  type: 'POST',
+                  url: '{% url "Walletpurchase" %}',
+                  headers: {
+                      'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+                  },
+                  data: {
+                      walletid: walletid,
+                      infoid: infoid,
+                      bserviceid: bserviceid,
+                      bplanid: bplanid,
+                      othercharges: othercharges,
+                      eventname:document.getElementById("eventname").value,
+                      eventdate:document.getElementById("datePicker").value,
+                      eventtype:document.getElementById("eventtype").value,
+                      timefrom:document.getElementById("select1").value,
+                      timeto:document.getElementById("select2").value,
+                      address:document.getElementById("address").value,
+                      description:document.getElementById("description").value,
+                      
+                  },
+                  success: function(response) {
+                      console.log("Rahul");
+                      console.log(response);
+
+                      if (response['results'] === 'ok') {
+                          redirecttourl('/payment-wallet-success/');
+                      }
+                  }
+              })
+
+              console.log('Button clicked with new id!');
+      
+  }
+  else{
+    console.log('2');
+
+    console.log('You have insufficient balance to process your order.');
+
+    var method = document.querySelector('input[name="availPayment"]:checked');
+
+    console.log(method);
+    if (method === null) {
+      // The value is null
+      console.log('You have not selected another option');
+
+      alert('You have minimum balance in your wallet, select another method with wallet to use it.');
+    }
+
+    else{
+
+      method= method.value;
+
+    if (method === 'PayPal')
+
+    {
+      
+   
+   var radioButton = document.getElementById("CC-1");
+  // radioButton.checked = false;
+   var infoid = document.getElementById("infouser").value;
+   var bserviceid =document.getElementById("bserviceid").value;
+   var bplanid=document.getElementById("bplanid").value;
+   var othercharges=document.getElementById("orcs").innerHTML;
+
+   var eventname=document.getElementById("eventname").value;
+   var eventdate=document.getElementById("datePicker").value;
+   var eventtype=document.getElementById("eventtype").value;
+   var timefrom=document.getElementById("select1").value;
+   var timeto=document.getElementById("select2").value;
+   var address=document.getElementById("address").value;
+   var description=document.getElementById("description").value;
+
+window.location.href = `https://www.influencerhiring.com/paypalbutton/?infoid=${infoid}&bserviceid=${bserviceid}&bplanid=${bplanid}&othercharges=${othercharges}&eventname=${eventname}&eventdate=${eventdate}&eventtype=${eventtype}&timefrom=${timefrom}&timeto=${timeto}&address=${address}&description=${description}`; 
+
+
+
+  
+    }
+  
+    
+  
+  
+  
+  
+    else if (method === 'Credit / Debit Card (Stripe)')
+  {
+
+ 
+    var stripe = Stripe('pk_live_51MZ69BSEqjetbOctzEJCbXdu63iFQGlF3cQiNRpNMnLvlIj93QWzz6QjO6GYucIbsp4b1xGKjfH33jscYIFSn3KD00SrlrQRaa');
+   
+      var radioButton = document.getElementById("CC-1");
+      //radioButton.checked = false;
+      var infoid = document.getElementById("infouser").value;
+      var bserviceid =document.getElementById("bserviceid").value;
+      var bplanid=document.getElementById("bplanid").value;
+      var othercharges=document.getElementById("orcs").innerHTML;
+
+      console.log("price");
+
+     
+              data={
+                'infoid':infoid,
+                'bserviceid':bserviceid,
+                'bplanid':bplanid,
+                'othercharges':othercharges,
+                'walletid':walletid,
+
+                'eventname':document.getElementById("eventname").value,
+                'eventdate':document.getElementById("datePicker").value,
+                'eventtype':document.getElementById("eventtype").value,
+                'timefrom':document.getElementById("select1").value,
+                'timeto':document.getElementById("select2").value,
+                'address':document.getElementById("address").value,
+                'description':document.getElementById("description").value,
+              }
+  
+  
+  
+              fetch('/create-checkout-session/', {
+                method: 'POST',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify(data),
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+              })
+              .then(function(response) {
+  
+                return response.json();
+              })
+              .then(function(session) {
+                return stripe.redirectToCheckout({ sessionId: session.id });
+              })
+              .then(function(result) {
+                // If `redirectToCheckout` fails due to a browser or network
+                // error, you should display the localized error message to your
+                // customer using `error.message`.
+                if (result.error) {
+                  alert(result.error.message);
+                }
+              })
+              .catch(function(error) {
+                console.error('Error:', error);
+              });
+           
+  }
+ 
+
+  }
+}
+}
+                
+
+function refreshbutton(){
+  var checkoutButton = document.getElementById('checkout-button');
+
+  checkoutButton.disabled = false;
+}
+
+
+
+function redirecttourl(url){
+  window.location.href=url;
+} 
+               
+            //   function getpaymentmethod(){
+                 
+                var checkoutButton = document.getElementById('checkout-button');
+
+                var hasExecuted = false; // Flag to track whether the code has been executed
+                var hasExecutedForExample = false; // Flag for the "for example" part
+                
+                checkoutButton.addEventListener('click', function() {
+                    if (!hasExecuted) { // Check if the code has not been executed yet
+                        checkoutButton.disabled = true;
+                
+                
+            
+            
+                    var method1 = document.querySelector('input[name="availPayment"]:checked');
+            
+                    if (method1) {
+                        var method = method1.value;
+            
+                        console.log("Method");
+                        console.log(method);
+  
+                 var walletck = document.getElementById('CC-3');
+                 var walletid = 0;
+                 
+                 // Flag to track button click
+                 
+                 if (walletck.checked) {
+                 // freshvalue();
+                   wallchnage();
+                   console.log("3");
+                 
+                 } else {
+                     walletid = 0;
+                     console.log('Checkbox is not checked');
+                 
+                 
+                   
+                 
+                 
+                 
+                 
+                 if (method === 'PayPal')
+  { 
+
+
+     var radioButton = document.getElementById("CC-1");
+    // radioButton.checked = false;
+     var infoid = document.getElementById("infouser").value;
+     var bserviceid =document.getElementById("bserviceid").value;
+     var bplanid=document.getElementById("bplanid").value;
+     var othercharges=document.getElementById("orcs").innerHTML;
+
+     var eventname=document.getElementById("eventname").value;
+     var eventdate=document.getElementById("datePicker").value;
+     var eventtype=document.getElementById("eventtype").value;
+     var timefrom=document.getElementById("select1").value;
+     var timeto=document.getElementById("select2").value;
+     var address=document.getElementById("address").value;
+     var description=document.getElementById("description").value;
+
+window.location.href = `https://www.influencerhiring.com/paypalbutton/?infoid=${infoid}&bserviceid=${bserviceid}&bplanid=${bplanid}&othercharges=${othercharges}&eventname=${eventname}&eventdate=${eventdate}&eventtype=${eventtype}&timefrom=${timefrom}&timeto=${timeto}&address=${address}&description=${description}`; 
+
+
+
+  }
+
+               
+               if (method === 'Credit / Debit Card (Stripe)'){
+                 console.log("Barawl");
+                 var stripe = Stripe('pk_live_51MZ69BSEqjetbOctzEJCbXdu63iFQGlF3cQiNRpNMnLvlIj93QWzz6QjO6GYucIbsp4b1xGKjfH33jscYIFSn3KD00SrlrQRaa');
+                
+                   // Create a new Checkout Session using the server-side endpoint you
+                   // created in step 3.
+                   var radioButton = document.getElementById("CC-1");
+                   //radioButton.checked = false;
+                   var infoid = document.getElementById("infouser").value;
+                   var bserviceid =document.getElementById("bserviceid").value;
+                   var bplanid=document.getElementById("bplanid").value;
+                   var othercharges=document.getElementById("orcs").innerHTML;
+
+                   console.log("price");
+
+                  
+                           data={
+                             'infoid':infoid,
+                             'bserviceid':bserviceid,
+                             'bplanid':bplanid,
+                             'othercharges':othercharges,
+                             'walletid':walletid,
+                             'eventname':document.getElementById("eventname").value,
+                             'eventdate':document.getElementById("datePicker").value,
+                             'eventtype':document.getElementById("eventtype").value,
+                             'timefrom':document.getElementById("select1").value,
+                             'timeto':document.getElementById("select2").value,
+                             'address':document.getElementById("address").value,
+                             'description':document.getElementById("description").value,
+                           }
+               
+               
+               
+                           fetch('/create-checkout-session/', {
+                             method: 'POST',
+                             headers: {'Content-type': 'application/json'},
+                             body: JSON.stringify(data),
+                             csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                           })
+                           .then(function(response) {
+               
+                             return response.json();
+                           })
+                           .then(function(session) {
+                             return stripe.redirectToCheckout({ sessionId: session.id });
+                           })
+                           .then(function(result) {
+                             // If `redirectToCheckout` fails due to a browser or network
+                             // error, you should display the localized error message to your
+                             // customer using `error.message`.
+                             if (result.error) {
+                               alert(result.error.message);
+                             }
+                           })
+                           .catch(function(error) {
+                             console.error('Error:', error);
+                           });
+                       
+               }
+
+               if (method === 'UPI Payment') {
+
+                console.log("egasdfhadfda", method);
+
+
+
+            
+               
+               }
+              }
+
+
+              hasExecuted = true;
+
+              }  
+              
+              
+              console.log("method",method);
+              if (typeof method === 'undefined') {
+                if (!hasExecutedForExample) {
+                 console.log('You have no select an option');
+
+
+
+                 var walletck = document.getElementById('CC-3');
+                 var walletid = 0;
+     
+                 // Flag to track button click
+     
+                 if (walletck.checked) {
+     
+     
+                 // freshvalue();
+                     wallchnage();
+     
+                     console.log("3");
+     
+                 }
+                 hasExecutedForExample = true; // Set the flag to true after execution of the "for example" part
+
+
+
+                }
+               }
+              }
+
+              });
+
+               
+             
+            // }
+
+
+
+             window.onload = diableradio;
+                                   
+function diableradio(){
+ 
+  var role='{{request.user.roles}}';
+
+  var county=null;
+  if (role=='client'){
+    county='{{request.user.clientprofile.country}}';
+
+  }
+  else if(role=='agency'){
+    county='{{request.user.agencyprofile.country}}';
+
+
+
+  }
+  else{
+    county='{{request.user.influencerprofile.country}}';
+
+  }
+
+  if(county==='India')
+{
+  var radio = document.getElementById('CC-0');
+        radio.disabled = true;
+  console.log("inner rahul execute");
+  console.log(county);
+}
+
+else if(county==='None' ||  county===null ||  county==='')
+{
+  
+  console.log("inner rahul execute");
+  console.log(county);
+
+}
+else{
+  var radio = document.getElementById('CC-2');
+        radio.disabled = true;
+}
+
+
+
+console.log("outer rahul execute");
+}
+
+               
+               </script>
+                    <div class="card card_options border-0 mt-4">
+                        <div class="quiz-window-header">
+                            <h5 class="footer-widget__title text-white ms-1">What Happen When I Purchase a Package?</h5>
+                          </div>
+                        <div class="card-body">
+                            <div class="step_list">
+                                 <ul id="progressbar">
+                                    <li id="account"><i class="fas fa-check"></i> <strong>Place Order</strong></li>
+                                    <li id="personal"><i class="fas fa-comments"></i><strong>Chat With Influencer</strong></li>
+                                    <li id="payment"><i class="fas fa-thumbs-up"></i><strong>Receive Content</strong></li>
+                                </ul>
+                                <p class="text-center pe-0">If the seller doesn't respond in 7 days, the order will be automatically cancelled and your payment will be refunded in wallet.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+</section>
+
+<script>
+
+
+  function switchcart() {
+    prebody.innerHTML=postbody.innerHTML;
+    var x=document.getElementById("postbody");
+    var y=document.getElementById("prebody");
+  }
+
+
+    function delwishlist(id){
+      switchcart();
+    
+      $('#usercart').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmywhishlist" %}',
+          data:
+          {
+            id:id,
+            
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+            for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+                
+if (response[key].length===0){
+  var html1="";
+  html1+=`
+  <div class="cart-empty-content d-block">
+                <img src="{%static 'images/wish_empty.webp'%}" class="cart-empty-img" alt="wishlist_empty_img" loading="lazy">
+                <p class="empty-heading">Wishlist  Empty add your Favourite Influencers ..</p>
+                <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                <a href="/" target="_blank" class="explore-celeb-btn">Explore Influencers</a>
+              </div>
+              `
+              $('#usercart').append(html1);
+            }
+            else{
+
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex">
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+                              <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                </div>
+                             
+                            </div>
+                          </div>
+                         
+                        </div>
+                        `
+                        $('#usercart').append(html);
+                      }
+                    }
+                    }
+          }
+          })
+        };
+
+        
+    function switchcart1() {
+      prebody1.innerHTML=postbody2.innerHTML;
+    }
+  
+    function delcart(id){
+      switchcart1();
+      
+      $('#usercart3').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmycart" %}',
+          data:
+          {
+            id:id,
+           
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+            for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+             
+              if (response[key].length===0){
+                var html1="";
+                html1+=`
+                <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/cart_empty.webp'%}" class="cart-empty-img" alt="cart_empty_img" loading="lazy">
+                  <p class="empty-heading">Cart Empty add Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Add Influencers</a>
+                </div>
+                            `
+                            $('#usercart3').append(html1);
+                          }
+                          else{
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                  
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+              <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                        $('#usercart3').append(html);
+                      }
+                     
+                    }
+                  }
+    
+          }
+          })
+        };
+  
+  
+  
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+     
+{%endblock%}

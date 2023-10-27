@@ -1,0 +1,45 @@
+DO $$
+DECLARE
+    jid integer;
+    scid integer;
+BEGIN
+-- Creating a new job
+INSERT INTO pgagent.pga_job(
+    jobjclid, jobname, jobdesc, jobhostagent, jobenabled
+) VALUES (
+    1::integer, 'subslotreferenceupdate'::text, ''::text, ''::text, true
+) RETURNING jobid INTO jid;
+
+-- Steps
+-- Inserting a step (jobid: NULL)
+INSERT INTO pgagent.pga_jobstep (
+    jstjobid, jstname, jstenabled, jstkind,
+    jstconnstr, jstdbname, jstonerror,
+    jstcode, jstdesc
+) VALUES (
+    jid, 'updatesubslot'::text, true, 's'::character(1),
+    ''::text, 'influencer'::name, 'f'::character(1),
+    'update mainapp_subslots set isreferenced=false where isreferenced is true and isbooked is false;'::text, 'Update subslotreference'::text
+) ;
+
+-- Schedules
+-- Inserting a schedule
+INSERT INTO pgagent.pga_schedule(
+    jscjobid, jscname, jscdesc, jscenabled,
+    jscstart, jscend,    jscminutes, jschours, jscweekdays, jscmonthdays, jscmonths
+) VALUES (
+    jid, 'updateisreferenced'::text, ''::text, true,
+    '2023-04-07 03:59:00-07'::timestamp with time zone, '2024-04-07 03:58:00-07'::timestamp with time zone,
+    -- Minutes
+    '{t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f,t,f,f,f,f}'::bool[]::boolean[],
+    -- Hours
+    '{t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[],
+    -- Week days
+    '{t,t,t,t,t,t,t}'::bool[]::boolean[],
+    -- Month days
+    '{t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[],
+    -- Months
+    '{t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[]
+) RETURNING jscid INTO scid;
+END
+$$;

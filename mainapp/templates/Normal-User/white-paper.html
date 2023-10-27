@@ -1,0 +1,280 @@
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+
+{% block title%}
+{% for i in Seo1 %}
+{% if i.page.pagename == 'White Paper'%}
+<title>{{i.title}}</title>
+<meta name="title" content="{{i.title}}">
+<meta name="description" content="{{i.description}}">
+<meta name="keywords" content="{{i.keyword}}">
+{% endif %}
+{%endfor%}
+{% endblock %}
+
+{% block canonical%}
+<link rel="canonical" href="https://www.influencerhiring.com/whitepaper/">
+{%endblock%}
+
+
+{%block head%}
+<div class="header dash-header ">
+{%endblock%}
+{%block active%}
+          <li> <a href="/" class="">Home</a> </li>
+          <li> <a href="/influencers/" class="">Explore</a> </li>
+          <li> <a href="/blogs/" class="">Blogs</a> </li>
+          <li> <a href="/webstories/">Web-Stories</a> </li>
+          <li> <a href="/casting-call/">Casting Call</a> </li>
+          <li> <a href="/whitepaper/" class="active">White Paper</a> </li>
+          {%endblock%}
+
+
+{% block body %}
+
+ <style>
+ .menu li a {
+  display: block;
+  padding: 4px 15px;
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  color:#666!important;
+}
+ 
+ </style>
+ 
+<div class="d-flex justify-content-between" style="width: 100%; height: auto; background: #cdebfb;margin-top: 0px;border-top: solid 4px #cecece;">
+<div class="left-white-paper">
+<div style="width: auto; padding: 40px 10px;" class="white-paper-text">
+ <ul class="breadcrumb">
+  <li><a href="/">Home</a></li> 
+  <li>Whitepaper</li>
+</ul> 
+<h1 class="section-header__title">influencer <span>Whitepaper</span></h1>
+<p>We are excited to present an investment opportunity in InfluencerHiring.com, a transformative platform in the rapidly growing influencer marketing industry. This whitepaper provides a comprehensive overview of our business model, market analysis, financial projections, and strategic growth plan. As we stand on the cusp of a new era in influencer marketing.</p>
+	
+</div>
+	
+</div> 
+ 
+ <div class="right-whitepaper">
+  <object data="http://influencerhiring.com/mainapp/static/images/white-paper.pdf" aria-label="Whitepaper" width="100%" height="100%"></object></div>
+    
+</div>
+
+
+
+<script>
+
+
+  function switchcart() {
+    prebody.innerHTML=postbody.innerHTML;
+    var x=document.getElementById("postbody");
+    var y=document.getElementById("prebody");
+  }
+
+
+
+
+
+
+    function delwishlist(id){
+      switchcart();
+    
+      $('#usercart').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmywhishlist" %}',
+          data:
+          {
+            id:id,
+            
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+            for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+                
+if (response[key].length===0){
+  var html1="";
+  html1+=`
+  <div class="cart-empty-content d-block">
+                <img src="{%static 'images/wish_empty.webp'%}" class="cart-empty-img" alt="wishlist_empty_img" loading="lazy">
+                <p class="empty-heading">Wishlist  Empty add your Favourite Influencers ..</p>
+                <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                <a href="/" target="_blank" class="explore-celeb-btn">Explore Influencers</a>
+              </div>
+              `
+              $('#usercart').append(html1);
+            }
+            else{
+
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex">
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+                              <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon"></a>
+                                </div>
+                             
+                            </div>
+                          </div>
+                         
+                        </div>
+                        `
+                        $('#usercart').append(html);
+                      }
+                    }
+                    }
+          }
+          })
+        };
+
+        
+    function switchcart1() {
+      prebody1.innerHTML=postbody2.innerHTML;
+    }
+  
+    function delcart(id){
+      switchcart1();
+      
+      $('#usercart3').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmycart" %}',
+          data:
+          {
+            id:id,
+           
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+                  for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+             
+              if (response[key].length===0){
+                var html1="";
+                html1+=`
+                <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/cart_empty.webp'%}" class="cart-empty-img" alt="cart_empty_img" loading="lazy">
+                  <p class="empty-heading">Cart Empty add Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Add Influencers</a>
+                </div>
+                            `
+                            $('#usercart3').append(html1);
+                          }
+                          else{
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                  
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+              <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                        $('#usercart3').append(html);
+                      }
+                     
+                    }
+                  }
+    
+          }
+          })
+        };
+  
+  
+  
+      </script>
+
+  
+  
+
+{%endblock%}

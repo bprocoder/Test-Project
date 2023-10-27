@@ -1,0 +1,3264 @@
+
+
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block title%}
+<title>Influncer Hiring | Influencer Dashboard</title>
+{% endblock %}
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="{%static 'images/logoIcon/favicon.ico'%}">
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+<link href="{%static 'asset/plugins/custom/fullcalendar/fullcalendar.bundle.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'asset/plugins/custom/datatables/datatables.bundle.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'asset/plugins/global/plugins.bundle.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'asset/css/style.bundle.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'css/input-file.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'asset/css/rating.css'%}" rel="stylesheet" type="text/css" /> 
+<link href="{%static 'asset/css/style-table.css'%}" rel="stylesheet" type="text/css" /> 
+<!-- <link href="https://weareoutman.github.io/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet" type="text/css" />  -->
+
+</head>
+<body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+  <!--begin::Theme mode setup on page load-->
+  <script>var defaultThemeMode = "dark"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-theme-mode")) { themeMode = document.documentElement.getAttribute("data-theme-mode"); } else { if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", themeMode); }</script>
+  <!--end::Theme mode setup on page load-->
+  <!--begin::App-->
+  <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+    <!--begin::Page-->
+    <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+      <!--begin::Header-->
+      <div id="kt_app_header" class="app-header">
+        <!--begin::Header container-->
+        <div class="app-container container-fluid d-flex align-items-stretch justify-content-between" id="kt_app_header_container">
+          <!--begin::Sidebar mobile toggle-->
+          <div class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2" title="Show sidebar menu">
+            <div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_sidebar_mobile_toggle">
+              <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+              <span class="svg-icon svg-icon-2 svg-icon-md-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="currentColor" />
+                  <path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="currentColor" />
+                </svg>
+              </span>
+              <!--end::Svg Icon-->
+            </div>
+          </div>
+          <!--end::Sidebar mobile toggle-->
+          <!--begin::Mobile logo-->
+          <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+            <a href="/Influencer-Dashboard/" class="d-lg-none">
+              <img alt="Logo" src="/mainapp/static/images/logoIcon/logo.webp" class="h-30px" />
+            </a>
+          </div>
+          <!--end::Mobile logo-->
+          <!--begin::Header wrapper-->
+          <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
+            <!--begin::Menu wrapper-->
+            <div class="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true" data-kt-swapper-mode="{default: 'append', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
+              <!--begin::Menu-->
+              <div class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0" id="kt_app_header_menu" data-kt-menu="true">
+                <!--begin:Menu item-->
+                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                  <!--begin:Menu link-->
+                  <span class="menu-item">
+                    <a href="/" target="_blank" class="menu-title">Home</a>
+                  </span>
+                  <!--end:Menu link-->
+                  
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+                  <!--begin:Menu link-->
+                  <span class="menu-item">
+                    <a href="/influencers/" target="_blank" class="menu-title">Explore</a>
+                  </span>
+                  <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+                  <!--begin:Menu link-->
+                  <span class="menu-item">
+                    <a href="/casting-call/" target="_blank" class="menu-title">Casting Call</a>
+                  </span>
+                  <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+                  <!--begin:Menu link-->
+                  <span class="menu-item">
+                    <a href="/whitepaper/" target="_blank" class="menu-title">White Paper</a>
+                  </span>
+                  <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+				<div class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+                <a href="/affiliate-payout/" class="btn btn-light-primary btn-sm btn-active-light-primary">Balance</a>
+                </div>
+                <!--end:Menu item-->
+                <div class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+                  <a href="/wallet/" class="btn btn-light-success btn-sm btn-active-light-success">Wallet</a>
+                </div>
+
+				<div class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+					<a href="#" class="btn btn-light btn-sm btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target28">Feedback</a>
+				</div>
+
+				<div class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+					<div class="btn btn-light btn-active-light-primary d-flex py-1 px-2" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+			    <div class="symbol symbol-30px me-2">
+				<img alt="Logo" src="/media/{{image}}/">
+				</div>
+				<div class="d-flex flex-column justify-content-start">
+				<div class="fw-bold d-flex justify-content-start flex-column fs-8">{{rmname}}
+				<span class="fw-semibold text-muted text-hover-primary fs-9 text-start">Relationship Manager</span>
+				</div>
+				
+				</div>
+				</div>
+				<!--begin::My apps-->
+				<div class="menu menu-sub menu-sub-dropdown menu-column w-100 w-sm-350px" data-kt-menu="true">
+					<!--begin::Card-->
+					<div class="card">
+						<!--begin::Card header-->
+							<!--begin::Card title-->
+							<div class="menu-item px-3">
+							<div class="menu-content d-flex align-items-center px-3">
+								<!--begin::Avatar-->
+								<div class="symbol symbol-50px me-5">
+								<img alt="Logo" src="/media/{{image}}/" />
+								</div>
+								<!--end::Avatar-->
+								<!--begin::Username-->
+								<div class="d-flex flex-column">
+								<div class="fw-bold d-flex align-items-center fs-5">{{rmname}}
+								<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2"></span></div>
+								<span class="badge badge-light-primary">Relationship Manager</span>
+								</div>
+								<!--end::Username-->
+							</div>
+							</div>
+					</div>
+					<!--end::Card-->
+				</div>
+				<!--end::My apps-->
+				</div>
+				
+              </div>
+              <!--end::Menu-->
+            </div>
+            <!--end::Menu wrapper-->
+            <!--begin::Navbar-->
+            <div class="app-navbar flex-shrink-0">
+			
+				<!--begin::My apps links-->
+			    <div class="app-navbar-item ms-1 ms-md-3">
+				<!--begin::Menu wrapper-->
+				
+				<!--end::Menu wrapper-->
+			    </div>
+			   <!--end::My apps links-->
+
+                        
+              <!--begin::Notifications-->
+              <div class="app-navbar-item ms-1 ms-md-3">
+                <!--begin::Menu- wrapper-->
+                <div id="notification-blink" class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px position-relative" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+                  <!--begin::Svg Icon | path: icons/duotune/general/gen022.svg-->
+                  <span class="svg-icon svg-icon-2 svg-icon-md-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor" />
+                      <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor" />
+                      <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor" />
+                      <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <!--end::Svg Icon-->
+                </div>
+                <!--begin::Menu-->
+                <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true">
+                  <!--begin::Heading-->
+                  <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('{%static 'asset/media/misc/menu-header-bg.jpg'%}')">
+                    <!--begin::Title-->
+                    <h3 class="text-white fw-semibold px-9 mt-10 mb-6">Notifications
+                    </h3>
+                    <!--end::Title-->
+                    <!--begin::Tabs-->
+                    <ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-semibold px-9">
+                      <li class="nav-item"> <a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_1"> <span id="noticount" class="fs-5 opacity-75 pe-3">{{notcount}}</span>Alert</a> </li>
+                    </ul>
+                    <!--end::Tabs-->
+                  </div>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="kt_topbar_notifications_1" role="tabpanel">
+                      <div id="notificationcontainer" class="scroll-y mh-325px my-5 px-8">
+                    {%for i in noti%}
+                    {%if i.notificationtype == 'Pitching' %}
+                    {%if i.notificationstatus == False %}
+                          <div class="d-flex flex-stack py-4 px-8 active_notification">
+                    {%else%}
+                    <div class="d-flex flex-stack py-4 px-8">
+                    {%endif%}
+                          <div class="d-flex align-items-center">
+                            <div class="symbol symbol-35px me-4"> <span class="symbol-label bg-light-primary"> <span class="svg-icon svg-icon-2 svg-icon-primary">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.3" d="M11 6.5C11 9 9 11 6.5 11C4 11 2 9 2 6.5C2 4 4 2 6.5 2C9 2 11 4 11 6.5ZM17.5 2C15 2 13 4 13 6.5C13 9 15 11 17.5 11C20 11 22 9 22 6.5C22 4 20 2 17.5 2ZM6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13ZM17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13Z" fill="currentColor" />
+                                <path d="M17.5 16C17.5 16 17.4 16 17.5 16L16.7 15.3C16.1 14.7 15.7 13.9 15.6 13.1C15.5 12.4 15.5 11.6 15.6 10.8C15.7 9.99999 16.1 9.19998 16.7 8.59998L17.4 7.90002H17.5C18.3 7.90002 19 7.20002 19 6.40002C19 5.60002 18.3 4.90002 17.5 4.90002C16.7 4.90002 16 5.60002 16 6.40002V6.5L15.3 7.20001C14.7 7.80001 13.9 8.19999 13.1 8.29999C12.4 8.39999 11.6 8.39999 10.8 8.29999C9.99999 8.19999 9.20001 7.80001 8.60001 7.20001L7.89999 6.5V6.40002C7.89999 5.60002 7.19999 4.90002 6.39999 4.90002C5.59999 4.90002 4.89999 5.60002 4.89999 6.40002C4.89999 7.20002 5.59999 7.90002 6.39999 7.90002H6.5L7.20001 8.59998C7.80001 9.19998 8.19999 9.99999 8.29999 10.8C8.39999 11.5 8.39999 12.3 8.29999 13.1C8.19999 13.9 7.80001 14.7 7.20001 15.3L6.5 16H6.39999C5.59999 16 4.89999 16.7 4.89999 17.5C4.89999 18.3 5.59999 19 6.39999 19C7.19999 19 7.89999 18.3 7.89999 17.5V17.4L8.60001 16.7C9.20001 16.1 9.99999 15.7 10.8 15.6C11.5 15.5 12.3 15.5 13.1 15.6C13.9 15.7 14.7 16.1 15.3 16.7L16 17.4V17.5C16 18.3 16.7 19 17.5 19C18.3 19 19 18.3 19 17.5C19 16.7 18.3 16 17.5 16Z" fill="currentColor" />
+                              </svg>
+                              </span> </span> </div>
+                            <div class="mb-0 me-2 fs-6 text-gray-800 text-hover-primary fw-bold"> <a href="#" class="post-value" data-my-value="true"  >{{i.notificationpurpose}}</a>
+                              <div class="text-gray-400 fs-7">{{i.notificationcontent}}</div>
+                            </div>
+                          </div>
+                          <span class="badge badge-light fs-8">{{i.time_diff}}</span> 
+                        </div>
+ 
+                        {%endif%}
+ 
+ 
+                       
+                       {%if i.notificationtype == 'Ordered' %}
+                       {%if i.notificationstatus == False %}
+                          <div class="d-flex flex-stack py-4 px-8 active_notification">
+                       {%else%}
+                       <div class="d-flex flex-stack py-4 px-8">
+  {%endif%}
+                          <div class="d-flex align-items-center">
+                            <div class="symbol symbol-35px me-4"> <span class="symbol-label bg-light-primary"> <span class="svg-icon svg-icon-2 svg-icon-primary">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.3" d="M11 6.5C11 9 9 11 6.5 11C4 11 2 9 2 6.5C2 4 4 2 6.5 2C9 2 11 4 11 6.5ZM17.5 2C15 2 13 4 13 6.5C13 9 15 11 17.5 11C20 11 22 9 22 6.5C22 4 20 2 17.5 2ZM6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13ZM17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13Z" fill="currentColor" />
+                                <path d="M17.5 16C17.5 16 17.4 16 17.5 16L16.7 15.3C16.1 14.7 15.7 13.9 15.6 13.1C15.5 12.4 15.5 11.6 15.6 10.8C15.7 9.99999 16.1 9.19998 16.7 8.59998L17.4 7.90002H17.5C18.3 7.90002 19 7.20002 19 6.40002C19 5.60002 18.3 4.90002 17.5 4.90002C16.7 4.90002 16 5.60002 16 6.40002V6.5L15.3 7.20001C14.7 7.80001 13.9 8.19999 13.1 8.29999C12.4 8.39999 11.6 8.39999 10.8 8.29999C9.99999 8.19999 9.20001 7.80001 8.60001 7.20001L7.89999 6.5V6.40002C7.89999 5.60002 7.19999 4.90002 6.39999 4.90002C5.59999 4.90002 4.89999 5.60002 4.89999 6.40002C4.89999 7.20002 5.59999 7.90002 6.39999 7.90002H6.5L7.20001 8.59998C7.80001 9.19998 8.19999 9.99999 8.29999 10.8C8.39999 11.5 8.39999 12.3 8.29999 13.1C8.19999 13.9 7.80001 14.7 7.20001 15.3L6.5 16H6.39999C5.59999 16 4.89999 16.7 4.89999 17.5C4.89999 18.3 5.59999 19 6.39999 19C7.19999 19 7.89999 18.3 7.89999 17.5V17.4L8.60001 16.7C9.20001 16.1 9.99999 15.7 10.8 15.6C11.5 15.5 12.3 15.5 13.1 15.6C13.9 15.7 14.7 16.1 15.3 16.7L16 17.4V17.5C16 18.3 16.7 19 17.5 19C18.3 19 19 18.3 19 17.5C19 16.7 18.3 16 17.5 16Z" fill="currentColor" />
+                              </svg>
+                              </span> </span> </div>
+                            <div class="mb-0 me-2 fs-6 text-gray-800 text-hover-primary fw-bold"> <a href="#" class="post-value" data-my-value="true"  >{{i.notificationpurpose}}</a>
+                              <div class="text-gray-400 fs-7">{{i.notificationcontent}}</div>
+                            </div>
+                          </div>
+                          <span class="badge badge-light fs-8">{{i.time_diff}}</span> 
+                        </div>
+                        {%endif%}
+                        {%endfor%}
+</div>
+<div class="py-3 text-center border-top"> <a href="/notification/" class="btn btn-color-gray-600 btn-active-color-primary">View All
+	<span class="svg-icon svg-icon-5">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="currentColor" />
+    <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
+  </svg>
+  </span>
+  </a> </div> 
+</div>
+</div>
+</div>
+</div>
+              <!--end::Notifications-->
+              <!--begin::Chat-->
+              <div class="app-navbar-item ms-1 ms-md-3">
+                <!--begin::Menu wrapper-->
+                <div class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px position-relative" id="kt_drawer_chat_toggle">
+                  <!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
+                  <span class="svg-icon svg-icon-2 svg-icon-md-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor" />
+                      <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor" />
+                      <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <!--end::Svg Icon-->
+                  {% if unread_status == True%}
+                  <span id="unread-blink" class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
+                  {% endif %}
+                </div>
+                <!--end::Menu wrapper-->
+              </div>
+              <!--end::Chat-->
+              
+              <!--begin::Theme mode-->
+              <div class="app-navbar-item ms-1 ms-md-3">
+                <!--begin::Menu toggle-->
+                <a href="#" class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+                  <!--begin::Svg Icon | path: icons/duotune/general/gen060.svg-->
+                  <span class="svg-icon theme-light-show svg-icon-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.9905 5.62598C10.7293 5.62574 9.49646 5.9995 8.44775 6.69997C7.39903 7.40045 6.58159 8.39619 6.09881 9.56126C5.61603 10.7263 5.48958 12.0084 5.73547 13.2453C5.98135 14.4823 6.58852 15.6185 7.48019 16.5104C8.37186 17.4022 9.50798 18.0096 10.7449 18.2557C11.9818 18.5019 13.2639 18.3757 14.429 17.8931C15.5942 17.4106 16.5901 16.5933 17.2908 15.5448C17.9915 14.4962 18.3655 13.2634 18.3655 12.0023C18.3637 10.3119 17.6916 8.69129 16.4964 7.49593C15.3013 6.30056 13.6808 5.62806 11.9905 5.62598Z" fill="currentColor" />
+                      <path d="M22.1258 10.8771H20.627C20.3286 10.8771 20.0424 10.9956 19.8314 11.2066C19.6204 11.4176 19.5018 11.7038 19.5018 12.0023C19.5018 12.3007 19.6204 12.5869 19.8314 12.7979C20.0424 13.0089 20.3286 13.1274 20.627 13.1274H22.1258C22.4242 13.1274 22.7104 13.0089 22.9214 12.7979C23.1324 12.5869 23.2509 12.3007 23.2509 12.0023C23.2509 11.7038 23.1324 11.4176 22.9214 11.2066C22.7104 10.9956 22.4242 10.8771 22.1258 10.8771Z" fill="currentColor" />
+                      <path d="M11.9905 19.4995C11.6923 19.5 11.4064 19.6187 11.1956 19.8296C10.9848 20.0405 10.8663 20.3265 10.866 20.6247V22.1249C10.866 22.4231 10.9845 22.7091 11.1953 22.9199C11.4062 23.1308 11.6922 23.2492 11.9904 23.2492C12.2886 23.2492 12.5746 23.1308 12.7854 22.9199C12.9963 22.7091 13.1147 22.4231 13.1147 22.1249V20.6247C13.1145 20.3265 12.996 20.0406 12.7853 19.8296C12.5745 19.6187 12.2887 19.5 11.9905 19.4995Z" fill="currentColor" />
+                      <path d="M4.49743 12.0023C4.49718 11.704 4.37865 11.4181 4.16785 11.2072C3.95705 10.9962 3.67119 10.8775 3.37298 10.8771H1.87445C1.57603 10.8771 1.28984 10.9956 1.07883 11.2066C0.867812 11.4176 0.749266 11.7038 0.749266 12.0023C0.749266 12.3007 0.867812 12.5869 1.07883 12.7979C1.28984 13.0089 1.57603 13.1274 1.87445 13.1274H3.37299C3.6712 13.127 3.95706 13.0083 4.16785 12.7973C4.37865 12.5864 4.49718 12.3005 4.49743 12.0023Z" fill="currentColor" />
+                      <path d="M11.9905 4.50058C12.2887 4.50012 12.5745 4.38141 12.7853 4.17048C12.9961 3.95954 13.1147 3.67361 13.1149 3.3754V1.87521C13.1149 1.57701 12.9965 1.29103 12.7856 1.08017C12.5748 0.869313 12.2888 0.750854 11.9906 0.750854C11.6924 0.750854 11.4064 0.869313 11.1955 1.08017C10.9847 1.29103 10.8662 1.57701 10.8662 1.87521V3.3754C10.8664 3.67359 10.9849 3.95952 11.1957 4.17046C11.4065 4.3814 11.6923 4.50012 11.9905 4.50058Z" fill="currentColor" />
+                      <path d="M18.8857 6.6972L19.9465 5.63642C20.0512 5.53209 20.1343 5.40813 20.1911 5.27163C20.2479 5.13513 20.2772 4.98877 20.2774 4.84093C20.2775 4.69309 20.2485 4.54667 20.192 4.41006C20.1355 4.27344 20.0526 4.14932 19.948 4.04478C19.8435 3.94024 19.7194 3.85734 19.5828 3.80083C19.4462 3.74432 19.2997 3.71531 19.1519 3.71545C19.0041 3.7156 18.8577 3.7449 18.7212 3.80167C18.5847 3.85845 18.4607 3.94159 18.3564 4.04633L17.2956 5.10714C17.1909 5.21147 17.1077 5.33543 17.0509 5.47194C16.9942 5.60844 16.9649 5.7548 16.9647 5.90264C16.9646 6.05048 16.9936 6.19689 17.0501 6.33351C17.1066 6.47012 17.1895 6.59425 17.294 6.69878C17.3986 6.80332 17.5227 6.88621 17.6593 6.94272C17.7959 6.99923 17.9424 7.02824 18.0902 7.02809C18.238 7.02795 18.3844 6.99865 18.5209 6.94187C18.6574 6.88509 18.7814 6.80195 18.8857 6.6972Z" fill="currentColor" />
+                      <path d="M18.8855 17.3073C18.7812 17.2026 18.6572 17.1195 18.5207 17.0627C18.3843 17.006 18.2379 16.9767 18.0901 16.9766C17.9423 16.9764 17.7959 17.0055 17.6593 17.062C17.5227 17.1185 17.3986 17.2014 17.2941 17.3059C17.1895 17.4104 17.1067 17.5345 17.0501 17.6711C16.9936 17.8077 16.9646 17.9541 16.9648 18.1019C16.9649 18.2497 16.9942 18.3961 17.0509 18.5326C17.1077 18.6691 17.1908 18.793 17.2955 18.8974L18.3563 19.9582C18.4606 20.0629 18.5846 20.146 18.721 20.2027C18.8575 20.2595 19.0039 20.2887 19.1517 20.2889C19.2995 20.289 19.4459 20.26 19.5825 20.2035C19.7191 20.147 19.8432 20.0641 19.9477 19.9595C20.0523 19.855 20.1351 19.7309 20.1916 19.5943C20.2482 19.4577 20.2772 19.3113 20.277 19.1635C20.2769 19.0157 20.2476 18.8694 20.1909 18.7329C20.1341 18.5964 20.051 18.4724 19.9463 18.3681L18.8855 17.3073Z" fill="currentColor" />
+                      <path d="M5.09528 17.3072L4.0345 18.368C3.92972 18.4723 3.84655 18.5963 3.78974 18.7328C3.73294 18.8693 3.70362 19.0156 3.70346 19.1635C3.7033 19.3114 3.7323 19.4578 3.78881 19.5944C3.84532 19.7311 3.92822 19.8552 4.03277 19.9598C4.13732 20.0643 4.26147 20.1472 4.3981 20.2037C4.53473 20.2602 4.68117 20.2892 4.82902 20.2891C4.97688 20.2889 5.12325 20.2596 5.25976 20.2028C5.39627 20.146 5.52024 20.0628 5.62456 19.958L6.68536 18.8973C6.79007 18.7929 6.87318 18.6689 6.92993 18.5325C6.98667 18.396 7.01595 18.2496 7.01608 18.1018C7.01621 17.954 6.98719 17.8076 6.93068 17.671C6.87417 17.5344 6.79129 17.4103 6.68676 17.3058C6.58224 17.2012 6.45813 17.1183 6.32153 17.0618C6.18494 17.0053 6.03855 16.9763 5.89073 16.9764C5.74291 16.9766 5.59657 17.0058 5.46007 17.0626C5.32358 17.1193 5.19962 17.2024 5.09528 17.3072Z" fill="currentColor" />
+                      <path d="M5.09541 6.69715C5.19979 6.8017 5.32374 6.88466 5.4602 6.94128C5.59665 6.9979 5.74292 7.02708 5.89065 7.02714C6.03839 7.0272 6.18469 6.99815 6.32119 6.94164C6.45769 6.88514 6.58171 6.80228 6.68618 6.69782C6.79064 6.59336 6.87349 6.46933 6.93 6.33283C6.9865 6.19633 7.01556 6.05003 7.01549 5.9023C7.01543 5.75457 6.98625 5.60829 6.92963 5.47184C6.87301 5.33539 6.79005 5.21143 6.6855 5.10706L5.6247 4.04626C5.5204 3.94137 5.39643 3.8581 5.25989 3.80121C5.12335 3.74432 4.97692 3.71493 4.82901 3.71472C4.68109 3.71452 4.53458 3.7435 4.39789 3.80001C4.26119 3.85652 4.13699 3.93945 4.03239 4.04404C3.9278 4.14864 3.84487 4.27284 3.78836 4.40954C3.73185 4.54624 3.70287 4.69274 3.70308 4.84066C3.70329 4.98858 3.73268 5.135 3.78957 5.27154C3.84646 5.40808 3.92974 5.53205 4.03462 5.63635L5.09541 6.69715Z" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <!--end::Svg Icon-->
+                  <!--begin::Svg Icon | path: icons/duotune/general/gen061.svg-->
+                  <span class="svg-icon theme-dark-show svg-icon-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.0647 5.43757C19.3421 5.43757 19.567 5.21271 19.567 4.93534C19.567 4.65796 19.3421 4.43311 19.0647 4.43311C18.7874 4.43311 18.5625 4.65796 18.5625 4.93534C18.5625 5.21271 18.7874 5.43757 19.0647 5.43757Z" fill="currentColor" />
+                      <path d="M20.0692 9.48884C20.3466 9.48884 20.5714 9.26398 20.5714 8.98661C20.5714 8.70923 20.3466 8.48438 20.0692 8.48438C19.7918 8.48438 19.567 8.70923 19.567 8.98661C19.567 9.26398 19.7918 9.48884 20.0692 9.48884Z" fill="currentColor" />
+                      <path d="M12.0335 20.5714C15.6943 20.5714 18.9426 18.2053 20.1168 14.7338C20.1884 14.5225 20.1114 14.289 19.9284 14.161C19.746 14.034 19.5003 14.0418 19.3257 14.1821C18.2432 15.0546 16.9371 15.5156 15.5491 15.5156C12.2257 15.5156 9.48884 12.8122 9.48884 9.48886C9.48884 7.41079 10.5773 5.47137 12.3449 4.35752C12.5342 4.23832 12.6 4.00733 12.5377 3.79251C12.4759 3.57768 12.2571 3.42859 12.0335 3.42859C7.32556 3.42859 3.42857 7.29209 3.42857 12C3.42857 16.7079 7.32556 20.5714 12.0335 20.5714Z" fill="currentColor" />
+                      <path d="M13.0379 7.47998C13.8688 7.47998 14.5446 8.15585 14.5446 8.98668C14.5446 9.26428 14.7693 9.48891 15.0469 9.48891C15.3245 9.48891 15.5491 9.26428 15.5491 8.98668C15.5491 8.15585 16.225 7.47998 17.0558 7.47998C17.3334 7.47998 17.558 7.25535 17.558 6.97775C17.558 6.70015 17.3334 6.47552 17.0558 6.47552C16.225 6.47552 15.5491 5.76616 15.5491 4.93534C15.5491 4.65774 15.3245 4.43311 15.0469 4.43311C14.7693 4.43311 14.5446 4.65774 14.5446 4.93534C14.5446 5.76616 13.8688 6.47552 13.0379 6.47552C12.7603 6.47552 12.5357 6.70015 12.5357 6.97775C12.5357 7.25535 12.7603 7.47998 13.0379 7.47998Z" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <!--end::Svg Icon-->
+                </a>
+                <!--begin::Menu toggle-->
+                <!--begin::Menu-->
+                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-muted menu-active-bg menu-state-color fw-semibold py-4 fs-base w-150px" data-kt-menu="true" data-kt-element="theme-mode-menu">
+                  <!--begin::Menu item-->
+                  <div class="menu-item px-3 my-0">
+                    <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="light">
+                      <span class="menu-icon" data-kt-element="icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen060.svg-->
+                        <span class="svg-icon svg-icon-3">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9905 5.62598C10.7293 5.62574 9.49646 5.9995 8.44775 6.69997C7.39903 7.40045 6.58159 8.39619 6.09881 9.56126C5.61603 10.7263 5.48958 12.0084 5.73547 13.2453C5.98135 14.4823 6.58852 15.6185 7.48019 16.5104C8.37186 17.4022 9.50798 18.0096 10.7449 18.2557C11.9818 18.5019 13.2639 18.3757 14.429 17.8931C15.5942 17.4106 16.5901 16.5933 17.2908 15.5448C17.9915 14.4962 18.3655 13.2634 18.3655 12.0023C18.3637 10.3119 17.6916 8.69129 16.4964 7.49593C15.3013 6.30056 13.6808 5.62806 11.9905 5.62598Z" fill="currentColor" />
+                            <path d="M22.1258 10.8771H20.627C20.3286 10.8771 20.0424 10.9956 19.8314 11.2066C19.6204 11.4176 19.5018 11.7038 19.5018 12.0023C19.5018 12.3007 19.6204 12.5869 19.8314 12.7979C20.0424 13.0089 20.3286 13.1274 20.627 13.1274H22.1258C22.4242 13.1274 22.7104 13.0089 22.9214 12.7979C23.1324 12.5869 23.2509 12.3007 23.2509 12.0023C23.2509 11.7038 23.1324 11.4176 22.9214 11.2066C22.7104 10.9956 22.4242 10.8771 22.1258 10.8771Z" fill="currentColor" />
+                            <path d="M11.9905 19.4995C11.6923 19.5 11.4064 19.6187 11.1956 19.8296C10.9848 20.0405 10.8663 20.3265 10.866 20.6247V22.1249C10.866 22.4231 10.9845 22.7091 11.1953 22.9199C11.4062 23.1308 11.6922 23.2492 11.9904 23.2492C12.2886 23.2492 12.5746 23.1308 12.7854 22.9199C12.9963 22.7091 13.1147 22.4231 13.1147 22.1249V20.6247C13.1145 20.3265 12.996 20.0406 12.7853 19.8296C12.5745 19.6187 12.2887 19.5 11.9905 19.4995Z" fill="currentColor" />
+                            <path d="M4.49743 12.0023C4.49718 11.704 4.37865 11.4181 4.16785 11.2072C3.95705 10.9962 3.67119 10.8775 3.37298 10.8771H1.87445C1.57603 10.8771 1.28984 10.9956 1.07883 11.2066C0.867812 11.4176 0.749266 11.7038 0.749266 12.0023C0.749266 12.3007 0.867812 12.5869 1.07883 12.7979C1.28984 13.0089 1.57603 13.1274 1.87445 13.1274H3.37299C3.6712 13.127 3.95706 13.0083 4.16785 12.7973C4.37865 12.5864 4.49718 12.3005 4.49743 12.0023Z" fill="currentColor" />
+                            <path d="M11.9905 4.50058C12.2887 4.50012 12.5745 4.38141 12.7853 4.17048C12.9961 3.95954 13.1147 3.67361 13.1149 3.3754V1.87521C13.1149 1.57701 12.9965 1.29103 12.7856 1.08017C12.5748 0.869313 12.2888 0.750854 11.9906 0.750854C11.6924 0.750854 11.4064 0.869313 11.1955 1.08017C10.9847 1.29103 10.8662 1.57701 10.8662 1.87521V3.3754C10.8664 3.67359 10.9849 3.95952 11.1957 4.17046C11.4065 4.3814 11.6923 4.50012 11.9905 4.50058Z" fill="currentColor" />
+                            <path d="M18.8857 6.6972L19.9465 5.63642C20.0512 5.53209 20.1343 5.40813 20.1911 5.27163C20.2479 5.13513 20.2772 4.98877 20.2774 4.84093C20.2775 4.69309 20.2485 4.54667 20.192 4.41006C20.1355 4.27344 20.0526 4.14932 19.948 4.04478C19.8435 3.94024 19.7194 3.85734 19.5828 3.80083C19.4462 3.74432 19.2997 3.71531 19.1519 3.71545C19.0041 3.7156 18.8577 3.7449 18.7212 3.80167C18.5847 3.85845 18.4607 3.94159 18.3564 4.04633L17.2956 5.10714C17.1909 5.21147 17.1077 5.33543 17.0509 5.47194C16.9942 5.60844 16.9649 5.7548 16.9647 5.90264C16.9646 6.05048 16.9936 6.19689 17.0501 6.33351C17.1066 6.47012 17.1895 6.59425 17.294 6.69878C17.3986 6.80332 17.5227 6.88621 17.6593 6.94272C17.7959 6.99923 17.9424 7.02824 18.0902 7.02809C18.238 7.02795 18.3844 6.99865 18.5209 6.94187C18.6574 6.88509 18.7814 6.80195 18.8857 6.6972Z" fill="currentColor" />
+                            <path d="M18.8855 17.3073C18.7812 17.2026 18.6572 17.1195 18.5207 17.0627C18.3843 17.006 18.2379 16.9767 18.0901 16.9766C17.9423 16.9764 17.7959 17.0055 17.6593 17.062C17.5227 17.1185 17.3986 17.2014 17.2941 17.3059C17.1895 17.4104 17.1067 17.5345 17.0501 17.6711C16.9936 17.8077 16.9646 17.9541 16.9648 18.1019C16.9649 18.2497 16.9942 18.3961 17.0509 18.5326C17.1077 18.6691 17.1908 18.793 17.2955 18.8974L18.3563 19.9582C18.4606 20.0629 18.5846 20.146 18.721 20.2027C18.8575 20.2595 19.0039 20.2887 19.1517 20.2889C19.2995 20.289 19.4459 20.26 19.5825 20.2035C19.7191 20.147 19.8432 20.0641 19.9477 19.9595C20.0523 19.855 20.1351 19.7309 20.1916 19.5943C20.2482 19.4577 20.2772 19.3113 20.277 19.1635C20.2769 19.0157 20.2476 18.8694 20.1909 18.7329C20.1341 18.5964 20.051 18.4724 19.9463 18.3681L18.8855 17.3073Z" fill="currentColor" />
+                            <path d="M5.09528 17.3072L4.0345 18.368C3.92972 18.4723 3.84655 18.5963 3.78974 18.7328C3.73294 18.8693 3.70362 19.0156 3.70346 19.1635C3.7033 19.3114 3.7323 19.4578 3.78881 19.5944C3.84532 19.7311 3.92822 19.8552 4.03277 19.9598C4.13732 20.0643 4.26147 20.1472 4.3981 20.2037C4.53473 20.2602 4.68117 20.2892 4.82902 20.2891C4.97688 20.2889 5.12325 20.2596 5.25976 20.2028C5.39627 20.146 5.52024 20.0628 5.62456 19.958L6.68536 18.8973C6.79007 18.7929 6.87318 18.6689 6.92993 18.5325C6.98667 18.396 7.01595 18.2496 7.01608 18.1018C7.01621 17.954 6.98719 17.8076 6.93068 17.671C6.87417 17.5344 6.79129 17.4103 6.68676 17.3058C6.58224 17.2012 6.45813 17.1183 6.32153 17.0618C6.18494 17.0053 6.03855 16.9763 5.89073 16.9764C5.74291 16.9766 5.59657 17.0058 5.46007 17.0626C5.32358 17.1193 5.19962 17.2024 5.09528 17.3072Z" fill="currentColor" />
+                            <path d="M5.09541 6.69715C5.19979 6.8017 5.32374 6.88466 5.4602 6.94128C5.59665 6.9979 5.74292 7.02708 5.89065 7.02714C6.03839 7.0272 6.18469 6.99815 6.32119 6.94164C6.45769 6.88514 6.58171 6.80228 6.68618 6.69782C6.79064 6.59336 6.87349 6.46933 6.93 6.33283C6.9865 6.19633 7.01556 6.05003 7.01549 5.9023C7.01543 5.75457 6.98625 5.60829 6.92963 5.47184C6.87301 5.33539 6.79005 5.21143 6.6855 5.10706L5.6247 4.04626C5.5204 3.94137 5.39643 3.8581 5.25989 3.80121C5.12335 3.74432 4.97692 3.71493 4.82901 3.71472C4.68109 3.71452 4.53458 3.7435 4.39789 3.80001C4.26119 3.85652 4.13699 3.93945 4.03239 4.04404C3.9278 4.14864 3.84487 4.27284 3.78836 4.40954C3.73185 4.54624 3.70287 4.69274 3.70308 4.84066C3.70329 4.98858 3.73268 5.135 3.78957 5.27154C3.84646 5.40808 3.92974 5.53205 4.03462 5.63635L5.09541 6.69715Z" fill="currentColor" />
+                          </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <span class="menu-title">Light</span>
+                    </a>
+                  </div>
+                  <!--end::Menu item-->
+                  <!--begin::Menu item-->
+                  <div class="menu-item px-3 my-0">
+                    <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="dark">
+                      <span class="menu-icon" data-kt-element="icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen061.svg-->
+                        <span class="svg-icon svg-icon-3">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.0647 5.43757C19.3421 5.43757 19.567 5.21271 19.567 4.93534C19.567 4.65796 19.3421 4.43311 19.0647 4.43311C18.7874 4.43311 18.5625 4.65796 18.5625 4.93534C18.5625 5.21271 18.7874 5.43757 19.0647 5.43757Z" fill="currentColor" />
+                            <path d="M20.0692 9.48884C20.3466 9.48884 20.5714 9.26398 20.5714 8.98661C20.5714 8.70923 20.3466 8.48438 20.0692 8.48438C19.7918 8.48438 19.567 8.70923 19.567 8.98661C19.567 9.26398 19.7918 9.48884 20.0692 9.48884Z" fill="currentColor" />
+                            <path d="M12.0335 20.5714C15.6943 20.5714 18.9426 18.2053 20.1168 14.7338C20.1884 14.5225 20.1114 14.289 19.9284 14.161C19.746 14.034 19.5003 14.0418 19.3257 14.1821C18.2432 15.0546 16.9371 15.5156 15.5491 15.5156C12.2257 15.5156 9.48884 12.8122 9.48884 9.48886C9.48884 7.41079 10.5773 5.47137 12.3449 4.35752C12.5342 4.23832 12.6 4.00733 12.5377 3.79251C12.4759 3.57768 12.2571 3.42859 12.0335 3.42859C7.32556 3.42859 3.42857 7.29209 3.42857 12C3.42857 16.7079 7.32556 20.5714 12.0335 20.5714Z" fill="currentColor" />
+                            <path d="M13.0379 7.47998C13.8688 7.47998 14.5446 8.15585 14.5446 8.98668C14.5446 9.26428 14.7693 9.48891 15.0469 9.48891C15.3245 9.48891 15.5491 9.26428 15.5491 8.98668C15.5491 8.15585 16.225 7.47998 17.0558 7.47998C17.3334 7.47998 17.558 7.25535 17.558 6.97775C17.558 6.70015 17.3334 6.47552 17.0558 6.47552C16.225 6.47552 15.5491 5.76616 15.5491 4.93534C15.5491 4.65774 15.3245 4.43311 15.0469 4.43311C14.7693 4.43311 14.5446 4.65774 14.5446 4.93534C14.5446 5.76616 13.8688 6.47552 13.0379 6.47552C12.7603 6.47552 12.5357 6.70015 12.5357 6.97775C12.5357 7.25535 12.7603 7.47998 13.0379 7.47998Z" fill="currentColor" />
+                          </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <span class="menu-title">Dark</span>
+                    </a>
+                  </div>
+                  <!--end::Menu item-->
+                  <!--begin::Menu item-->
+                  <div class="menu-item px-3 my-0">
+                    <a href="#" class="menu-link px-3 py-2" data-kt-element="mode" data-kt-value="system">
+                      <span class="menu-icon" data-kt-element="icon">
+                        <!--begin::Svg Icon | path: icons/duotune/general/gen062.svg-->
+                        <span class="svg-icon svg-icon-3">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.34375 3.9463V15.2178C1.34375 16.119 2.08105 16.8563 2.98219 16.8563H8.65093V19.4594H6.15702C5.38853 19.4594 4.75981 19.9617 4.75981 20.5757V21.6921H19.2403V20.5757C19.2403 19.9617 18.6116 19.4594 17.8431 19.4594H15.3492V16.8563H21.0179C21.919 16.8563 22.6562 16.119 22.6562 15.2178V3.9463C22.6562 3.04516 21.9189 2.30786 21.0179 2.30786H2.98219C2.08105 2.30786 1.34375 3.04516 1.34375 3.9463ZM12.9034 9.9016C13.241 9.98792 13.5597 10.1216 13.852 10.2949L15.0393 9.4353L15.9893 10.3853L15.1297 11.5727C15.303 11.865 15.4366 12.1837 15.523 12.5212L16.97 12.7528V13.4089H13.9851C13.9766 12.3198 13.0912 11.4394 12 11.4394C10.9089 11.4394 10.0235 12.3198 10.015 13.4089H7.03006V12.7528L8.47712 12.5211C8.56345 12.1836 8.69703 11.8649 8.87037 11.5727L8.0107 10.3853L8.96078 9.4353L10.148 10.2949C10.4404 10.1215 10.759 9.98788 11.0966 9.9016L11.3282 8.45467H12.6718L12.9034 9.9016ZM16.1353 7.93758C15.6779 7.93758 15.3071 7.56681 15.3071 7.1094C15.3071 6.652 15.6779 6.28122 16.1353 6.28122C16.5926 6.28122 16.9634 6.652 16.9634 7.1094C16.9634 7.56681 16.5926 7.93758 16.1353 7.93758ZM2.71385 14.0964V3.90518C2.71385 3.78023 2.81612 3.67796 2.94107 3.67796H21.0589C21.1839 3.67796 21.2861 3.78023 21.2861 3.90518V14.0964C15.0954 14.0964 8.90462 14.0964 2.71385 14.0964Z" fill="currentColor" />
+                          </svg>
+                        </span>
+                        <!--end::Svg Icon-->
+                      </span>
+                      <span class="menu-title">System</span>
+                    </a>
+                  </div>
+                  <!--end::Menu item-->
+                </div>
+                <!--end::Menu-->
+              </div>
+              <!--end::Theme mode-->
+              <!--begin::User menu-->
+              <div class="app-navbar-item ms-1 ms-md-3" id="kt_header_user_menu_toggle">
+                <!--begin::Menu wrapper-->
+                <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+                  <img src="/media/{{request.user.influencerprofile.profileimage}}" alt="user" />
+                </div>
+                <!--begin::User account menu-->
+                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px" data-kt-menu="true">
+                  <!--begin::Menu item-->
+                  <div class="menu-item px-3">
+                    <div class="menu-content d-flex align-items-center px-3">
+                      <!--begin::Avatar-->
+                      <div class="symbol symbol-50px me-5">
+                        <img alt="Logo" src="/media/{{request.user.influencerprofile.profileimage}}" />
+                      </div>
+                      <!--end::Avatar-->
+                      <!--begin::Username-->
+                      <div class="d-flex flex-column">
+                        <div class="fw-bold d-flex align-items-center fs-5">{{request.user.username}}
+							<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2"></span>
+					</div>
+                        <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{request.user.email}}</a>
+                      </div>
+                      <!--end::Username-->
+                    </div>
+                  </div>
+                  <!--end::Menu item-->
+                  <!--begin::Menu separator-->
+                  <div class="separator my-2"></div>
+                  <!--end::Menu separator-->
+                  <!--begin::Menu item-->
+                  <div class="menu-item px-5">
+                    <a href="/Overview/" class="menu-link px-5">My Profile</a>
+                  </div>
+                  <!--end::Menu item-->
+				  <div class="menu-item px-5">
+					<a href="/Orders/" class="menu-link px-5">
+					<span class="menu-text">Recent Orders</span>
+					<span class="menu-badge">
+					</span>
+					</a>
+					</div>
+                
+                  <!--begin::Menu separator-->
+                  <div class="separator my-2"></div>
+                  <!--end::Menu separator-->
+                  <!--begin::Menu item-->
+                  <div class="menu-item px-5 my-1">
+                    <a href="/Settings/" class="menu-link px-5">Account Settings</a>
+                  </div>
+                  <!--end::Menu item-->
+                  <!--begin::Menu item-->
+                  <div class="menu-item px-5">
+                    <a href="/logout/" class="menu-link px-5">Sign Out</a>
+                  </div>
+                  <!--end::Menu item-->
+                </div>
+                <!--end::User account menu-->
+                <!--end::Menu wrapper-->
+              </div>
+              <!--end::User menu-->
+              <!--begin::Header menu toggle-->
+              <div class="app-navbar-item d-lg-none ms-2 me-n3" title="Show header menu">
+                <div class="btn btn-icon btn-active-color-primary w-30px h-30px w-md-35px h-md-35px" id="kt_app_header_menu_toggle">
+                  <!--begin::Svg Icon | path: icons/duotune/text/txt001.svg-->
+                  <span class="svg-icon svg-icon-2 svg-icon-md-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 11H3C2.4 11 2 10.6 2 10V9C2 8.4 2.4 8 3 8H13C13.6 8 14 8.4 14 9V10C14 10.6 13.6 11 13 11ZM22 5V4C22 3.4 21.6 3 21 3H3C2.4 3 2 3.4 2 4V5C2 5.6 2.4 6 3 6H21C21.6 6 22 5.6 22 5Z" fill="currentColor" />
+                      <path opacity="0.3" d="M21 16H3C2.4 16 2 15.6 2 15V14C2 13.4 2.4 13 3 13H21C21.6 13 22 13.4 22 14V15C22 15.6 21.6 16 21 16ZM14 20V19C14 18.4 13.6 18 13 18H3C2.4 18 2 18.4 2 19V20C2 20.6 2.4 21 3 21H13C13.6 21 14 20.6 14 20Z" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <!--end::Svg Icon-->
+                </div>
+              </div>
+              <!--end::Header menu toggle-->
+            </div>
+            <!--end::Navbar-->
+          </div>
+          <!--end::Header wrapper-->
+        </div>
+        <!--end::Header container-->
+      </div>
+      <!--end::Header-->
+      <!--begin::Wrapper-->
+      <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+        <!--begin::Sidebar-->
+        <div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+			<!--begin::Logo-->
+						<div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+							<!--begin::Logo image-->
+							<a href="/Influencer-Dashboard/">
+								<img alt="Logo" src="/mainapp/static/images/logoIcon/logo.webp" class="h-50px app-sidebar-logo-default" />
+								<img alt="Logo" src="{%static 'images/logoIcon/favicon.png'%}" class="h-40px app-sidebar-logo-minimize" />
+							</a>
+							<!--end::Logo image-->
+							<!--begin::Sidebar toggle-->
+							<div id="kt_app_sidebar_toggle" class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="app-sidebar-minimize">
+								<!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
+								<span class="svg-icon svg-icon-2 rotate-180">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor" />
+										<path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor" />
+									</svg>
+								</span>
+								<!--end::Svg Icon-->
+							</div>
+							<!--end::Sidebar toggle-->
+						</div>
+						<!--end::Logo-->
+
+        
+
+        {%block sidebar%}
+        <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+          <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+            <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+              <div class="menu-item"> <a class="menu-link active" href="/Influencer-Dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+                </svg>
+                </span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+
+				<!--begin:Menu item-->
+				<div class="menu-item pt-5">
+				<!--begin:Menu content-->
+					<div class="menu-content">
+						<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+					</div>
+					<!--end:Menu content-->
+					</div>
+				<!--end:Menu item-->
+               
+          
+              
+              <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+                  <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+                </svg>
+                </span> </span> <span class="menu-title">My Business</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Completed-Orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Completed-Orders</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Accepted-Orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Active Orders</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pending Orders</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Cancel-Orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Cancel Orders</span></a></div>
+                </div>
+              </div>
+
+              <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 7H2V11H22V7Z" fill="currentColor"></path>
+                  <path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="currentColor"></path>
+                </svg>
+                </span> </span> <span class="menu-title">My Earning</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Earnings/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Earnings</span></a></div>
+                </div>
+              </div>
+
+              <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+                  <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+                  <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+                </svg>
+                </span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  
+                  <div class="menu-item"> <a class="menu-link" href="/Group-Chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Orders chat</span></a></div>
+				  <div class="menu-item"> <a class="menu-link" href="/client-influencer-chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Clients chat</span></a></div>
+                   
+                </div>
+              </div>
+
+              <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor"></path>
+                  <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor"></path>
+                </svg>
+                </span> </span> <span class="menu-title">My Profile</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Overview/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Overview</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Settings/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Settings</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Service-Plan/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Service-Plan</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Bank-Details/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Bank-Details</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Referral</span></a></div>
+				  <div class="menu-item"> <a class="menu-link" href="/coupons/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Coupon Code</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Login-Logs/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Logs</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Page-SEO-Setting/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">SEO-Setting</span></a></div>
+                </div>
+              </div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path opacity="0.3" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"></path>
+				<path d="M8.70001 6C8.10001 5.7 7.39999 5.40001 6.79999 5.10001C7.79999 4.00001 8.90001 3 10.1 2.2C10.7 2.1 11.4 2 12 2C12.7 2 13.3 2.1 13.9 2.2C12 3.2 10.2 4.5 8.70001 6ZM12 8.39999C13.9 6.59999 16.2 5.30001 18.7 4.60001C18.1 4.00001 17.4 3.6 16.7 3.2C14.4 4.1 12.2 5.40001 10.5 7.10001C11 7.50001 11.5 7.89999 12 8.39999ZM7 20C7 20.2 7 20.4 7 20.6C6.2 20.1 5.49999 19.6 4.89999 19C4.59999 18 4.00001 17.2 3.20001 16.6C2.80001 15.8 2.49999 15 2.29999 14.1C4.99999 14.7 7 17.1 7 20ZM10.6 9.89999C8.70001 8.09999 6.39999 6.9 3.79999 6.3C3.39999 6.9 2.99999 7.5 2.79999 8.2C5.39999 8.6 7.7 9.80001 9.5 11.6C9.8 10.9 10.2 10.4 10.6 9.89999ZM2.20001 10.1C2.10001 10.7 2 11.4 2 12C2 12 2 12 2 12.1C4.3 12.4 6.40001 13.7 7.60001 15.6C7.80001 14.8 8.09999 14.1 8.39999 13.4C6.89999 11.6 4.70001 10.4 2.20001 10.1ZM11 20C11 14 15.4 9.00001 21.2 8.10001C20.9 7.40001 20.6 6.8 20.2 6.2C13.8 7.5 9 13.1 9 19.9C9 20.4 9.00001 21 9.10001 21.5C9.80001 21.7 10.5 21.8 11.2 21.9C11.1 21.3 11 20.7 11 20ZM19.1 19C19.4 18 20 17.2 20.8 16.6C21.2 15.8 21.5 15 21.7 14.1C19 14.7 16.9 17.1 16.9 20C16.9 20.2 16.9 20.4 16.9 20.6C17.8 20.2 18.5 19.6 19.1 19ZM15 20C15 15.9 18.1 12.6 22 12.1C22 12.1 22 12.1 22 12C22 11.3 21.9 10.7 21.8 10.1C16.8 10.7 13 14.9 13 20C13 20.7 13.1 21.3 13.2 21.9C13.9 21.8 14.5 21.7 15.2 21.5C15.1 21 15 20.5 15 20Z" fill="currentColor"></path>
+				</svg>
+                </span> </span> <span class="menu-title">Web Stories</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/add-webstories/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Add Web Stories</span></a></div>
+                </div>
+              </div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+                    <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+                  </svg>
+                </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Blogs-Home/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blog</span></a></div>
+                </div>
+              </div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3" d="M7 20.5L2 17.6V11.8L7 8.90002L12 11.8V17.6L7 20.5ZM21 20.8V18.5L19 17.3L17 18.5V20.8L19 22L21 20.8Z" fill="currentColor"></path>
+                    <path d="M22 14.1V6L15 2L8 6V14.1L15 18.2L22 14.1Z" fill="currentColor"></path>
+                  </svg>
+                </span> </span> <span class="menu-title">My Service Plan</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Service-Plan/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Service Plan</span></a></div>
+                </div>
+              </div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+					<path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+					<path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+					<path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+					</svg>
+				</span> </span> <span class="menu-title">Affiliates</span><span class="menu-arrow"></span></span>
+				<div class="menu-sub menu-sub-accordion">
+					<div class="menu-item"> <a class="menu-link" href="/affiliate-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+				<div class="menu-item"> <a class="menu-link" href="/affiliate-campaign/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Campaigns</span></a></div>
+				<div class="menu-item"> <a class="menu-link" href="/affiliate-lead/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Leads</span></a></div>
+				
+				</div>
+				</div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z" fill="currentColor"></path>
+			  <path opacity="0.3" d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z" fill="currentColor"></path>
+                </svg>
+                </span> </span> <span class="menu-title">My Gallery</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Photo-Gallery/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Photo Gallery</span></a></div>
+				  <div class="menu-item"> <a class="menu-link" href="/Video-Gallery/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Video Gallery</span></a></div>
+                </div>
+              </div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="currentColor"></path>
+					<path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.1128C2.10209 18.0128 6.40208 22.0128 11.3021 21.9128C13.1021 21.8128 14.7021 21.3128 16.0021 20.4128C16.5021 20.1128 16.6021 19.3128 16.1021 18.9128L11.0021 13.7128Z" fill="currentColor"></path>
+					<path opacity="0.3" d="M21.9021 14.0128C21.7021 15.6128 21.1021 17.1128 20.1021 18.4128C19.7021 18.9128 19.0021 18.9128 18.6021 18.5128L13.0021 12.9128H20.9021C21.5021 12.9128 22.0021 13.4128 21.9021 14.0128Z" fill="currentColor"></path>
+                </svg>
+                </span> </span> <span class="menu-title">Casting Call</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Pitchng-Report-list/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pitching Report</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% endblock %}
+        
+		<!--begin::Footer-->
+						<div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
+							<a href="/terms-of-service/" target="_blank" class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="platform term and service">
+								<span class="btn-label">Terms of Services</span>
+								<!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
+								<span class="svg-icon btn-icon svg-icon-2 m-0">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z" fill="currentColor" />
+										<rect x="7" y="17" width="6" height="2" rx="1" fill="currentColor" />
+										<rect x="7" y="12" width="10" height="2" rx="1" fill="currentColor" />
+										<rect x="7" y="7" width="6" height="2" rx="1" fill="currentColor" />
+										<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="currentColor" />
+									</svg>
+								</span>
+								<!--end::Svg Icon-->
+							</a>
+						</div>
+						<!--end::Footer-->
+		</div>
+      
+
+    {%block body%}
+      
+      <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+        <div class="d-flex flex-column flex-column-fluid">
+          <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+            <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+              <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Influencer Dashboard</h1>
+                <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                  <li class="breadcrumb-item text-muted"> <a href="/Influencer-Dashboard/" class="text-muted text-hover-primary">Home</a> </li>
+                  <li class="breadcrumb-item"> <span class="bullet bg-gray-400 w-5px h-2px"></span> </li>
+                  <li class="breadcrumb-item text-muted">Dashboards</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="kt_app_content" class="app-content flex-column-fluid">
+            <div id="kt_app_content_container" class="app-container container-fluid">
+             
+              <div class="card mb-5 mb-xl-10">
+                <div class="card-body pt-9 pb-0"> 
+                  <!--begin::Details-->
+                  <div class="d-flex flex-wrap flex-sm-nowrap mb-3"> 
+                    <!--begin: Pic-->
+					<div class="me-7 mb-4">
+						<div class="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative"> <img src="/media/{{info.profileimage}}" alt="image" />
+						  {%if active == True %}
+							<div class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-body h-20px w-20px">
+						  </div>
+                        {%endif%}
+						</div>
+					  </div>
+                    <!--end::Pic--> 
+                    <!--begin::Info-->
+                    <div class="flex-grow-1"> 
+                      <!--begin::Title-->
+                      <div class="d-flex justify-content-between align-items-start flex-wrap mb-2"> 
+                        <!--begin::User-->
+                        <div class="d-flex flex-column"> 
+                          <!--begin::Name-->
+						  {%if request.user.influencerprofile.fullname == None%}
+                          <div class="d-flex align-items-center mb-2"> <a href="#" class="text-gray-900 text-hover-Primary fs-2 fw-bold me-1">{{ request.user.username }}</a>
+							{%else%}
+                          <div class="d-flex align-items-center mb-2"> <a href="#" class="text-gray-900 text-hover-Primary fs-2 fw-bold me-1">{{ request.user.influencerprofile.fullname}}</a>
+						  {%endif%}
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen026.svg--> 
+							{%if request.user.influencersettings.kyc == True %}
+                            <span class="svg-icon svg-icon-1 svg-icon-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                              <path d="M10.0813 3.7242C10.8849 2.16438 13.1151 2.16438 13.9187 3.7242V3.7242C14.4016 4.66147 15.4909 5.1127 16.4951 4.79139V4.79139C18.1663 4.25668 19.7433 5.83365 19.2086 7.50485V7.50485C18.8873 8.50905 19.3385 9.59842 20.2758 10.0813V10.0813C21.8356 10.8849 21.8356 13.1151 20.2758 13.9187V13.9187C19.3385 14.4016 18.8873 15.491 19.2086 16.4951V16.4951C19.7433 18.1663 18.1663 19.7433 16.4951 19.2086V19.2086C15.491 18.8873 14.4016 19.3385 13.9187 20.2758V20.2758C13.1151 21.8356 10.8849 21.8356 10.0813 20.2758V20.2758C9.59842 19.3385 8.50905 18.8873 7.50485 19.2086V19.2086C5.83365 19.7433 4.25668 18.1663 4.79139 16.4951V16.4951C5.1127 15.491 4.66147 14.4016 3.7242 13.9187V13.9187C2.16438 13.1151 2.16438 10.8849 3.7242 10.0813V10.0813C4.66147 9.59842 5.1127 8.50905 4.79139 7.50485V7.50485C4.25668 5.83365 5.83365 4.25668 7.50485 4.79139V4.79139C8.50905 5.1127 9.59842 4.66147 10.0813 3.7242V3.7242Z" fill="currentColor" />
+                              <path d="M14.8563 9.1903C15.0606 8.94984 15.3771 8.9385 15.6175 9.14289C15.858 9.34728 15.8229 9.66433 15.6185 9.9048L11.863 14.6558C11.6554 14.9001 11.2876 14.9258 11.048 14.7128L8.47656 12.4271C8.24068 12.2174 8.21944 11.8563 8.42911 11.6204C8.63877 11.3845 8.99996 11.3633 9.23583 11.5729L11.3706 13.4705L14.8563 9.1903Z" fill="white" />
+                            </svg>
+                            </span> 
+							<div class="badge badge-light-primary fs-base">KYC Successful</div>
+							{%else%}
+							<div class="badge badge-light-danger fs-base">KYC Pending</div>
+							
+                            {%endif%}
+                            <!--end::Svg Icon--> 
+                            </a>  </div>
+                          <!--end::Name--> 
+                          <!--begin::Info-->
+                          <div class="d-flex flex-wrap fw-semibold fs-6 mb-4 pe-2"> <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2"> 
+                            <!--begin::Svg Icon | path: icons/duotune/communication/com006.svg--> 
+                            <span class="svg-icon svg-icon-4 me-1">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path opacity="0.3" d="M16.5 9C16.5 13.125 13.125 16.5 9 16.5C4.875 16.5 1.5 13.125 1.5 9C1.5 4.875 4.875 1.5 9 1.5C13.125 1.5 16.5 4.875 16.5 9Z" fill="currentColor" />
+                              <path d="M9 16.5C10.95 16.5 12.75 15.75 14.025 14.55C13.425 12.675 11.4 11.25 9 11.25C6.6 11.25 4.57499 12.675 3.97499 14.55C5.24999 15.75 7.05 16.5 9 16.5Z" fill="currentColor" />
+                              <rect x="7" y="6" width="4" height="4" rx="2" fill="currentColor" />
+                            </svg>
+                            </span> 
+                           <!--end::Svg Icon-->{{info.desc_title}}</a> <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2"> 
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen018.svg--> 
+                            <span class="svg-icon svg-icon-4 me-1">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								  <path opacity="0.3" d="M18.0624 15.3453L13.1624 20.7453C12.5624 21.4453 11.5624 21.4453 10.9624 20.7453L6.06242 15.3453C4.56242 13.6453 3.76242 11.4453 4.06242 8.94534C4.56242 5.34534 7.46242 2.44534 11.0624 2.04534C15.8624 1.54534 19.9624 5.24534 19.9624 9.94534C20.0624 12.0453 19.2624 13.9453 18.0624 15.3453Z" fill="currentColor" />
+								  <path d="M12.0624 13.0453C13.7193 13.0453 15.0624 11.7022 15.0624 10.0453C15.0624 8.38849 13.7193 7.04535 12.0624 7.04535C10.4056 7.04535 9.06241 8.38849 9.06241 10.0453C9.06241 11.7022 10.4056 13.0453 12.0624 13.0453Z" fill="currentColor" />
+								</svg>
+								</span> 
+								<!--end::Svg Icon-->{{info.address}}</a> <a href="#" class="d-flex align-items-center text-gray-400 text-hover-primary mb-2"> 
+								<!--begin::Svg Icon | path: icons/duotune/communication/com011.svg--> 
+								<span class="svg-icon svg-icon-4 me-1">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								  <path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19Z" fill="currentColor" />
+								  <path d="M21 5H2.99999C2.69999 5 2.49999 5.10005 2.29999 5.30005L11.2 13.3C11.7 13.7 12.4 13.7 12.8 13.3L21.7 5.30005C21.5 5.10005 21.3 5 21 5Z" fill="currentColor" />
+								</svg>
+								</span> 
+								<!--end::Svg Icon-->{{info.influencer_userid.email}}</a> </div>
+							  <!--end::Info--> 
+							</div>
+							<!--end::User-->
+                      
+                      </div>
+                      <!--end::Title--> 
+                      <!--begin::Stats-->
+                      <div class="d-flex flex-wrap flex-stack"> 
+                        <!--begin::Wrapper-->
+                        <div class="d-flex flex-column flex-grow-1 pe-8"> 
+                          <!--begin::Stats-->
+                          <div class="d-flex flex-wrap"> 
+                            <!--begin::Stat-->
+                            <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3"> 
+                              <!--begin::Number-->
+                              <div class="d-flex align-items-center"> 
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg--> 
+                                <span class="svg-icon svg-icon-3 svg-icon-success me-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+                                  <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+                                </svg>
+                                </span> 
+                                <!--end::Svg Icon-->
+                                <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="{{tot}}" data-kt-countup-prefix="">0</div>
+                              </div>
+                              <!--end::Number--> 
+                              <!--begin::Label-->
+                              <div class="fw-semibold fs-6 text-gray-400">Total Orders</div>
+                              <!--end::Label--> 
+                            </div>
+                            <!--end::Stat--> 
+                            <!--begin::Stat-->
+                            <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3"> 
+                              <!--begin::Number-->
+                              <div class="d-flex align-items-center"> 
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg--> 
+                                <span class="svg-icon svg-icon-3 svg-icon-danger me-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
+                                  <path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+                                </svg>
+                                </span> 
+                                <!--end::Svg Icon-->
+                                <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="{{can}}">0</div>
+                              </div>
+                              <!--end::Number--> 
+                              <!--begin::Label-->
+                              <div class="fw-semibold fs-6 text-gray-400">Cancelled Orders</div>
+                              <!--end::Label--> 
+                            </div>
+                            <!--end::Stat--> 
+                            <!--begin::Stat-->
+                            <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3"> 
+                              <!--begin::Number-->
+                              <div class="d-flex align-items-center"> 
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg--> 
+                                <span class="svg-icon svg-icon-3 svg-icon-success me-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+                                  <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+                                </svg>
+                                </span> 
+                                <!--end::Svg Icon-->
+                                <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="{{com}}" data-kt-countup-prefix="">0</div>
+                              </div>
+                              <!--end::Number--> 
+                              <!--begin::Label-->
+                              <div class="fw-semibold fs-6 text-gray-400">Completed Orders</div>
+                              <!--end::Label--> 
+                            </div>
+                            
+                            
+                             <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3"> 
+                              <!--begin::Number-->
+                              <div class="d-flex align-items-center"> 
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg--> 
+                                <span class="svg-icon svg-icon-3 svg-icon-success me-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+                                  <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+                                </svg>
+                                </span> 
+                                <!--end::Svg Icon-->
+                                <div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="{{pan}}" data-kt-countup-prefix="">0</div>
+                              </div>
+                              <!--end::Number--> 
+                              <!--begin::Label-->
+                              <div class="fw-semibold fs-6 text-gray-400">Pending Orders</div>
+                              <!--end::Label--> 
+                            </div>
+                            
+                            
+                            
+                            <!--end::Stat--> 
+                          </div>
+                          <!--end::Stats--> 
+                        </div>
+                        <!--end::Wrapper--> 
+                        <!--begin::Progress-->
+                  
+                        <!--end::Progress--> 
+                      </div>
+                      <!--end::Stats--> 
+                    </div>
+                    <!--end::Info--> 
+                  </div>
+                  
+                </div>
+              </div>
+
+			  <script>
+				window.completed_tasks = {{ completed_tasks|safe }};
+				window.revenue = {{ revenue|safe }};
+				window.monthname = {{ monthname|safe }};
+				window.cost = {{ cost|safe }};
+				</script>
+
+              
+              <div class="row g-5 g-xl-10 total_order_graph"> 
+                <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+											<!--begin::Timeline widget 3-->
+											<div class="card h-md-100">
+												<!--begin::Header-->
+												<div class="card-header border-0 pt-5 mb-2">
+													<h3 class="card-title align-items-start flex-column">
+														<span class="card-label fw-bold text-dark">Total Orders Earning Overview</span>
+														<span class="text-muted mt-1 fw-semibold fs-7"> Average Orders Price</span>
+													</h3>
+													<!--begin::Toolbar-->
+													<div class="card-toolbar">
+														<a class="btn btn-sm btn-light">Report Analytics</a>
+													</div>
+													<!--end::Toolbar-->
+												</div>
+												<!--end::Header-->
+												<!--begin::Body-->
+												<div class="card-body graph_card pt-0 px-0">
+													<!--begin::Chart-->
+                                                <div id="kt_charts_widget_55_chart" style="min-width: 200px; min-height: 180px" data-kt-size="70" data-kt-line="11"></div>
+                                                <!--end::Chart-->
+												</div>
+												<!--end: Card Body-->
+											</div>
+											<!--end::Timeline widget 3-->
+											<!--begin::Timeline widget 3-->
+											<div class="card card-flush d-none h-md-100">
+												<!--begin::Card header-->
+												<div class="card-header mt-6">
+													<!--begin::Card title-->
+													<div class="card-title flex-column">
+														<h3 class="fw-bold mb-1">What's on the road?</h3>
+														<div class="fs-6 text-gray-400">Total 482 participants</div>
+													</div>
+													<!--end::Card title-->
+													<!--begin::Card toolbar-->
+													<div class="card-toolbar">
+														<!--begin::Select-->
+														<select name="status" data-control="select2" data-hide-search="true" class="form-select form-select-solid form-select-sm fw-bold w-100px">
+															<option value="1" selected="selected">Options</option>
+															<option value="2">Option 1</option>
+															<option value="3">Option 2</option>
+															<option value="4">Option 3</option>
+														</select>
+														<!--end::Select-->
+													</div>
+													<!--end::Card toolbar-->
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body p-0">
+													<!--begin::Dates-->
+													<ul class="nav nav-pills d-flex flex-nowrap hover-scroll-x py-2 ms-4">
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_0">
+																<span class="text-gray-400 fs-7 fw-semibold">Fr</span>
+																<span class="fs-6 text-gray-800 fw-bold">20</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_1">
+																<span class="text-gray-400 fs-7 fw-semibold">Sa</span>
+																<span class="fs-6 text-gray-800 fw-bold">21</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_2">
+																<span class="text-gray-400 fs-7 fw-semibold">Su</span>
+																<span class="fs-6 text-gray-800 fw-bold">22</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger active" data-bs-toggle="tab" href="#kt_schedule_day_3">
+																<span class="text-gray-400 fs-7 fw-semibold">Mo</span>
+																<span class="fs-6 text-gray-800 fw-bold">23</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_4">
+																<span class="text-gray-400 fs-7 fw-semibold">Tu</span>
+																<span class="fs-6 text-gray-800 fw-bold">24</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_5">
+																<span class="text-gray-400 fs-7 fw-semibold">We</span>
+																<span class="fs-6 text-gray-800 fw-bold">25</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_6">
+																<span class="text-gray-400 fs-7 fw-semibold">Th</span>
+																<span class="fs-6 text-gray-800 fw-bold">26</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_7">
+																<span class="text-gray-400 fs-7 fw-semibold">Fr</span>
+																<span class="fs-6 text-gray-800 fw-bold">27</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_8">
+																<span class="text-gray-400 fs-7 fw-semibold">Sa</span>
+																<span class="fs-6 text-gray-800 fw-bold">28</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_9">
+																<span class="text-gray-400 fs-7 fw-semibold">Su</span>
+																<span class="fs-6 text-gray-800 fw-bold">29</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_10">
+																<span class="text-gray-400 fs-7 fw-semibold">Mo</span>
+																<span class="fs-6 text-gray-800 fw-bold">30</span>
+															</a>
+														</li>
+														<!--end::Date-->
+														<!--begin::Date-->
+														<li class="nav-item me-1">
+															<a class="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-color-active-white btn-active-danger" data-bs-toggle="tab" href="#kt_schedule_day_11">
+																<span class="text-gray-400 fs-7 fw-semibold">Tu</span>
+																<span class="fs-6 text-gray-800 fw-bold">31</span>
+															</a>
+														</li>
+														<!--end::Date-->
+													</ul>
+													<!--end::Dates-->
+													<!--begin::Tab Content-->
+													<div class="tab-content px-9">
+														<!--begin::Day-->
+														<div id="kt_schedule_day_0" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">10:00 - 11:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Project Review & Testing</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Bob Harris</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">10:00 - 11:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Weekly Team Stand-Up</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Terry Robins</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">13:00 - 14:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Team Backlog Grooming Session</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Michael Walters</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_1" class="tab-pane fade show active">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">12:00 - 13:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Lunch & Learn Catch Up</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">David Stevenson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">9:00 - 10:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Project Review & Testing</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Sean Bean</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">13:00 - 14:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Project Review & Testing</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Bob Harris</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_2" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">16:30 - 17:30
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Lunch & Learn Catch Up</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Mark Randall</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">9:00 - 10:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Lunch & Learn Catch Up</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Terry Robins</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">11:00 - 11:45
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Lunch & Learn Catch Up</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Peter Marcus</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_3" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">14:30 - 15:30
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Development Team Capacity Review</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">David Stevenson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">9:00 - 10:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Sales Pitch Proposal</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">David Stevenson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">10:00 - 11:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Project Review & Testing</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Caleb Donaldson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_4" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">10:00 - 11:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">9 Degree Project Estimation Meeting</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Karina Clarke</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">11:00 - 11:45
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Marketing Campaign Discussion</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Peter Marcus</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">11:00 - 11:45
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">9 Degree Project Estimation Meeting</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Bob Harris</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_5" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">16:30 - 17:30
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Marketing Campaign Discussion</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">David Stevenson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">9:00 - 10:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Creative Content Initiative</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Caleb Donaldson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">13:00 - 14:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Development Team Capacity Review</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Caleb Donaldson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_6" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">12:00 - 13:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Project Review & Testing</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Yannis Gloverson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">12:00 - 13:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Committee Review Approvals</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Walter White</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">10:00 - 11:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Sales Pitch Proposal</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Mark Randall</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_7" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">11:00 - 11:45
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Creative Content Initiative</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Peter Marcus</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">10:00 - 11:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Sales Pitch Proposal</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Peter Marcus</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">16:30 - 17:30
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Dashboard UI/UX Design Review</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Peter Marcus</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_8" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">11:00 - 11:45
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Committee Review Approvals</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Caleb Donaldson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">11:00 - 11:45
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Committee Review Approvals</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Terry Robins</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">13:00 - 14:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Team Backlog Grooming Session</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Naomi Hayabusa</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_9" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">13:00 - 14:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Marketing Campaign Discussion</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Michael Walters</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">16:30 - 17:30
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Lunch & Learn Catch Up</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Peter Marcus</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">14:30 - 15:30
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Project Review & Testing</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Michael Walters</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_10" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">9:00 - 10:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">9 Degree Project Estimation Meeting</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Caleb Donaldson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">10:00 - 11:00
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Team Backlog Grooming Session</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">David Stevenson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">14:30 - 15:30
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Dashboard UI/UX Design Review</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Terry Robins</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+														<!--begin::Day-->
+														<div id="kt_schedule_day_11" class="tab-pane fade show">
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">11:00 - 11:45
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Project Review & Testing</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Kendell Trevor</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">11:00 - 11:45
+																	<span class="fs-7 text-gray-400 text-uppercase">am</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Marketing Campaign Discussion</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">David Stevenson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+															<!--begin::Time-->
+															<div class="d-flex flex-stack position-relative mt-8">
+																<!--begin::Bar-->
+																<div class="position-absolute h-100 w-4px bg-secondary rounded top-0 start-0"></div>
+																<!--end::Bar-->
+																<!--begin::Info-->
+																<div class="fw-semibold ms-5 text-gray-600">
+																	<!--begin::Time-->
+																	<div class="fs-5">13:00 - 14:00
+																	<span class="fs-7 text-gray-400 text-uppercase">pm</span></div>
+																	<!--end::Time-->
+																	<!--begin::Title-->
+																	<a href="#" class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2">Weekly Team Stand-Up</a>
+																	<!--end::Title-->
+																	<!--begin::User-->
+																	<div class="text-gray-400">Lead by
+																	<a href="#">Yannis Gloverson</a></div>
+																	<!--end::User-->
+																</div>
+																<!--end::Info-->
+																<!--begin::Action-->
+																<a href="#" class="btn btn-bg-light btn-active-color-primary btn-sm">View</a>
+																<!--end::Action-->
+															</div>
+															<!--end::Time-->
+														</div>
+														<!--end::Day-->
+													</div>
+													<!--end::Tab Content-->
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Timeline widget-3-->
+				</div>
+										<!--end::Col-->
+            
+
+
+         <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-md-5 mb-xl-10 ">
+          <div class="card">
+          <div class="card card-flush mb-5 mb-xl-10">
+												<!--begin::Header-->
+												<div class="card-header pt-5">
+													<!--begin::Title-->
+													<div class="card-title d-flex flex-column">
+														<!--begin::Info-->
+														<div class="d-flex align-items-center">
+															<!--begin::Currency-->
+															<span class="fs-4 fw-semibold text-gray-400 me-1 align-self-start">Total Orders Service wise</span>
+															<!--end::Currency-->
+															<!--begin::Amount-->
+															<span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">{{tot}}</span>
+															<!--end::Amount-->
+															<!--begin::Badge-->
+															<span class="badge badge-light-success fs-base">
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+															<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																	<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon--></span>
+															<!--end::Badge-->
+														</div>
+														<!--end::Info-->
+														<!--begin::Subtitle-->
+														<span class="text-gray-400 pt-1 fw-semibold fs-6">Service wise Order Analytics</span>
+														<!--end::Subtitle-->
+													</div>
+													<!--end::Title-->
+												</div>
+												<!--end::Header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-2 pb-4 d-flex flex-wrap align-items-center">
+													<!--begin::Chart-->
+													<div class="position-relative d-flex flex-center h-175px w-175px me-15 mb-7">
+															<div class="position-absolute translate-middle start-50 top-50 d-flex flex-column flex-center">
+																<span class="fs-2qx fw-bold">{{tot}}</span>
+																<span class="fs-6 fw-semibold text-gray-400">Total Orders</span>
+															</div>
+															<canvas id="project_overview_charts" width="175" height="175" style="display: block; box-sizing: border-box; height: 175px; width: 175px;"></canvas>
+														</div>
+													<!--end::Chart-->
+													<!--begin::Labels-->
+													<div class="d-flex flex-column content-justify-center flex-row-fluid">
+													<!--begin::Label-->
+                          <div class="d-flex fw-semibold align-items-center my-3">
+                            <!--begin::Bullet-->
+                            <div class="bullet w-8px h-3px rounded-2  me-3" style="background-color: #E4E6EF"></div>
+                            <!--end::Bullet-->
+                            <!--begin::Label-->
+                            <div class="text-gray-500 flex-grow-1 me-4">Brand Promotion</div>
+                            <!--end::Label-->
+                            <!--begin::Stats-->
+                            <div class="fw-bolder text-gray-700 text-xxl-end">{{brand}}</div>
+                            <!--end::Stats-->
+                          </div>
+                          <!--end::Label-->
+														<!--begin::Label-->
+														<div class="d-flex fw-semibold align-items-center my-3">
+															<!--begin::Bullet-->
+															<div class="bullet w-8px h-3px rounded-2  me-3" style="background-color: #E4E6EF"></div>
+															<!--end::Bullet-->
+															<!--begin::Label-->
+															<div class="text-gray-500 flex-grow-1 me-4">Greeting Messages</div>
+															<!--end::Label-->
+															<!--begin::Stats-->
+															<div class="fw-bolder text-gray-700 text-xxl-end">{{gm}}</div>
+															<!--end::Stats-->
+														</div>
+														<!--end::Label-->
+                            <!--begin::Label-->
+														<div class="d-flex fw-semibold align-items-center my-3">
+															<!--begin::Bullet-->
+															<div class="bullet w-8px h-3px rounded-2 me-3" style="background-color: #E4E6EF"></div>
+															<!--end::Bullet-->
+															<!--begin::Label-->
+															<div class="text-gray-500 flex-grow-1 me-4">Video Chat Service</div>
+															<!--end::Label-->
+															<!--begin::Stats-->
+															<div class="fw-bolder text-gray-700 text-xxl-end">{{vcs}}</div>
+															<!--end::Stats-->
+														</div>
+														<!--end::Label-->
+														<!--begin::Label-->
+														<div class="d-flex fw-semibold align-items-center my-3">
+															<!--begin::Bullet-->
+															<div class="bullet w-8px h-3px rounded-2  me-3" style="background-color: #E4E6EF"></div>
+															<!--end::Bullet-->
+															<!--begin::Label-->
+															<div class="text-gray-500 flex-grow-1 me-4">Shoutout Service</div>
+															<!--end::Label-->
+															<!--begin::Stats-->
+															<div class="fw-bolder text-gray-700 text-xxl-end">{{ss}}</div>
+															<!--end::Stats-->
+														</div>
+														<!--end::Label-->
+                            <!--begin::Label-->
+														<div class="d-flex fw-semibold align-items-center my-3">
+															<!--begin::Bullet-->
+															<div class="bullet w-8px h-3px rounded-2  me-3" style="background-color: #E4E6EF"></div>
+															<!--end::Bullet-->
+															<!--begin::Label-->
+															<div class="text-gray-500 flex-grow-1 me-4">Influencer Acquisition</div>
+															<!--end::Label-->
+															<!--begin::Stats-->
+															<div class="fw-bolder text-gray-700 text-xxl-end">{{ina}}</div>
+															<!--end::Stats-->
+														</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Labels-->
+												</div>
+												<!--end::Card body-->
+		   </div>
+		   </div>
+		   </div>
+                
+                
+         <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-md-5 mb-xl-10 ">
+          <div class="card">
+          <div class="card card-flush mb-5 mb-xl-10">
+												<!--begin::Header-->
+												<div class="card-header pt-5">
+													<!--begin::Title-->
+													<div class="card-title d-flex flex-column">
+														<!--begin::Info-->
+														<div class="d-flex align-items-center">
+															<!--begin::Currency-->
+															<span class="fs-4 fw-semibold text-gray-400 me-1 align-self-start">Total Earning Service wise</span>
+															<!--end::Currency-->
+															<!--begin::Amount-->
+															<span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">{{totalearn}}</span>
+															<!--end::Amount-->
+															<!--begin::Badge-->
+															<span class="badge badge-light-success fs-base">
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+															<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																	<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon--></span>
+															<!--end::Badge-->
+														</div>
+														<!--end::Info-->
+														<!--begin::Subtitle-->
+														<span class="text-gray-400 pt-1 fw-semibold fs-6">Servicewise Earnings Analytics</span>
+														<!--end::Subtitle-->
+													</div>
+													<!--end::Title-->
+												</div>
+												<!--end::Header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-2 pb-4 d-flex flex-wrap align-items-center">
+													<!--begin::Chart-->
+													<div class="position-relative d-flex flex-center h-175px w-175px me-15 mb-7">
+															<div class="position-absolute translate-middle start-50 top-50 d-flex flex-column flex-center">
+																<span class="fs-1qx fw-bold">{{totalearn}}</span>
+																<span class="fs-6 fw-semibold text-gray-400">Total Earning</span>
+															</div>
+															<canvas id="project_overview_chart" width="175" height="175" style="display: block; box-sizing: border-box; height: 175px; width: 175px;"></canvas>
+														</div>
+													<!--end::Chart-->
+													<!--begin::Labels-->
+													<div class="d-flex flex-column content-justify-center flex-row-fluid">
+                            <!--begin::Label-->
+                            <div class="d-flex fw-semibold align-items-center my-3">
+                              <!--begin::Bullet-->
+                              <div class="bullet w-8px h-3px rounded-2  me-3" style="background-color: #E4E6EF"></div>
+                              <!--end::Bullet-->
+                              <!--begin::Label-->
+                              <div class="text-gray-500 flex-grow-1 me-4">Brand Promotion</div>
+                              <!--end::Label-->
+                              <!--begin::Stats-->
+                              <div class="fw-bolder text-gray-700 text-xxl-end">{{total}}</div>
+                              <!--end::Stats-->
+                            </div>
+                            <!--end::Label-->
+                              <!--begin::Label-->
+                              <div class="d-flex fw-semibold align-items-center my-3">
+                                <!--begin::Bullet-->
+                                <div class="bullet w-8px h-3px rounded-2  me-3" style="background-color: #E4E6EF"></div>
+                                <!--end::Bullet-->
+                                <!--begin::Label-->
+                                <div class="text-gray-500 flex-grow-1 me-4">Greeting Messages</div>
+                                <!--end::Label-->
+                                <!--begin::Stats-->
+                                <div class="fw-bolder text-gray-700 text-xxl-end">{{totgm}}</div>
+                                <!--end::Stats-->
+                              </div>
+                              <!--end::Label-->
+                              <!--begin::Label-->
+                              <div class="d-flex fw-semibold align-items-center my-3">
+                                <!--begin::Bullet-->
+                                <div class="bullet w-8px h-3px rounded-2 me-3" style="background-color: #E4E6EF"></div>
+                                <!--end::Bullet-->
+                                <!--begin::Label-->
+                                <div class="text-gray-500 flex-grow-1 me-4">Video Chat Services</div>
+                                <!--end::Label-->
+                                <!--begin::Stats-->
+                                <div class="fw-bolder text-gray-700 text-xxl-end">{{totvcs}}</div>
+                                <!--end::Stats-->
+                              </div>
+                              <!--end::Label-->
+                              <!--begin::Label-->
+                              <div class="d-flex fw-semibold align-items-center my-3">
+                                <!--begin::Bullet-->
+                                <div class="bullet w-8px h-3px rounded-2  me-3" style="background-color: #E4E6EF"></div>
+                                <!--end::Bullet-->
+                                <!--begin::Label-->
+                                <div class="text-gray-500 flex-grow-1 me-4">Shoutout Service</div>
+                                <!--end::Label-->
+                                <!--begin::Stats-->
+                                <div class="fw-bolder text-gray-700 text-xxl-end">{{totss}}</div>
+                                <!--end::Stats-->
+                              </div>
+                              <!--end::Label-->
+                              <!--begin::Label-->
+                              <div class="d-flex fw-semibold align-items-center my-3">
+                                <!--begin::Bullet-->
+                                <div class="bullet w-8px h-3px rounded-2  me-3" style="background-color: #E4E6EF"></div>
+                                <!--end::Bullet-->
+                                <!--begin::Label-->
+                                <div class="text-gray-500 flex-grow-1 me-4">Influencer Acquisition</div>
+                                <!--end::Label-->
+                                <!--begin::Stats-->
+                                <div class="fw-bolder text-gray-700 text-xxl-end">{{totina}}</div>
+                                <!--end::Stats-->
+                              </div>
+                              <!--end::Label-->
+                            </div>
+                            <!--end::Labels-->
+							</div>
+					<!--end::Card body-->
+				</div>
+				</div>
+				</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+		<!--begin::Chat drawer-->
+		<div id="kt_drawer_chat" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle" data-kt-drawer-close="#kt_drawer_chat_close">
+			<!--begin::Messenger-->
+			<div class="card w-100 rounded-0 border-0" id="kt_drawer_chat_messenger">
+				<!--begin::Card header-->
+				<div class="card-header pe-5" id="kt_drawer_chat_messenger_header">
+					<!--begin::Title-->
+					<div class="card-title">
+						<div class="d-flex align-items-center mb-2">
+							<!--begin::Avatar-->
+							<div class="symbol symbol-35px symbol-circle">
+								<img alt="rmpic" src="/media/{{image}}/">
+							</div>
+							<!--end::Avatar-->
+							<!--begin::Details-->
+							<div class="ms-3">
+								<a id="RMuserName" href="#" class="fs-4 fw-bold text-gray-900 text-hover-danger me-1 mb-2 lh-1">RM</a>
+								<span class="badge badge-light-primary">Relationship Manager</span>
+							</div>
+							<!--end::Details-->
+						</div>
+					</div>
+					<!--end::Title-->
+					<!--begin::Card toolbar-->
+					<div class="card-toolbar">
+						<!--begin::Close-->
+						<div class="btn btn-sm btn-icon btn-active-light-primary" id="kt_drawer_chat_close">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+							<span class="svg-icon svg-icon-2">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Close-->
+					</div>
+					<!--end::Card toolbar-->
+				</div>
+				<!--end::Card header-->
+				<!--begin::Card body-->
+				<div class="card-body">
+					<!--begin::Messages-->
+					<div id="kt_drawer_chat_messenger_body" class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer" data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">
+						
+					</div>
+					<!--end::Messages-->
+				</div>
+				<!--end::Card body-->
+				<!--begin::Card footer-->
+				<div class="card-footer pt-4" id="kt_drawer_chat_messenger_footer">
+					<!--begin:Toolbar-->
+					<div class="d-flex flex-stack">
+						<!--begin::Actions-->
+						<div class="d-flex align-items-center me-2">
+              <input id="fileUploaderInput" type="file" hidden />
+							<button id="fileUploader" class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Select File to upload...">
+								<i class="bi bi-paperclip fs-3"></i>
+							</button>
+						</div>
+						<!--end::Actions-->
+            <!--begin::Input-->
+            <textarea id="input_textarea" class="form-control form-control-flush mb-3 me-3" rows="1" data-kt-element="input" placeholder="Type a message"></textarea>
+            <!--end::Input-->
+						<!--begin::Send-->
+						<button id="kuchbhi" class="btn btn-primary" type="button" data-kt-element="send" onclick="buttonSendMessage()">Send</button>
+						<!--end::Send-->
+					</div>
+					<!--end::Toolbar-->
+          <div id="fileprogresscontainer" class="w-100 position-relative"> 
+						<!--<div id="fileprogressbar" class="progress my-5">
+						<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 50%" aria-valuenow="${precent}" aria-valuemin="0" aria-valuemax="100">${precent}%</div>
+						<a href="javascript:void(0);" class="delete_btn text-hover-primary p-0">x</a>
+						</div>-->
+					</div>
+				</div>
+				<!--end::Card footer-->
+			</div>
+			<!--end::Messenger-->
+		</div>
+		<!--end::Chat drawer-->
+
+
+	
+        {% endblock %}
+
+        <div id="kt_app_footer" class="app-footer">
+          <div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+            <div class="text-dark order-2 order-md-1"> <span class="text-muted fw-semibold me-1">2023&copy;</span> <a href="" class="text-gray-800 text-hover-primary">Influencer Hiring</a> </div>
+            <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
+              <li class="menu-item"> <a href="/about/" target="_blank" class="menu-link px-2">About</a> </li>
+              <li class="menu-item"> <a href="/contact/" target="_blank" class="menu-link px-2">Support</a> </li>
+              <li class="menu-item"> <a href="/privacy-policy/" target="_blank" class="menu-link px-2">Privacy Policy</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true"> <span class="svg-icon">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+    <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+  </svg>
+  </span> 
+</div>
+
+
+ 
+
+
+<!--begin::Modal - New Target-->
+		<div class="modal fade" id="kt_modal_new_target28" tabindex="-1" aria-hidden="true">
+			<!--begin::Modal dialog-->
+			<div class="modal-dialog modal-dialog-centered mw-550px">
+				<!--begin::Modal content-->
+				<div class="modal-content rounded">
+					<!--begin::Modal header-->
+					<div class="modal-header pb-0 border-0 justify-content-end">
+						<!--begin::Close-->
+						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+							<span class="svg-icon svg-icon-1">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Close-->
+					</div>
+					<!--begin::Modal header-->
+					<!--begin::Modal body-->
+					<div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+						<form id="kt_modal_new_target_form" class="form" action="#" method="post" >
+              				{%csrf_token%}
+							<!--begin::Heading-->
+							<div class="mb-13 text-center">
+								<!--begin::Title-->
+								<h1 class="mb-3">Feedback About Your Relationship Manager</h1>
+								<!--end::Title-->
+								<!--begin::Description-->
+								<div class="text-muted fw-semibold fs-5">You can submit your relationship manager's 
+								<span class="fw-bold link-primary">feedback from here</span></div>
+								<!--end::Description-->
+							</div>
+							<!--end::Heading-->
+							<!--begin::Input group-->
+							<div class="d-flex flex-column mb-8 fv-row">
+								<!--begin::Label-->
+								<label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+									<span class="required">RATE</span>
+								</label>
+                <input class="rating rating--nojs" max="5" step="1" type="range" name="feedratevalue" value="3"></label>
+							</div>
+							<!--end::Input group-->
+							<!--begin::Input group-->
+							<div class="d-flex flex-column mb-8">
+								<label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                <span class="required">YOUR MESSAGE</span></label>
+                <textarea class="form-control form-control-solid" rows="3" name="feedmess" placeholder="Type Your Message"></textarea>
+							</div>
+							<!--end::Input group-->
+              <div class="text-center">
+                <button type="reset" id="kt_modal_new_target_cancel" class="btn btn-light me-3">
+                  Cancel
+                  </button>
+                  <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
+                    <span class="indicator-label">
+                      Submit
+                    </span>
+                    <span class="indicator-progress">
+                      Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                    </span>
+                  </button>
+                    </div>
+						</form>
+					</div>
+					<!--end::Modal body-->
+				</div>
+				<!--end::Modal content-->
+			</div>
+			<!--end::Modal dialog-->
+		</div>
+		<!--end::Modal - New Target-->   
+
+
+
+  <script src="{%static 'asset/plugins/global/plugins.bundle.js'%}"></script> 
+  <script src="{%static 'asset/js/scripts.bundle.js'%}"></script> 
+  <script src="{%static 'asset/plugins/custom/fullcalendar/fullcalendar.bundle.js'%}"></script> 
+  <script src="{%static 'asset/plugins/custom/datatables/datatables.bundle.js'%}"></script>
+  <script src="{%static 'asset/js/custom/apps/user-management/users/list/table.js'%}"></script>
+  <script src="{%static 'asset/js/custom/apps/projects/project/project.js'%}"></script>
+  <script src="{%static 'asset/js/custom/apps/inbox/reply.js'%}"></script>
+  <script src="{%static 'asset/js/widgets.bundle.js'%}"></script> 
+  <script src="{%static 'asset/js/custom/widgets.js'%}"></script> 
+  <script src="{%static 'asset/js/custom/apps/customers/list/list.js'%}"></script>
+  <script src="{%static 'asset/js/custom/apps/customers/add.js'%}"></script>
+  <script src="{%static 'asset/js/custom/apps/chat/chat.js'%}"></script>	
+  <script src="{%static 'asset/js/custom/apps/invoices/create.js'%}"></script>
+  <script src="{%static 'asset/js/custom/account/referrals/referral-program.js'%}"></script>
+  <script src="{%static 'asset/js/custom/apps/calendar/calendar.js'%}"></script>
+  <script src="{%static 'asset/js/custom/apps/ecommerce/sales/save-order.js'%}"></script>
+  <script src="{%static 'asset/js/agora-rtm.js'%}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js" integrity="sha256-Nn+JGDrq3PuTxcDfJmmI0Srj5LpfOFlKqEiPwQK7y40=" crossorigin="anonymous"></script>
+  
+<script>
+
+// file uploading functionality
+
+/// function to make true cancle upload
+				function stopFileUpload() {
+					stopUpload = true;
+				}
+
+				let stopUpload = false;
+				//////// end calncel uplaod...
+					
+        //// add and remove progress bar start
+
+function addorremoveprogressbar() {
+
+	var progressbar = `<div id="fileprogressbar" class="progress my-5">
+						<div id="updatebar" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">0%</div>
+						<a href="javascript:void(0);" class="delete_btn text-hover-primary p-0" onclick="cancelUpload(xhr)">x</a>
+						</div>`
+
+	var progressbaritemcontainer = document.getElementById('fileprogresscontainer')
+
+	var progressbaritemindom = document.getElementById('fileprogressbar')
+
+	if (progressbaritemindom !== null) {
+		progressbaritemindom.remove()
+		stopUpload = false;
+	} else {
+		progressbaritemcontainer.insertAdjacentHTML('beforeend', progressbar)
+	}
+}
+
+///// add and remove progress bar end
+//// update progress bar start
+
+function updateprogressbartodom(precent) {
+
+	precent = precent | 0;
+
+	var progressbaritemindom = document.getElementById('updatebar')
+
+	progressbaritemindom.style.width = precent + '%';
+    progressbaritemindom.textContent = precent + '%';
+    progressbaritemindom.setAttribute('aria-valuenow', precent);
+	
+	
+}
+
+/// update progress bar end
+
+					document.getElementById('fileUploader').addEventListener('click', openDialog);
+
+					function openDialog() {
+						if (channel) {
+							document.getElementById('fileUploaderInput').click();
+						}
+					}
+
+					document.getElementById('fileUploaderInput').addEventListener('change', function () {
+						//console.log('ABCD')
+						let stopUpload = false;
+						console.log('this is stopupload--|-|A',stopUpload)
+						var fileInput = document.getElementById('fileUploaderInput');
+						var file = fileInput.files[0];
+						fileInput.value = '';
+						console.log('file', file)
+						console.log('getting here A!!')
+						fetch('/chat-file-upload/', {
+							method: 'POST',
+							body: JSON.stringify({
+								filename: file.name,
+								contentType: file.type,
+								channel: channel['channelId']
+							}),
+							headers: {
+								'Content-Type': 'application/json'
+							}
+						})
+							.then(response => response.json())
+							.then(data => {
+								console.log(data.signedUrl)
+								let stopUpload = false;
+								uploadfiletogcschunking(file, data.signedUrl);
+                addorremoveprogressbar();
+							})
+							.catch(error => {
+								console.log('unable to get signedURL!!', error);
+							});
+
+
+					});
+					// upload abort
+					// Create an AbortController instance
+					const abortController = new AbortController();
+
+					// Create an AbortSignal from the AbortController
+					const abortSignal = abortController.signal;
+
+					// cancle file upload
+					function cancelFileUpload() {
+						abortSignal.abort();
+					}
+					// upload data by chunking progress
+
+
+					//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+let xhr;
+					function uploadfiletogcschunking(file, signedUrl) {
+    xhr = new XMLHttpRequest();
+
+    // Event listener for progress
+    xhr.upload.addEventListener('progress', function(event) {
+        if (event.lengthComputable) {
+            const percentComplete = (event.loaded / event.total) * 100;
+            updateprogressbartodom(percentComplete)
+            // console.log(`Upload progress: ${percentComplete.toFixed(2)}%`);
+            // You can also update a progress bar or any other UI element here.
+        }
+    });
+
+    // Event listener for the load event, which is triggered when the request completes
+    xhr.addEventListener('load', function() {
+        if (xhr.status === 200) {
+            console.log('File uploaded successfully!');
+            const splites = signedUrl.split('/')[5].split('?')[0];
+            getdownloadableurl(splites);
+            addorremoveprogressbar();
+        } else {
+            console.error('Upload failed:', xhr.statusText);
+        }
+    });
+
+    // Event listener for errors
+    xhr.addEventListener('error', function() {
+        console.error('Upload failed due to a network error.');
+    });
+
+    // Setting up the request
+    xhr.open('PUT', signedUrl, true);
+    xhr.setRequestHeader('Content-Type', file.type);
+    
+    // Send the request with the file
+    xhr.send(file);
+}
+
+// To abort the upload
+function cancelUpload(xhr) {
+    xhr.abort();
+    addorremoveprogressbar();
+}
+					function getdownloadableurl(fileName) {
+						console.log(fileName)
+						foldername = channel['channelId']
+						console.log(foldername)
+						fetch('/get-file-download-url/' + fileName + '/' + foldername,{
+              method: 'GET',
+            })
+							.then(response => response.json())
+							.then(data => {
+								console.log(data.download_url);
+								if (data.download_url !== '') {
+									submitData(data.download_url, ChatuserName)
+								}
+							})
+
+					}
+
+					//end file uploading functionlity
+
+///// RM chat js start
+const APP_ID = "4e226a8c0c724e20aab4e504951a33eb"
+const token = null
+//{% comment %} '2c329178083c4d4492ec7abe11949e00' {% endcomment %}
+const uid = String(Math.floor(Math.random() * 232 ))
+console.log('uid below')
+console.log(uid);
+var ChatuserName = "{{request.user.username}}"
+console.log(ChatuserName)
+
+///////
+
+let iniateRTM = async (channel_name) => {
+if (typeof client === 'undefined') {
+client = await AgoraRTM.createInstance(APP_ID);
+await client.login({ uid, token });
+}
+
+if (typeof channel !== 'undefined') {
+	channel.leave();
+	channel = await client.createChannel(channel_name);
+await channel.join();
+} else {
+channel = await client.createChannel(channel_name);
+await channel.join();
+}
+
+channel.on('ChannelMessage', (message, peerId) => {
+	post = JSON.parse(message.text);
+	console.log('this is the post on recive', post)
+	console.log("sidhfiuohjiodfoihoiiohsadhoihsd this  is  posthuhuih" + peerId);
+	addMessageToDom(post);
+	//AddMessageAndTime(post)
+});
+//console.clear();
+};
+
+
+// //   setInterval(getunreadstatus, 5000);
+
+function getunreadstatus() {
+  fetch('/get-unread-status/',{
+  method: 'POST',
+	  headers: {
+		'Content-Type': 'application/json',
+    }
+})
+.then(response => response.json())
+.then(data => {
+  console.log('this is the data:---',data)
+  chatBlinkadd(data.status)
+ })
+.catch(error => {
+   console.log('These are error',error)
+ });
+}
+
+function chatBlinkadd(status) {
+  var chatButton = document.getElementById('kt_drawer_chat_toggle')
+  var chatBlink = document.getElementById('unread-blink');
+  if (status === true && chatBlink === null) {
+    let chatBlinkHtml = `<span id="unread-blink" class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>`
+    chatButton.insertAdjacentHTML('beforeend', chatBlinkHtml)
+  }
+}
+    
+    const chatButton = document.getElementById('kt_drawer_chat_toggle')
+    
+    chatButton.addEventListener('click', handleClick);
+    
+
+    function handleClick(event) {
+      let channel_name = "{{channel_name}}";
+      if (channel_name !== 'None') {
+      var clickedElement = event.target;
+    console.log(clickedElement);
+    console.log(ChatuserName);
+    iniateRTM(channel_name);
+    getRmChat(channel_name);
+    var chatBlink = document.getElementById('unread-blink');
+    if (chatBlink !== null) {
+      chatBlink.remove()
+    }
+    }
+    }
+    
+    
+    var chatDOM = document.getElementById('kt_drawer_chat')
+    console.log(chatDOM)
+    console.log('This is the status of unread script',"{{unread_status}}");
+
+/// get chat data
+
+function getRmChat(channel_name) {
+	fetch('/get-RM-chat/', {
+	  method: 'POST',
+	  headers: {
+		'Content-Type': 'application/json'
+	  },
+	  body: JSON.stringify({
+		'name': ChatuserName,
+		'channel': channel_name
+	  })
+	})
+	  .then(response => {
+		console.log('A');
+		//console.log(response);
+		return response.json();
+	  })
+	  .then(data => {
+		// Process the response data here
+		console.log(data);
+		postList.innerHTML = '';
+		AddRMuserName(data['RM']);
+	if (data['data'].length !== 0) {
+		
+	for (var msg of data["data"]) {
+		addMessageToDom(msg);
+	}
+	}else{
+	// Step 1: Get a reference to the HTML tag
+	let container = document.getElementById('kt_drawer_chat_messenger_body');
+
+	// Step 2: Create a new <div> element
+	let divElement = document.createElement('div');
+
+	// Step 3: Set height and width
+	divElement.style.height = '400px';
+	divElement.style.width = '400px';
+	divElement.textContent = "your chat will be shown here!!";
+	// Step 4: Append the <div> element to the container
+	container.appendChild(divElement);
+
+	}
+	  })
+	  .catch(error => {
+		// Handle any errors here
+		console.error('Fetch error:', error);
+	  });
+  }
+
+// end get chat data
+
+////// add RMuserName
+
+function AddRMuserName(RMuser) {
+	var RMuserNameElement = document.getElementById('RMuserName')
+	RMuserNameElement.innerHTML = RMuser;
+}
+
+///// end add RMuserName
+
+///////////////////start send message button to send messages
+// var sendButton = document.getElementById('kuchbhi');
+function buttonSendMessage() {
+	//console.log("chanekjioajd : "+channel_name)
+	var textarea = document.getElementById('input_textarea');
+	var message = textarea.value;
+	textarea.value = "";
+	//console.log('submit buser', username);
+	//console.log('message body :  '+message)
+	if (message !== "") {
+		console.log('B','senderName')
+	submitData(message, ChatuserName);
+	}
+};
+
+// sendButton.addEventListener('click', buttonSendMessage);
+////////////////////// end message button to send messages
+
+////////////////////// start message submiting
+
+let submitData = async (bodyText,senderName) => {
+	var channel_name = channel['channelId']
+	console.log(channel_name)
+    let response = await fetch('/single-chat-add/', {
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({'body':bodyText, 'sender':senderName, 'channel':channel_name})
+    })
+
+    let data = await response.json()
+    data['sender'] = senderName
+
+	//console.log('after username', username);
+
+
+    channel.sendMessage({text:JSON.stringify(data), type:'text'})
+    console.log('Data:', data )
+    addMessageToDom(data)
+	//AddMessageAndTime(data)
+};
+
+////////////////////// end message submit
+
+
+
+let postList = document.getElementById('kt_drawer_chat_messenger_body')
+
+let addMessageToDom  = async (message) => {
+	
+
+	let timeSince = new Intl.RelativeTimeFormat('en')
+
+	let messageTime = new Date(message['created'])
+
+		let diff = new Date() - new Date(messageTime)
+		let ago = timeSince.format(- diff/(1000*60*60*24), 'seconds')
+		
+		if (message['sender'] === "{{request.user.username}}"){
+			var post_wrapper = `<!--begin::Message(out)-->
+			<div class="d-flex justify-content-end mb-10">
+				<!--begin::Wrapper-->
+				<div class="d-flex flex-column align-items-end">
+					<!--begin::User-->
+					<div class="d-flex align-items-center mb-2">
+						<!--begin::Details-->
+						<div class="me-3">
+							<span class="text-muted fs-7 mb-1">${formatTimeAgo(messageTime)}</span>
+							<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-danger ms-1">You</a>
+						</div>
+						<!--end::Details-->
+						<!--begin::Avatar-->
+						<div class="symbol symbol-35px symbol-circle">
+							<span class="symbol-label bg-light-success text-success fs-6 fw-bolder" style="z-index: 0;">${message['sender'].slice(0,1).toUpperCase()}</span>
+							<!--<img alt="Pic" src="{%static 'asset/media/avatars/300-1.jpg'%}" />-->
+						</div>
+						<!--end::Avatar-->
+					</div>
+					<!--end::User-->
+					<!--begin::Text-->
+					<div class="p-5 rounded bg-light-primary text-dark fw-semibold mw-lg-400px text-end" data-kt-element="message-text">${ message['body'] }</div>
+					<!--end::Text-->
+				</div>
+				<!--end::Wrapper-->
+			</div>
+			<!--end::Message(out)-->`
+		} else{ var post_wrapper = `
+			<!--begin::Message(in)-->
+						<div class="d-flex justify-content-start mb-10">
+							<!--begin::Wrapper-->
+							<div class="d-flex flex-column align-items-start">
+								<!--begin::User-->
+								<div class="d-flex align-items-center mb-2">
+									<!--begin::Avatar-->
+									<div class="symbol symbol-35px symbol-circle">
+										<span class="symbol-label bg-light-success text-success fs-6 fw-bolder" style="z-index: 0;">${message['sender'].slice(0,1).toUpperCase()}</span>
+										<!--<img alt="Pic" src="{%static 'asset/media/avatars/300-25.jpg'%}" />-->
+									</div>
+									<!--end::Avatar-->
+									<!--begin::Details-->
+									<div class="ms-3">
+										<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-danger me-1">${message['sender']}</a>
+										<span class="text-muted fs-7 mb-1">${formatTimeAgo(messageTime)}</span>
+									</div>
+									<!--end::Details-->
+								</div>
+								<!--end::User-->
+								<!--begin::Text-->
+								<div class="p-5 rounded bg-light-info text-dark fw-semibold mw-lg-400px text-start" data-kt-element="message-text">${ message['body'] }</div>
+								<!--end::Text-->
+							</div>
+							<!--end::Wrapper-->
+						</div>
+						<!--end::Message(in)-->`
+		}
+
+		postList.insertAdjacentHTML('beforeend', post_wrapper)
+		postList.scrollIntoView(false);
+		scrollToBottom()
+		
+	}
+
+function scrollToBottom() {
+	var chatWindow = document.getElementById('kt_drawer_chat_messenger_body')
+	//console.log('This is container style i want to see---',element.getAttribute('style'))
+	console.log('just clicked it!!')
+	chatWindow.scrollTop = chatWindow.scrollHeight;
+	//const lastMessageforscroll = chatwindowforlastmsg.lastElementChild;
+	//lastMessageforscroll.scrollIntoView({ behavior: 'smooth' });
+}
+
+function formatTimeAgo(timestamp) {
+	const currentTime = new Date();
+	const timeDifference = currentTime - timestamp;
+  
+	// Check if the timestamp is from today
+	const isToday = timestamp.getDate() === currentTime.getDate() &&
+	  timestamp.getMonth() === currentTime.getMonth() &&
+	  timestamp.getFullYear() === currentTime.getFullYear();
+  
+	if (!isToday) {
+	  // Format the date in dd/mm/yy format
+	  const formattedDate = `${timestamp.getDate().toString().padStart(2, '0')}/${
+		(timestamp.getMonth() + 1).toString().padStart(2, '0')}/${
+		timestamp.getFullYear().toString().slice(-2)}`;
+  
+	  // Format the time in hh:mm AM/PM format
+	  const formattedTime = `${timestamp.getHours() > 12 ? (timestamp.getHours() - 12) : timestamp.getHours()
+		}:${timestamp.getMinutes().toString().padStart(2, '0')} ${
+		timestamp.getHours() >= 12 ? 'PM' : 'AM'}`;
+  
+	  return `${formattedDate} at ${formattedTime}`;
+	} else {
+	  // Format the time in hh:mm AM/PM format
+	  const formattedTime = `${timestamp.getHours() > 12 ? (timestamp.getHours() - 12) : timestamp.getHours()
+		}:${timestamp.getMinutes().toString().padStart(2, '0')} ${
+		timestamp.getHours() >= 12 ? 'PM' : 'AM'}`;
+  
+	  return formattedTime;
+	}
+  }
+    
+      </script>
+    
+	  <script>
+  function getsinglechatnewmsg() {
+  fetch('/getsinglechatnewmsg/',{
+    method: 'GET'
+  })
+					.then(response => response.json())
+					  .then(data => {
+						  console.log('this is the data we get as unread count',data)
+						for (var item of data.unread_count) {
+							//console.log('this is vaar',item)
+							if (item['count'] !== 0 ) {
+                givenotificationaboutnewmsg(item);
+							}
+						}
+					  })
+					  .catch (error => {
+						  console.log('Error', error);
+					  });
+				}
+// setInterval(getsinglechatnewmsg, 30000); // Update every 5min(300000 seconds)
+
+function getorderchatnewmsg() {
+  fetch('/getorderchatnewmsg/',{
+    method: 'GET'
+  })
+					.then(response => response.json())
+					  .then(data => {
+						  console.log('this is the data we get as unread count',data)
+						for (var item of data.unread_count) {
+							//console.log('this is vaar',item)
+							if (item['count'] !== 0 ) {
+                givenotificationaboutnewmsg(item);
+							}
+						}
+					  })
+					  .catch (error => {
+						  console.log('Error', error);
+					  });
+				}
+// setInterval(getorderchatnewmsg, 30000); // Update every 5min(300000 seconds)
+
+  // Function to play sound
+function playSound(url) {
+	console.log('hey')
+    const audio = new Audio(url);
+    audio.play().catch((error) => console.error("Audio play failed", error));
+}
+
+
+function givenotificationaboutnewmsg(detail) {
+// Request permission 
+// let nameofsender = document.getElementById(detail['channel']+'nameorderid')
+if (Notification.permission !== "granted") {
+    Notification.requestPermission();//https://www.influencerhiring.com/mainapp/static/media/notification.mp3
+}
+// Later on, when an event occurs (like receiving a message)
+if (Notification.permission === "granted") {
+	
+    const notification = new Notification(detail['sender'], {
+        body: detail['message'],
+        icon: 'https://www.influencerhiring.com/mainapp/static/images/logoIcon/favicon.png',
+        image: 'https://www.influencerhiring.com/mainapp/static/images/logoIcon/logo.webp'
+    });
+	playSound('https://www.influencerhiring.com/media/notification.ogg');
+    
+}
+}
+
+</script>
+		<script> 
+         var t = document.getElementById("project_overview_chart");
+                if (t) {
+                    var e = t.getContext("2d");
+                    new Chart(e, {
+                        type: "doughnut",
+                        data: {
+                            datasets: [{
+                                data: [{{total}}, {{totgm}}, {{totvcs}}, {{totss}},{{totina}}],
+                                backgroundColor: ["#50CD89","#f1416c", "#00A3FF", "#E4E6EF", "#ffc700"]
+                            }],
+                            labels: ["Brand Promotion", "Greeting Messages", "Video Chat Service", "Shoutout Service", "Influencer Acquisition"]
+                        },
+                        options: {
+                            chart: {
+                                fontFamily: "inherit"
+                            },
+                            cutoutPercentage: 75,
+                            responsive: !0,
+                            maintainAspectRatio: !1,
+                            cutout: "75%",
+                            title: {
+                                display: !1
+                            },
+                            animation: {
+                                animateScale: !0,
+                                animateRotate: !0
+                            },
+                            tooltips: {
+                                enabled: !0,
+                                intersect: !1,
+                                mode: "nearest",
+                                bodySpacing: 5,
+                                yPadding: 10,
+                                xPadding: 10,
+                                caretPadding: 0,
+                                displayColors: !1,
+                                backgroundColor: "#20D489",
+                                titleFontColor: "#ffffff",
+                                cornerRadius: 4,
+                                footerSpacing: 0,
+                                titleSpacing: 0
+                            },
+                            plugins: {
+                                legend: {
+                                    display: !1
+                                }
+                            }
+                        }
+                    });
+                }
+
+         var t = document.getElementById("project_overview_charts");
+                if (t) {
+                    var e = t.getContext("2d");
+                    new Chart(e, {
+                        type: "doughnut",
+                        data: {
+                            datasets: [{
+                                data: [{{brand}}, {{gm}}, {{vcs}}, {{ss}},{{ina}}],
+                                backgroundColor: [ "#50CD89", "#00A3FF", "#E4E6EF", "#f1416c","#ffc700"]
+                            }],
+                            labels: ["Brand Promotion", "Greeting Messages", "Video Chat Service", "Shoutout Service", "Influencer Acquisition"]
+                        },
+                        options: {
+                            chart: {
+                                fontFamily: "inherit"
+                            },
+                            cutoutPercentage: 75,
+                            responsive: !0,
+                            maintainAspectRatio: !1,
+                            cutout: "75%",
+                            title: {
+                                display: !1
+                            },
+                            animation: {
+                                animateScale: !0,
+                                animateRotate: !0
+                            },
+                            tooltips: {
+                                enabled: !0,
+                                intersect: !1,
+                                mode: "nearest",
+                                bodySpacing: 5,
+                                yPadding: 10,
+                                xPadding: 10,
+                                caretPadding: 0,
+                                displayColors: !1,
+                                backgroundColor: "#20D489",
+                                titleFontColor: "#ffffff",
+                                cornerRadius: 4,
+                                footerSpacing: 0,
+                                titleSpacing: 0
+                            },
+                            plugins: {
+                                legend: {
+                                    display: !1
+                                }
+                            }
+                        }
+                    });
+                }
+          
+      </script>
+
+<script>
+
+//// start js for inapp notifications
+
+function updatenotificanblink(status) {
+var notificatoinblinkcontainer = document.getElementById('notification-blink')
+var notiblinkobj = document.getElementById('notification-unread-blink')
+var notiblink = `<span id="notification-unread-blink" class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>`
+if (status === true && notiblinkobj === null) {
+notificatoinblinkcontainer.insertAdjacentHTML('beforeend', notiblink)
+} else {
+if (status === false && notiblinkobj !== null) {
+  notiblinkobj.remove()
+}
+}
+}
+
+function updatealertno(num) {
+  //console.log('getting',num)
+  var alertcontainer = document.getElementById('noticount');
+  alertcontainer.innerText = num;
+}
+
+var notificationcontainer = document.getElementById('kt_topbar_notifications_1')
+console.log('This is container---', notificationcontainer)
+
+var notificationbutton = document.getElementById('notification-blink')
+console.log('this is notification button', notificationbutton)
+
+notificationbutton.addEventListener('click', updatenotificationreadstatus());
+window.onload = getnotificationdata();
+function updatenotificationreadstatus() {
+	updatenotificanblink(false)
+fetch('/updatenotificatoinreadstatus/',{
+	method:'GET'
+})
+.then(response => {
+	return response.json();
+})
+.then(data => {console.log(data);})
+}
+
+//add or remove 
+
+function getnotificationdata() {
+fetch('/updatenotificationdata/',{
+method:"GET"})
+.then(response => {
+	return response.json();
+})
+.then(data => {console.log(data);
+updatenotificanblink(data.unread_status)
+updatealertno(data.unread_count)
+data.data.findLast(elem => {//console.log(elem)
+	additeminnotificationcontainer(elem)})
+//for (var data of data.data) {
+//	additeminnotificationcontainer(data)
+//}
+// .catch(error => console.error('not getting the data of latest notification', error));
+}
+)
+}
+function additeminnotificationcontainer(data) {
+console.log('ABCD')
+var notificationcontainer = document.getElementById('notificationcontainer')
+console.log('A BIYSATCVH',notificationcontainer)
+var elementofhtml = `<!--begin::Item-->
+					<div class="d-flex flex-stack py-4">
+						<!--begin::Section-->
+						<div class="d-flex align-items-center">
+							<!--begin::Symbol-->
+							<div class="symbol symbol-35px me-4">
+								${data['icon']}
+							</div>
+							<!--end::Symbol-->
+							<!--begin::Title-->
+							<div class="mb-0 me-2">
+								<a href="/${data['redirect_link']}/" class="fs-6 text-gray-800 text-hover-primary fw-bold">${data['title']}</a>
+								<div class="text-gray-400 fs-7">${data['message']}</div>
+							</div>
+							<!--end::Title-->
+						</div>
+						<!--end::Section-->
+						<!--begin::Label-->
+						<span class="badge badge-light fs-8">${formatTimeAgotoutc(data['timestamp'])}</span>
+						<!--end::Label-->
+					</div>
+					<!--end::Item-->`
+notificationcontainer.insertAdjacentHTML('afterbegin', elementofhtml);
+}
+
+function formatTimeAgotoutc(timestamp) {
+	// Parse the timestamp to create a Luxon DateTime object
+	const dateTime = luxon.DateTime.fromISO(timestamp);
+
+	// Get the current time in the user's local timezone
+	const currentTime = luxon.DateTime.local();
+
+	// Check if the timestamp is from today
+	const isToday = dateTime.hasSame(currentTime, 'day');
+
+	if (!isToday) {
+		// Format the date in dd/mm/yy format
+		const formattedDate = dateTime.toFormat('dd/MM/yy');
+
+		// Format the time in hh:mm AM/PM format
+		const formattedTime = dateTime.toFormat('hh:mm a');
+
+		return `${formattedDate}`;
+	} else {
+		// Format the time in hh:mm AM/PM format
+		const formattedTime = dateTime.toFormat('hh:mm a');
+
+		return formattedTime;
+	}
+}
+
+
+
+//// end js for inapp notifications
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('DOM is fully loaded');
+  reduceheightofchatbody()
+  getorderchatnewmsg()
+  getunreadstatus()
+});
+
+
+function reduceheightofchatbody() {
+var chatWindow = document.getElementById('kt_drawer_chat_messenger_body')
+      var heightofwindow = chatWindow.style.height
+      let newheight = parseInt(heightofwindow, 10) - 65;
+      chatWindow.style.height = newheight + 'px'
+      console.log('This is container style i want to see---',heightofwindow)
+      console.log('new height is here---',newheight)
+    }
+
+function chatBlinkadd(status) {
+  var chatButton = document.getElementById('kt_drawer_chat_toggle')
+  var chatBlink = document.getElementById('unread-blink');
+  if (status === true && chatBlink === null) {
+    let chatBlinkHtml = `<span id="unread-blink" class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>`
+    chatButton.insertAdjacentHTML('beforeend', chatBlinkHtml)
+  }
+}
+
+</script>
+	
+
+</body>
+</html>

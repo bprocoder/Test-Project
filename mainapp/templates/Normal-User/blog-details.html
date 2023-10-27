@@ -1,0 +1,540 @@
+
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+
+
+{% block title%}
+<title>{{det.title_tegs}}</title>
+<meta name="title" content="{{det.title_tegs}}">
+<meta name="description" content="{{det.meta_description}}">
+<meta name="keywords" content="{{det.keyword}}">
+<link rel="stylesheet" href="{%static 'css/blog.css'%}">
+{% endblock %}
+
+{% block canonical%}
+<link rel="canonical" href="{{link}}">
+{%endblock%}
+
+{%block head%}
+<div class="header dash-header ">
+{%endblock%}
+
+{%block active%}
+<li> <a href="/" class="">Home</a> </li>
+<li> <a href="/influencers/" class="">Explore</a> </li>
+<li> <a href="/blogs/" class="">Blogs</a> </li>
+<li> <a href="/webstories/">Web-Stories</a> </li>
+<li> <a href="/casting-call/">Casting Call</a> </li>
+<li> <a href="/whitepaper/" class="">White Paper</a> </li>
+{%endblock%}
+
+{% block body %}
+
+<section id="blog" class="blog py-5 blog_home">
+  <div class="container" data-aos="fade-up">
+    <div class="row g-3">
+      <div class="col-lg-8">
+        <article class="blog-details"> 
+          <div class="post-img mb-3">
+            <img src="/media/{{det.image}}" alt="{{det.alttext}}" class="img-fluid">
+          </div>
+    
+            <div class="d-flex flex-wrap mb-3">
+              <div class="me-4 my-1">
+                <span class="svg-icon svg-icon-primary svg-icon-2 me-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor"></rect>
+                    <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor"></rect>
+                    <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor"></rect>
+                    <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor"></rect>
+                  </svg>
+                </span>
+                <span class="text-gray-400 font-13">{{det.date}}</span>
+              </div>
+              <div class="me-4 my-1">
+                <div class="ui labeled like_button d-flex" tabindex="0">
+                  <div class="ui blue me-2">
+                    <form action="" method="POST" id="task-form">
+                      {% csrf_token %}
+                    <button type="submit" name="post_id" id="post_id" value="{{det.blogid}}"  class="" style="background-color: transparent;border: none;" aria-label="Like">
+                  <i class="fas fa-thumbs-up"></i>
+                </button>
+              </form>
+                  </div>
+                  <span class="ui basic blue label">{{det.likes}}</span>
+                </div>
+              </div>
+
+              <div class="my-1">
+                <span class="svg-icon svg-icon-primary svg-icon-2 me-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3" d="M2 4V16C2 16.6 2.4 17 3 17H13L16.6 20.6C17.1 21.1 18 20.8 18 20V17H21C21.6 17 22 16.6 22 16V4C22 3.4 21.6 3 21 3H3C2.4 3 2 3.4 2 4Z" fill="currentColor"></path>
+                    <path d="M18 9H6C5.4 9 5 8.6 5 8C5 7.4 5.4 7 6 7H18C18.6 7 19 7.4 19 8C19 8.6 18.6 9 18 9ZM16 12C16 11.4 15.6 11 15 11H6C5.4 11 5 11.4 5 12C5 12.6 5.4 13 6 13H15C15.6 13 16 12.6 16 12Z" fill="currentColor"></path>
+                  </svg>
+                </span>
+                <span class="font-13 text-gray-400">{{num}} Comments</span>
+              </div>
+            </div>
+            <div class="col-lg-9 col-sm-6 col-md-5">
+              <div class="footer-widget">
+                <ul class="social-links d-flex mt-2 flex-wrap gap-3">
+                  <li> <a href="https://pinterest.com/pin/create/link?url={{link}}" target="_blank"> <i class="fab fa-pinterest-p"></i> </a> </li>
+                  <li> <a href="https://telegram.me/share/url?url={{link}}" target="_blank"> <i class="fab fa-telegram"></i></a> </li>
+                  <li> <a href="mailto:?body={{link}}" target="_blank"> <i class="fa fa-envelope"></i> </a> </li>
+                  <li> <a href="https://www.facebook.com/sharer.php?u={{link}}" target="_blank"> <i class="fab fa-facebook-f"></i> </a> </li>
+                  <li> <a href="https://twitter.com/intent/tweet?url={{link}}" target="_blank"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" class="bi bi-twitter-x fa-twitter p-2 rounded" viewBox="0 0 16 16">
+                      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                    </svg>
+                   </a> </li>
+                  <li> <a href="https://www.instagram.com/?caption={{link}}" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+                  <li> <a href="https://www.linkedin.com/shareArticle?mini=true&url={{link}}" target="_blank"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                  <li> <a href="https://api.whatsapp.com/send?text={{link}}" target="_blank"> <i class="fab fa-whatsapp"></i> </a> </li>
+                  <li> <a href="https://www.reddit.com/submit?url={{link}}" target="_blank"> <i class="fab fa-reddit-alien"></i></a> </li>
+                  <li> <a href="https://web.skype.com/share?url={{link}}" target="_blank"> <i class="fab fa-skype"></i></a> </li>
+                  </a></li>
+                  <li>
+                    <div class="clipboard_copy">
+                      <div class="copy-text">
+                        <input type="text" class="text" value="{{link}}" />
+                        <button aria-label="clone"><i class="fa fa-clone"></i></button>
+                      </div>                  
+
+                    </div>
+                  </li>
+                  <div class="modal-share">
+                    <div class="modal-share__info">
+                      choose one option
+                    </div>
+                    <div class="modal-share__icons">
+                      <a href="#" class="link-icon modal-share__icon modal-share__icon--socials">
+                        <span class="link-icon__icon" data-feather="smartphone"></span>
+                      </a>
+                      <a href="#" class="link-icon modal-share__icon modal-share__icon--socials">
+                        <span class="link-icon__icon" data-feather="mail"></span>
+                      </a>
+                      <a href="#" class="link-icon modal-share__icon modal-share__icon--socials">
+                        <span class="link-icon__icon" data-feather="facebook"></span>
+                      </a>
+                      <a href="#" class="link-icon modal-share__icon modal-share__icon--socials">
+                        <span class="link-icon__icon" data-feather="link"></span>
+                      </a>
+                    </div>
+                    <span class="modal-share__icon modal-share__icon--close" data-feather="x"></span>
+                    
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </br>
+
+          <h1 class="text-dark text-hover-primary fs-3 mb-3">{{det.title}}</h1>
+          <div class="content">  {{det.discription|safe}}</div>
+          {%for i in content%}
+          {% if i.image == ''%}
+          <p></p>
+          {%else%}
+          <div class="post-img mb-3">
+            <img src="/media/{{i.image}}" alt="{{i.alttext}}" class="img-fluid">
+          </div>
+          {%endif%}
+          <h2 class="text-dark text-hover-primary fs-3 mb-3">{{i.title}}</h2>
+          <div class="content">  {{i.discription|safe}}
+          </div><!-- End post content -->
+        </br>
+          {%endfor%}
+
+
+
+        <input type="hidden" value="{{det.blogid}}" id="bids" name="bids">
+        </br>
+         <span class="text-gray-400 font-13"><i class="fas fa-share"></i>   Like this article ? Spread the word ...</span>
+           <div class="footer-widget">
+             <ul class="social-links d-flex mt-2 flex-wrap gap-3">
+              <li> <a href="https://pinterest.com/pin/create/link?url={{link}}" target="_blank"> <i class="fab fa-pinterest-p"></i> </a> </li>
+              <li> <a href="https://telegram.me/share/url?url={{link}}" target="_blank"> <i class="fab fa-telegram"></i></a> </li>
+              <li> <a href="mailto:?body={{link}}" target="_blank"> <i class="fa fa-envelope"></i> </a> </li>
+              <li> <a href="https://www.facebook.com/sharer.php?u={{link}}" target="_blank"> <i class="fab fa-facebook-f"></i> </a> </li>
+              <li> <a href="https://twitter.com/intent/tweet?url={{link}}" target="_blank"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fff" class="bi bi-twitter-x fa-twitter p-2 rounded" viewBox="0 0 16 16">
+                  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                </svg>
+               </a> </li>
+              <li> <a href="https://www.instagram.com/?url={{link}}" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+              <li> <a href="https://www.linkedin.com/shareArticle?mini=true&url={{link}}" target="_blank"> <i class="fab fa-linkedin-in"></i> </a> </li>
+              <li> <a href="https://api.whatsapp.com/send?text={{link}}" target="_blank"> <i class="fab fa-whatsapp"></i> </a> </li>
+              <li> <a href="https://www.reddit.com/submit?url={{link}}" target="_blank"> <i class="fab fa-reddit-alien"></i></a> </li>
+              <li> <a href="https://web.skype.com/share?url={{link}}" target="_blank"> <i class="fab fa-skype"></i></a> </li>
+             </ul>
+         </div>
+       </article><!-- End blog post -->
+  <div class="comments">
+    <h3 class="aside-title ">Recent Comments:</h3>
+    {% for message in messages %}
+    {% if messages %}
+    <div class="alert alert-{{message.tags}}" role="alert">
+    <strong>{{message}}</strong>
+    </div>
+    {%endif%}
+    {%endfor%}
+    <div class="comments-grids">
+    {%for i in comm%}
+      <div class="media-grid loadMOre">
+        <div class="media">
+          <a class="comment-img" href="#url">{{i.name.0}}</a>
+          <div class="media-body comments-grid-right">
+            <h5>{{i.name}}</h5>
+            <ul class="p-0 comment">
+              <li class="">{{i.date}}</li>
+              <li>
+                <a href="#comment" class="text-primary"></a>
+              </li>
+            </ul>
+            <p>{{i.Commenttext}}</p>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    <a href="#" id="seeMore">Show More</a>
+  </div>
+  </div>
+  
+  <div class="w-100 position-relative mt-4">
+        <div class="contact-form">
+          <h3 class="mb-4">Get in touch</h3>
+          <form method="post" action=" " class="verify-gcaptcha">
+            {% csrf_token %}
+            <div class="row gy-3">
+              <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                  <label class="form-label required">Name</label>
+                  <input type="text" name="Name" id="Name" class="form-control form--control" placeholder="Name" value="" required="">
+                  <input type="hidden" value="" id="commentid" name="commentid">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group has-error">
+                  <label class="form-label required" for="message">Comments</label>
+                  <textarea name="Message" class="form-control form--control" id="Message" cols="30" rows="4" placeholder="Write your message" required=""></textarea>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12">
+                <button type="submit" class="btn btn--base" aria-label="send">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="col-lg-4">
+
+        <div class="sidebar">
+          <div class="sidebar-item categories">
+            <h3 class="sidebar-title">Blogs Categories</h3>
+            <ul class="mt-3">
+              {%for i in cate%}
+              <li><a href="/blogs/{{i.blogcategory|striptags|slugify}}/">{{i.blogcategory}} </a><span>[{{i.blogcategory_count}}]</span></li>
+             {%endfor%}
+            </ul>
+          </div><!-- End sidebar categories-->
+
+          <div class="sidebar-item recent-posts mt-4">
+            <h3 class="sidebar-title mb-4">Recent Posts</h3>
+
+            <div class="mt-3">
+
+            
+{%for i in rc%}
+<div class="post-item">
+<img src="/media/{{i.image}}" alt="{{i.image}}">
+<div>
+<h4><a href="/blog-details/{{i.url_structure|striptags|slugify}}/">{{i.title}}</a></h4>
+<time datetime="2020-01-01">{{i.date}}</time>
+</div>
+</div><!-- End recent post item-->
+{%endfor%}
+              
+            </div>
+
+          </div><!-- End sidebar recent posts-->
+
+        </div><!-- End Blog Sidebar -->
+
+      </div>
+
+
+
+      <div class="mb-17">
+        <div class="d-flex flex-stack mb-4">
+          <h3 class="text-dark fw-bold">Others Blogs</h3>
+        </div>
+        <div class="separator separator-dashed mb-9"></div>
+        
+        <div class="row g-10 mt-4">
+          {% for i in blogdeatils %}
+         <div class="col-md-4 mb-4 loadMOre_div">
+            <div class="card-xl-stretch me-md-6">
+              <a class="d-block bgi-no-repeat bgi-size-cover bgi-position-center card-rounded position-relative min-h-175px mb-6" style="background-image:url('/media/{{i.image}}')" href="/blog-details/{{i.url_structure|striptags|slugify}}/">
+              </a>
+              <div class="mt-3">
+                <a href="/blog-details/{{i.url_structure|striptags|slugify}}/" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{i.title}}</a>
+                <div class="fw-semibold fs-5 text-gray-600 text-dark my-2">{{i.short_discription}}</div>
+                <div class="fw-500">
+                  <a href="#" class="bloger-name text-gray-700 text-hover-primary">{{i.name}}</a>
+                  <span class="text-muted">on {{i.date}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% endfor %}
+</div>
+     <a href="javascript:void(0)" class="load-more" id="more">Load More</a>
+      
+      </div>
+      
+
+</section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+    </script>
+
+<script>
+$(function () {
+  var $src = $('#bids'),
+      $dst = $('#commentid');
+      $dst.val($src.val());
+});
+
+$(document).on('submit','#task-form',function(e){
+  e.preventDefault();
+  $.ajax({
+      type:'POST',
+      url:'{% url "likes" %}',
+      data:
+      {
+          task:$("#post_id").val(),
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+      },
+      })
+  });
+
+</script>
+
+
+<script>
+
+
+  function switchcart() {
+    prebody.innerHTML=postbody.innerHTML;
+    var x=document.getElementById("postbody");
+    var y=document.getElementById("prebody");
+  }
+
+
+
+
+
+
+    function delwishlist(id){
+      switchcart();
+    
+      $('#usercart').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmywhishlist" %}',
+          data:
+          {
+            id:id,
+            
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+            for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+                
+if (response[key].length===0){
+  var html1="";
+  html1+=`
+  <div class="cart-empty-content d-block">
+                <img src="{%static 'images/wish_empty.webp'%}" class="cart-empty-img" alt="wishlist_empty_img" loading="lazy">
+                <p class="empty-heading">Wishlist  Empty add your Favourite Influencers ..</p>
+                <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                <a href="/" target="_blank" class="explore-celeb-btn">Explore Influencers</a>
+              </div>
+              `
+              $('#usercart').append(html1);
+            }
+            else{
+
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex">
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+                              <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                </div>
+                             
+                            </div>
+                          </div>
+                         
+                        </div>
+                        `
+                        $('#usercart').append(html);
+                      }
+                    }
+                    }
+          }
+          })
+        };
+
+        
+    function switchcart1() {
+      prebody1.innerHTML=postbody2.innerHTML;
+    }
+  
+    function delcart(id){
+      switchcart1();
+      
+      $('#usercart3').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmycart" %}',
+          data:
+          {
+            id:id,
+           
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+                  for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+             
+              if (response[key].length===0){
+                var html1="";
+                html1+=`
+                <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/cart_empty.webp'%}" class="cart-empty-img" alt="cart_empty_img" loading="lazy">
+                  <p class="empty-heading">Cart Empty add Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Add Influencers</a>
+                </div>
+                            `
+                            $('#usercart3').append(html1);
+                          }
+                          else{
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                  
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+              <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                        $('#usercart3').append(html);
+                      }
+                     
+                    }
+                  }
+    
+          }
+          })
+        };
+  
+  
+  
+      </script>
+
+
+   
+{% endblock  %}

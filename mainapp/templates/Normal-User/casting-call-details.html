@@ -1,0 +1,474 @@
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+
+
+{% block title%}
+	
+<title>{{det.posttitle}}</title>
+<meta name="title" content="{{det.posttitle}}">
+<meta name="description" content="{{det.postdescription}}">
+<meta name="keywords" content="{{det.brandname}}">
+
+{% endblock %}
+
+{% block canonical%}
+<link rel="canonical" href="https://www.influencerhiring.com/casting-call-details/{{det.posttitle|striptags|slugify}}/">
+{%endblock%}
+
+{%block head%}
+<div class="header dash-header ">
+{%endblock%}
+{%block active%}
+<li> <a href="/" class="">Home</a> </li>
+<li> <a href="/influencers/" class="">Explore</a> </li>
+<li> <a href="/blogs/" >Blogs</a> </li>
+<li> <a href="/webstories/">Web-Stories</a> </li>
+<li> <a href="/casting-call/" >Casting Call</a> </li>
+<li> <a href="/whitepaper/" class="">White Paper</a> </li>
+{%endblock%}
+{% block body %}
+
+<section class="asting-details pb-4">
+    <div class="w-100">
+      <div class="banner_top_inner rounded-3">
+        <img src="/media/{{det.brandbanner}}" alt="{{det.posttitle}}" class="img-fluid rounded-3" />
+      </div>
+    </div>
+
+    <div class="request_info faqs-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+               <div class="row mt-4 mb-5">
+                  <div class="col-lg-12">
+                      <div class="d-md-flex">
+                          <span class="avatar flex-shrink-0 avatar-base avatar-circle rounded-pi{{det.brandname}}ll">
+                              <img class="img-fluid rounded-pill avatar-img" src="/media/{{det.brandlogo}}" alt="{{det.brandname}}" class="img-fluid">
+                          </span>
+                          <div class="d-block ms-3">
+                              <h3 class="fw-bold mb-0 sub-heading">{{det.brandname}}</h3>
+                              <div class="row mt-1 mb-2">
+                                  <a class="link-primary font-size-sm col-auto" href="#">Influencer Marketing</a>
+                              </div>
+                              <p>{{det.postdescription | safe }}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="row mb-5">
+                  <div class="col-lg-12">
+                    <div class="section-title t_left mb-3">
+                    <h5>Information</h5>
+                    <h3>Information Requests</h3>
+                    <p>Additional questions from the Buyer so they can determine if you're the right fit.</p>
+                    </div>
+                    <div class="accordion accordion-flush accordian_scroll" id="accordionFlushExample">
+                    {%for i in faq%}
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne-{{i.questionid}}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-{{i.questionid}}" aria-expanded="false" aria-controls="flush-collapseOne-{{i.questionid}}">
+                    {{i.title}}
+                    </button>
+                    </h2>
+                    <div id="flush-collapseOne-{{i.questionid}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne-{{i.questionid}}" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">{{i.des}}</div>
+                    </div>
+                    </div>
+                    {%endfor%}
+                    </div>
+                    </div>
+
+              </div>
+          </div>
+          <div class="col-lg-5">
+              <div class="sticky_right col-12 mx-auto mb-5 mt-5 mb-lg-0 mt-lg-0">
+
+                <div id="viewing_pitch" class="card mt-4">
+                  <div class="card-body ">
+
+                    <div class="row mt-1 mb-3">
+                      <div class="col-auto">
+                        <div class="d-flex align-items-center flex-row mb-3">
+                          <div class="d-flex flex-column overflow-hidden w-100">
+                            <div class="d-flex align-items-center ">
+                              <span class="text-start required_heading flex-grow-1 fw-semi-bold text-gray-700"> Required Platforms </span>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                              <span class="badge d-inline-flex align-items-center svg-icon-xs badge-lg font-size-sm fw-normal px-3 rounded-pill  text-soft-primary  bg-soft-primary"> {{det.requiredplatform}}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex align-items-center  flex-row">
+                          <div class="d-flex flex-column overflow-hidden w-100">
+                            <div class="d-flex align-items-center ">
+                              <span class="text-start required_heading flex-grow-1 fw-semi-bold text-gray-700"> Due By </span>
+                            </div>
+                            <span class="badge d-inline-flex align-items-center svg-icon-xs badge-lg font-size-sm fw-normal px-3 rounded-pill text-soft-dark mt-2 bg-soft-dark">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none" class="svg-icon">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.06947 0.8H7.44305V0.410526C7.44305 0.189474 7.26556 0 7.03588 0C6.80619 0 6.6287 0.178947 6.6287 0.410526V0.8H3.3713V0.410526C3.3713 0.189474 3.19381 0 2.96413 0C2.73444 0 2.55695 0.178947 2.55695 0.410526V0.8H1.93053C0.907369 0.8 0.0825787 1.63158 0.0825787 2.66316V8.13684C0.0825787 9.16842 0.91781 10 1.93053 10H8.06947C9.09263 10 9.91742 9.16842 9.91742 8.13684V2.66316C9.91742 1.63158 9.08219 0.8 8.06947 0.8ZM1.93071 1.61052H2.55714V1.99999C2.55714 2.22104 2.73462 2.41052 2.96431 2.41052C3.194 2.41052 3.37149 2.23157 3.37149 1.99999V1.61052H6.62889V1.99999C6.62889 2.22104 6.80637 2.41052 7.03606 2.41052C7.26575 2.41052 7.44324 2.23157 7.44324 1.99999V1.61052H8.06966C8.64388 1.61052 9.10326 2.0842 9.10326 2.66315V3.19999H0.897115V2.66315C0.897115 2.0842 1.35649 1.61052 1.93071 1.61052ZM1.93071 9.17896H8.06966C8.64388 9.17896 9.10326 8.7158 9.10326 8.12633V4.01054H0.886672V8.12633C0.886672 8.70527 1.35649 9.17896 1.93071 9.17896Z" fill="#dc3545"></path>
+                                <path d="M2.89108 4.96843H2.44214C2.11849 4.96843 1.86792 5.23159 1.86792 5.54738C1.86792 5.87369 2.12893 6.12632 2.44214 6.12632H2.89108C3.21473 6.12632 3.4653 5.86317 3.4653 5.54738C3.47574 5.23159 3.21473 4.96843 2.89108 4.96843Z" fill="#dc3545"></path>
+                                <path d="M5.22951 4.96843H4.78058C4.45693 4.96843 4.20636 5.23159 4.20636 5.54738C4.20636 5.87369 4.46737 6.12632 4.78058 6.12632H5.22951C5.55317 6.12632 5.80374 5.86317 5.80374 5.54738C5.80374 5.23159 5.54273 4.96843 5.22951 4.96843Z" fill="#dc3545"></path>
+                                <path d="M7.55788 4.96843H7.10894C6.78529 4.96843 6.53472 5.23159 6.53472 5.54738C6.53472 5.87369 6.79573 6.12632 7.10894 6.12632H7.55788C7.88153 6.12632 8.1321 5.86317 8.1321 5.54738C8.14254 5.23159 7.88153 4.96843 7.55788 4.96843Z" fill="#dc3545"></path>
+                                <path d="M2.89108 7.04211H2.44214C2.11849 7.04211 1.86792 7.30527 1.86792 7.62106C1.86792 7.94738 2.12893 8.20001 2.44214 8.20001H2.89108C3.21473 8.20001 3.4653 7.93685 3.4653 7.62106C3.47574 7.30527 3.21473 7.04211 2.89108 7.04211Z" fill="#dc3545"></path>
+                                <path d="M5.22951 7.04211H4.78058C4.45693 7.04211 4.20636 7.30527 4.20636 7.62106C4.20636 7.94738 4.46737 8.20001 4.78058 8.20001H5.22951C5.55317 8.20001 5.80374 7.93685 5.80374 7.62106C5.80374 7.30527 5.54273 7.04211 5.22951 7.04211Z" fill="#dc3545"></path>
+                                <path d="M7.55788 7.04211H7.10894C6.78529 7.04211 6.53472 7.30527 6.53472 7.62106C6.53472 7.94738 6.79573 8.20001 7.10894 8.20001H7.55788C7.88153 8.20001 8.1321 7.93685 8.1321 7.62106C8.14254 7.30527 7.88153 7.04211 7.55788 7.04211Z" fill="#dc3545"></path>
+                              </svg>
+                              <time datetime="2023-03-01T17:00:00Z" data-local="time" data-format="%m/%d/%Y - %I:%M %P" title="March 1, 2023 at 10:30pm IST" data-localized="" aria-label="{{det.expirydate}}">{{det.expirydate}}</time>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="d-flex align-items-center  flex-row">
+                          <div class="d-flex flex-column overflow-hidden w-100">
+                            <div class="d-flex align-items-center ">
+                              <span class="text-start required_heading flex-grow-1 fw-semi-bold text-gray-700"> Compensation   </span>
+                            </div>
+                            <div class="d-flex gap-1 mt-2">
+                              {%if det.compensation == 'Cash' %}
+                              <span class="badge d-inline-flex justify-content-center align-items-center text-center badge-lg font-size-sm fw-normal px-3 rounded-pill badge-circle text-soft-success  bg-soft-success">
+                                <i class="fas fa-money-bill-alt"></i>
+                              </span>
+                              {%endif%}
+                    
+                              {%if det.compensation == 'Products' %}
+                              <span class="badge d-inline-flex justify-content-center align-items-center text-center badge-lg font-size-sm fw-normal px-3 rounded-pill badge-circle text-soft-success  bg-soft-success">
+                                <i class="fas fa-gift"></i>
+                              </span>
+                              {%endif%}
+                    
+                    
+                              {%if det.compensation == 'Both' %}
+                              <span class="badge d-inline-flex justify-content-center align-items-center text-center badge-lg font-size-sm fw-normal px-3 rounded-pill badge-circle text-soft-success  bg-soft-success">
+                                <i class="fas fa-money-bill-alt"></i>
+                              </span>
+                              <span class="badge d-inline-flex justify-content-center align-items-center text-center badge-lg font-size-sm fw-normal px-3 rounded-pill badge-circle text-soft-success  bg-soft-success">
+                                <i class="fas fa-gift"></i>
+                              </span>
+                              {%endif%}
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="m-0">If this Casting Call interests you, submit a Pitch and see if you're the perfect fit.</p>
+                    <div class="d-none d-lg-flex mt-3">
+                      <a href="/Brand-Pitch/" class="btn btn-danger flex-grow-0 flex-lg-grow-1 text-nowrap" type="default" data-turbo="true" data-turbo-frame="remote_modal"> I'd like to Submit a Pitch </a>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="casting-call py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xxl-8">
+        <div class="section-header text-center">
+          <h2 class="section-header__title text-center">
+            <img src="/media/images/Icon File-13.png" alt="casting-call icon"> Similar <span>Casting Calls</span>
+            <img src="/media/images/Icon File-14.png" alt="casting-call icon">
+          </h2>
+        </div>
+      </div>
+      </div>
+
+
+  <div class="col-12">
+  <div class="d-block pb-3">
+  <div class="row">
+
+  <div class="col-12 col-lg-12 col-xl-12">
+    <div class="casting-slider-contain">
+      <div id="casting_Slider" class="owl-carousel owl-theme">
+        {%for i in sdet%}
+        <div class="item">
+          <a href="/casting-call-details/{{i.posttitle|striptags|slugify}}/">
+            <div class="new-card">
+              <img src="/media/{{i.productimage}}" alt="productimage" class="img-fluid user_profile_icon">
+          
+              <div class="user_heading_card">
+               <h4 class="sub-heading">{{i.posttitle}}</h4>
+              </div>
+          
+              <div class="user-card">
+              <div class="d-flex align-items-start text-dark">
+                <div class="avatar flex-shrink-0 rounded-circle">
+                <img src="/media/{{i.brandlogo}}" alt="{{i.brandname}}" class="img-fluid">
+                </div>
+                <div class="user_profile_ d-flex flex-column flex-grow-1 justify-content-center overflow-hidden ms-2">
+                <span class="font-size-sm fw-semi-bold text-truncate">{{i.brandname}}</span>
+                <span class="d-inline-flex align-items-center svg-icon-sm gap-05">
+                <span class="font-size-sm text-truncate">Influencer Marketing</span>
+                </span>
+                </div>
+                </div>
+              </div>
+              
+              <div class="card-footer bg-white p-2 d-flex justify-content-between">
+                <span class="badge d-inline-flex align-items-center svg-icon-xs badge-lg font-size-sm fw-normal px-3 rounded-pill  text-soft-dark  bg-soft-dark">
+                <i class="fas fa-calendar-alt"></i>
+                {{i.expirydate}}
+                </span>
+                <div class="d-flex gap-1">
+                  {%if i.compensation == 'Cash' %}
+                  <span class="badge d-inline-flex justify-content-center align-items-center text-center badge-lg font-size-sm fw-normal px-3 rounded-pill badge-circle text-soft-success  bg-soft-success">
+                    <i class="fas fa-money-bill-alt"></i>
+                  </span>
+                  {%endif%}
+        
+                  {%if i.compensation == 'Products' %}
+                  <span class="badge d-inline-flex justify-content-center align-items-center text-center badge-lg font-size-sm fw-normal px-3 rounded-pill badge-circle text-soft-success  bg-soft-success">
+                    <i class="fas fa-gift"></i>
+                  </span>
+                  {%endif%}
+        
+        
+                  {%if i.compensation == 'Both' %}
+                  <span class="badge d-inline-flex justify-content-center align-items-center text-center badge-lg font-size-sm fw-normal px-3 rounded-pill badge-circle text-soft-success  bg-soft-success">
+                    <i class="fas fa-money-bill-alt"></i>
+                  </span>
+                  <span class="badge d-inline-flex justify-content-center align-items-center text-center badge-lg font-size-sm fw-normal px-3 rounded-pill badge-circle text-soft-success  bg-soft-success">
+                    <i class="fas fa-gift"></i>
+                  </span>
+                  {%endif%}
+                </div>
+                </div>
+            </div>  
+            </a>
+        </div>
+        {%endfor%}
+        
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+  </section>
+
+
+
+  <script>
+
+
+    function switchcart() {
+      prebody.innerHTML=postbody.innerHTML;
+      var x=document.getElementById("postbody");
+      var y=document.getElementById("prebody");
+    }
+  
+  
+    function switchcart1() {
+      prebody1.innerHTML=postbody2.innerHTML;
+    }
+  
+    function delcart(id){
+      switchcart1();
+      
+      $('#usercart3').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmycart" %}',
+          data:
+          {
+            id:id,
+           
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+                  for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+             
+              if (response[key].length===0){
+                var html1="";
+                html1+=`
+                <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/cart_empty.webp'%}" class="cart-empty-img" alt="cart_empty_img" loading="lazy">
+                  <p class="empty-heading">Cart Empty add Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Add Influencers</a>
+                </div>
+                            `
+                            $('#usercart3').append(html1);
+                          }
+                          else{
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                  
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+              <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                        $('#usercart3').append(html);
+                      }
+                     
+                    }
+                  }
+    
+          }
+          })
+        };
+  
+  
+  
+  
+  
+  
+  
+      function delwishlist(id){
+        switchcart();
+      
+        $('#usercart').empty();
+        $.ajax({
+            type:'POST',
+            url:'{% url "delmywhishlist" %}',
+            data:
+            {
+              id:id,
+              
+              csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success: function(response){
+              console.log("Rahul");
+              console.log(response);
+              for (var key in response){
+                console.log("Lkey");
+                console.log(key);
+                console.log("Lenght of the response");
+                console.log(response[key].length);
+                  
+  if (response[key].length===0){
+    var html1="";
+    html1+=`
+    <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/wish_empty.webp'%}" class="cart-empty-img" alt="wishlist_empty_img" loading="lazy">
+                  <p class="empty-heading">Wishlist  Empty add your Favourite Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Explore Influencers</a>
+                </div>
+                `
+                $('#usercart').append(html1);
+              }
+              else{
+  
+  
+  
+                        for (var i=0; i<response[key].length;i++)
+                        {
+                          console.log("values");
+                          console.log(response[key][0]);
+                          var html="";
+                          html+=`
+                          <div class="row m-0 fadeout-box full-cart-div">
+                            <div class="cart-box d-flex flex-wrap">
+                              <div class="row">
+                                <div class="col-3 p-0">
+                                <div class="celeb-cart enter-booking-details">
+                                  <a href="/influencer/`+response[key][i][8]+`">
+                                    <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-9">
+                                <div class="celeb-cart-detail">
+                                  <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                  <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                    <div class="cart-occasion">
+                                      <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                    </div>
+                                  </div>
+                                  <div class="celeb-prize-sec d-flex">
+                                    <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                            <div class="col-12 prime-applied-div">
+                              <div class="coupen-code-sec">
+                                <div class="coupen-code-div">
+                                  <p class="coupen-text">Starts from </p>
+                                  <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                                </div>
+                                <div class="coupen-prize-div">
+                                <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                  </div>
+                               
+                              </div>
+                            </div>
+                           
+                          </div>
+                          `
+                          $('#usercart').append(html);
+                        }
+                      }
+                      }
+            }
+            })
+          };
+        </script>
+  
+
+{% endblock %}

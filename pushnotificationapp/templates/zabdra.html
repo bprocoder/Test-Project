@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-messaging.js"></script>
+    <!-- <script src="/static/js/firebase-messaging-sw.js"></script> -->
+
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyC12zRqMZPpcx8o9tKTLSqDstUvOnL5N68",
+        authDomain: "send-push-notification-77012.firebaseapp.com",
+        databaseURL: "",
+        projectId: "send-push-notification-77012",
+        storageBucket: "send-push-notification-77012.appspot.com",
+        messagingSenderId: "974348841496",
+        appId: "1:974348841496:web:962860e313aca5098a096d",
+        measurementId: "G-2BRNNG25XV"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+          
+            const messaging = firebase.messaging();
+            console.log(messaging.getToken())
+            messaging.getToken({ vapidKey: 'BOKoVD_gfbPsk_2UyqkkleDoDiPNbykCqMufIzf9p8WYt7N5hOtr8cng8hRzeV-EDqclNDc18r-DsPLo5zHuFA8' }).then((currentToken) => {
+            if (currentToken) {
+              
+              console.log(currentToken)
+            } else {
+              console.log('No registration token available. Request permission to generate one.');
+           
+            }
+          }).catch((err) => {
+            console.log('An error occurred while retrieving token. ', err);
+          });
+          
+          
+            messaging
+             .requestPermission()
+             .then(function () {
+               console.log("Notification permission granted.");
+               return messaging.getToken()
+             })
+             .catch(function (err) {
+             console.log("Unable to get permission to notify.", err);
+           });
+          
+          
+       
+
+          messaging.onMessage((payload) => {
+            console.log('Message received.', payload);
+            const { title, body, icon } = payload.notification; // Extract the title and body from the payload
+          
+            // Display the notification to the user
+            if (Notification.permission === 'granted') {
+              // If the user has granted notification permission
+              new Notification(title, { body , icon});
+              const audio = new Audio('https://www.influencerhiring.com/media/notification.ogg'); // Replace with the actual path to your sound files
+              audio.play();
+
+            } else {
+              // If the user has not granted notification permission, you can display a custom notification UI in your app
+              // You can use a library or a custom implementation to show the notification within your app's UI
+              // For example, you might show an alert or a toast message with the notification details
+              showCustomNotification(title, body); // Replace this with your custom notification display logic
+            }
+            
+           
+          });
+          
+          
+          
+          
+          </script>
+
+</head>
+<body>
+  
+  <div style="display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;height: 500px;">
+        <button type="submit" onclick="location.href='/send/'">{% csrf_token %}Send<br>Notification</button>
+    </div>
+    
+</body>
+</html>

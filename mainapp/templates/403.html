@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title%}
+<title>Influencer Hiring</title>
+{% endblock %}
+<meta name="title" Content="Influencer Hiring">
+<link rel="shortcut icon" href="{%static 'images/logoIcon/favicon.png'%}" type="image/x-icon">
+<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{%static 'css/all.min.css' %}">
+<link rel="stylesheet" href="{%static 'css/line-awesome.min.css' %}">
+<link rel="stylesheet" href="{%static 'css/lib/animate.css' %}">
+<!-- Plugin Link -->
+<link rel="stylesheet" href="{%static 'css/lib/slick.css' %}">
+<!-- <link rel="stylesheet" href="{%static 'css/lib/magnific-popup.css' %}"> -->
+<!-- Main css -->
+<link rel="stylesheet" href="{%static 'css/blog.css'%}">
+<link rel="stylesheet" href="{%static 'css/main.css' %}">
+<link rel="stylesheet" href="{%static 'css/custom.css' %}">
+<link rel="stylesheet" href="{%static 'css/colore31b.css' %}"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<link rel="stylesheet" href="{%static 'css/services.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+
+
+<main class="bl_page404">
+    <h1 >Error 404. The page does not exist</h1>
+    <p class="tilte mb-2 text-white">Sorry! The page you are looking for can not be found. Because, you have execeeded the upperlimit to access the page. Perhaps the page you requested was moved or deleted. It is also possible that you made a small typing when entering the address. Go to the main page.
+    </p>
+    <div class="bl_page404__wrapper">
+      <img src="https://github.com/BlackStar1991/Pictures-for-sharing-/blob/master/404/bigBoom/cloud_warmcasino.png?raw=true" alt="image">
+      <div class="bl_page404__el1"></div>
+      <div class="bl_page404__el2"></div>
+      <div class="bl_page404__el3"></div>
+      <a class="bl_page404__link" c href="/">go home</a>
+    </div>
+  </main>
+  <style>body {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(110, 18, 97, 1) 0%, rgba(121, 29, 76, 1) 43%, rgba(255, 0, 95, 1) 100%);
+    color: #fff;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffff;
+  } 
+  
+  p {
+    display: block;
+    margin: 25px auto;
+    max-width: 776px;
+    text-align: center;
+    color: #ffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .bl_page404__wrapper {
+    position: relative;
+    width: 100%;
+    margin: 10px auto 10px;
+    max-width: 440px;
+    min-height: 410px;
+  
+  }
+  .bl_page404__img {
+    width: 100%;
+  }
+  .bl_page404__link {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 64px;
+    box-shadow: 0 5px 0 #9c1007, inset 0 0 18px rgba(253, 60, 0, 0.75);
+    background-color: #f95801;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 64px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 30px;
+    text-align: center;
+  }
+  .bl_page404__link:hover,
+  .bl_page404__link:focus {
+    background-color: #ff7400;
+  }
+  .bl_page404__el1 {
+    position: absolute;
+    top: 108px;
+    left: 102px;
+    opacity: 1;
+    animation: el1Move 800ms linear infinite;
+    width: 84px;
+    height: 106px;
+    background: url("https://github.com/BlackStar1991/Pictures-for-sharing-/blob/master/404/bigBoom/404-1.png?raw=true")
+      50% 50% no-repeat;
+    z-index: 2;
+  }
+  .bl_page404__el2 {
+    position: absolute;
+    top: 92px;
+    left: 136px;
+    opacity: 1;
+    animation: el2Move 800ms linear infinite;
+    width: 184px;
+    height: 106px;
+    background: url("https://github.com/BlackStar1991/Pictures-for-sharing-/blob/master/404/bigBoom/404-2.png?raw=true")
+      50% 50% no-repeat;
+    z-index: 2;
+  }
+  .bl_page404__el3 {
+    position: absolute;
+    top: 108px;
+    left: 180px;
+    opacity: 1;
+    animation: el3Move 800ms linear infinite;
+    width: 284px;
+    height: 106px;
+    background: url("https://github.com/BlackStar1991/Pictures-for-sharing-/blob/master/404/bigBoom/404-3.png?raw=true")
+      50% 50% no-repeat;
+    z-index: 2;
+  }
+  @keyframes el1Move {
+    0% {
+      top: 108px;
+      left: 102px;
+      opacity: 1;
+    }
+    100% {
+      top: -10px;
+      left: 22px;
+      opacity: 0;
+    }
+  }
+  @keyframes el2Move {
+    0% {
+      top: 92px;
+      left: 136px;
+      opacity: 1;
+    }
+    100% {
+      top: -10px;
+      left: 108px;
+      opacity: 0;
+    }
+  }
+  @keyframes el3Move {
+    0% {
+      top: 108px;
+      left: 180px;
+      opacity: 1;
+    }
+    100% {
+      top: 28px;
+      left: 276px;
+      opacity: 0;
+    }
+  }</style>

@@ -1,0 +1,44 @@
+.file-upload .file-upload-select {
+    display: block;
+    color: #242424;
+    cursor: pointer;
+    text-align: left;
+    background: 0 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px
+}
+
+.file-upload .file-upload-select .file-select-button {
+    padding: 0;
+    display: block;
+    font-size: 1.25rem
+}
+
+.file-upload .file-upload-select .file-select-name {
+    display: block;
+    padding: 10px 26px;
+    color: #fff;
+    background: #1e1e2d;
+    border-radius: 5px;
+    width: 329px;
+    margin-top: 8px;
+}
+
+.file-upload .file-upload-select input[type=file] {
+    display: none
+}
+
+.write_story {
+    background: 0 0;
+    border: 0;
+    padding-left: 0;
+    transition: .5s;
+    color: #fff
+}
+
+.write_story:focus {
+    padding-left: 1rem;
+    transition: .5s;
+    min-height: calc(4em + 1.55rem + 2px)
+}

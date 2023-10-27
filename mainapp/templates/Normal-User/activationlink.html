@@ -1,0 +1,52 @@
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | Activation Link</title>
+{% endblock %}
+
+{% block canonical%}
+<link rel="canonical" href="https://www.influencerhiring.com/reset/">
+{%endblock%}
+
+{%block head%}
+<div class="header dash-header">
+{%endblock%}
+{%block active%}
+          <li> <a href="/" class="">Home</a> </li>
+          <li> <a href="/influencers/" class="">Explore</a> </li>
+          <li> <a href="/blogs/" class="">Blogs</a> </li>
+          <li> <a href="/webstories/">Web-Stories</a> </li>
+          <li> <a href="/casting-call/">Casting Call</a> </li>
+          <li> <a href="/whitepaper/" class="">White Paper</a> </li>
+          {%endblock%}
+{% block body %}
+
+
+<section class="pt-80 pb-80" style="margin-top: 20px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-7 col-xl-5">
+        <div class="card custom--card">
+          <div class="card-body">
+            {% comment %} <div class="mb-3">
+              <p>To recover your account please provide your email or username to find your account.</p>
+            </div> {% endcomment %}
+            {% for message in messages %}
+            {% if messages %}
+            <div class="alert alert-{{message.tags}}" role="alert">
+              <strong>{{message}}</strong>
+              </div>
+            {%endif%}
+            {%endfor%}
+            <div style="display:flex; justify-content:center; align-items:center;">
+            <a href="https://www.influencerhiring.com/resendactivatelink/{{username}}/">   <button class="cmn--btn w-100"   >Click Here!</button></a>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+{% endblock %}

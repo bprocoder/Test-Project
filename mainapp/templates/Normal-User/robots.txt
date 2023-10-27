@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: https://www.influencerhiring.com/sitemap.xml
+
+
+
+
+

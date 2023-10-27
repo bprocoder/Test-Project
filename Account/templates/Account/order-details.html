@@ -1,0 +1,1522 @@
+{% extends 'Account/index.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | Orders Details</title>
+{% endblock %}
+
+{%block sidebar%}
+        <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+          <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+            <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+              <div class="menu-item"> <a class="menu-link" href="/Account-Dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+                </svg>
+                </span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+
+				<!--begin:Menu item-->
+				<div class="menu-item pt-5">
+				<!--begin:Menu content-->
+					<div class="menu-content">
+						<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+					</div>
+					<!--end:Menu content-->
+					</div>
+				<!--end:Menu item-->
+               
+          
+              
+              <div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+                  <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+                </svg>
+                </span> </span> <span class="menu-title">Our Business</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Complete-orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Completed-Orders</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Active-orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Active Orders</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Total-orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pending Orders</span></a></div>
+                  <div class="menu-item"> <a class="menu-link" href="/Cancel-orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Cancel Orders</span></a></div>
+                </div>
+              </div>
+
+			  <!--begin:Menu item-->
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-icon">
+						<!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+						<span class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
+								<path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
+							</svg>
+						</span>
+						<!--end::Svg Icon-->
+					</span>
+					<span class="menu-title">Users</span>
+					<span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Agencylist/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Brands / Agencies</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Clientslist/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Clients</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Creatorslist/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Creaters</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			</div>
+			<!--end:Menu item-->
+
+              <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 7H2V11H22V7Z" fill="currentColor"></path>
+                  <path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="currentColor"></path>
+                </svg>
+                </span> </span> <span class="menu-title">Total Earning</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Total-Earnings/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Earnings</span></a></div>
+                </div>
+              </div>
+
+              <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor"></path>
+                  <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor"></path>
+                </svg>
+                </span> </span> <span class="menu-title">User Profile</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Profile-Details/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Profile Setting</span></a></div>
+                </div>
+              </div>
+
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"></path>
+                    <path d="M8.70001 6C8.10001 5.7 7.39999 5.40001 6.79999 5.10001C7.79999 4.00001 8.90001 3 10.1 2.2C10.7 2.1 11.4 2 12 2C12.7 2 13.3 2.1 13.9 2.2C12 3.2 10.2 4.5 8.70001 6ZM12 8.39999C13.9 6.59999 16.2 5.30001 18.7 4.60001C18.1 4.00001 17.4 3.6 16.7 3.2C14.4 4.1 12.2 5.40001 10.5 7.10001C11 7.50001 11.5 7.89999 12 8.39999ZM7 20C7 20.2 7 20.4 7 20.6C6.2 20.1 5.49999 19.6 4.89999 19C4.59999 18 4.00001 17.2 3.20001 16.6C2.80001 15.8 2.49999 15 2.29999 14.1C4.99999 14.7 7 17.1 7 20ZM10.6 9.89999C8.70001 8.09999 6.39999 6.9 3.79999 6.3C3.39999 6.9 2.99999 7.5 2.79999 8.2C5.39999 8.6 7.7 9.80001 9.5 11.6C9.8 10.9 10.2 10.4 10.6 9.89999ZM2.20001 10.1C2.10001 10.7 2 11.4 2 12C2 12 2 12 2 12.1C4.3 12.4 6.40001 13.7 7.60001 15.6C7.80001 14.8 8.09999 14.1 8.39999 13.4C6.89999 11.6 4.70001 10.4 2.20001 10.1ZM11 20C11 14 15.4 9.00001 21.2 8.10001C20.9 7.40001 20.6 6.8 20.2 6.2C13.8 7.5 9 13.1 9 19.9C9 20.4 9.00001 21 9.10001 21.5C9.80001 21.7 10.5 21.8 11.2 21.9C11.1 21.3 11 20.7 11 20ZM19.1 19C19.4 18 20 17.2 20.8 16.6C21.2 15.8 21.5 15 21.7 14.1C19 14.7 16.9 17.1 16.9 20C16.9 20.2 16.9 20.4 16.9 20.6C17.8 20.2 18.5 19.6 19.1 19ZM15 20C15 15.9 18.1 12.6 22 12.1C22 12.1 22 12.1 22 12C22 11.3 21.9 10.7 21.8 10.1C16.8 10.7 13 14.9 13 20C13 20.7 13.1 21.3 13.2 21.9C13.9 21.8 14.5 21.7 15.2 21.5C15.1 21 15 20.5 15 20Z" fill="currentColor"></path>
+                  </svg>
+                </span> </span> <span class="menu-title">Invoice Manager</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/Create-Invoice/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Create Invoice</span></a></div>
+                </div>
+              </div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M11.8 5.2L17.7 8.6V15.4L11.8 18.8L5.90001 15.4V8.6L11.8 5.2ZM11.8 2C11.5 2 11.2 2.1 11 2.2L3.8 6.4C3.3 6.7 3 7.3 3 7.9V16.2C3 16.8 3.3 17.4 3.8 17.7L11 21.9C11.3 22 11.5 22.1 11.8 22.1C12.1 22.1 12.4 22 12.6 21.9L19.8 17.7C20.3 17.4 20.6 16.8 20.6 16.2V7.9C20.6 7.3 20.3 6.7 19.8 6.4L12.6 2.2C12.4 2.1 12.1 2 11.8 2Z" fill="currentColor"></path>
+                  <path d="M11.8 8.69995L8.90001 10.3V13.7L11.8 15.3L14.7 13.7V10.3L11.8 8.69995Z" fill="currentColor"></path>
+                </svg>
+                </span> </span> <span class="menu-title">Creators Margin</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/set-margin/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Set Margin</span></a></div>
+                </div>
+              </div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"></path>
+                    <path d="M8.70001 6C8.10001 5.7 7.39999 5.40001 6.79999 5.10001C7.79999 4.00001 8.90001 3 10.1 2.2C10.7 2.1 11.4 2 12 2C12.7 2 13.3 2.1 13.9 2.2C12 3.2 10.2 4.5 8.70001 6ZM12 8.39999C13.9 6.59999 16.2 5.30001 18.7 4.60001C18.1 4.00001 17.4 3.6 16.7 3.2C14.4 4.1 12.2 5.40001 10.5 7.10001C11 7.50001 11.5 7.89999 12 8.39999ZM7 20C7 20.2 7 20.4 7 20.6C6.2 20.1 5.49999 19.6 4.89999 19C4.59999 18 4.00001 17.2 3.20001 16.6C2.80001 15.8 2.49999 15 2.29999 14.1C4.99999 14.7 7 17.1 7 20ZM10.6 9.89999C8.70001 8.09999 6.39999 6.9 3.79999 6.3C3.39999 6.9 2.99999 7.5 2.79999 8.2C5.39999 8.6 7.7 9.80001 9.5 11.6C9.8 10.9 10.2 10.4 10.6 9.89999ZM2.20001 10.1C2.10001 10.7 2 11.4 2 12C2 12 2 12 2 12.1C4.3 12.4 6.40001 13.7 7.60001 15.6C7.80001 14.8 8.09999 14.1 8.39999 13.4C6.89999 11.6 4.70001 10.4 2.20001 10.1ZM11 20C11 14 15.4 9.00001 21.2 8.10001C20.9 7.40001 20.6 6.8 20.2 6.2C13.8 7.5 9 13.1 9 19.9C9 20.4 9.00001 21 9.10001 21.5C9.80001 21.7 10.5 21.8 11.2 21.9C11.1 21.3 11 20.7 11 20ZM19.1 19C19.4 18 20 17.2 20.8 16.6C21.2 15.8 21.5 15 21.7 14.1C19 14.7 16.9 17.1 16.9 20C16.9 20.2 16.9 20.4 16.9 20.6C17.8 20.2 18.5 19.6 19.1 19ZM15 20C15 15.9 18.1 12.6 22 12.1C22 12.1 22 12.1 22 12C22 11.3 21.9 10.7 21.8 10.1C16.8 10.7 13 14.9 13 20C13 20.7 13.1 21.3 13.2 21.9C13.9 21.8 14.5 21.7 15.2 21.5C15.1 21 15 20.5 15 20Z" fill="currentColor"></path>
+                  </svg>
+                </span> </span> <span class="menu-title">Wallet</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+                  <div class="menu-item"> <a class="menu-link" href="/payout-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Client Payout Request</span></a></div>
+				  <div class="menu-item"> <a class="menu-link" href="/user-wallet-info/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Users Wallet Information</span></a></div>
+                </div>
+              </div>
+
+			  <div data-kt-menu-trigger="click" class="menu-item  menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				  <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+				  <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+				  <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+				  <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+				  </svg>
+				</span> </span> <span class="menu-title">Affilate Marketing</span><span class="menu-arrow"></span></span>
+				<div class="menu-sub menu-sub-accordion">
+				  <div class="menu-item"> <a class="menu-link" href="/account-affiliate-payout-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Affilate Payout Request</span></a></div>  
+				</div>
+				</div>
+
+				<div data-kt-menu-trigger="click" class="menu-item  menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="currentColor"></path>
+					<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="currentColor"></path>
+					</svg>
+				</span> </span> <span class="menu-title">Transactions Logs</span><span class="menu-arrow"></span></span>
+				<div class="menu-sub menu-sub-accordion">
+				  <div class="menu-item"> <a class="menu-link" href="/order-purchase-transaction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Orders Purchase Txn.</span></a></div> 
+				  <div class="menu-item"> <a class="menu-link" href="/advertiser-transaction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Advertiser Transaction</span></a></div> 
+				  <div class="menu-item"> <a class="menu-link" href="/affiliate-transaction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Affiliate Transaction</span></a></div> 
+				  <div class="menu-item"> <a class="menu-link" href="/wallet-transaction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Wallet Transaction</span></a></div> 
+				  <div class="menu-item"> <a class="menu-link" href="/wallet-withdrawal-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">>Wallet Withdrawal Txn.</span></a></div> 
+				</div>
+				</div>
+
+
+			
+            </div>
+          </div>
+        </div>
+        {%endblock%}	
+
+{%block body%}
+					<!--begin::Main-->
+					<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+						<div class="d-flex flex-column flex-column-fluid">
+						  <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+							<div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+							  <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+										<!--begin::Title-->
+										<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Order Details</h1>
+										<!--end::Title-->
+										<!--begin::Breadcrumb-->
+										<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+											<!--begin::Item-->
+											<li class="breadcrumb-item text-muted">
+												<a href="/manager-dashboard/" class="text-muted text-hover-primary">Home</a>
+											</li>
+											<!--end::Item-->
+									
+											<!--begin::Item-->
+											<li class="breadcrumb-item">
+												<span class="bullet bg-gray-400 w-5px h-2px"></span>
+											</li>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<li class="breadcrumb-item text-muted">Details</li>
+											<!--end::Item-->
+										</ul>
+										<!--end::Breadcrumb-->
+									</div>
+									<!--end::Page title-->
+									<!--begin::Actions-->
+									<div class="d-flex align-items-center gap-2 gap-lg-3">
+										
+									</div>
+									<!--end::Actions-->
+								</div>
+								<!--end::Toolbar container-->
+							</div>
+							<!--end::Toolbar-->
+							<!--begin::Content-->
+							<div id="kt_app_content" class="app-content flex-column-fluid">
+								<div id="kt_app_content_container" class="app-container container-fluid">
+									<!--begin::Order details page-->
+									<div class="d-flex flex-column gap-7 gap-lg-10">
+										
+										<!--begin::Order summary-->
+										<div class="d-flex flex-column flex-xl-row gap-7 gap-lg-4">
+											<!--begin::Order details-->
+											<div class="card card-flush py-4 flex-row-fluid">
+												<!--begin::Card header-->
+												<div class="card-header">
+													<div class="card-title">
+														<h2>Order Details ({{order.0.ordersid}})</h2>
+													</div>
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-0">
+													<div class="table-responsive">
+														<!--begin::Table-->
+														<table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-250px">
+															<!--begin::Table body-->
+															<tbody class="fw-semibold text-gray-600">
+																<!--begin::Date-->
+																<tr>
+																	<td class="text-muted">
+																		<div class="d-flex align-items-center">
+																		<!--begin::Svg Icon | path: icons/duotune/files/fil002.svg-->
+																		<span class="svg-icon svg-icon-2 me-2">
+																			<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M19 3.40002C18.4 3.40002 18 3.80002 18 4.40002V8.40002H14V4.40002C14 3.80002 13.6 3.40002 13 3.40002C12.4 3.40002 12 3.80002 12 4.40002V8.40002H8V4.40002C8 3.80002 7.6 3.40002 7 3.40002C6.4 3.40002 6 3.80002 6 4.40002V8.40002H2V4.40002C2 3.80002 1.6 3.40002 1 3.40002C0.4 3.40002 0 3.80002 0 4.40002V19.4C0 20 0.4 20.4 1 20.4H19C19.6 20.4 20 20 20 19.4V4.40002C20 3.80002 19.6 3.40002 19 3.40002ZM18 10.4V13.4H14V10.4H18ZM12 10.4V13.4H8V10.4H12ZM12 15.4V18.4H8V15.4H12ZM6 10.4V13.4H2V10.4H6ZM2 15.4H6V18.4H2V15.4ZM14 18.4V15.4H18V18.4H14Z" fill="currentColor" />
+																				<path d="M19 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V4.40002C0 5.00002 0.4 5.40002 1 5.40002H19C19.6 5.40002 20 5.00002 20 4.40002V1.40002C20 0.800024 19.6 0.400024 19 0.400024Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->Date Added</div>
+																	</td>
+																	<td class="fw-bold text-end">{{order.0.orderdate}}</td>
+																</tr>
+																<!--end::Date-->
+																<!--begin::Payment method-->
+																<tr>
+																	<td class="text-muted">
+																		<div class="d-flex align-items-center">
+																		<!--begin::Svg Icon | path: icons/duotune/finance/fin008.svg-->
+																		<span class="svg-icon svg-icon-2 me-2">
+																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M3.20001 5.91897L16.9 3.01895C17.4 2.91895 18 3.219 18.1 3.819L19.2 9.01895L3.20001 5.91897Z" fill="currentColor" />
+																				<path opacity="0.3" d="M13 13.9189C13 12.2189 14.3 10.9189 16 10.9189H21C21.6 10.9189 22 11.3189 22 11.9189V15.9189C22 16.5189 21.6 16.9189 21 16.9189H16C14.3 16.9189 13 15.6189 13 13.9189ZM16 12.4189C15.2 12.4189 14.5 13.1189 14.5 13.9189C14.5 14.7189 15.2 15.4189 16 15.4189C16.8 15.4189 17.5 14.7189 17.5 13.9189C17.5 13.1189 16.8 12.4189 16 12.4189Z" fill="currentColor" />
+																				<path d="M13 13.9189C13 12.2189 14.3 10.9189 16 10.9189H21V7.91895C21 6.81895 20.1 5.91895 19 5.91895H3C2.4 5.91895 2 6.31895 2 6.91895V20.9189C2 21.5189 2.4 21.9189 3 21.9189H19C20.1 21.9189 21 21.0189 21 19.9189V16.9189H16C14.3 16.9189 13 15.6189 13 13.9189Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->Payment Method</div>
+																	</td>
+																	<td class="fw-bold text-end">{{pymethod.0.paymentmethod}}
+																	{% comment %} <img src="{%static 'asset/media/svg/card-logos/visa.svg'%}" class="w-50px ms-2" /> {% endcomment %}
+																
+																</td>
+																</tr>
+																<!--end::Payment method-->
+																
+															</tbody>
+															<!--end::Table body-->
+														</table>
+														<!--end::Table-->
+													</div>
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Order details-->
+											<!--begin::Customer details-->
+											<div class="card card-flush py-4 flex-row-fluid">
+												<!--begin::Card header-->
+												<div class="card-header">
+													<div class="card-title">
+														<h2>Customer Details</h2>
+													</div>
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-0">
+													<div class="table-responsive">
+														<!--begin::Table-->
+														<table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-250px">
+															<!--begin::Table body-->
+															<tbody class="fw-semibold text-gray-600">
+																<!--begin::Customer name-->
+																<tr>
+																	<td class="text-muted">
+																		<div class="d-flex align-items-center">
+																		<!--begin::Svg Icon | path: icons/duotune/communication/com006.svg-->
+																		<span class="svg-icon svg-icon-2 me-2">
+																			<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M16.5 9C16.5 13.125 13.125 16.5 9 16.5C4.875 16.5 1.5 13.125 1.5 9C1.5 4.875 4.875 1.5 9 1.5C13.125 1.5 16.5 4.875 16.5 9Z" fill="currentColor" />
+																				<path d="M9 16.5C10.95 16.5 12.75 15.75 14.025 14.55C13.425 12.675 11.4 11.25 9 11.25C6.6 11.25 4.57499 12.675 3.97499 14.55C5.24999 15.75 7.05 16.5 9 16.5Z" fill="currentColor" />
+																				<rect x="7" y="6" width="4" height="4" rx="2" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->Customer</div>
+																	</td>
+																	<td class="fw-bold text-end">
+																		<div class="d-flex align-items-center justify-content-end">
+																			<!--begin:: Avatar -->
+																			<div class="symbol symbol-circle symbol-25px overflow-hidden me-3">
+																				<a href="">
+																					<div class="symbol-label">
+																						<span class="symbol-label bg-light-primary text-primary fs-6 fw-bolder">{{order.0.clientid.clientprofile.fullname|slice:":1"}}</span>
+																						
+																					</div>
+																				</a>
+																			</div>
+																			<!--end::Avatar-->
+																			<!--begin::Name-->
+																			<a href="" class="text-gray-600 text-hover-primary">{{order.0.clientid.clientprofile.fullname}}</a>
+																			<!--end::Name-->
+																		</div>
+																	</td>
+																</tr>
+																<!--end::Customer name-->
+																<!--begin::Customer email-->
+																<tr>
+																	<td class="text-muted">
+																		<div class="d-flex align-items-center">
+																		<!--begin::Svg Icon | path: icons/duotune/communication/com011.svg-->
+																		<span class="svg-icon svg-icon-2 me-2">
+																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19Z" fill="currentColor" />
+																				<path d="M21 5H2.99999C2.69999 5 2.49999 5.10005 2.29999 5.30005L11.2 13.3C11.7 13.7 12.4 13.7 12.8 13.3L21.7 5.30005C21.5 5.10005 21.3 5 21 5Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->Chat Status</div>
+																	</td>
+																	<td class="fw-bold text-end">
+																		<!-- <a href=" " > -->
+																			<div class="badge badge-light-danger">
+																				Not Active</div> 
+																			<!-- </a> -->
+																	</td>
+																</tr>
+																<!--end::Payment method-->
+																
+															</tbody>
+															<!--end::Table body-->
+														</table>
+														<!--end::Table-->
+													</div>
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Customer details-->
+											<!--begin::Documents-->
+											<div class="card card-flush py-4 flex-row-fluid">
+												<!--begin::Card header-->
+												<div class="card-header">
+													<div class="card-title">
+														<h2>Documents</h2>
+													</div>
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-0">
+													<div class="table-responsive">
+														<!--begin::Table-->
+														<table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-250px">
+															<!--begin::Table body-->
+															<tbody class="fw-semibold text-gray-600">
+																<!--begin::Invoice-->
+																<tr>
+																	<td class="text-muted">
+																		<div class="d-flex align-items-center">
+																		<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
+																		<span class="svg-icon svg-icon-2 me-2">
+																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M18 21.6C16.3 21.6 15 20.3 15 18.6V2.50001C15 2.20001 14.6 1.99996 14.3 2.19996L13 3.59999L11.7 2.3C11.3 1.9 10.7 1.9 10.3 2.3L9 3.59999L7.70001 2.3C7.30001 1.9 6.69999 1.9 6.29999 2.3L5 3.59999L3.70001 2.3C3.50001 2.1 3 2.20001 3 3.50001V18.6C3 20.3 4.3 21.6 6 21.6H18Z" fill="currentColor" />
+																				<path d="M12 12.6H11C10.4 12.6 10 12.2 10 11.6C10 11 10.4 10.6 11 10.6H12C12.6 10.6 13 11 13 11.6C13 12.2 12.6 12.6 12 12.6ZM9 11.6C9 11 8.6 10.6 8 10.6H6C5.4 10.6 5 11 5 11.6C5 12.2 5.4 12.6 6 12.6H8C8.6 12.6 9 12.2 9 11.6ZM9 7.59998C9 6.99998 8.6 6.59998 8 6.59998H6C5.4 6.59998 5 6.99998 5 7.59998C5 8.19998 5.4 8.59998 6 8.59998H8C8.6 8.59998 9 8.19998 9 7.59998ZM13 7.59998C13 6.99998 12.6 6.59998 12 6.59998H11C10.4 6.59998 10 6.99998 10 7.59998C10 8.19998 10.4 8.59998 11 8.59998H12C12.6 8.59998 13 8.19998 13 7.59998ZM13 15.6C13 15 12.6 14.6 12 14.6H10C9.4 14.6 9 15 9 15.6C9 16.2 9.4 16.6 10 16.6H12C12.6 16.6 13 16.2 13 15.6Z" fill="currentColor" />
+																				<path d="M15 18.6C15 20.3 16.3 21.6 18 21.6C19.7 21.6 21 20.3 21 18.6V12.5C21 12.2 20.6 12 20.3 12.2L19 13.6L17.7 12.3C17.3 11.9 16.7 11.9 16.3 12.3L15 13.6V18.6Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->Invoice
+																		<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="" data-bs-original-title="View the invoice generated by this order."></i></div>
+																	</td>
+																	<td class="fw-bold text-end">
+																		<a href="#" onclick="event.preventDefault(); filter({{order.0.ordersid}})" class="badge py-2 px-4 fs-7 badge-light-primary">View Invoice</a>
+																	 </td>
+																  </tr>
+																  <!--end::Invoice-->
+																  <script>
+																	 function filter(id){
+																	 
+																			 $.ajax({
+																				 type:'POST',
+																				 url:'{% url "orderinv" %}',
+																				 headers: {
+																					 'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+																				 },
+																				 data:
+																				 {
+																		 orderid:id,     
+																				 },
+																				 success: function(response){
+																				   console.log("Rahul");
+																				   console.log(response['results']);
+																				   if (response['results']==='ok')
+																				   {
+																				   redirecttourl('/Orders-Invoice1/');
+																				 } 
+																				 }
+																			   
+																				
+																				 })
+																			   
+																		 };
+																	 
+																	 
+																	 
+																		   function redirecttourl(url){
+																			 window.location.href=url;
+																		   }
+																	 
+																	 
+																	 
+																	 
+																  </script>
+																<!--begin::Rewards-->
+																<tr>
+																	<td class="text-muted">
+																		<div class="d-flex align-items-center">
+																		<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm011.svg-->
+																		<span class="svg-icon svg-icon-2 me-2">
+																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M21.6 11.2L19.3 8.89998V5.59993C19.3 4.99993 18.9 4.59993 18.3 4.59993H14.9L12.6 2.3C12.2 1.9 11.6 1.9 11.2 2.3L8.9 4.59993H5.6C5 4.59993 4.6 4.99993 4.6 5.59993V8.89998L2.3 11.2C1.9 11.6 1.9 12.1999 2.3 12.5999L4.6 14.9V18.2C4.6 18.8 5 19.2 5.6 19.2H8.9L11.2 21.5C11.6 21.9 12.2 21.9 12.6 21.5L14.9 19.2H18.2C18.8 19.2 19.2 18.8 19.2 18.2V14.9L21.5 12.5999C22 12.1999 22 11.6 21.6 11.2Z" fill="currentColor" />
+																				<path d="M11.3 9.40002C11.3 10.2 11.1 10.9 10.7 11.3C10.3 11.7 9.8 11.9 9.2 11.9C8.8 11.9 8.40001 11.8 8.10001 11.6C7.80001 11.4 7.50001 11.2 7.40001 10.8C7.20001 10.4 7.10001 10 7.10001 9.40002C7.10001 8.80002 7.20001 8.4 7.30001 8C7.40001 7.6 7.7 7.29998 8 7.09998C8.3 6.89998 8.7 6.80005 9.2 6.80005C9.5 6.80005 9.80001 6.9 10.1 7C10.4 7.1 10.6 7.3 10.8 7.5C11 7.7 11.1 8.00005 11.2 8.30005C11.3 8.60005 11.3 9.00002 11.3 9.40002ZM10.1 9.40002C10.1 8.80002 10 8.39998 9.90001 8.09998C9.80001 7.79998 9.6 7.70007 9.2 7.70007C9 7.70007 8.8 7.80002 8.7 7.90002C8.6 8.00002 8.50001 8.2 8.40001 8.5C8.40001 8.7 8.30001 9.10002 8.30001 9.40002C8.30001 9.80002 8.30001 10.1 8.40001 10.4C8.40001 10.6 8.5 10.8 8.7 11C8.8 11.1 9 11.2001 9.2 11.2001C9.5 11.2001 9.70001 11.1 9.90001 10.8C10 10.4 10.1 10 10.1 9.40002ZM14.9 7.80005L9.40001 16.7001C9.30001 16.9001 9.10001 17.1 8.90001 17.1C8.80001 17.1 8.70001 17.1 8.60001 17C8.50001 16.9 8.40001 16.8001 8.40001 16.7001C8.40001 16.6001 8.4 16.5 8.5 16.4L14 7.5C14.1 7.3 14.2 7.19998 14.3 7.09998C14.4 6.99998 14.5 7 14.6 7C14.7 7 14.8 6.99998 14.9 7.09998C15 7.19998 15 7.30002 15 7.40002C15.2 7.30002 15.1 7.50005 14.9 7.80005ZM16.6 14.2001C16.6 15.0001 16.4 15.7 16 16.1C15.6 16.5 15.1 16.7001 14.5 16.7001C14.1 16.7001 13.7 16.6 13.4 16.4C13.1 16.2 12.8 16 12.7 15.6C12.5 15.2 12.4 14.8001 12.4 14.2001C12.4 13.3001 12.6 12.7 12.9 12.3C13.2 11.9 13.7 11.7001 14.5 11.7001C14.8 11.7001 15.1 11.8 15.4 11.9C15.7 12 15.9 12.2 16.1 12.4C16.3 12.6 16.4 12.9001 16.5 13.2001C16.6 13.4001 16.6 13.8001 16.6 14.2001ZM15.4 14.1C15.4 13.5 15.3 13.1 15.2 12.9C15.1 12.6 14.9 12.5 14.5 12.5C14.3 12.5 14.1 12.6001 14 12.7001C13.9 12.8001 13.8 13.0001 13.7 13.2001C13.6 13.4001 13.6 13.8 13.6 14.1C13.6 14.7 13.7 15.1 13.8 15.4C13.9 15.7 14.1 15.8 14.5 15.8C14.8 15.8 15 15.7 15.2 15.4C15.3 15.2 15.4 14.7 15.4 14.1Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->Reward Points
+																		<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="" data-bs-original-title="Reward value earned by customer when purchasing this order."></i></div>
+																	</td>
+																	<td class="fw-bold text-end"> </td>
+																</tr>
+																<!--end::Rewards-->
+															</tbody>
+															<!--end::Table body-->
+														</table>
+														<!--end::Table-->
+													</div>
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Documents-->
+										</div>
+										<!--end::Order summary-->
+										<!--begin::Tab content-->
+										<div class="tab-content">
+											<!--begin::Tab pane-->
+											<div class="tab-pane fade show active" id="kt_ecommerce_sales_order_summary" role="tab-panel">
+												<!--begin::Orders-->
+												<div class="d-flex flex-column gap-7 gap-lg-10">
+													
+													<!--begin::Product List-->
+													<div class="card card-flush py-4 flex-row-fluid overflow-hidden">
+														<!--begin::Card header-->
+														<div class="card-header">
+															<div class="card-title">
+																<h2>Order {{order.0.ordersid}}</h2>
+															</div>
+														</div>
+														<!--end::Card header-->
+														<!--begin::Card body-->
+														<div class="card-body pt-0">
+															<div class="table-responsive">
+																<!--begin::Table-->
+																<table class="table align-middle table-row-dashed fs-6 gy-5 mb-0">
+																	<!--begin::Table head-->
+																	<thead>
+																		<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+																			<th class="min-w-175px">Influencer Name</th>
+																			<th class="min-w-100px">Order Discriptions</th>
+																			<th class="min-w-70px text-end">Qty</th>
+																			<th class="min-w-100px text-end">Price</th>
+																			<th class="min-w-100px text-center">Order Status</th>
+																			<th class="min-w-100px text-center">Action</th>
+																		</tr>
+																	</thead>
+																	<!--end::Table head-->
+																	<!--begin::Table body-->
+																	<tbody class="fw-semibold text-gray-600">
+																		<!--begin::Products-->
+																		<tr>
+																			<!--begin::Product-->
+																			<td>
+																				<div class="d-flex align-items-center">
+																					<!--begin::Thumbnail-->
+																					<a href="/influencer/{{order.0.influencerid.influencer_userid.username|striptags|slugify}}" class="symbol symbol-50px">
+																						<span class="symbol-label" style="background-image:url(https://www.influencerhiring.com/media/{{order.0.influencerid.profileimage}});"></span>
+																					</a>
+																					<!--end::Thumbnail-->
+																					<!--begin::Title-->
+																					<div class="ms-5">
+																						<a href="/influencer/{{order.0.influencerid.influencer_userid.username|striptags|slugify}}" class="fw-bold text-gray-600 text-hover-primary">{{order.0.influencerid.fullname}}</a>
+																						<div class="fs-7 text-muted">Service Name: {{order.0.serviceid.subservice}}</div>
+																						<input id="inuserid" type="hidden" value="{{order.0.influencerid.influencer_userid}}"/>
+																					</div>
+																					<!--end::Title-->
+																				</div>
+																			</td>
+																			<!--end::Product-->
+																			<!--begin::SKU-->
+																			<td class="">“{{order.0.orderdescription}}</td>
+																			<!--end::SKU-->
+																			<!--begin::Quantity-->
+																			<td class="text-end">1</td>
+																			<!--end::Quantity-->
+																			<!--begin::Price-->
+																			<td class="text-end">{{order.0.paymentcurrency}} {% if order.0.iscouponapplied == true %}	
+																				{{order.0.finalamtafterdiscount}}
+																				{%else%}
+																				{{order.0.finalamt}}
+																			{%endif%}
+																			
+																			</td>
+																			<!--end::Price-->
+																			
+																			<td class="text-center">
+
+																				{%if order.0.orderstatus.status == 'Completed' %}
+																				<div class="badge badge-light-success">{{order.0.orderstatus.status}}</div>
+																				{%elif order.0.orderstatus.status == 'Processing' %}
+																				<div class="badge badge-light-primary">{{order.0.orderstatus.status}}</div>
+																				{%elif order.0.orderstatus.status == 'Cancelled' %}
+																				<div class="badge badge-light-danger">{{order.0.orderstatus.status}}</div>
+																				{%else%}
+																				<div class="badge badge-light-warning">{{order.0.orderstatus.status}}</div>
+																				{%endif%}
+
+																			</td>
+																			<!--end::Total-->
+																			<td class="text-center">
+																				<a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target11" onclick="updateModal();">View Details</a>
+																				<!-- <a href="#" class="btn btn-sm btn-flex btn-light-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+																					 Process Order
+																				</a> -->
+																			</td>
+																			<script type='text/javascript'>
+																				
+																					
+																				
+																				
+
+																			
+																				
+																	
+																				function updateModal()
+																					{
+																						
+																						document.getElementById("order-id").value = '{{order.0.ordersid}}';
+																							
+																							
+
+																						//if('{{order.0.orderstatus}}'!=='1' && '{{order.0.orderstatus}}'!=='6'){
+																					//		document.getElementById("butid").value = '{{order.0.ordersid}}';
+																					//	}
+
+																						document.getElementById("order-date").value = '{{order.0.orderdate}}';
+																						document.getElementById("client-nam").value = '{{order.0.clientid.clientprofile.fullname}}';
+
+
+																						document.getElementById("service-nam").value = '{{order.0.serviceid.subservice}}';
+
+
+
+																						
+
+
+
+																						if ('{{order.0.serviceid.serviceid}}'===2){
+																							document.getElementById("service-pln").value = '{{order.0.planid.plan_type}}';
+																						}
+																						else if ('{{order.0.serviceid.serviceid}}'==='5') {
+																							document.getElementById("service-pln").value = '{{ordreq.0.eventid.bookinghours}}';
+																						}
+																						else if ('{{order.0.serviceid.serviceid}}'==='4') {
+																							document.getElementById("service-pln").value = '{{ordreq.0.templatesid.templatetype}}';
+																						}
+																						else{
+																								if('{{sabslot.slotduration}}'){
+																							
+																							document.getElementById("service-pln").value = '{{sabslot.slotduration}}';
+																						}
+																						else{
+																							document.getElementById("service-pln").value = '{{order.0.planid.plan_type}}';
+																						}
+
+																						}
+
+
+
+																						if ('{{order.0.iscouponapplied}}'===true){
+																						document.getElementById("order-val").value = '{{order.0.finalamtafterdiscount}}'; 
+																					}
+																					else{
+																						document.getElementById("order-val").value = '{{order.0.finalamt}}'; 
+																					}
+									
+
+																					if ('{{order.0.serviceid.serviceid}}'==='4'){
+																						document.getElementById("gmmessages").value = '{{ordreq.0.requirement}}';	
+																						document.getElementById("order-des").value = '{{order.0.orderdescription}}';
+																						console.log('execute1');
+																					}
+
+
+																					if ('{{order.0.serviceid.serviceid}}'==='5'){
+																						document.getElementById("eventtype").value = '{{ordreq.0.eventid.eventtypeid.eventtype}}';
+																						document.getElementById("eventname1").value = '{{ordreq.0.eventid.eventname}}';
+	
+																						document.getElementById("eventdate").value = '{{ordreq.0.eventid.eventbookdate}}';
+																						document.getElementById("eventfrom").value = '{{ordreq.0.eventid.starttime}}';
+																						document.getElementById("eventto").value = '{{ordreq.0.eventid.endtime}}';
+																						document.getElementById("address1").value = '{{ordreq.0.eventid.address}}';
+																						document.getElementById("order-des").value = '{{ordreq.0.eventid.description}}';
+																						console.log('execute2');
+																					}
+																					else{
+																						document.getElementById("order-des").value = '{{order.0.orderdescription}}';
+																					}
+
+											
+																					document.getElementById("planperks").value = '{{order.0.planid.planperks|join:", "}}';
+																					
+
+																				
+
+
+																					
+
+
+
+
+										
+
+
+
+
+
+
+																					
+																					}
+																				</script>
+																			<div class="modal fade" id="kt_modal_new_target11" tabindex="-1" aria-hidden="true">
+																				<div class="modal-dialog modal-dialog-centered mw-650px">
+																				  <div class="modal-content rounded">
+																					<div class="modal-header pb-0 border-0 justify-content-end">
+																					  <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal"> <span class="svg-icon svg-icon-1">
+																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																						  <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																						  <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																						</svg>
+																						</span> </div>
+																					</div>
+																					<div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+																					  <form id="kt_modal_new_target_form" class="form" action="" method="post">
+																						{% csrf_token %}
+																						<div class="mb-13 text-center">
+																						  <h1 class="mb-3">Orders Details</h1>
+																						  <div class="text-muted fw-semibold fs-5">If you need more info, please check <a href="/terms-of-service/" target="_blank" class="fw-bold link-primary">Project Guidelines</a>.</div>
+																						</div>
+																						
+																						<div class="row g-9 mb-8">
+																						  <div class="col-md-6 fv-row">
+																							<label class="fs-6 fw-semibold mb-2">Order Id </label>
+																							<input type="text" id="order-id" value="" class="form-control form-control-solid" name="target_title" readonly />
+																						  </div>
+																						  <div class="col-md-6 fv-row">
+																							<label class="fs-6 fw-semibold mb-2">Order Date</label>
+																							<div class="position-relative d-flex align-items-center"> <span class="svg-icon svg-icon-2 position-absolute mx-4">
+																							  </span>
+																							  <input type="text" id="order-date" value="" class="form-control form-control-solid" name="target_title1" readonly />
+																							</div>
+																						  </div>
+																						</div>
+																						<div class="row g-9 mb-8">
+																							<div class="col-md-6 fv-row">
+																							  <label class="fs-6 fw-semibold mb-2">Client Name</label>
+																							  <input type="text" id="client-nam" value="" class="form-control form-control-solid" name="target_title2" readonly />
+																							</div>
+																							<div class="col-md-6 fv-row">
+																							  <label class="fs-6 fw-semibold mb-2">Service Name</label>
+																							  <div class="position-relative d-flex align-items-center"> <span class="svg-icon svg-icon-2 position-absolute mx-4">
+																								</span>
+																								<input type="text" id="service-nam" value="" class="form-control form-control-solid" name="target_title3" readonly />
+																							  </div>
+																							</div>
+																							
+																							<div class="col-md-6 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">
+																									
+																									{% if order.0.serviceid.serviceid == 2 %}
+
+
+Video Chat Duration
+{% elif order.0.serviceid.serviceid == 5 %}
+
+
+Booking Hours
+{% elif order.0.serviceid.serviceid == 4 %}
+
+
+Template Type
+																									{%else%}
+
+																									Plan Type
+																									{%endif%}
+																									
+
+
+
+
+																								</label>
+
+
+																								<div class="position-relative d-flex align-items-center"> <span class="svg-icon svg-icon-2 position-absolute mx-4">
+																								  </span>
+																								  <input type="text" id="service-pln" value="" class="form-control form-control-solid" name="target_title3" readonly />
+																								</div>
+																							  </div>
+
+
+																							  <div class="col-md-6 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">Price</label>
+																								<div class="position-relative d-flex align-items-center"> <span class="svg-icon svg-icon-2 position-absolute mx-4">
+																								  </span>
+																								  <input type="text" id="order-val" value="" class="form-control form-control-solid" name="target_title3" readonly />
+																								</div>
+																							  </div>
+
+{% if order.0.serviceid.serviceid == 2 %}
+																							  <div class="col-md-6 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">Video Chat Start Date & Time</label>
+																								<div class="position-relative d-flex align-items-center"> <span class="svg-icon svg-icon-2 position-absolute mx-4">
+																								  </span>
+																								  <input type="text" id="videochatdate" value="{{sabslot.starttime}}" class="form-control form-control-solid" name="target_title3" readonly  />
+																								</div>
+																							  </div>
+
+																							  <div class="col-md-6 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">Video Chat Joining Link</label>
+																								<div class="position-relative d-flex align-items-center"> <span class="svg-icon svg-icon-2 position-absolute mx-4">
+																								  </span>
+																								  <input type="text" id="videochattime" value="{{zoome.meet_link}}" class="form-control form-control-solid" name="target_title3" readonly  />
+																								</div>
+																							  </div>
+{%endif%}
+
+
+																						  </div>
+
+																						  {% if order.0.serviceid.serviceid == 4 %}
+																						  <div class="d-flex flex-column mb-8">
+																							<label class="fs-6 fw-semibold mb-2">Greeting Message   </label>
+																							<textarea class="form-control form-control-solid" id="gmmessages" value="" rows="4" name="g_message"  readonly ></textarea>
+																						  </div>
+
+																						  {%endif%}
+
+																							{% if order.0.serviceid.serviceid == 4 or order.0.serviceid.serviceid == 2 or order.0.serviceid.serviceid == 5 %}
+																						  
+																						  {% comment %} <div class="d-flex flex-column mb-8">
+																							<label class="fs-6 fw-semibold mb-2">Plan Perks</label>
+																							<textarea class="form-control form-control-solid" id="planperks" value="" rows="3" name="plan" readonly ></textarea>
+																						  </div> {% endcomment %}
+																						  {%else%}
+																						  <div class="d-flex flex-column mb-8">
+																							<label class="fs-6 fw-semibold mb-2">Plan Perks</label>
+																							<textarea class="form-control form-control-solid" id="planperks" value="" rows="3" name="plan" readonly ></textarea>
+																						  </div>
+{%endif%}
+
+
+
+
+																						<div class="row mb-8">
+																							{% if order.0.serviceid.serviceid == 5 %}
+
+																							<div class="col-md-6 mb-3 fv-row">
+																								<div class="mb-3">
+																									
+																								<label class="fs-6 fw-semibold mb-2">Event Type: </label>
+
+																									<div class="position-relative d-flex align-items-center"> <span class="svg-icon svg-icon-2 position-absolute mx-4">
+																									</span>
+																									<input type="text"  class="form-control form-control-solid" id="eventtype" value="" readonly />
+																								  </div>
+																									</div>
+																							  </div>
+																							  <div class="col-md-6 mb-3 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">Event Name: </label>
+																								<div class="position-relative d-flex align-items-center"> <span class="svg-icon svg-icon-2 position-absolute mx-4">
+																								  </span>
+																								  <input type="text"  class="form-control form-control-solid" id="eventname1" value="" readonly />
+																								</div>
+																							  </div>
+																							  <div class="col-md-12 mb-3 fv-row">
+																								<div class="mb-0">
+																									<label class="form-label">Event Date :</label>
+																									<input class="form-control form-control-solid" id="eventdate" value="" readonly  />
+																								</div>
+																							  </div>
+																							  <div class="col-md-6 mb-3 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">Time From : </label>
+																								<input type="text" value="" class="form-control form-control-solid" id="eventfrom" name="" readonly />
+																							  </div>
+																							  <div class="col-md-6 mb-3 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">Time To </label>
+																								<input type="text" value="" class="form-control form-control-solid" id="eventto" name=""  readonly />
+																							  </div>
+																							  <div class="col-md-12 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">Address</label>
+																								<textarea class="form-control form-control-solid" value="" rows="3" id="address1" name="address" readonly ></textarea>
+																							  </div>
+										{%endif%}
+																							  <div class="col-md-12 fv-row">
+																								<label class="fs-6 fw-semibold mb-2">Description</label>
+																								<textarea class="form-control form-control-solid" id="order-des" value="" rows="3"  readonly ></textarea>
+																							  </div>
+																						  </div> 
+
+
+
+
+																						{% comment %} {%if order.0.orderstatus.status == 'Completed' %}
+																				
+																						  {% else %}
+																						  <div class="text-center">
+																						  
+																							<button type="button" class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Cancel</button>
+
+																							{%if order.0.orderstatus.status == 'Processing' %}
+																							
+																							 {%else%}
+																							 <button type="submit" id="butid" value="" name="acceptorder" class="btn btn-primary">Accept</button>{%endif%}
+																					      </div>
+																						
+
+																						  {%endif%} {% endcomment %}
+
+																						
+																					  </form>
+																					</div>
+																				  </div>
+																				</div>
+																			  </div>
+
+
+																		</tr>
+																		
+																		<!--end::Products-->
+																		
+
+																		
+																	</tbody>
+																	<!--end::Table head-->
+																</table>
+																<!--end::Table-->
+															</div>
+														</div>
+														<!--end::Card body-->
+													</div>
+													<!--end::Product List-->
+												</div>
+												<!--end::Orders-->
+											</div>
+											<!--end::Tab pane-->
+											<!--begin::Tab pane-->
+											<div class="tab-pane fade" id="kt_ecommerce_sales_order_history" role="tab-panel">
+												<!--begin::Orders-->
+												<div class="d-flex flex-column gap-7 gap-lg-10">
+													<!--begin::Order history-->
+													<div class="card card-flush py-4 flex-row-fluid">
+														<!--begin::Card header-->
+														<div class="card-header">
+															<div class="card-title">
+																<h2>Order History</h2>
+															</div>
+														</div>
+														<!--end::Card header-->
+														<!--begin::Card body-->
+														<div class="card-body pt-0">
+															<div class="table-responsive">
+																<!--begin::Table-->
+																<table class="table align-middle table-row-dashed fs-6 gy-5 mb-0">
+																	<!--begin::Table head-->
+																	<thead>
+																		<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+																			<th class="min-w-100px">Date Added</th>
+																			<th class="min-w-175px">Comment</th>
+																			<th class="min-w-70px">Order Status</th>
+																			<th class="min-w-100px">Customer Notifed</th>
+																		</tr>
+																	</thead>
+																	<!--end::Table head-->
+																	<!--begin::Table body-->
+																	<tbody class="fw-semibold text-gray-600">
+																		<tr>
+																			<!--begin::Date-->
+																			<td>23/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Order completed</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-success">Completed</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>No</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																		<tr>
+																			<!--begin::Date-->
+																			<td>22/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Order received by customer</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-success">Delivered</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>Yes</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																		<tr>
+																			<!--begin::Date-->
+																			<td>21/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Order shipped from warehouse</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-primary">Delivering</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>Yes</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																		<tr>
+																			<!--begin::Date-->
+																			<td>20/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Payment received</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-primary">Processing</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>No</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																		<tr>
+																			<!--begin::Date-->
+																			<td>19/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Pending payment</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-warning">Pending</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>No</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																		<tr>
+																			<!--begin::Date-->
+																			<td>18/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Payment method updated</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-warning">Pending</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>No</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																		<tr>
+																			<!--begin::Date-->
+																			<td>17/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Payment method expired</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-danger">Failed</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>Yes</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																		<tr>
+																			<!--begin::Date-->
+																			<td>16/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Pending payment</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-warning">Pending</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>No</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																		<tr>
+																			<!--begin::Date-->
+																			<td>15/11/2022</td>
+																			<!--end::Date-->
+																			<!--begin::Comment-->
+																			<td>Order received</td>
+																			<!--end::Comment-->
+																			<!--begin::Status-->
+																			<td>
+																				<!--begin::Badges-->
+																				<div class="badge badge-light-warning">Pending</div>
+																				<!--end::Badges-->
+																			</td>
+																			<!--end::Status-->
+																			<!--begin::Customer Notified-->
+																			<td>Yes</td>
+																			<!--end::Customer Notified-->
+																		</tr>
+																	</tbody>
+																	<!--end::Table head-->
+																</table>
+																<!--end::Table-->
+															</div>
+														</div>
+														<!--end::Card body-->
+													</div>
+													<!--end::Order history-->
+													<!--begin::Order data-->
+													<div class="card card-flush py-4 flex-row-fluid">
+														<!--begin::Card header-->
+														<div class="card-header">
+															<div class="card-title">
+																<h2>Order Data</h2>
+															</div>
+														</div>
+														<!--end::Card header-->
+														<!--begin::Card body-->
+														<div class="card-body pt-0">
+															<div class="table-responsive">
+																<!--begin::Table-->
+																<table class="table align-middle table-row-bordered mb-0 fs-6 gy-5">
+																	<!--begin::Table body-->
+																	<tbody class="fw-semibold text-gray-600">
+																		<!--begin::IP address-->
+																		<tr>
+																			<td class="text-muted">IP Address</td>
+																			<td class="fw-bold text-end">172.68.221.26</td>
+																		</tr>
+																		<!--end::IP address-->
+																		<!--begin::Forwarded IP-->
+																		<tr>
+																			<td class="text-muted">Forwarded IP</td>
+																			<td class="fw-bold text-end">89.201.163.49</td>
+																		</tr>
+																		<!--end::Forwarded IP-->
+																		<!--begin::User agent-->
+																		<tr>
+																			<td class="text-muted">User Agent</td>
+																			<td class="fw-bold text-end">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36</td>
+																		</tr>
+																		<!--end::User agent-->
+																		<!--begin::Accept language-->
+																		<tr>
+																			<td class="text-muted">Accept Language</td>
+																			<td class="fw-bold text-end">en-GB,en-US;q=0.9,en;q=0.8</td>
+																		</tr>
+																		<!--end::Accept language-->
+																	</tbody>
+																	<!--end::Table body-->
+																</table>
+																<!--end::Table-->
+															</div>
+														</div>
+														<!--end::Card body-->
+													</div>
+													<!--end::Order data-->
+												</div>
+												<!--end::Orders-->
+											</div>
+											<!--end::Tab pane-->
+										</div>
+										<!--end::Tab content-->
+
+									
+									</div>
+									<!--end::Order details page-->
+								</div>
+								<!--end::Content container-->
+							</div>
+								<!--end::Content-->
+
+
+								<!--begin::Content-->
+								<div id="kt_app_content" class="app-content flex-column-fluid">
+
+									<div id="kt_app_content_container" class="app-container container-fluid">
+										<!--begin::Inbox App - View & Reply -->
+
+
+
+										{% if not qno %}
+    {% comment %} <div class="card mb-8">
+											<div class="card-header align-items-center py-5 gap-5 mb-0">
+												<div class="d-flex flex-column flex-wrap gap-2">
+												   <!--begin::Heading-->
+												   <h2 class="fw-semibold me-3 my-1">Seller Requests</h2>
+												   <!--begin::Heading-->
+												</div> 
+											 </div>	
+
+											<div class="card-body">												
+												<form>
+													<div class="accordion question_answer" id="accordionExample">
+														{%for i in qno%}
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingOne-{{i.orderrequirementquestionsid}}">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-{{i.orderrequirementquestionsid}}" aria-expanded="true" aria-controls="collapseOne">
+										{{i.question.question}}
+									</button>
+								</h2>
+								<div id="collapseOne-{{i.orderrequirementquestionsid}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+									<div class="accordion-body answer_textarea">
+                              <input type="hidden" name="questionid" value="{{i.orderrequirementquestionsid}}"/>
+										<textarea class="form-control form-control-solid" placeholder="type your answer here.." name="answer" readonly > {{i.answer}} </textarea>
+									</div>
+								</div>
+							</div>
+
+{%endfor%}
+							
+														
+													</div>
+												</form>
+											</div>
+										</div> {% endcomment %}
+{% else %}
+     <div class="card mb-8">
+											<div class="card-header align-items-center py-5 gap-5 mb-0">
+												<div class="d-flex flex-column flex-wrap gap-2">
+												   <!--begin::Heading-->
+												   <h2 class="fw-semibold me-3 my-1">Seller Requests</h2>
+												   <!--begin::Heading-->
+												</div> 
+											 </div>	
+
+											<div class="card-body">												
+												<form>
+													<div class="accordion question_answer" id="accordionExample">
+														{%for i in qno%}
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingOne-{{i.orderrequirementquestionsid}}">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-{{i.orderrequirementquestionsid}}" aria-expanded="true" aria-controls="collapseOne">
+										{{i.question.question}}
+									</button>
+								</h2>
+								<div id="collapseOne-{{i.orderrequirementquestionsid}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+									<div class="accordion-body answer_textarea">
+                              <input type="hidden" name="questionid" value="{{i.orderrequirementquestionsid}}"/>
+										<textarea class="form-control form-control-solid" placeholder="type your answer here.." name="answer" readonly > {{i.answer}} </textarea>
+									</div>
+								</div>
+							</div>
+
+{%endfor%}
+							
+														
+													</div>
+												</form>
+											</div>
+										</div> 
+{% endif %}
+
+										
+
+												<!--begin::Card-->													
+													<div class="card">
+														
+														<div class="card-body">
+															<!--begin::Title-->
+															<div class="d-flex flex-wrap gap-2 justify-content-between mb-8">
+																<div class="d-flex align-items-center flex-wrap gap-2">
+																	<!--begin::Heading-->
+																	<h2 class="fw-semibold me-3 my-1">Order Related Conversation Between Client And Creators ..!</h2>
+																	<!--begin::Heading-->
+																</div>
+																<div class="d-flex">
+															
+																</div>
+															</div>
+															<!--end::Title-->
+															{%for i in chtme%}
+															<!--begin::Message accordion-->
+															<div data-kt-inbox-message="message_wrapper">
+																<!--begin::Message header-->
+																<div class="d-flex flex-wrap gap-2 flex-stack cursor-pointer" data-kt-inbox-message="header">
+																	<!--begin::Author-->
+																	<div class="d-flex align-items-center">
+																		<!--begin::Avatar-->
+																		<div class="symbol symbol-50 me-4">
+	{%if i.userid.roles == 'client' %}
+																			<span class="symbol-label bg-light-danger text-danger fs-6 fw-bolder">{{i.userid.username|slice:":1"}}</span>
+																			{%else%}
+																			<span class="symbol-label bg-light-primary text-primary fs-6 fw-bolder">{{i.userid.username|slice:":1"}}</span>
+																			{%endif%}
+	
+																		</div>
+																		<!--end::Avatar-->
+																		<div class="pe-5">
+																			<!--begin::Author details-->
+																			<div class="d-flex align-items-center flex-wrap gap-1">
+																				<a href="#" class="fw-bold text-dark text-hover-primary">{{i.userid.username}}</a>
+																				<!--begin::Svg Icon | path: icons/duotune/abstract/abs050.svg-->
+																				<span class="svg-icon svg-icon-7 svg-icon-success mx-3">
+																					<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																						<circle fill="currentColor" cx="12" cy="12" r="8" />
+																					</svg>
+																				</span>
+																				<!--end::Svg Icon-->
+
+																				{%if i.time_diff1 is None %}
+																				<span class="text-muted fw-bold">0 seconds ago</span>
+																				{%else%}
+																				<span class="text-muted fw-bold">{{i.time_diff1}}</span>
+																				{%endif%}
+
+																			</div>
+																			<!--end::Author details-->
+																			<!--begin::Message details-->
+																			<div data-kt-inbox-message="details">
+																				<span class="text-muted fw-semibold">{{i.text|slice:":50"}}.....</span>
+																				<!--begin::Menu toggle-->
+																				<a href="#" class="me-1" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start">
+																					<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+																					<span class="svg-icon svg-icon-5 m-0">
+																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																							<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																						</svg>
+																					</span>
+																					<!--end::Svg Icon-->
+																				</a>
+																				<!--end::Menu toggle-->
+																				
+																			</div>
+																			<!--end::Message details-->
+																			<!--begin::Preview message-->
+																			<div class="text-muted fw-semibold mw-450px d-none" data-kt-inbox-message="preview">Message</div>
+																			<!--end::Preview message-->
+																		</div>
+																	</div>
+																	<!--end::Author-->
+																	<!--begin::Actions-->
+																	<div class="d-flex align-items-center flex-wrap gap-2">
+																		<!--begin::Date-->
+																		<span class="fw-semibold text-muted text-end me-3">{{i.date}}</span>
+																		<!--end::Date-->
+																	</div>
+																	<!--end::Actions-->
+																</div>
+																<!--end::Message header-->
+																<!--begin::Message content-->
+																<div class="collapse fade" data-kt-inbox-message="message">
+																	<div class="py-5">
+																		{{i.text}}
+																	</div>
+																</div>
+																<!--end::Message content-->
+															</div>
+															
+															<div class="separator my-6"> </div>
+															{%endfor%}
+															<!-- <form id="kt_inbox_reply_form" class="rounded border mt-10" method="post" action="" enctype="multipart/form-data" >
+																{% csrf_token %}
+																
+																<div class="d-block sending-message">
+																	
+																	<textarea  class="border-0  px-3" name="content" placeholder="Type Text Here" id="myTextarea" ></textarea>
+																	
+																	
+																</div>
+																
+																<div class="d-flex flex-stack flex-wrap gap-2 py-5 ps-8 pe-5 border-top">
+																	<div class="d-flex align-items-center me-3">
+																		<div class="btn-group me-4">
+																			
+																			<button id="myButton" class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send" type="submit" >
+																				<span class="indicator-label">Send</span>
+																				<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+																			</button>
+																		
+																		</div>
+																		
+																	
+	
+																	</div>
+																
+																	
+																</div>
+															
+															</form>
+															<!--end::Form-->
+														</div>
+													</div>
+													<!--end::Card-->
+									
+									<!--end::Content container-->
+								</div>
+								<!--end::Content-->
+						</div>
+						<!--end::Content wrapper-->
+
+						<!--begin::Modal - New Target-->
+		<div class="modal fade" id="kt_modal_new_target" tabindex="-1" aria-hidden="true">
+			<!--begin::Modal dialog-->
+			<div class="modal-dialog modal-dialog-centered mw-650px">
+				<!--begin::Modal content-->
+				<div class="modal-content rounded">
+					<!--begin::Modal header-->
+					<div class="modal-header pb-0 border-0 justify-content-end">
+						<!--begin::Close-->
+						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+							<span class="svg-icon svg-icon-1">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Close-->
+					</div>
+					<!--begin::Modal header-->
+					<!--begin::Modal body-->
+					<div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+						<!--begin:Form-->
+						<form id="kt_modal_new_target_form" class="form" action="" method="post" onsubmit="return validateForm()" >
+							{% csrf_token %}
+							<!--begin::Heading-->
+							<div class="mb-13 text-center">
+								<!--begin::Title-->
+								<h1 class="mb-3">Upload Cancelled Reason</h1>
+								<!--end::Title-->
+								<!--begin::Description-->
+								<div class="text-muted fw-semibold fs-5">If you need more info, please check
+								<a href="/terms-of-service/" target="_blank" class="fw-bold link-primary">Project Guidelines</a>.</div>
+								<!--end::Description-->
+							</div>
+							<!--end::Heading-->
+							
+							
+							<!--begin::Input group-->
+							<div class="d-flex flex-column mb-8">
+								<label class="fs-6 fw-semibold mb-2">Reason</label>
+								<textarea class="form-control form-control-solid"  id="inputField" rows="3" name="reason" placeholder="{{re.0.reason}}" oninput="toggleSubmitButton()" ></textarea>
+							</div>
+							<!--end::Input group-->
+							<!--begin::Actions-->
+							<div class="text-center">
+								<button type="submit" id="kt_modal_new_target_submit" disabled class="btn btn-primary">
+									<span class="indicator-label">Submit</span>
+									<span class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+								</button>
+							</div>
+							<!--end::Actions-->
+						</form>
+						<!--end:Form-->
+					</div>
+					<!--end::Modal body-->
+				</div>
+				<!--end::Modal content-->
+			</div>
+			<!--end::Modal dialog-->
+		</div>
+		<script>
+
+			function toggleSubmitButton() {
+				var inputField = document.getElementById("inputField");
+				var submitButton = document.getElementById("kt_modal_new_target_submit");
+			  
+				if (inputField.value.trim() !== "") {
+				  submitButton.disabled = false;
+				} else {
+				  submitButton.disabled = true;
+				}
+			  }
+			  
+			  function validateForm() {
+				var inputField = document.getElementById("inputField");
+				if (inputField.value === "") {
+				  alert("Please fill in the input field.");
+				  return false; // Prevent form submission
+				}
+				return true; // Allow form submission
+			  }
+		</script>
+		<!--end::Modal - New Target-->
+
+						<script>
+							// Function to be executed on page load
+							function onPageLoad() {
+								// Get the textarea element by its id
+								if ('{{order.0.orderstatus.status}}' == 'Completed'){
+								var textarea = document.getElementById("myTextarea");
+						
+								// Disable the textarea
+								textarea.disabled = true;
+								var button = document.getElementById("myButton");
+
+								// Disable the button
+								button.disabled = true;
+							}
+							}
+						
+							// Call the onPageLoad function when the page finishes loading
+
+							window.addEventListener("load", onPageLoad);
+
+						</script>
+
+						<script>
+							$("#kt_daterangepicker_3").daterangepicker({
+									singleDatePicker: true,
+									showDropdowns: true,
+									minYear: 1901,
+									maxYear: parseInt(moment().format("YYYY"),12)
+								}, function(start, end, label) {
+									var years = moment().diff(start, "years");
+									alert("You are " + years + " years old!");
+								}
+							);
+						</script>
+					</div>
+					<!--end:::Main-->
+
+				{%endblock%}

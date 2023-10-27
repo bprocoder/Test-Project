@@ -1,0 +1,1453 @@
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+{% block title%}
+<meta charset="utf-8">
+<title>{{pseo.title}}</title>
+<meta name="title" content="{{pseo.title}}">
+<meta name="description" content="{{pseo.description}}">
+<meta name="keywords" content="{{pseo.keyword}}">
+{% endblock %}
+
+{% block canonical%}
+<link rel="canonical" href="{{link}}">
+{%endblock%}
+
+{%block head%}
+<div class="header dash-header">
+{%endblock%}
+{%block active%}
+          <li> <a href="/" class="">Home</a> </li>
+          <li> <a href="/influencers/" class="">Explore</a> </li>
+          <li> <a href="/blogs/" class="">Blogs</a> </li>
+          <li> <a href="/webstories/">Web-Stories</a> </li>
+          <li> <a href="/casting-call/">Casting Call</a> </li>
+          <li> <a href="/whitepaper/" class="">White Paper</a> </li>
+{%endblock%}
+{% block body %}
+    <section class="services_section w-100 position-relative py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 text-center">
+            <div class="stickY-left_section">
+            <div class="index-banner-img pe-5 d-inline-block">
+              <img src="/media/{{info.profileimage1}}" alt="{{info.influencer_userid.username}}" class="img-fluid" width="251" height="400">
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-9">
+            <h1 id="wish-video" class="sub_heading mb-3">
+              <span class="position-relative">{{info.fullname}}</span>
+            </h1>
+            <p>{{info.short_description}}</p>
+
+            <div class="wrapper">
+
+              {%for i in pltlk%}
+
+              {%if i.platformtype == 'Youtube' %}
+              <div class="icon youtube">
+                <span>
+                  <a href="{{i.profilelink}}" target="_blank"><i class="fab fa-youtube"></i></a>
+                </span>
+                <div class="followers">{{yt.subscribers_followers}}+</div>
+              </div>
+
+              {%elif i.platformtype == 'Twitter' %}
+              <div class="icon facebook">
+                <span>
+                  <a href="{{i.profilelink}}" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" fill="#fff" class="bi bi-twitter-x fa-twitter p-1" viewBox="0 0 16 16">
+                      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                    </svg>
+                  </a>
+                </span>
+                <div class="followers">{{fb.subscribers_followers}}+</div>
+              </div>
+
+              {%elif i.platformtype == 'Instagram' %}
+              <div class="icon instagram">
+                <span>
+                  <a href="{{i.profilelink}}" target="_blank"><i class="fab fa-instagram"></i></a>
+                </span>
+                <div class="followers">{{ig.subscribers_followers}}+</div>
+              </div>
+
+              {%elif i.platformtype == 'Tiktok' %}
+
+               <div class="icon twitter">
+                <span>
+                  <a href="{{i.profilelink}}" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </span>
+                <div class="followers">{{tk.subscribers_followers}}+</div>
+              </div>
+              {%else%}
+             
+              {%endif%}
+
+              {%endfor%} 
+              
+              <div class="social-share">
+                <div class="tooltip-box">
+                  <p> <b class="tooltip-new">
+                    <a href="/client-influencer-start-chat/{{info.influencer_userid.username}}/" class="chat_icon">
+                    <img src="/media/images/chat-icon.png" alt="chat icon" class="img-fluid">
+                    </a> <span>Chat With Influencer</span></b>
+                  </p>	   
+                  </div>
+
+                <label class="toggle" for="toggle">
+                  <input type="checkbox" id="toggle" />
+                  <div class="btn">
+                    <i class="fas fa-share-alt"></i>
+                    <i class="fas fa-times"></i>
+                    <div class="social">
+                      <div class="">
+                      <div class="footer-widget">
+                      <ul class="social-links d-flex align-items-center">
+                      <li> <a href="https://telegram.me/share/url?url={{link}}" target="_blank"> <i class="fab fa-telegram"></i></a> </li>
+                      <li> <a href="https://www.facebook.com/sharer.php?u={{link}}" target="_blank"> <i class="fab fa-facebook-f"></i> </a> </li>
+                      <li> <a href="https://twitter.com/intent/tweet?url={{link}}" target="_blank"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" fill="#fff" class="bi bi-twitter-x fa-twitter p-1 rounded" viewBox="0 0 16 16">
+                          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                        </svg> </a> </li>
+                      <li> <a href="https://www.instagram.com/?url={{link}}" target="_blank"> <i class="fab fa-instagram"></i> </a> </li>
+                      <li> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{link}}" target="_blank"> <i class="fab fa-linkedin-in"></i> </a> </li>
+                      <li> <a href="https://api.whatsapp.com/send?text={{link}}" target="_blank"> <i class="fab fa-whatsapp"></i> </a> </li>
+                      <li> <a href="https://www.reddit.com/submit?url={{link}}" target="_blank"> <i class="fab fa-reddit-alien"></i></a> </li>
+                      <li> <a href="https://web.skype.com/share?url={{link}}" target="_blank"> <i class="fab fa-skype"></i></a> </li>
+                      <div class="clipboard_copy">
+                        <div class="copy-text">
+                          <input type="text" class="text" value="{{link}}" />
+                          <button><i class="fa fa-clone"></i></button>
+                        </div>
+                      </div>
+                      </ul>
+                      </div>
+                      </div>
+                      </div>
+                  </div>
+                </label>
+              </div>
+
+              
+            </div>
+            <div class="tab-content-service mb-3">
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Why choose me?</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#about-md" type="button" role="tab" aria-controls="about-md" aria-selected="true">About me</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Rules for this Gig</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                  <h3 class="py-2 fs--20px">{{choose.choosetext.0}}</h3>
+                  <ul class="why_list">
+                    {%for i in choose.choosetext|slice:"1:"%}
+                    <li> {{i}}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="about-md" role="tabpanel" aria-labelledby="pills-about-tab" tabindex="0">
+                  <p>{{info.aboutme}}</p>
+                  <input type="hidden" id="infouser" name="infouser" value="{{info.influencer_userid}}"/>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                  <h3 class="py-2 fs--20px">{{rule.gigtext.1}}</h3>
+                  <ul class="why_list mb-3">
+                  {%for i in rule.gigtext|slice:"2:" %}
+
+                  {% if i == 'Before Placing an Order:' %}  
+                
+                    <strong>{{i}}</strong>
+                    {%elif i == 'After Placing an Order:' %}
+                  
+                    <strong>{{i}}</strong>
+                    {%else%}
+                  
+                    <li>{{i}}</li>
+                    {%endif%}
+
+
+                  {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="book_your_perso">
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                {% for i in checkseriver%}
+                {% if i == 1 %}
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-brand-promotion-tab" data-bs-toggle="pill" data-bs-target="#pills-brand-promotion" type="button" role="tab" aria-controls="pills-brand-promotion" aria-selected="true">
+                    <img src="{%static 'images/01_Brand Promotion__.webp'%}" class="img-fluid brand_icon" alt="icon" width="32" height="32">
+                    <span>{{ser.0.servicename}}</span>
+                    <input type="hidden" id="bserviceid" name="bserviceid" value="{{ser.0.serviceid}}"/>
+                  </button>
+                </li>
+               
+                
+                {% elif i == 4 %}
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-Greeting-tab" data-bs-toggle="pill" data-bs-target="#pills-Greeting" type="button" role="tab" aria-controls="pills-Greeting" aria-selected="false">
+                    <img src="{%static 'images/02 Video greetings .webp' %}" class="img-fluid brand_icon" alt="icon" width="32" height="32">
+                    <span>{{ser.3.servicename}} </span>
+                  </button>
+                </li>
+                {% elif i == 2 %}
+             
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-video-chat-tab" data-bs-toggle="pill" data-bs-target="#pills-video-chat" type="button" role="tab" aria-controls="pills-video-chat" aria-selected="false">
+                    <img src="{%static 'images/03 Video Chat_c.webp' %}" class="img-fluid brand_icon" alt="icon" width="32" height="32">
+                    <span>{{ser.1.servicename}} </span>
+                  </button>
+                </li>
+               
+                
+                {% elif i == 5 %}
+               
+              <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-booking-influencer-tab" data-bs-toggle="pill" data-bs-target="#pills-booking-influencer" type="button" role="tab" aria-controls="pills-booking-influencer" aria-selected="false">
+                    <img src="/media/influacq.webp/" class="img-fluid brand_icon" alt="icon" width="32" height="32">
+                    <span> {{ser.4.servicename}}</span>
+                  </button>
+                </li>
+                {%else%}
+                <p>
+                {%endif%}
+                {%endfor%}
+
+                
+               
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-Shortut-tab" data-bs-toggle="pill" data-bs-target="#pills-Shortut" type="button" role="tab" aria-controls="pills-Shortut" aria-selected="false">
+                    <img src="{%static 'images/04 Shoutout.webp' %}" class="img-fluid brand_icon" alt="icon" width="32" height="32">
+                    <span>{{ser.2.servicename}}</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-brand-promotion" role="tabpanel" aria-labelledby="pills-brand-promotion-tab">
+                  <h2 class="fs-4 mb-3 brand-promo-heading">{{info.fullname}} Promotions: Unleash your brand's potential, conquer markets.
+
+
+
+
+                  </h2>
+                  <div class="price_tab">
+                    <div class="pricing__table">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="heading"><i class="fas fa-rocket"></i> <strong>Basic</strong> Package</h3>
+                        <h2 class="service__price">
+                            {%for i in infoprice %}
+                            {% if i.0 == 1 and i.1 == 'Basic' %}
+                            {{cur}} {{i.2}}
+                            {%endif%}
+                            {%endfor%}
+                        </h2>
+                      </div>
+                        <input type="hidden" id="bplanid" name="bplanid" value="{{basic.planid}}" />
+                        <div class="d-flex justify-content-between my-3 package_details">
+                            <div class="w-50 text-start">
+                              <p>Content Delivery</p>
+                              <p>Delivery Time</p>
+                              <p>Fast Deliver Time</p>
+                              <p>Revised Work</p>
+                            </div>
+                            <div class="w-50 text-end">
+                              <p>{{basic.planperks|join:", " }}</p>
+                              {% if basic.deliverytime.days > 1 %}
+                              <p>{{basic.deliverytime.days}} days</p>
+                              {%else%}
+                              <p>{{basic.deliverytime.days}} day</p>
+                              {%endif%}
+                              {% if basic.exclusivedeliverytime.days > 1 %}
+                              <p>{{basic.exclusivedeliverytime.days}} days</p>
+                              {%else%}
+                              <p>{{basic.exclusivedeliverytime.days}} day</p>
+                              {%endif%}
+                              <p>{{basic.revisiontimes}}</p>
+                            </div>
+                        </div>
+                        
+
+                      {% if user.is_authenticated %}
+                      {%if request.user.roles == 'agency'%}
+                      {%if request.user.agencyprofile.country is None or request.user.agencyprofile.country == '' %}
+                      <a class="order__button" href="/profile_setting/"><button class="order__button">Hire Now</button></a>
+                      {%else%}
+                      <button  class="order__button"  onclick="subitform();" >Hire Now</button>
+                      {%endif%}
+                      {%elif request.user.roles == 'client'%}
+                      {%if request.user.clientprofile.country is None or request.user.clientprofile.country == '' %}
+                      <a class="order__button" href="/Profile-Setting/"><button class="order__button">Hire Now</button></a>
+                      {%else%}
+                      <button  class="order__button"  onclick="subitform();" >Hire Now</button>
+                      {%endif%}
+                      {%else%}
+                      <button  class="order__button">Hire Now</button>
+                      {%endif%}
+                      {% else %}
+                      <a class="order__button" href="{% url 'login1' username|striptags|slugify %}"><button  class="order__button" >Login to Hire Now</button> </a>
+                      {% endif %}
+
+                      <!-- <button  class="order__button"  onclick="subitform();" >Hire Now</button> -->
+
+                    </div>
+
+                    <script>
+                      function subitform(){
+                        var bplanid=document.getElementById("bplanid").value;
+                        $.ajax({
+                          type:'POST',
+                          url:'{% url "service" %}',
+                          data:
+                          {
+                            bplanid:bplanid,
+                            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                          },
+                          success: function(response){
+                            console.log("Rahul");
+                            console.log(response);
+                            if (response==='Result')
+                            {
+                            redirecttourl('/Package-Details/{{username|striptags|slugify}}/');
+                          }
+                          }
+                          })
+                    }
+                      function redirecttourl(url){
+                        window.location.href=url;
+                      }
+                  </script>
+
+
+                    <div class="pricing__table">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="heading"><i class="fas fa-award"></i> <strong>Standard</strong> Package</h3>
+                        <h2 class="service__price">
+                          {%for i in infoprice %}
+                            {% if i.0 == 1 and i.1 == 'Standard' %}
+                            {{cur}}{{i.2}}
+                            {%endif%}
+                            {%endfor%}
+                        </h2> 
+                      </div>
+                        <input type="hidden" id="splanid" name="splanid" value="{{stand.planid}}" />
+                        <div class="d-flex justify-content-between my-3 package_details">
+                          <div class="w-50 text-start">
+                            <p>Content Delivery</p>
+                            <p>Delivery Time</p>
+                            <p>Fast Deliver Time</p>
+                            <p>Revised Work</p>
+                          </div>
+                          <div class="w-50 text-end">
+                            <p>{{stand.planperks|join:", " }}</p>
+                              {% if stand.deliverytime.days > 1 %}
+                              <p>{{stand.deliverytime.days}} days</p>
+                              {%else%}
+                              <p>{{stand.deliverytime.days}} day</p>
+                              {%endif%}
+                              {% if stand.exclusivedeliverytime.days > 1 %}
+                              <p>{{stand.exclusivedeliverytime.days}} days</p>
+                              {%else%}
+                              <p>{{stand.exclusivedeliverytime.days}} day</p>
+                              {%endif%}
+                              <p>{{stand.revisiontimes}}</p>
+                          </div>
+                      </div>
+
+                      {% if user.is_authenticated %}
+                      {%if request.user.roles == 'agency'%}
+                      {%if request.user.agencyprofile.country is None or request.user.agencyprofile.country == '' %}
+                      <a class="order__button" href="/profile_setting/"><button class="order__button">Hire Now</button></a>
+                      {%else%}
+                      <button  class="order__button"  onclick="subitform1();" >Hire Now</button>
+                      {%endif%}
+                      {%elif request.user.roles == 'client'%}
+                      {%if request.user.clientprofile.country is None or request.user.clientprofile.country == '' %}
+                      <a class="order__button" href="/Profile-Setting/"><button class="order__button">Hire Now</button></a>
+                      {%else%}
+                      <button  class="order__button"  onclick="subitform1();" >Hire Now</button>
+                      {%endif%}
+                      {%else%}
+                      <button  class="order__button">Hire Now</button>
+                      {%endif%}
+                      {% else %}
+                      <a class="order__button" href="{% url 'login1' username|striptags|slugify %}"> <button  class="order__button" >Login to Hire Now</button> </a>
+                      {% endif %}                       
+
+                    </div>
+                    <script>
+                      function subitform1(){
+                        var bplanid=document.getElementById("splanid").value;
+                        $.ajax({
+                          type:'POST',
+                          url:'{% url "service" %}',
+                          data:
+                          {
+                            bplanid:bplanid,
+                            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                          },
+                          success: function(response){
+                            console.log("Rahul");
+                            console.log(response);
+                            if (response==='Result')
+                            {
+                            redirecttourl('/Package-Details/{{username|striptags|slugify}}/');
+                          }
+
+                          }
+
+                          })
+
+                    }
+                      function redirecttourl(url){
+                        window.location.href=url;
+                      }
+                  </script>
+
+                    <div class="pricing__table">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h3 class="heading"><i class="fas fa-gem"></i> <strong>Premium</strong> Package</h3>
+                       <h2 class="service__price">
+                          {%for i in infoprice %}
+                          {% if i.0 == 1 and i.1 == 'Premium' %}
+                          {{cur}}{{i.2}}
+                   
+                          {%endif%}
+                          {%endfor%}
+                        </h2> 
+                        
+                      </div>
+                        <input type="hidden" id="pplanid" name="pplanid" value="{{prem.planid}}" />
+                        <div class="d-flex justify-content-between my-3 package_details">
+                          <div class="w-50 text-start">
+                            <p>Content Delivery</p>
+                            <p>Delivery Time</p>
+                            <p>Fast Deliver Time</p>
+                            <p>Revised Work</p>
+                            
+                          </div>
+                          <div class="w-50 text-end">
+                            <p>{{prem.planperks|join:", " }}</p>
+                            {% if prem.deliverytime.days > 1 %}
+                            <p>{{prem.deliverytime.days}} days</p>
+                            {%else%}
+                            <p>{{prem.deliverytime.days}} day</p>
+                            {%endif%}
+                            {% if prem.exclusivedeliverytime.days > 1 %}
+                            <p>{{prem.exclusivedeliverytime.days}} days</p>
+                            {%else%}
+                            <p>{{prem.exclusivedeliverytime.days}} day</p>
+                            {%endif%}
+                            <p>{{prem.revisiontimes}}</p>
+                          </div>
+                      </div>
+
+                      {% if user.is_authenticated %}
+                      {%if request.user.roles == 'agency'%}
+                      {%if request.user.agencyprofile.country is None or request.user.agencyprofile.country == '' %}
+                      <a class="order__button" href="/profile_setting/"><button class="order__button">Hire Now</button></a>
+                      {%else%}
+                      <button  class="order__button"  onclick="subitform2();" >Hire Now</button>
+                      {%endif%}
+                      {%elif request.user.roles == 'client'%}
+                      {%if request.user.clientprofile.country is None or request.user.clientprofile.country == '' %}
+                      <a class="order__button" href="/Profile-Setting/"><button class="order__button">Hire Now</button></a>
+                      {%else%}
+                      <button  class="order__button"  onclick="subitform2();" >Hire Now</button>
+                      {%endif%}
+                      {%else%}
+                      <button  class="order__button">Hire Now</button>
+                      {%endif%}
+                      {% else %}
+                      <a class="order__button" href="{% url 'login1' username|striptags|slugify %}"><button  class="order__button" >Login to Hire Now</button> </a>
+                      {% endif %}
+
+                    </div>
+
+                </div>
+                <script>
+                  function subitform2(){
+                    var bplanid=document.getElementById("pplanid").value;
+                    $.ajax({
+                      type:'POST',
+                      url:'{% url "service" %}',
+                      data:
+                      {
+                        bplanid:bplanid,
+                        csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                      },
+                      success: function(response){
+                        console.log("Rahul");
+                        console.log(response);
+                        if (response==='Result')
+                        {
+                        redirecttourl('/Package-Details/{{username|striptags|slugify}}/');
+                      }
+                      }
+                      })
+                }
+                  function redirecttourl(url){
+                    window.location.href=url;
+                  }
+                </script>
+
+                <div class="greeting_tab-contents">
+                  <h3 class="mb-2">Brand Promotion</h3>
+                  {{ser.0.service_description}}
+                  <div class="youtube_videos">                
+                  
+                  </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="pills-Greeting" role="tabpanel" aria-labelledby="pills-Greeting-tab">
+                  <div class="greeting_tab-contents">
+                    <h2 class="fs-4 mb-3 brand-promo-heading">
+                      {{info.fullname}} Greetings: Personalized messages that touch hearts and spread smiles.</h2>
+                  <div class="w-100">
+                    <h3 class="mb-2">About Greeting Services</h3>
+                    <p>{{ser.3.service_description}}</p>
+
+                      {% if user.is_authenticated %}
+                      {%if request.user.roles == 'agency'%}
+                      {%if request.user.agencyprofile.country is None or request.user.agencyprofile.country == '' %}
+                      <div class="d-flex justify-content-end mt-2"><a href="/profile_setting/" class="continue_btn btn--outline-base text-white">Hire Now</a></div>
+                      {%else%}
+                      <div class="d-flex justify-content-end mt-2"><a href="/Greeting-Payments/{{username|striptags|slugify}}/" class="continue_btn btn--outline-base text-white">Hire Now</a></div>
+                      {%endif%}
+                      {%elif request.user.roles == 'client'%}
+                      {%if request.user.clientprofile.country is None or request.user.clientprofile.country == '' %}
+                      <div class="d-flex justify-content-end mt-2"><a href="/Profile-Setting/" class="continue_btn btn--outline-base text-white">Hire Now</a></div>
+                      {%else%}
+                      <div class="d-flex justify-content-end mt-2"><a href="/Greeting-Payments/{{username|striptags|slugify}}/" class="continue_btn btn--outline-base text-white">Hire Now</a></div>
+                      {%endif%}
+                      {%else%}
+                      <div class="d-flex justify-content-end mt-2"><a href="#" class="continue_btn btn--outline-base text-white">Hire Now</a></div>
+                      {%endif%}
+                      {% else %}
+
+                      <div class="d-flex justify-content-end mt-2"><a href="{% url 'login1' username|striptags|slugify %}" class="continue_btn btn--outline-base text-white" >  Login to Hire Now</a></div> 
+                      {% endif %}
+                    
+                  </div>
+                  </div>  
+
+                  <div class="mt-3 greeting_tab-contents">
+                    <h3 class="">Related Videos</h3>
+                    <div class="youtube_videos">
+                      <div class="row">    
+                        {%for i in gmvl%}            
+                        <div class="col-md-3">
+
+                          <div class="video position-relative">
+                            <div class="video-wrapper">
+                            <div class="video-container" id="video-container">
+
+                              <video controls id="video-{{i.videosid}}" preload="metadata">
+                                <source src="/media/{{i.videospath}}" type="video/mp4">
+                              </video>
+
+                              <div class="service_message"><i class="fas fa-birthday-cake"></i> {{i.videopurpose}}</div>
+
+                              <div class="play-button-wrapper">
+                                <div title="Play video-{{i.videosid}}" class="play-gif" id="circle-play-b-{{i.videosid}}">
+                                  <!-- SVG Play Button -->
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                                    <path d="M40 0a40 40 0 1040 40A40 40 0 0040 0zM26 61.56V18.44L64 40z" />
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                            </div>                            
+                           </div>
+
+
+                        </div>
+                        {%endfor%}
+
+                      </div>               
+            
+                    </div>
+                  </div>
+
+                </div>
+
+              <div class="tab-pane fade" id="pills-Shortut" role="tabpanel" aria-labelledby="pills-Shortut-tab">
+                <div class="greeting_tab-contents">
+                  <h2 class="fs-4 mb-3 brand-promo-heading">
+                    {{info.fullname}} Shoutouts: Boost your brand, dominate the social scene.</h2>
+                    {% for i in checkseriver%}
+                    {% if i == 7 %}
+                    
+                  <h3 class="mb-2">{{ser.5.subservice}}</h3>
+                  <p>{{ser.5.service_description}}</p>                  
+                    
+                  {% if user.is_authenticated %}
+                  {%if request.user.roles == 'agency'%}
+                  {%if request.user.agencyprofile.country is None or request.user.agencyprofile.country == '' %}
+                  <a class="order__button" href="/profile_setting/"><button class="order__button">Hire Now</button></a>
+                  {%else%}
+                  <button  class="order__button"  onclick="subitform4();" >Hire Now</button>
+                  {%endif%}
+                  {%elif request.user.roles == 'client'%}
+                  {%if request.user.clientprofile.country is None or request.user.clientprofile.country == '' %}
+                  <a class="order__button" href="/Profile-Setting/"><button class="order__button">Hire Now</button></a>
+                  {%else%}
+                  <button  class="order__button"  onclick="subitform4();" >Hire Now</button>
+                  {%endif%}
+                  {%else%}
+                  <button  class="order__button">Hire Now</button>
+                  {%endif%}
+                  {% else %}
+                  <a class="order__button" href="{% url 'login1' username|striptags|slugify %}"> <button  class="order__button" >Login to Hire Now</button> </a>
+                  {% endif %}
+                     
+
+                      {%else%}
+                      <p>
+
+
+                      {%endif%}
+                      {%endfor%}
+                </div>
+
+                <div class="greeting_tab-contents">
+                  {% for i in checkseriver%}
+                  {% if i == 3 %}
+                  <h3 class="mb-2">{{ser.2.subservice}}</h3>
+                  {{ser.2.service_description}}                  
+
+                  {% if user.is_authenticated %}
+                  {%if request.user.roles == 'agency'%}
+                  {%if request.user.agencyprofile.country is None or request.user.agencyprofile.country == '' %}
+                  <a class="order__button" href="/profile_setting/"><button class="order__button">Hire Now</button></a>
+                  {%else%}
+                  <button  class="order__button"  onclick="subitform3();" >Hire Now</button>
+                  {%endif%}
+                  {%elif request.user.roles == 'client'%}
+                  {%if request.user.clientprofile.country is None or request.user.clientprofile.country == '' %}
+                  <a class="order__button" href="/Profile-Setting/"><button class="order__button">Hire Now</button></a>
+                  {%else%}
+                  <button  class="order__button"  onclick="subitform3();" >Hire Now</button>
+                  {%endif%}
+                  {%else%}
+                  <button  class="order__button">Hire Now</button>
+                  {%endif%}
+                  {% else %}
+                  <a class="order__button mt-3" href="{% url 'login1' username|striptags|slugify %}"><button  class="order__button" >Login to Hire Now</button>
+                  </a>
+                  {% endif %}      
+                      {%else%}
+                      <p>
+
+
+                      {%endif%}
+                      {%endfor%}
+                </div>
+                </div>
+
+                <script>
+                  function subitform3(){
+                    var bplanid='{{ser.2.serviceid}}';
+                    console.log(bplanid);
+                    $.ajax({
+                      type:'POST',
+                      url:'{% url "shoutservice" %}',
+                      data:
+                      {
+                        bplanid:bplanid,
+                        csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                      },
+                      success: function(response){
+                        console.log("Rahul");
+                        console.log(response);
+                        if (response==='Result')
+                        {
+                        redirecttourl('/Shoutout-Details/{{username|striptags|slugify}}/');
+                      }
+                      }
+                      })
+                }
+
+                function subitform4(){
+                  var bplanid='{{ser.5.serviceid}}';
+                  $.ajax({
+                    type:'POST',
+                    url:'{% url "shoutservice" %}',
+                    data:
+                    {
+                      bplanid:bplanid,
+                      csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                    },
+                    success: function(response){
+                      console.log("Rahul");
+                      console.log(response);
+                      if (response==='Result')
+                      {
+                      redirecttourl('/Shoutout-Details/{{username|striptags|slugify}}/');
+                    }
+                    }
+                    })
+              }
+              
+            </script>
+                
+                <div class="tab-pane fade" id="pills-video-chat" role="tabpanel" aria-labelledby="pills-video-chat-tab">
+                  <h2 class="fs-4 mb-3 brand-promo-heading">{{info.fullname}} Video Chat: Connect, engage, and make memories together.</h2>
+                  <div class="tab-content-service mb-3">
+                    <h3 class="mb-2 mt-4">Video Chat</h3>
+                    <p>{{ser.1.service_description}}</p>
+                    <div class="youtube_videos mt-2">
+
+                  {% if user.is_authenticated %}
+                  {%if request.user.roles == 'agency'%}
+                  {%if request.user.agencyprofile.country is None or request.user.agencyprofile.country == '' %}
+                  <a href="/profile_setting/" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%else%}
+                  <a href="/influencerchat/{{username|striptags|slugify}}/" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%endif%}
+                  {%elif request.user.roles == 'client'%}
+                  {%if request.user.clientprofile.country is None or request.user.clientprofile.country == '' %}
+                  <a href="/Profile-Setting/" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%else%}
+                  <a href="/influencerchat/{{username|striptags|slugify}}/" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%endif%}
+                  {%else%}
+                  <a href="#" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%endif%}
+                  {% else %}
+                  <a  href="{% url 'login1' username|striptags|slugify %}" class="continue_btn btn--outline-base text-white" >  Login to Hire Now</a>
+                  {% endif %}		
+
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="tab-pane fade" id="pills-booking-influencer" role="tabpanel" aria-labelledby="pills-booking-influencer-tab">
+                  <h2 class="fs-4 mb-3 brand-promo-heading">{{info.fullname}} Event Collabs: Creating unforgettable experiences, together.</h2>
+                  <div class="tab-content-service mb-3">
+                    <h3 class="mb-2 mt-4">Event Collaborations</h3>
+                    <p>{{ser.4.service_description}}</p>
+                    <div class="youtube_videos">
+                      
+                  {% if user.is_authenticated %}
+                  {%if request.user.roles == 'agency'%}
+                  {%if request.user.agencyprofile.country is None or request.user.agencyprofile.country == '' %}
+                  <a href="/profile_setting/" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%else%}
+                  <a href="/Event-Collaboration/{{username|striptags|slugify}}/" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%endif%}
+                  {%elif request.user.roles == 'client'%}
+                  {%if request.user.clientprofile.country is None or request.user.clientprofile.country == '' %}
+                  <a href="/Profile-Setting/" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%else%}
+                  <a href="/Event-Collaboration/{{username|striptags|slugify}}/" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%endif%}
+                  {%else%}
+                  <a href="#" class="continue_btn btn--outline-base text-white">Hire Now</a>
+                  {%endif%}
+                  {% else %}
+                  <a href="{% url 'login1' username|striptags|slugify %}" class="continue_btn btn--outline-base text-white" >  Login to Hire Now</a>
+                  {% endif %}                    
+
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+   <section class="counter-section pt-80 pb-80 bg--light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-xl-6 mx-auto">
+            <div class="section-header text-center">
+              <h2 class="section-header__title text-center">
+                <img src="/media/images/Icon File-01-07.png" alt="title" width="50" height="50"> Related <span>Influencers</span>
+                <img src="/media/images/Icon File-01-05.png" alt="title" width="50" height="50">
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="row gy-4 justify-content-center">
+          {%if info1%}
+          <div class="carousel-wrap">
+            <div class="owl-carousel Celebrities">
+              {%for i in info1%}
+              <div class="item">
+                <div class="tab">
+                  <a href="/influencer/{{i.1|striptags|slugify}}/">
+                  <div class="effect effect-two">
+                    <a href="/influencer/{{i.1|striptags|slugify}}/">
+                      <img src="/media/{{i.2}}" class="img-fluid" alt="{{i.1}}" width="231" height="347">
+                    </a>
+                    <div class="placement">
+                      {% if user.is_authenticated %}
+                      {%if i.9 == True %}
+                      <div class="heart is-active" onclick="checkwishlist({{i.7}});">
+                                    <input type="hidden" id="checkwish-{{i.7}}" name="checkwish" value="True"/>
+                                  </div>
+                    {%else%}
+                     <div class="heart" onclick="checkwishlist({{i.7}});">
+                                  <input type="hidden" id="checkwish-{{i.7}}" name="checkwish" value="False"/>
+                                </div>
+                    {%endif%}
+                    {%else%}
+                    <a href="/login/"><div class="heart"></div></a>
+                    {%endif%}
+                    </div>
+                    <a href="/influencer/{{i.1|striptags|slugify}}/"><div class="tab-text">
+                      <h2>{{i.3}}</h2>
+                      <div class="description d-block w-100">
+                        <a href="/influencer/{{i.1|striptags|slugify}}/" tabindex="0">Hire Now</a>
+                        <a href="javascript:cart({{i.7}});" class="addtocart-btn celebrity-cart-url-ambika-ranjankar cart-hide-btn " tabindex="0">
+                          <span class="globaladdtocart" onclick="showmessage()">Add to Cart </span>
+                          <input type="hidden" id="curruser" name="curruser" value="{{request.user.id}}" />
+                        </a>
+                      </div>
+                      <div class="star_rating mb-4">
+                        <i class="far fa-star {% if i.6 > 0%} fas fa-star {%endif%}"></i>
+                        <i class="far fa-star {% if i.6 > 1%}fas fa-star {%endif%}"></i>
+                        <i class="far fa-star {% if i.6 > 2%} fas fa-star {%endif%}"></i>
+                        <i class="far fa-star {% if i.6 > 3%} fas fa-star {%endif%}"></i>
+                        <i class="far fa-star {% if i.6 > 4%} fas fa-star {%endif%}"></i> 
+                      </div>
+                    </div></a>
+                  </div>
+                  </a>
+                  <h3 class="text-center mt-3">Starts from <span>{{cur}}{{i.5}}</span>
+                  </h3>
+                  <p class="text-center text-white">
+                    <span class="me-2">
+                      <a href="#" tabindex="0">{{i.4}}</a>
+                    </span>
+                  </p>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div>
+          {% else %}
+
+		    	
+			    <div class="not-showing-influe text-center">
+		    	<a href="/register/"><img src="/media/images/not found _New.webp/" alt="image" class="img-fluid"></a>
+			    </div> 
+		     	
+			    {% endif %}
+        </div>
+      </div>
+    </section>
+   
+    <section class="py-5 how-it-work bg-white">
+      <div class="container">
+        <h2 class="section-header__title text-center">How does <span>it work?</span>
+        </h2>
+        <div class="row justify-content-between">
+          <div class="col-lg-3 col-md-6 text-center mb-30">
+            <div class="process-single">
+              <div class="icon">
+                <span>01</span>
+                <img src="{%static 'images/services/Find Influencers.webp' %}" alt="Celebrity" class="img-fluid" width="50" height="50">
+              </div>
+              <h4>Find Influencers</h4>
+              <p>Brands browse through the diverse influencer marketplace on InfluencerHiring.com and select the influencer they're interested in collaborating with.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center mb-30">
+            <div class="process-single">
+              <div class="icon">
+                <span>02</span>
+                <img src="{%static 'images/services/Secure Payment.webp' %}" alt="Request Booking" class="img-fluid" width="50" height="50">
+              </div>
+              <h4>Secure Payment</h4>
+              <p>
+                Brand pays influencer's price. Payment held securely by InfluencerHiring.com, not released immediately, ensuring financial security for both parties involved in the transaction.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center mb-30">
+            <div class="process-single">
+              <div class="icon">
+                <span>03</span>
+                <img src="{%static 'images/services/Connect with Influencer.webp' %}" alt="Order Process" class="img-fluid" width="50" height="50">
+              </div>
+              <h4>Connect with Influencer</h4>
+              <p>After payment, brand receives influencer's contact for direct communication and collaboration, facilitating their interaction outside of the platform.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center mb-30">
+            <div class="process-single">
+              <div class="icon">
+                <span>04</span>
+                <img src="{%static 'images/services/Approve and Release Payment.webp' %}" alt="Fun Begins" class="img-fluid" width="50" height="50">
+              </div>
+              <h4>Approve and Release Payment</h4>
+              <p>Brand approves influencer's work, signaling InfluencerHiring.com to release payment. Ensures satisfaction and timely compensation for both brand and influencer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section pt-80 pb-80">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-xxl-7">
+            <div class="section-header text-center">
+              <h2 class="section-header__title text-center">
+                <img src="/media/images/Icon File-15.png" alt="icon" width="50" height="50"> {{info.fullname}} <span> - Reviews</span> 
+                <img src="/media/images/Icon File-16.png" alt="icon" width="50" height="50"> </h2>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="testimonial-slider">
+          {%for i in test%}
+          <div class="single-slide">
+           
+            <div class="testimonial-item">
+     
+              <div class="testimonial-item__content">
+                <ul class="rating">
+                  <i class="far fa-star {% if i.rating > 0%} fas fa-star {%endif%}"></i>
+                  <i class="far fa-star {% if i.rating > 1%}fas fa-star {%endif%}"></i>
+                  <i class="far fa-star {% if i.rating > 2%} fas fa-star {%endif%}"></i>
+                  <i class="far fa-star {% if i.rating > 3%} fas fa-star {%endif%}"></i>
+                  <i class="far fa-star {% if i.rating > 4%} fas fa-star {%endif%}"></i> 
+                </ul>
+                <p>
+{{i.review_message}}
+                </p>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between gap-3"
+              >
+                <div class="testimonial-thumb-wrapper">
+                  <div class="testimonial-thumb">
+                    {% comment %} <img src="/media/{{i.Profile_Image}}" alt="{{i.Name}}" width="70" height="70"
+                    /> {% endcomment %}
+
+                    <div class="testimonial_name">{{i.name | slice:":1"}}</div>
+                    
+                  </div>
+                  <div class="testimonial-content">
+                    <h5 class="name">{{i.name}}</h5>
+                    <p class="text--muted">{{i.clientid.roles}}</p>
+                  </div>
+                </div>
+                <span class="icon"><i class="fas fa-quote-right"></i></span>
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </section>
+
+
+<script>
+
+
+  function switchcart1() {
+    prebody1.innerHTML=postbody2.innerHTML;
+  }
+
+
+  function cart(id=null){
+    switchcart1();
+    var loguser = document.getElementById("curruser").value;
+    $('#usercart3').empty();
+    $.ajax({
+        type:'POST',
+        url:'{% url "mycart" %}',
+        data:
+        {
+          client:loguser,
+          influencer:id,
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+        success: function(response){
+          console.log("Rahul");
+          console.log(response);
+          for (var key in response){
+            console.log("Lkey");
+            console.log(key);
+                    for (var i=0; i<response[key].length;i++)
+                    {
+                      console.log("values");
+                      console.log(response[key][0]);
+                      var html="";
+                      html+=`
+                      <div class="row m-0 fadeout-box full-cart-div">
+                        <div class="cart-box d-flex flex-wrap">
+                          <div class="row">
+                            <div class="col-3 p-0">
+                            <div class="celeb-cart enter-booking-details">
+                              <a href="/influencer/`+response[key][i][8]+`">
+                                <img src="/media/`+response[key][i][5]+`"  class="celeb-cart-img img-fluid" alt="`+response[key][i][8]+`" />
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class="celeb-cart-detail">
+                              <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                              <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                <div class="cart-occasion">
+                                  <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                </div>
+                              </div>
+                              <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                
+                                <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-12 prime-applied-div">
+                          <div class="coupen-code-sec">
+                            <div class="coupen-code-div">
+                              <p class="coupen-text">Starts from </p>
+                              <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                            </div>
+                            <div class="coupen-prize-div">
+            <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon" alt="delete" width="16" height="16"></a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      `
+                      $('#usercart3').append(html);
+                    }
+                   
+                  }
+  
+        }
+       
+        })
+    };
+  
+ 
+    function delcart(id){
+      switchcart1();
+      var loguser = document.getElementById("curruser").value;
+      $('#usercart3').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmycart" %}',
+          data:
+          {
+            id:id,
+            login:loguser,
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+            for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+             
+              if (response[key].length===0){
+                var html1="";
+                html1+=`
+                <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/cart_empty.webp'%}" class="cart-empty-img" alt="cart_empty_img" loading="lazy">
+                  <p class="empty-heading">Cart Empty add Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Add Influencers</a>
+                </div>
+                            `
+                            $('#usercart3').append(html1);
+                          }
+                          else{
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" class="celeb-cart-img img-fluid" alt="cart" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                  
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+              <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon" alt="delete" width="16" height="16"></a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                        $('#usercart3').append(html);
+                      }
+                     
+                    }
+                  }
+    
+          }
+          })
+        };
+  
+
+  function switchcart() {
+    prebody.innerHTML=postbody.innerHTML;
+    var x=document.getElementById("postbody");
+    var y=document.getElementById("prebody");
+  }
+
+  function checkwishlist(id){
+    var checkwish = document.getElementById("checkwish-"+id).value;
+    if (checkwish==="False"){
+      wishlist(id);
+      console.log("execute wishlist.");
+      document.getElementById("checkwish-"+id).value="True";
+ 
+    }
+    else{
+      delwishlist(id);
+      console.log("execute delwishlist.");
+      document.getElementById("checkwish-"+id).value="False";
+    }
+  }
+
+
+  function wishlist(id=null){
+    switchcart();
+    var loguser = document.getElementById("curruser").value;
+    $('#usercart').empty();
+    $.ajax({
+        type:'POST',
+        url:'{% url "mywishlist" %}',
+        data:
+        {
+          id:id,
+          login:loguser,
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+        success: function(response){
+          console.log("Rahul");
+          console.log(response);
+         for (var key in response){
+  console.log("Lkey");
+  console.log(key);
+          for (var i=0; i<response[key].length;i++)
+          {
+            console.log("values");
+            console.log(response[key][0]);
+            var html="";
+            html+=`
+            <div class="row m-0 fadeout-box full-cart-div">
+              <div class="cart-box d-flex flex-wrap">
+                <div class="row">
+                  <div class="col-3 p-0">
+                  <div class="celeb-cart enter-booking-details">
+                    <a href="/influencer/`+response[key][i][8]+`">
+                      <img src="/media/`+response[key][i][5]+`" class="celeb-cart-img img-fluid" alt="cart" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-9">
+                  <div class="celeb-cart-detail">
+                    <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                   
+                    <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                      <div class="cart-occasion">
+                        <p class="cart-subheading">`+response[key][i][2]+`</p>
+                      </div>
+                    </div>
+                    <div class="celeb-prize-sec d-flex">
+                      <p class="celeb-amount">`+response[key][i][1]+`</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+             
+              <div class="col-12 prime-applied-div">
+                <div class="coupen-code-sec">
+                  <div class="coupen-code-div">
+                    <p class="coupen-text">Starts from </p>
+                    <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                  </div>
+                  <div class="coupen-prize-div">
+                    <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon" alt="delete" width="16" height="16"></a>
+                    </div>
+                 
+                </div>
+              </div>
+             
+            </div>
+            `
+            $('#usercart').append(html);
+          }
+         
+        }
+ 
+        }
+       
+        })
+    };
+ 
+
+
+    function delwishlist(id){
+      switchcart();
+      var loguser = document.getElementById("curruser").value;
+      $('#usercart').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmywhishlist" %}',
+          data:
+          {
+            id:id,
+            login:loguser,
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+            for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+                
+if (response[key].length===0){
+  var html1="";
+  html1+=`
+  <div class="cart-empty-content d-block">
+                <img src="{%static 'images/wish_empty.webp'%}" class="cart-empty-img" alt="wishlist_empty_img" loading="lazy">
+                <p class="empty-heading">Wishlist  Empty add your Favourite Influencers ..</p>
+                <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                <a href="/" target="_blank" class="explore-celeb-btn">Explore Influencers</a>
+              </div>
+              `
+              $('#usercart').append(html1);
+            }
+            else{
+
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" class="celeb-cart-img img-fluid" alt="cart" />
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex">
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+                              <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon" alt="delete" width="16" height="16"></a>
+                                </div>
+                             
+                            </div>
+                          </div>
+                         
+                        </div>
+                        `
+                        $('#usercart').append(html);
+                      }
+                    }
+                    }
+          }
+          })
+        };
+</script>
+
+<script>
+  let copyText = document.querySelector(".copy-text");
+  copyText.querySelector("button").addEventListener("click", function () {
+  let input = copyText.querySelector("input.text");
+  input.select();
+  document.execCommand("copy");
+  copyText.classList.add("active");
+  window.getSelection().removeAllRanges();
+  setTimeout(function () {
+  copyText.classList.remove("active");
+  }, 2500);
+  });
+  </script>
+
+  
+<script>
+
+const video = document.getElementById("video");
+const circlePlayButton = document.getElementById("circle-play-b");
+
+function togglePlay() {
+	if (video.paused || video.ended) {
+		video.play();
+	} else {
+		video.pause();
+	}
+}
+
+circlePlayButton.addEventListener("click", togglePlay);
+video.addEventListener("playing", function () {
+	circlePlayButton.style.opacity = 0;
+});
+video.addEventListener("pause", function () {
+	circlePlayButton.style.opacity = 1;
+});
+
+
+const video1 = document.getElementById("video1");
+const circlePlayButton1 = document.getElementById("circle-play-b1");
+
+function togglePlay1() {
+	if (video1.paused || video1.ended) {
+		video1.play();
+	} else {
+		video1.pause();
+	}
+}
+
+circlePlayButton1.addEventListener("click", togglePlay1);
+video1.addEventListener("playing", function () {
+	circlePlayButton1.style.opacity = 0;
+});
+video1.addEventListener("pause", function () {
+	circlePlayButton1.style.opacity = 1;
+});
+
+
+const video2 = document.getElementById("video2");
+const circlePlayButton2 = document.getElementById("circle-play-b2");
+
+function togglePlay2() {
+  if (video2.paused || video2.ended) {
+    video2.play();
+  } else {
+    video2.pause();
+  }
+}
+
+circlePlayButton2.addEventListener("click", togglePlay2);
+video2.addEventListener("playing", function () {
+  circlePlayButton2.style.opacity = 0;
+});
+video2.addEventListener("pause", function () {
+  circlePlayButton2.style.opacity = 1;
+});
+
+
+const video3 = document.getElementById("video3");
+const circlePlayButton3 = document.getElementById("circle-play-b3");
+
+function togglePlay3() {
+  if (video3.paused || video3.ended) {
+    video3.play();
+  } else {
+    video3.pause();
+  }
+}
+
+circlePlayButton3.addEventListener("click", togglePlay3);
+video3.addEventListener("playing", function () {
+  circlePlayButton3.style.opacity = 0;
+});
+video3.addEventListener("pause", function () {
+  circlePlayButton3.style.opacity = 1;
+});
+
+</script>
+<script>
+
+function showmessage() {
+    var userthatiwanttoshow = "{{request.user.username}}";
+  // Get the snackbar DIVxz
+  if (userthatiwanttoshow !== '') {
+  var x = document.getElementById("snackbar");
+  
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  } else {
+    window.location.href = "https://www.influencerhiring.com/login/";
+  }
+}
+
+</script>
+
+     
+
+    {% endblock %}

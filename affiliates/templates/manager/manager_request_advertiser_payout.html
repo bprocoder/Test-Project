@@ -1,0 +1,726 @@
+{% extends 'affiliate/affiliate_campaign.html' %}
+ {% load static %}
+{% block title%} 
+<title>Influencer Hiring | Affiliates Payout</title>
+ {% endblock %}
+ 
+ {%block sidebar%}
+ {% if request.user.roles == 'influencer' %}
+
+<style>
+  #text{
+    display:none;
+    }
+</style>
+
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+   <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+     <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+       <div class="menu-item"> <a class="menu-link" href="/Influencer-Dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+         </svg>
+         </span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+
+ <!--begin:Menu item-->
+ <div class="menu-item pt-5">
+ <!--begin:Menu content-->
+   <div class="menu-content">
+     <span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+   </div>
+   <!--end:Menu content-->
+   </div>
+ <!--end:Menu item-->
+        
+   
+       
+       <div data-kt-menu-trigger="click" class="menu-item here menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+           <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+         </svg>
+         </span> </span> <span class="menu-title">My Business</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Completed-Orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Completed-Orders</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Accepted-Orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Active Orders</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pending Orders</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Cancel-Orders/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Cancel Orders</span></a></div>
+         </div>
+       </div>
+
+       <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M22 7H2V11H22V7Z" fill="currentColor"></path>
+           <path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="currentColor"></path>
+         </svg>
+         </span> </span> <span class="menu-title">My Earning</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Earnings/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Earnings</span></a></div>
+         </div>
+       </div>
+
+       <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+           <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+           <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+         </svg>
+         </span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           
+           <div class="menu-item"> <a class="menu-link" href="/Group-Chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Group-Chat</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/client-influencer-chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Clients chat</span></a></div>
+            
+         </div>
+       </div>
+
+
+
+       <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor"></path>
+           <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor"></path>
+         </svg>
+         </span> </span> <span class="menu-title">My Profile</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Overview/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Overview</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Settings/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Settings</span></a></div>
+            
+           <div class="menu-item"> <a class="menu-link" href="/Service-Plan/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Service-Plan</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Bank-Details/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Bank-Details</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Referral</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Login-Logs/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Logs</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Page-SEO-Setting/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">SEO-Setting</span></a></div>
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+             <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+           </svg>
+         </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Blogs-Home/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blog</span></a></div>
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path opacity="0.3" d="M7 20.5L2 17.6V11.8L7 8.90002L12 11.8V17.6L7 20.5ZM21 20.8V18.5L19 17.3L17 18.5V20.8L19 22L21 20.8Z" fill="currentColor"></path>
+             <path d="M22 14.1V6L15 2L8 6V14.1L15 18.2L22 14.1Z" fill="currentColor"></path>
+           </svg>
+         </span> </span> <span class="menu-title">My Service Plan</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Service-Plan/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Service Plan</span></a></div>
+         </div>
+       </div>
+
+
+   
+       <div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+     <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+     <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+     <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+     </svg>
+   </span> </span> <span class="menu-title">Affiliates</span><span class="menu-arrow"></span></span>
+   <div class="menu-sub menu-sub-accordion">
+     <div class="menu-item"> <a class="menu-link" href="/affiliate-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-campaign/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Campaigns</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-lead/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Leads</span></a></div>
+   
+   </div>
+   </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z" fill="currentColor"></path>
+ <path opacity="0.3" d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z" fill="currentColor"></path>
+         </svg>
+         </span> </span> <span class="menu-title">My Gallery</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Photo-Gallery/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Photo Gallery</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/Video-Gallery/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Video Gallery</span></a></div>
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.1128C2.10209 18.0128 6.40208 22.0128 11.3021 21.9128C13.1021 21.8128 14.7021 21.3128 16.0021 20.4128C16.5021 20.1128 16.6021 19.3128 16.1021 18.9128L11.0021 13.7128Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M21.9021 14.0128C21.7021 15.6128 21.1021 17.1128 20.1021 18.4128C19.7021 18.9128 19.0021 18.9128 18.6021 18.5128L13.0021 12.9128H20.9021C21.5021 12.9128 22.0021 13.4128 21.9021 14.0128Z" fill="currentColor"></path>
+         </svg>
+         </span> </span> <span class="menu-title">Casting Call</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Pitchng-Report-list/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pitching Report</span></a></div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+{% elif request.user.roles == 'client' %}
+
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+   <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+     <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+       <div class="menu-item"> <a class="menu-link" href="/User-Dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+           <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+         </svg>
+         </span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+   <!--begin:Menu item-->
+   <div class="menu-item pt-5">
+     <!--begin:Menu content-->
+       <div class="menu-content">
+         <span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+       </div>
+       <!--end:Menu content-->
+       </div>
+     <!--end:Menu item-->
+
+       <div data-kt-menu-trigger="click" class="menu-item here menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+           <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+         </svg>
+         </span> </span> <span class="menu-title">My Business</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Completed-Project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Complete Orders</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Pending-Project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pending Orders</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Cancel-Project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Cancel Orders</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Active-Project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Active Orders</span></a></div>
+            
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+ <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+ </svg>
+ </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/BlogHome/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs</span></a></div>
+    
+ </div>
+ </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor"></path>
+     <rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor"></rect>
+ </svg>
+ </span> </span> <span class="menu-title">Profile Settings</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/Profile-Setting/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Profile Settings</span></a></div>
+ </div>
+ </div>
+
+       <div data-kt-menu-trigger="click" class="menu-item  menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+           <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+           <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+         </svg>
+         </span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Group-Chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title"> Group Chat</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/client-influencer-chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Influencer chat</span></a></div>
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="currentColor"></path>
+   <path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="currentColor"></path>
+ </svg>
+ </span> </span> <span class="menu-title">Referral</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/Client-Referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Referral</span></a></div>
+    
+ </div>
+ </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+   <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+   </svg>
+ </span> </span> <span class="menu-title">Affiliates</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-campaign/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Campaigns</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-lead/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Leads</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/affiliate-bankdetail/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Bank Details</span></a></div>
+ </div>
+ </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item  menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+             <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+             <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+             <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+             </svg>
+           </span> </span> <span class="menu-title">Advertisers</span><span class="menu-arrow"></span></span>
+           <div class="menu-sub menu-sub-accordion">
+             <div class="menu-item"> <a class="menu-link" href="/advertiser-instruction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Instructions</span></a></div>
+             <div class="menu-item"> <a class="menu-link" href="/advertiser-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+             <div class="menu-item"> <a class="menu-link" href="/advertiser-withdrawal-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Withdrawal Requests</span></a></div>
+           </div>
+           </div>
+
+       <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="">
+           <path d="M11.7 8L7.49998 15.3L4.59999 20.3C3.49999 18.4 3.1 17.7 2.3 16.3C1.9 15.7 1.9 14.9 2.3 14.3L8.8 3L11.7 8Z" fill="currentColor"></path>
+           <path opacity="0.3" d="M11.7 8L8.79999 3H13.4C14.1 3 14.8 3.4 15.2 4L20.6 13.3H14.8L11.7 8ZM7.49997 15.2L4.59998 20.2H17.6C18.3 20.2 19 19.8 19.4 19.2C20.2 17.7 20.6 17 21.7 15.2H7.49997Z" fill="currentColor"></path>
+         </svg>
+         </span> </span> <span class="menu-title">Casting Calls</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/Insert-Casting-Call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Insert Casting Call</span></a></div>
+           <div class="menu-item"> <a class="menu-link" href="/Total-Casting-Call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Casting Call</span></a></div>
+   <div class="menu-item"> <a class="menu-link" href="/Casting-Call-Pitching-Details/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Pitching List</span></a></div>
+         </div>
+       </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+   <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+   </svg>
+ </span> </span> <span class="menu-title">My Wishlist</span><span class="menu-arrow"></span></span>
+ <div class="menu-sub menu-sub-accordion">
+   <div class="menu-item"> <a class="menu-link" href="/My-Wishlist/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Wishlist</span></a></div>
+    
+ </div>
+ </div>
+
+ <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z" fill="currentColor"></path>
+   <path opacity="0.3" d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z" fill="currentColor"></path>
+ </svg>
+         </span> </span> <span class="menu-title">My Cart</span><span class="menu-arrow"></span></span>
+         <div class="menu-sub menu-sub-accordion">
+           <div class="menu-item"> <a class="menu-link" href="/My-Cart/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">My Cart</span></a></div>
+         </div>
+       </div>
+
+     </div>
+   </div>
+</div>  
+
+
+{% else %}
+
+<p>
+
+{% endif %}
+ 
+<!--begin::Footer-->
+     <div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
+       <a href="/terms-of-service/" target="_blank" class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="platform term and service">
+         <span class="btn-label">Terms of Services</span>
+         <!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
+         <span class="svg-icon btn-icon svg-icon-2 m-0">
+           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z" fill="currentColor" />
+             <rect x="7" y="17" width="6" height="2" rx="1" fill="currentColor" />
+             <rect x="7" y="12" width="10" height="2" rx="1" fill="currentColor" />
+             <rect x="7" y="7" width="6" height="2" rx="1" fill="currentColor" />
+             <path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="currentColor" />
+           </svg>
+         </span>
+         <!--end::Svg Icon-->
+       </a>
+     </div>
+     <!--end::Footer-->
+</div>
+{%endblock%}
+
+{% block body %}
+ 
+<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+    <div class="d-flex flex-column flex-column-fluid">
+      <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+        <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+          <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+            <!--begin::Title-->
+            <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Platform Payout</h1>
+            <!--end::Title-->            
+          </div>
+        </div>
+    </div>
+
+     <!--begin::Content-->
+     <div id="kt_app_content" class="app-content flex-column-fluid">
+        <div id="kt_app_content_container" class="app-container container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+                <!--begin::Card-->
+                <div class="card mb-5 mb-xl-10">
+                    <div class="table-responsive">
+                        <table class="table table-primary rounded payout-table">
+                            <thead>
+                                <tr class="px-5">
+                                    <th scope="col"></th>
+                                    <th scope="col">INR</th>
+                                    <th scope="col">BTC</th>
+                                    <th scope="col">USDT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-active px-5">
+                                    <td scope="row">Total</td>
+                                    <td>{{total_bank}}</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Successfully Received</td>
+                                    <td>{{successful_withdrawal_bank}}</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="table-active">
+                                    <td scope="row">Pending</td>
+                                    <td>{{hold_bank}}</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="fw-bold">Remaining Balance</td>
+                                    <td class="fw-bold">{{remaining_balance_bank}}</td>
+                                    <td class="fw-bold">0</td>
+                                    <td class="fw-bold">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End::Card-->
+            </div>
+            
+
+     
+
+
+          <!--begin::Card All Offers Wallet Details-->
+          <div class="card p-5 mb-5 mb-xl-10">
+              <div class="d-flex justify-content-between">
+                <h2 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center mt-0 mb-3">All Offers Wallet Details</h2>
+                <div class="DateRangePicker">
+                    <div class="mb-0">
+                        <input class="form-control form-control-solid" placeholder="Pick date rage" id="kt_daterangepicker_1"/>
+                    </div>
+                </div>
+              </div>
+              <div id="kt_app_content" class="app-content flex-column-fluid" >
+                <!--begin::Content container-->
+                <div id="kt_app_content_container" class="app-container container-fluid">
+                  <!-- <a class="btn btn-light btn-sm btn-active-light-primary mb-4" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target121">Add New </a> -->
+                  
+                  <div class="card card-flush mb-5 mb-xl-10">
+                    <form>
+                      
+                    </form>
+                    <table id="kt_datatable_vertical_scroll" class="table table-striped table-row-bordered gy-5 gs-7 offer-table">
+                        <thead>
+                            <tr class="fw-semibold fs-6 text-gray-800">
+                              
+                              <th>ADVERTISER NAME</th>
+                              <th>OFFER ID</th>
+                              <th>PRODUCT NAME</th>
+                              <th>PAYOUT(per lead)</th>
+                                
+                                <th>TOTAL PAYOUT</th>
+                                <th class="pe-7">SUCCESSFUL WITHDRAWAL</th>
+                                <th>HOLD</th>
+                                <th>REMAINING BALANCE</th>
+                                <th>ASSIGNED RM</th>
+                                <th>RM ACTION</th>
+                                <!-- <th>ASSIGNED ACCOUNT</th> -->
+                                <!-- <th>ACCOUNT ACTION</th> -->
+                                <th>REQUEST</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          {% for i in all_offer_wallet_details %}
+                            <tr>
+                          <td>
+                            <a class="link-hover-underline" href="/advertiser-offer/">{{i.advertisername}}</a>
+                          </td> 
+                          <td>{{i.utm_offerid}}</td>
+
+                          <td>{{i.productname}}</td>
+                          <td>{{i.payout}}</td>
+                          <td>
+                            <a class="link-hover-underline" href="/advertiser-offer/">{{i.total_payout}}</a>
+                          </td>
+                          <td>{{i.successful_withdrawal_bank}}</td>
+                          <td>
+                            <span title="ID">
+                              <span role="presentation" class="change-filter">{{i.hold_bank}}</span>
+                            </span>
+                          </td>
+                 
+                          <td>{{i.remaining_balance}}</td>
+                          <td>{{i.assigned_rm.username}}</td>
+                          <td>rm action</td>
+                          <!-- <td>assigned account</td> -->
+                          <!-- <td>account action</td> -->
+                          <td>
+                            <a href="#" class="btn btn-light btn-sm btn-active-light-primary"  transferid(2046);" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target121" onclick="request_balance_for_offerid('{{i.assigned_rm.id}}',{{i.utm_offerid}},{{i.remaining_balance}}); ">Request Balance</a>
+                          <!-- <span class="fa fa-edit" title="send request" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target22" onclick="approveoffer('{{i.offerid}}');" ></span> -->
+                          </td>  
+                          
+                            </tr>
+                          {% endfor %}
+          
+                        </tbody>
+                        
+                    </table>
+                  </div>
+                  
+                </div>
+                <!--end::Content container-->
+              </div>
+              <!--end::Content-->
+            </div>
+              <!-- <div class="py-5 mb-3">
+                <div class="last-actions">Recent actions</div>
+                <div class="col-lg-8 mx-auto text-center">
+                    <img src="/media/images/finance-no-data.png" alt="" class="checkmar_img">
+                    <p class="no-data__text">Here's a list of your payments. First of all, add a convenient way to withdraw your funds</p>
+                    <a class="no-data__button" href="/affiliatesbankdetails">Add payment method</a>
+                </div>
+              </div> -->
+          </div>
+        </div>
+     </div>
+
+
+     
+          <!--begin::Card Platform Payout Request(outgoing) -->
+          <div class="card p-5 mb-5 mb-xl-10">
+            <div class="d-flex justify-content-between">
+              <h2 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center mt-0 mb-3">Platform Payout Request(outgoing)</h2>
+              <div class="DateRangePicker">
+                  <div class="mb-0">
+                      <input class="form-control form-control-solid" placeholder="Pick date rage" id="kt_daterangepicker_1"/>
+                  </div>
+              </div>
+            </div>
+            <div id="kt_app_content" class="app-content flex-column-fluid" >
+              <!--begin::Content container-->
+              <div id="kt_app_content_container" class="app-container container-fluid">
+                <!-- <a class="btn btn-light btn-sm btn-active-light-primary mb-4" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target121">Add New </a> -->
+                
+                <div class="card card-flush mb-5 mb-xl-10">
+                  <form>
+                    
+                  </form>
+                  <table id="kt_datatable_vertical_scroll" class="table table-striped table-row-bordered gy-5 gs-7 offer-table">
+                      <thead>
+                          <tr class="fw-semibold fs-6 text-gray-800">
+                            
+                            <th>REQUEST DATE</th>
+                            <th>OFFER ID</th>
+                            <th>PRODUCT NAME</th>
+                            
+                              <th>REQUESTED METHOD</th>
+                              <th class="pe-7">REQUESTED AMOUNT</th>
+                              <th>REMAINING BALANCE(on date of request)</th>
+                              <th>ASSIGNED RM</th>
+                              <th>RM ACTION</th>
+                              <!-- <th>ASSIGNED ACCOUNT</th> -->
+                              <!-- <th>ACCOUNT ACTION</th> -->
+                              <th>TRANSACTION AMOUNT</th>
+                              <th>TRANSACTION SCREENSHOT</th>
+                              <th>ADVERTISER ACTION</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        {% for i in platformpayoutrequest %}
+                          <tr>
+                        <td>
+                          <a class="link-hover-underline" href="/advertiser-offer/">{{i.creationdate}}</a>
+                        </td> 
+                        <td>{{i.for_offer_id}}</td>
+
+                        <td>{{i.productname}}</td>
+                        <td>
+                          <a class="link-hover-underline" href="/advertiser-offer/">{{i.requested_method}}</a>
+                        </td>
+                        <td>{{i.requested_amount}}</td>
+                        <td>{{i.remaining_balance_on_dateofrequest}}</td>
+                        <td>
+                          <span title="ID">
+                            <span role="presentation" class="change-filter">{{i.assigned_rm.username}}</span>
+                          </span>
+                        </td>
+               
+                        <td>{{i.rm_action}}</td>
+                        <!-- <td>{{i.assigned_account}}</td> -->
+                        <!-- <td>{{i.account_action}}</td> -->
+
+                        <td>{{i.transaction_amount}}</td>
+                        <td width="70" class="offer-logo">
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal{{ i.id }}">
+                              <img src="{{ i.transaction_screenshot }}" class="offer_img" alt="no-img" />
+                          </a>
+                          <!-- Modal -->
+                          <div class="modal fade" id="imageModal{{ i.id }}" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="imageModalLabel">View Image</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <img src="{{ i.transaction_screenshot }}" class="img-fluid" alt="no-img" />
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </td>
+                        <td>
+                          {% if i.advertiser_action %}
+                              <span class="badge badge-light-success ">Completed</span>
+                          {% else %}
+                              <span class="badge badge-light-warning">Pending</span>
+                          {% endif %}
+                        </td>
+
+                        </tr>
+                        {% endfor %}
+        
+                      </tbody>
+                      
+                  </table>
+                </div>
+                
+              </div>
+              <!--end::Content container-->
+            </div>
+            <!--end::Content-->
+          </div>
+            <!-- <div class="py-5 mb-3">
+              <div class="last-actions">Recent actions</div>
+              <div class="col-lg-8 mx-auto text-center">
+                  <img src="/media/images/finance-no-data.png" alt="" class="checkmar_img">
+                  <p class="no-data__text">Here's a list of your payments. First of all, add a convenient way to withdraw your funds</p>
+                  <a class="no-data__button" href="/affiliatesbankdetails">Add payment method</a>
+              </div>
+            </div> -->
+        </div>
+      </div>
+   </div>
+
+</div>
+</div>
+<script type='text/javascript'>
+
+  function request_balance_for_offerid(assigned_rm, offerid, remaining_balance) {
+    var div = document.getElementById('changecontent121');
+    div.innerHTML = offerid;
+
+    console.log(offerid);
+      document.getElementById('butid2').value = offerid;
+      document.getElementById("hidden_remaining_balance").value = remaining_balance;
+      document.getElementById("hidden_request_from_rm").value = assigned_rm;
+
+      console.log('esce');
+      
+  }
+
+</script>
+
+<div class="modal fade" id="kt_modal_new_target121" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered mw-650px">
+      <div class="modal-content rounded">
+          <div class="modal-header pb-0 border-0 justify-content-end">
+              <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal"> <span
+                      class="svg-icon svg-icon-1">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1"
+                              transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                          <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)"
+                              fill="currentColor" />
+                      </svg>
+                  </span> </div>
+          </div>
+          <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+              <form id="kt_modal_new_target_form" class="form" action="" method="post" enctype="multipart/form-data" >
+                  {% csrf_token %}
+                  <div class="mb-13 text-center">
+                      <h1 class="mb-3">Request Amount</h1>
+                      <div class="text-muted fw-semibold fs-5">for OFFER ID <a href="#"
+                              class="fw-bold link-primary" id ="changecontent121">dynamic content here</a>.</div>
+                  </div>
+
+                  <div class="d-flex flex-column mb-8" required>
+                      <label class="fs-6 fw-semibold mb-2">Amount:</label>
+                      <input type="text" id="ctname1" name="requested_amount" value="" class="form-control form-control-solid"
+                      name="target_title" required ></input>                  
+                  </div>
+
+                  <div class="d-flex flex-column mb-8">
+                      <label class="fs-6 fw-semibold mb-2">Message(Optional):</label>
+                      <textarea type="text" id="ctname2" name="optional_message" value="" class="form-control form-control-solid"
+                      name="target_title" required ></textarea>                  
+                    </div>
+
+                  <div class="text-center">
+
+                      <!-- <input type="hidden" id="appliedofferidhiddenfield" name="appliedofferid" value=""> -->
+                      <input type="hidden" id="hidden_request_from_rm" name="hidden_request_from_rm" value="{{value}}">
+                      <input type="hidden" id="hidden_remaining_balance" name="hidden_remaining_balance" value="{{value}}">
+                      <button type="submit" id="butid2" value="" name="request_balance_flag" class="btn btn-primary"> <span
+                              class="indicator-label">Submit</span> <span class="indicator-progress">Please wait...
+                              <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                      </button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+<script>
+  $(document).ready(function() {
+  $("#toggle").click(function() {
+    var elem = $("#toggle").text();
+    if (elem == "Read More") {
+      //Stuff to do when btn is in the read more state
+      $("#toggle").text("Read Less");
+      $("#text").slideDown();
+    } else {
+      //Stuff to do when btn is in the read less state
+      $("#toggle").text("Read More");
+      $("#text").slideUp();
+    }
+  });
+});
+</script>
+

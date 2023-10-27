@@ -1,0 +1,594 @@
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+
+
+{% block title%}
+	{% for i in Seo1 %}
+	{% if i.page.pagename == 'Career'%}
+<title>{{i.title}}</title>
+<meta name="title" content="{{i.title}}">
+<meta name="description" content="{{i.description}}">
+<meta name="keywords" content="{{i.keyword}}">
+	{% endif %}
+	{%endfor%}
+{% endblock %}
+
+{% block canonical%}
+<link rel="canonical" href="https://www.influencerhiring.com/career/">
+{%endblock%}
+
+
+{%block head%}
+<div class="header">
+{%endblock%}
+{%block active%}
+          <li> <a href="/" >Home</a> </li>
+          <li> <a href="/influencers/" >Explore</a> </li>
+          <li> <a href="/blogs/" >Blogs</a> </li>
+          <li> <a href="/webstories/">Web-Stories</a> </li>
+          <li> <a href="/casting-call/">Casting Call</a> </li>
+          <li> <a href="/whitepaper/" class="">White Paper</a> </li>
+{%endblock%}
+{% block body %}
+<section class="banner-section careers py-5 mt-5">
+    <div class="container">      
+        <div class="row py-5 align-items-center">
+          <div class="col-lg-6 text-white">
+            <h1 class="text-white mb-4 font-title">{{career.0.bannertitle}}</h1>
+            <p class="text-white">{{career.0.bannerdescription | safe}}</p>
+          </div>
+          <div class="col-lg-6 banner_right_img position-relative">
+            <img src="/media/{{career.0.bannerimage}}/" alt="{{career.0.bannertitle}}" class="img-fluid">
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-career">
+  <div class="container">
+    <div class="nav_tabs-section">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Who we are</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">What we value</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">How we hire</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-whatwe-do-tab" data-bs-toggle="pill" data-bs-target="#pills-whatwe-do" type="button" role="tab" aria-controls="pills-whatwe-do" aria-selected="false">What we do</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+          <div class="row align-items-center">
+            <div class="col-lg-7 pe-lg-5">
+              <h2 class="mb-3 font-title">{{career.0.who_we_are_title}}</h2>
+              <p class="pe-lg-5">{{career.0.who_we_are_description | safe}}</p>
+            </div>
+            <div class="col-lg-5 who-we-are">
+              <img src="/media/{{career.0.who_we_are_image}}/" class="img-fluid" alt="{{career.0.who_we_are_title}}">
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+          <div class="row align-items-center">
+            <div class="col-lg-7 pe-lg-5">
+              <h2 class="mb-3 font-title">{{career.0.what_we_value_title}}</h2>
+              <p class="pe-lg-5">{{career.0.what_we_value_description | safe}}</p>
+            </div>
+            <div class="col-lg-5 who-we-are">
+              <img src="/media/{{career.0.what_we_value_image}}/" class="img-fluid" alt="{{career.0.what_we_value_title}}">
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+          <div class="row align-items-center">
+            <div class="col-lg-7 pe-lg-5">
+              <h2 class="mb-3 font-title">{{career.0.how_we_hire_title}}</h2>
+              <p class="pe-lg-5">{{career.0.how_we_hire_description | safe}}</p>
+            </div>
+            <div class="col-lg-5 who-we-are">
+              <img src="/media/{{career.0.how_we_hire_image}}/" class="img-fluid" alt="{{career.0.how_we_hire_title}}">
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-whatwe-do" role="tabpanel" aria-labelledby="pills-whatwe-do-tab" tabindex="0">
+          <div class="row align-items-center">
+            <div class="col-lg-7 pe-lg-5">
+                <h2 class="mb-3 font-title">{{career.0.what_we_do_title}}</h2>
+                
+              <p class="pe-lg-5">{{career.0.what_we_do_description | safe}}</p>
+            </div>
+            <div class="col-lg-5 who-we-are">
+              <img src="/media/{{career.0.what_we_do_image}}/" class="img-fluid" alt="{{career.0.what_we_do_title}}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="we-are-hiring">
+  <div class="container">
+    <h2 class="mb-3 font-title">We are hiring</h2>
+
+    <div class="hiring_tabs">
+      <div class="accordion" id="accordionExample">
+        {%for i in job%}
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-{{i.jobhiringid}}" aria-expanded="true" aria-controls="collapseOne">
+               <div class="">
+                 <h3 class="d-block w-100 hiring_heading">{{i.jobtitle}}</h3>
+               <div class="d-flex items-start gap-2">
+                 <div class="b--green">
+                    <p class="fw-bold mb-0"><span>{{i.designation}}</span></p>
+                 </div>
+                 <div class="d-flex outline-border align-items-center">
+                       <svg class="mx200" width="11" height="14" viewBox="0 0 11 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.20602 13.6874C1.51682 8.33916 0.832031 7.79027 0.832031 5.82471C0.832031 3.13231 3.01463 0.949707 5.70703 0.949707C8.39943 0.949707 10.582 3.13231 10.582 5.82471C10.582 7.79027 9.89724 8.33916 6.20804 13.6874C5.96594 14.0371 5.4481 14.0371 5.20602 13.6874ZM5.70703 7.85596C6.82886 7.85596 7.73828 6.94654 7.73828 5.82471C7.73828 4.70287 6.82886 3.79346 5.70703 3.79346C4.5852 3.79346 3.67578 4.70287 3.67578 5.82471C3.67578 6.94654 4.5852 7.85596 5.70703 7.85596Z" fill="currentColor"></path>
+                       </svg>
+                       <p class="fw-bold f200 my0 ss-nowrap" aria-label="Location: Remote Ireland" role="text"><span aria-hidden="true">{{i.joblocation}}</span></p>
+                 </div>
+              </div>
+               </div>
+            </button>
+          </h2>
+          <div id="collapseOne-{{i.jobhiringid}}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="">
+                <p>
+                  
+                  <b class="main-heading">About the job</b><br><br>
+                  <p>{{i.aboutthejob}}</p><br><br>
+
+                  <b class="main-heading"><i class="fas fa-check"></i> Roles and Responsibilities :</b><br>
+                  <ul class="carreer_ul ml-3">
+                    {%for j in i.rulesandresponsibilities%}
+                    <li>{{j}}</li>
+                    {%endfor%}
+                  </ul>
+                </p>
+
+                <p>
+                  <b class="main-heading"><i class="fas fa-check"></i> Desired Candidate Profile:</b>
+                  <br><br>
+                  <ul class="carreer_ul ml-3">
+                    {%for k in i.desiredcandidateprofile%}
+                    <li>{{k}}</li>
+                    {%endfor%}
+                    
+
+                  </ul>
+                </p>
+                <button type="button" class="btn cmn--btn mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-mydata="{{i.jobhiringid}}" >Apply Now</button>
+      
+
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="meet_team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10">
+        <h3 class="title fw-bold">Experience the Power of Teamwork at InfluencerHiring.com</h3>
+        <p style="text-align: justify;"><span style="font-size: 18px;">Discover firsthand stories from our talented team members on their remarkable journeys and career growth at InfluencerHiring.com. Hear their insights, accomplishments, and the valuable experiences that have shaped their careers in the dynamic world of influencer marketing.</span></p>
+<p style="text-align: justify;"><br></p>
+<p><span style="font-size: 18px;"><strong>&quot;Empowered Careers, Inspiring Success: Insights from our InfluencerHiring.com Team&quot;</strong></span></p>
+      </div>
+    </div>
+    
+    <div id="meet-team-slider" class="owl-carousel owl-theme">
+      {%for i in review%}
+      <div class="item">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="/media/{{i.employeeimage}}/" alt="{{i.employeename}}" class="img-fluid">
+          </div>
+          <div class="col-lg-6">
+            <p class="team_message">{{i.employeemessage}}</p>
+            <p class="f400-l f300 mt-2 fw-bold">{{i.employeename}}</p>
+            <p class="f400-l f300 mt-2">{{i.employeedesgination}}, {{i.employeedepartment}}</p>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+     
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade career_form" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="text-center mb-4">
+          <h2 class="fs-5 mb-2 apply_title">Apply Now</h2>
+          <p>If you need more info, please check Project Guidelines.</p>
+        </div>
+        <div class="flash-message" id="flash-message"></div>
+       
+        <form id="contact" action="" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="inputField">
+                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                  <span class="required">First Name</span>
+                </label>
+                <input type="name" name="firstname" id="name" placeholder="First Name" autocomplete="on" required>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="inputField">
+                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                  <span class="required">Last Name</span>
+                </label>
+                <input type="name" name="lastname" id="name" placeholder="Last Name" autocomplete="on" required>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="inputField">
+                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                  <span class="required">Email ID</span>
+                </label>
+                <input type="Email" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="inputField">
+                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                  <span class="required">Phone Number</span>
+                </label>
+                <input type="number" name="number" id="number" placeholder="Phone" required="" />
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="inputField">
+                <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                  <span class="required">Files Upload</span>
+                </label>
+                <div class="inputField">
+                  <div class="upload">
+                    <input id="upload" type="file" name="upload"  accept=".docx,.doc,.pdf" maxlength="4194304" >  <!--4*1024*1024-->
+                    <label for="upload" data-input-value="" data-select-text="Browse" data-remove-text="Remove file" data-drag-text="Drag and drop file here or.">
+                      <!-- Upload -->
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="inputField">
+                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <div class="g-recaptcha" data-sitekey="6LdWu9YiAAAAAH2hGK-j7Psucc7gTwwAYzh4dkjA"
+                  data-callback="verifyCaptcha" required ></div>
+                <div id="g-recaptcha-error"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-end">
+                <input type="hidden" id="myInput" name="jobhiringid" value="">
+                <div class="inputField btn">
+                
+                  <button type="submit" id="form-submit" class="main-gradient-button">Submit Application</button>
+                </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .flash-message {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff0e0e;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+</style>
+
+
+<script>
+
+  document.getElementById('contact').addEventListener('submit', function(event) {
+    var fileInput = document.getElementById('upload');
+    
+    var recaptchaResponse = grecaptcha.getResponse();
+    if (fileInput.value === '') {
+      event.preventDefault(); // prevent the form from submitting
+      const mes='Please select a file.';
+      showMessage(mes);
+ 
+    }
+    else{
+    var fileName = fileInput.value;
+    var fileExt = fileName.split('.').pop().toLowerCase();
+
+    if (fileExt !== "docx" && fileExt !== "pdf" && fileExt !== "doc" ) {
+      showMessage("Only PDF and DOCX files are allowed.");
+      event.preventDefault();
+    }
+    else{
+      if (recaptchaResponse.length === 0) {
+        showMessage("Please fill out the reCAPTCHA.");
+        event.preventDefault();
+      }
+    }
+    }
+
+   
+  });
+
+
+
+</script>
+
+<script>
+
+  function showMessage(mes) {
+    const message = mes;
+    const flashMessage = document.getElementById("flash-message");
+    flashMessage.innerText = message;
+    flashMessage.style.display = "block";
+    setTimeout(function() {
+      flashMessage.style.display = "none";
+    }, 3000); // hide message after 3 seconds
+  }
+</script>
+
+
+
+<script>
+  var myModal = document.getElementById('staticBackdrop');
+
+  myModal.addEventListener('show.bs.modal', function (event) {
+    var button = event.relatedTarget; // Button that triggered the modal
+    var myData = button.getAttribute('data-mydata'); // Extract info from data-* attributes
+    var myInput = document.getElementById("myInput");
+
+// Set the value of the hidden input
+myInput.value = myData;
+  })
+
+
+
+
+
+
+</script>
+
+
+<script>
+
+
+    function switchcart() {
+      prebody.innerHTML=postbody.innerHTML;
+      var x=document.getElementById("postbody");
+      var y=document.getElementById("prebody");
+    }
+  
+  
+  
+  
+  
+  
+      function delwishlist(id){
+        switchcart();
+      
+        $('#usercart').empty();
+        $.ajax({
+            type:'POST',
+            url:'{% url "delmywhishlist" %}',
+            data:
+            {
+              id:id,
+              
+              csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success: function(response){
+              console.log("Rahul");
+              console.log(response);
+              for (var key in response){
+                console.log("Lkey");
+                console.log(key);
+                console.log("Lenght of the response");
+                console.log(response[key].length);
+                  
+  if (response[key].length===0){
+    var html1="";
+    html1+=`
+    <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/wish_empty.webp'%}" class="cart-empty-img" alt="wishlist_empty_img" loading="lazy">
+                  <p class="empty-heading">Wishlist  Empty add your Favourite Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Explore Influencers</a>
+                </div>
+                `
+                $('#usercart').append(html1);
+              }
+              else{
+  
+  
+  
+                        for (var i=0; i<response[key].length;i++)
+                        {
+                          console.log("values");
+                          console.log(response[key][0]);
+                          var html="";
+                          html+=`
+                          <div class="row m-0 fadeout-box full-cart-div">
+                            <div class="cart-box d-flex flex-wrap">
+                              <div class="row">
+                                <div class="col-3 p-0">
+                                <div class="celeb-cart enter-booking-details">
+                                  <a href="/influencer/`+response[key][i][8]+`">
+                                    <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-9">
+                                <div class="celeb-cart-detail">
+                                  <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                  <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                    <div class="cart-occasion">
+                                      <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                    </div>
+                                  </div>
+                                  <div class="celeb-prize-sec d-flex">
+                                    <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                            <div class="col-12 prime-applied-div">
+                              <div class="coupen-code-sec">
+                                <div class="coupen-code-div">
+                                  <p class="coupen-text">Starts from </p>
+                                  <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                                </div>
+                                <div class="coupen-prize-div">
+                                <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                  </div>
+                               
+                              </div>
+                            </div>
+                           
+                          </div>
+                          `
+                          $('#usercart').append(html);
+                        }
+                      }
+                      }
+            }
+            })
+          };
+          
+      function switchcart1() {
+        prebody1.innerHTML=postbody2.innerHTML;
+      }
+    
+      function delcart(id){
+        switchcart1();
+        
+        $('#usercart3').empty();
+        $.ajax({
+            type:'POST',
+            url:'{% url "delmycart" %}',
+            data:
+            {
+              id:id,
+             
+              csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success: function(response){
+              console.log("Rahul");
+              console.log(response);
+                    for (var key in response){
+                console.log("Lkey");
+                console.log(key);
+                console.log("Lenght of the response");
+                console.log(response[key].length);
+               
+                if (response[key].length===0){
+                  var html1="";
+                  html1+=`
+                  <div class="cart-empty-content d-block">
+                    <img src="{%static 'images/cart_empty.webp'%}" class="cart-empty-img" alt="cart_empty_img" loading="lazy">
+                    <p class="empty-heading">Cart Empty add Influencers ..</p>
+                    <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                    <a href="/" target="_blank" class="explore-celeb-btn">Add Influencers</a>
+                  </div>
+                              `
+                              $('#usercart3').append(html1);
+                            }
+                            else{
+  
+  
+                        for (var i=0; i<response[key].length;i++)
+                        {
+                          console.log("values");
+                          console.log(response[key][0]);
+                          var html="";
+                          html+=`
+                          <div class="row m-0 fadeout-box full-cart-div">
+                            <div class="cart-box d-flex flex-wrap">
+                              <div class="row">
+                                <div class="col-3 p-0">
+                                <div class="celeb-cart enter-booking-details">
+                                  <a href="/influencer/`+response[key][i][8]+`">
+                                    <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-9">
+                                <div class="celeb-cart-detail">
+                                  <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                  <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                    <div class="cart-occasion">
+                                      <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                    </div>
+                                  </div>
+                                  <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                    
+                                    <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                    <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                            <div class="col-12 prime-applied-div">
+                              <div class="coupen-code-sec">
+                                <div class="coupen-code-div">
+                                  <p class="coupen-text">Starts from </p>
+                                  <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                                </div>
+                                <div class="coupen-prize-div">
+                <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          `
+                          $('#usercart3').append(html);
+                        }
+                       
+                      }
+                    }
+      
+            }
+            })
+          };
+    
+    
+    
+        </script>
+  
+{%endblock%}

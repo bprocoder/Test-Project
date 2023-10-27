@@ -1,0 +1,48 @@
+DO $$
+DECLARE
+    jid integer;
+    scid integer;
+BEGIN
+-- Creating a new job
+INSERT INTO pgagent.pga_job(
+    jobjclid, jobname, jobdesc, jobhostagent, jobenabled
+) VALUES (
+    1::integer, 'Deleteoldslotsentries'::text, ''::text, ''::text, true
+) RETURNING jobid INTO jid;
+
+-- Steps
+-- Inserting a step (jobid: NULL)
+INSERT INTO pgagent.pga_jobstep (
+    jstjobid, jstname, jstenabled, jstkind,
+    jstconnstr, jstdbname, jstonerror,
+    jstcode, jstdesc
+) VALUES (
+    jid, 'Deleteentries'::text, true, 's'::character(1),
+    ''::text, 'influencer'::name, 'f'::character(1),
+    'DELETE FROM mainapp_subslots
+WHERE (isreferenced = FALSE OR isreferenced IS NULL)
+  AND (isbooked = FALSE OR isbooked IS NULL)
+  AND endtime < current_timestamp;'::text, ''::text
+) ;
+
+-- Schedules
+-- Inserting a schedule
+INSERT INTO pgagent.pga_schedule(
+    jscjobid, jscname, jscdesc, jscenabled,
+    jscstart, jscend,    jscminutes, jschours, jscweekdays, jscmonthdays, jscmonths
+) VALUES (
+    jid, 'Dailydeleteusers'::text, ''::text, true,
+    '2023-08-31 00:19:00-07'::timestamp with time zone, '2024-08-31 00:17:00-07'::timestamp with time zone,
+    -- Minutes
+    '{t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,f,t,t,t,t,t,t,t,t}'::bool[]::boolean[],
+    -- Hours
+    '{t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[],
+    -- Week days
+    '{t,t,t,t,t,t,t}'::bool[]::boolean[],
+    -- Month days
+    '{t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[],
+    -- Months
+    '{t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[]
+) RETURNING jscid INTO scid;
+END
+$$;

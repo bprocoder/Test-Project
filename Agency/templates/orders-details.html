@@ -1,0 +1,1460 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | Completed-Orders</title>
+{% endblock %}
+
+{%block sidebar1%}
+
+<style>
+   #uniqueid:hover { cursor: pointer;color:#009ef7;}
+   #uniqueid {word-wrap:break-word;}
+   </style>
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+  <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+    <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+      <div class="menu-item"> <a class="menu-link" href="/agency_dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+        </svg>
+        </span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+  <div class="menu-item pt-5">
+  <!--begin:Menu content-->
+       <div class="menu-content">
+          <span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+       </div>
+       <!--end:Menu content-->
+       </div>
+    <!--end:Menu item-->
+
+      <div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+          <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+        </svg>
+        </span> </span> <span class="menu-title">My Business</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/completed_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Complete Orders</span></a></div>
+          <div class="menu-item"> <a class="menu-link" href="/pending_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Pending Orders</span></a></div>
+          <div class="menu-item"> <a class="menu-link" href="/cancel_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Cancel Orders</span></a></div>
+          <div class="menu-item"> <a class="menu-link" href="/active_project/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Active Orders</span></a></div>
+        </div>
+      </div>
+
+      
+       
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+          <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+        </svg>
+          </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+          <div class="menu-sub menu-sub-accordion">
+            <div class="menu-item"> <a class="menu-link" href="/bloghome/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs</span></a></div>
+             
+          </div>
+        </div>
+
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor"></path>
+             <rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor"></rect>
+        </svg>
+          </span> </span> <span class="menu-title">Profile Settings</span><span class="menu-arrow"></span></span>
+          <div class="menu-sub menu-sub-accordion">
+            <div class="menu-item"> <a class="menu-link" href="/profile_setting/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Profile Settings</span></a></div>
+             
+          </div>
+        </div>
+
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+            <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+            <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+          </svg>
+          </span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+          <div class="menu-sub menu-sub-accordion">
+            <div class="menu-item"> <a class="menu-link" href="/Group-Chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Orders chat</span></a></div>
+            <div class="menu-item"> <a class="menu-link" href="/client-influencer-chat/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Influencer chat</span></a></div>
+          </div>
+        </div>
+
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="currentColor"></path>
+            <path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="currentColor"></path>
+          </svg>
+          </span> </span> <span class="menu-title">Referral</span><span class="menu-arrow"></span></span>
+          <div class="menu-sub menu-sub-accordion">
+            <div class="menu-item"> <a class="menu-link" href="/agency_referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Referral</span></a></div>
+             
+          </div>
+        </div>
+
+
+<div data-kt-menu-trigger="click" class="menu-item  menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+            <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+            <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+            <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+            </svg>
+          </span> </span> <span class="menu-title">Advertisers</span><span class="menu-arrow"></span></span>
+          <div class="menu-sub menu-sub-accordion">
+            <div class="menu-item"> <a class="menu-link" href="/advertiser-instruction/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Instructions</span></a></div>
+            <div class="menu-item"> <a class="menu-link" href="/advertiser-offer/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Offers</span></a></div>
+            <div class="menu-item"> <a class="menu-link" href="/advertiser-withdrawal-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Withdrawal Requests</span></a></div> 
+          </div>
+          </div>
+
+          <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+				  <span class="menu-icon">
+					<!--begin::Svg Icon | path: icons/duotune/finance/fin002.svg-->
+					<span class="svg-icon svg-icon-2">
+					  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22 7H2V11H22V7Z" fill="currentColor" />
+						<path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="currentColor" />
+					  </svg>
+					</span>
+					<!--end::Svg Icon-->
+				  </span>
+				  <span class="menu-title">Bank Details</span>
+				  <span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+				  <!--begin:Menu item-->
+				  <div class="menu-item">
+					<!--begin:Menu link-->
+					<a class="menu-link" href="/bankdetail/">
+					  <span class="menu-bullet">
+						<span class="bullet bullet-dot"></span>
+					  </span>
+					  <span class="menu-title">Bank Details</span>
+					</a>
+					<!--end:Menu link-->
+				  </div>
+				  <!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			  </div>
+
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="">
+            <path d="M11.7 8L7.49998 15.3L4.59999 20.3C3.49999 18.4 3.1 17.7 2.3 16.3C1.9 15.7 1.9 14.9 2.3 14.3L8.8 3L11.7 8Z" fill="currentColor"></path>
+            <path opacity="0.3" d="M11.7 8L8.79999 3H13.4C14.1 3 14.8 3.4 15.2 4L20.6 13.3H14.8L11.7 8ZM7.49997 15.2L4.59998 20.2H17.6C18.3 20.2 19 19.8 19.4 19.2C20.2 17.7 20.6 17 21.7 15.2H7.49997Z" fill="currentColor"></path>
+          </svg>
+          </span> </span> <span class="menu-title">Casting Calls</span><span class="menu-arrow"></span></span>
+          <div class="menu-sub menu-sub-accordion">
+            <div class="menu-item"> <a class="menu-link" href="/insert_casting_call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Insert Casting Call</span></a></div>
+            <div class="menu-item"> <a class="menu-link" href="/total_casting_call/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Casting Call</span></a></div>
+            <div class="menu-item"> <a class="menu-link" href="/casting_call_pitching_details/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Total Pitching List</span></a></div>
+          </div>
+        </div>
+
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor"></path>
+          <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor"></path>
+          <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor"></path>
+          <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor"></path>
+        </svg>
+          </span> </span> <span class="menu-title">My Wishlist</span><span class="menu-arrow"></span></span>
+          <div class="menu-sub menu-sub-accordion">
+            <div class="menu-item"> <a class="menu-link" href="/my_wishlist/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Wishlist</span></a></div>
+             
+          </div>
+          </div>
+
+          <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z" fill="currentColor"></path>
+                                  <path opacity="0.3" d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z" fill="currentColor"></path>
+                                  <path opacity="0.3" d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z" fill="currentColor"></path>
+                               </svg>
+        </span> </span> <span class="menu-title">My Cart</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/my_cart/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">My Cart</span></a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{%endblock%}
+{%block body%}
+<!--begin::Main-->
+<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+   <div class="d-flex flex-column flex-column-fluid">
+      <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+         <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+            <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+               <!--begin::Title-->
+               <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Order Details</h1>
+               <!--end::Title-->
+               <!--begin::Breadcrumb-->
+               <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                  <!--begin::Item-->
+                  <li class="breadcrumb-item text-muted">
+                     <a href="/User-Dashboard/" class="text-muted text-hover-primary">Home</a>
+                  </li>
+                  <!--end::Item-->
+                  <!--begin::Item-->
+                  <li class="breadcrumb-item">
+                     <span class="bullet bg-gray-400 w-5px h-2px"></span>
+                  </li>
+                  <!--end::Item-->
+                  <!--begin::Item-->
+                  <li class="breadcrumb-item text-muted">Order Details</li>
+                  <!--end::Item-->
+               </ul>
+               <!--end::Breadcrumb-->
+            </div>
+            <!--end::Page title-->
+            <!--begin::Actions-->
+            <div class="d-flex align-items-center gap-2 gap-lg-3">
+            </div>
+            <!--end::Actions-->
+         </div>
+         <!--end::Toolbar container-->
+      </div>
+      <!--end::Toolbar-->
+      <!--begin::Content-->
+      <div id="kt_app_content" class="app-content flex-column-fluid">
+         <div id="kt_app_content_container" class="app-container container-fluid">
+            <!--begin::Order details page-->
+            <div class="d-flex flex-column gap-7 gap-lg-10">
+               <!--begin::Order summary-->
+               <div class="d-flex flex-column flex-xl-row gap-7 gap-lg-4">
+                  <!--begin::Order details-->
+                  <div class="card card-flush py-4 flex-row-fluid">
+                     <!--begin::Card header-->
+                     <div class="card-header">
+                        <div class="card-title">
+                           <h2>Order Details ({{order.0.ordersid}})</h2>
+                        </div>
+                     </div>
+                     <!--end::Card header-->
+                     <!--begin::Card body-->
+                     <div class="card-body pt-0">
+                        <div class="table-responsive">
+                           <!--begin::Table-->
+                           <table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-250px">
+                              <!--begin::Table body-->
+                              <tbody class="fw-semibold text-gray-600">
+                                 <!--begin::Date-->
+                                 <tr>
+                                    <td class="text-muted">
+                                       <div class="d-flex align-items-center">
+                                          <!--begin::Svg Icon | path: icons/duotune/files/fil002.svg-->
+                                          <span class="svg-icon svg-icon-2 me-2">
+                                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.3" d="M19 3.40002C18.4 3.40002 18 3.80002 18 4.40002V8.40002H14V4.40002C14 3.80002 13.6 3.40002 13 3.40002C12.4 3.40002 12 3.80002 12 4.40002V8.40002H8V4.40002C8 3.80002 7.6 3.40002 7 3.40002C6.4 3.40002 6 3.80002 6 4.40002V8.40002H2V4.40002C2 3.80002 1.6 3.40002 1 3.40002C0.4 3.40002 0 3.80002 0 4.40002V19.4C0 20 0.4 20.4 1 20.4H19C19.6 20.4 20 20 20 19.4V4.40002C20 3.80002 19.6 3.40002 19 3.40002ZM18 10.4V13.4H14V10.4H18ZM12 10.4V13.4H8V10.4H12ZM12 15.4V18.4H8V15.4H12ZM6 10.4V13.4H2V10.4H6ZM2 15.4H6V18.4H2V15.4ZM14 18.4V15.4H18V18.4H14Z" fill="currentColor" />
+                                                <path d="M19 0.400024H1C0.4 0.400024 0 0.800024 0 1.40002V4.40002C0 5.00002 0.4 5.40002 1 5.40002H19C19.6 5.40002 20 5.00002 20 4.40002V1.40002C20 0.800024 19.6 0.400024 19 0.400024Z" fill="currentColor" />
+                                             </svg>
+                                          </span>
+                                          <!--end::Svg Icon-->Date Added
+                                       </div>
+                                    </td>
+                                    <td class="fw-bold text-end">{{order.0.orderdate}}</td>
+                                 </tr>
+                                 <!--end::Date-->
+                                 <!--begin::Payment method-->
+                                 <tr>
+                                    <td class="text-muted">
+                                       <div class="d-flex align-items-center">
+                                          <!--begin::Svg Icon | path: icons/duotune/finance/fin008.svg-->
+                                          <span class="svg-icon svg-icon-2 me-2">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.3" d="M3.20001 5.91897L16.9 3.01895C17.4 2.91895 18 3.219 18.1 3.819L19.2 9.01895L3.20001 5.91897Z" fill="currentColor" />
+                                                <path opacity="0.3" d="M13 13.9189C13 12.2189 14.3 10.9189 16 10.9189H21C21.6 10.9189 22 11.3189 22 11.9189V15.9189C22 16.5189 21.6 16.9189 21 16.9189H16C14.3 16.9189 13 15.6189 13 13.9189ZM16 12.4189C15.2 12.4189 14.5 13.1189 14.5 13.9189C14.5 14.7189 15.2 15.4189 16 15.4189C16.8 15.4189 17.5 14.7189 17.5 13.9189C17.5 13.1189 16.8 12.4189 16 12.4189Z" fill="currentColor" />
+                                                <path d="M13 13.9189C13 12.2189 14.3 10.9189 16 10.9189H21V7.91895C21 6.81895 20.1 5.91895 19 5.91895H3C2.4 5.91895 2 6.31895 2 6.91895V20.9189C2 21.5189 2.4 21.9189 3 21.9189H19C20.1 21.9189 21 21.0189 21 19.9189V16.9189H16C14.3 16.9189 13 15.6189 13 13.9189Z" fill="currentColor" />
+                                             </svg>
+                                          </span>
+                                          <!--end::Svg Icon-->Payment Method
+                                       </div>
+                                    </td>
+                                    <td class="fw-bold text-end">{{pymethod.0.paymentmethod}}
+                                       {% comment %} <img src="{%static 'asset/media/svg/card-logos/visa.svg'%}" class="w-50px ms-2" /> {% endcomment %}
+                                    </td>
+                                 </tr>
+                                 <!--end::Payment method-->
+                              </tbody>
+                              <!--end::Table body-->
+                           </table>
+                           <!--end::Table-->
+                        </div>
+                     </div>
+                     <!--end::Card body-->
+                  </div>
+                  <!--end::Order details-->
+                  <!--begin::Customer details-->
+                  <div class="card card-flush py-4 flex-row-fluid">
+                     <!--begin::Card header-->
+                     <div class="card-header">
+                        <div class="card-title">
+                           <h2>Influencer Details</h2>
+                        </div>
+                     </div>
+                     <!--end::Card header-->
+                     <!--begin::Card body-->
+                     <div class="card-body pt-0">
+                        <div class="table-responsive">
+                           <!--begin::Table-->
+                           <table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-250px">
+                              <!--begin::Table body-->
+                              <tbody class="fw-semibold text-gray-600">
+                                 <!--begin::Customer name-->
+                                 <tr>
+                                    <td class="text-muted">
+                                       <div class="d-flex align-items-center">
+                                          <!--begin::Svg Icon | path: icons/duotune/communication/com006.svg-->
+                                          <span class="svg-icon svg-icon-2 me-2">
+                                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.3" d="M16.5 9C16.5 13.125 13.125 16.5 9 16.5C4.875 16.5 1.5 13.125 1.5 9C1.5 4.875 4.875 1.5 9 1.5C13.125 1.5 16.5 4.875 16.5 9Z" fill="currentColor" />
+                                                <path d="M9 16.5C10.95 16.5 12.75 15.75 14.025 14.55C13.425 12.675 11.4 11.25 9 11.25C6.6 11.25 4.57499 12.675 3.97499 14.55C5.24999 15.75 7.05 16.5 9 16.5Z" fill="currentColor" />
+                                                <rect x="7" y="6" width="4" height="4" rx="2" fill="currentColor" />
+                                             </svg>
+                                          </span>
+                                          <!--end::Svg Icon-->Influencer
+                                       </div>
+                                    </td>
+                                    <td class="fw-bold text-end">
+                                       <div class="d-flex align-items-center justify-content-end">
+                                          <!--begin:: Avatar -->
+                                          <div class="symbol symbol-circle symbol-25px overflow-hidden me-3">
+                                             <a href="/influencer/{{order.0.influencerid.influencer_userid.username|striptags|slugify}}">
+                                                <div class="symbol-label">
+                                                   <img src="/media/{{order.0.influencerid.profileimage}}" alt="Dan Wilson" class="w-100" />
+                                                </div>
+                                             </a>
+                                          </div>
+                                          <!--end::Avatar-->
+                                          <!--begin::Name-->
+                                          <a href="/influencer/{{order.0.influencerid.influencer_userid.username|striptags|slugify}}" class="text-gray-600 text-hover-primary">{{order.0.influencerid.influencer_userid.username}}</a>
+                                          <!--end::Name-->
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <!--end::Customer name-->
+                                 <!--begin::Date-->
+                                 <tr>
+                                    <td class="text-muted">
+                                       <div class="d-flex align-items-center">
+                                          <!--begin::Svg Icon | path: icons/duotune/electronics/elc003.svg-->
+                                          <span class="svg-icon svg-icon-2 me-2">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 20H19V21C19 21.6 18.6 22 18 22H6C5.4 22 5 21.6 5 21V20ZM19 3C19 2.4 18.6 2 18 2H6C5.4 2 5 2.4 5 3V4H19V3Z" fill="currentColor" />
+                                                <path opacity="0.3" d="M19 4H5V20H19V4Z" fill="currentColor" />
+                                             </svg>
+                                          </span>
+                                          <!--end::Svg Icon-->Chat Status
+                                       </div>
+                                    </td>
+                                    <td class="fw-bold text-end">
+                                       {%if order.0.orderstatus.status == 'Completed' %}
+                                       <div class="badge badge-light-danger">Not Active</div>
+                              
+                                    {%else%}
+                                    <div class="badge badge-light-success">Active</div>
+                                    {%endif%}
+                                    </td>
+                                 </tr>
+                                 <!--end::Date-->
+                              </tbody>
+                              <!--end::Table body-->
+                           </table>
+                           <!--end::Table-->
+                        </div>
+                     </div>
+                     <!--end::Card body-->
+                  </div>
+                  <!--end::Customer details-->
+                  <!--begin::Documents-->
+                  <div class="card card-flush py-4 flex-row-fluid">
+                     <!--begin::Card header-->
+                     <div class="card-header">
+                        <div class="card-title">
+                           <h2>Documents</h2>
+                        </div>
+                     </div>
+                     <!--end::Card header-->
+                     <!--begin::Card body-->
+                     <div class="card-body pt-0">
+                        <div class="table-responsive">
+                           <!--begin::Table-->
+                           <table class="table align-middle table-row-bordered mb-0 fs-6 gy-5 min-w-250px">
+                              <!--begin::Table body-->
+                              <tbody class="fw-semibold text-gray-600">
+                                 <!--begin::Invoice-->
+                                 <tr>
+                                    <td class="text-muted">
+                                       <div class="d-flex align-items-center">
+                                          <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm008.svg-->
+                                          <span class="svg-icon svg-icon-2 me-2">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.3" d="M18 21.6C16.3 21.6 15 20.3 15 18.6V2.50001C15 2.20001 14.6 1.99996 14.3 2.19996L13 3.59999L11.7 2.3C11.3 1.9 10.7 1.9 10.3 2.3L9 3.59999L7.70001 2.3C7.30001 1.9 6.69999 1.9 6.29999 2.3L5 3.59999L3.70001 2.3C3.50001 2.1 3 2.20001 3 3.50001V18.6C3 20.3 4.3 21.6 6 21.6H18Z" fill="currentColor" />
+                                                <path d="M12 12.6H11C10.4 12.6 10 12.2 10 11.6C10 11 10.4 10.6 11 10.6H12C12.6 10.6 13 11 13 11.6C13 12.2 12.6 12.6 12 12.6ZM9 11.6C9 11 8.6 10.6 8 10.6H6C5.4 10.6 5 11 5 11.6C5 12.2 5.4 12.6 6 12.6H8C8.6 12.6 9 12.2 9 11.6ZM9 7.59998C9 6.99998 8.6 6.59998 8 6.59998H6C5.4 6.59998 5 6.99998 5 7.59998C5 8.19998 5.4 8.59998 6 8.59998H8C8.6 8.59998 9 8.19998 9 7.59998ZM13 7.59998C13 6.99998 12.6 6.59998 12 6.59998H11C10.4 6.59998 10 6.99998 10 7.59998C10 8.19998 10.4 8.59998 11 8.59998H12C12.6 8.59998 13 8.19998 13 7.59998ZM13 15.6C13 15 12.6 14.6 12 14.6H10C9.4 14.6 9 15 9 15.6C9 16.2 9.4 16.6 10 16.6H12C12.6 16.6 13 16.2 13 15.6Z" fill="currentColor" />
+                                                <path d="M15 18.6C15 20.3 16.3 21.6 18 21.6C19.7 21.6 21 20.3 21 18.6V12.5C21 12.2 20.6 12 20.3 12.2L19 13.6L17.7 12.3C17.3 11.9 16.7 11.9 16.3 12.3L15 13.6V18.6Z" fill="currentColor" />
+                                             </svg>
+                                          </span>
+                                          <!--end::Svg Icon-->Invoice
+                                          <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="" data-bs-original-title="View the invoice generated by this order."></i>
+                                       </div>
+                                    </td>
+                                    <td class="fw-bold text-end">
+                                       <a href="#" onclick="event.preventDefault(); filter({{order.0.ordersid}})" class="badge py-2 px-4 fs-7 badge-light-primary">View Invoice</a>
+                                    </td>
+                                 </tr>
+                                 <!--end::Invoice-->
+                                 <script>
+                                    function filter(id){
+                                    
+                                            $.ajax({
+                                                type:'POST',
+                                                url:'{% url "orderinv" %}',
+                                                headers: {
+                                                    'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+                                                },
+                                                data:
+                                                {
+                                    	orderid:id,     
+                                                },
+                                                success: function(response){
+                                                  console.log("Rahul");
+                                                  console.log(response['results']);
+                                                  if (response['results']==='ok')
+                                                  {
+                                                  redirecttourl('/orders_invoice/');
+                                                } 
+                                                }
+                                              
+                                               
+                                                })
+                                              
+                                        };
+                                    
+                                    
+                                    
+                                          function redirecttourl(url){
+                                            window.location.href=url;
+                                          }
+                                    
+                                    
+                                    
+                                    
+                                 </script>
+                                 <!--begin::Rewards-->
+                                 <tr>
+                                    <td class="text-muted">
+                                       <div class="d-flex align-items-center">
+                                          <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm011.svg-->
+                                          <span class="svg-icon svg-icon-2 me-2">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.3" d="M21.6 11.2L19.3 8.89998V5.59993C19.3 4.99993 18.9 4.59993 18.3 4.59993H14.9L12.6 2.3C12.2 1.9 11.6 1.9 11.2 2.3L8.9 4.59993H5.6C5 4.59993 4.6 4.99993 4.6 5.59993V8.89998L2.3 11.2C1.9 11.6 1.9 12.1999 2.3 12.5999L4.6 14.9V18.2C4.6 18.8 5 19.2 5.6 19.2H8.9L11.2 21.5C11.6 21.9 12.2 21.9 12.6 21.5L14.9 19.2H18.2C18.8 19.2 19.2 18.8 19.2 18.2V14.9L21.5 12.5999C22 12.1999 22 11.6 21.6 11.2Z" fill="currentColor" />
+                                                <path d="M11.3 9.40002C11.3 10.2 11.1 10.9 10.7 11.3C10.3 11.7 9.8 11.9 9.2 11.9C8.8 11.9 8.40001 11.8 8.10001 11.6C7.80001 11.4 7.50001 11.2 7.40001 10.8C7.20001 10.4 7.10001 10 7.10001 9.40002C7.10001 8.80002 7.20001 8.4 7.30001 8C7.40001 7.6 7.7 7.29998 8 7.09998C8.3 6.89998 8.7 6.80005 9.2 6.80005C9.5 6.80005 9.80001 6.9 10.1 7C10.4 7.1 10.6 7.3 10.8 7.5C11 7.7 11.1 8.00005 11.2 8.30005C11.3 8.60005 11.3 9.00002 11.3 9.40002ZM10.1 9.40002C10.1 8.80002 10 8.39998 9.90001 8.09998C9.80001 7.79998 9.6 7.70007 9.2 7.70007C9 7.70007 8.8 7.80002 8.7 7.90002C8.6 8.00002 8.50001 8.2 8.40001 8.5C8.40001 8.7 8.30001 9.10002 8.30001 9.40002C8.30001 9.80002 8.30001 10.1 8.40001 10.4C8.40001 10.6 8.5 10.8 8.7 11C8.8 11.1 9 11.2001 9.2 11.2001C9.5 11.2001 9.70001 11.1 9.90001 10.8C10 10.4 10.1 10 10.1 9.40002ZM14.9 7.80005L9.40001 16.7001C9.30001 16.9001 9.10001 17.1 8.90001 17.1C8.80001 17.1 8.70001 17.1 8.60001 17C8.50001 16.9 8.40001 16.8001 8.40001 16.7001C8.40001 16.6001 8.4 16.5 8.5 16.4L14 7.5C14.1 7.3 14.2 7.19998 14.3 7.09998C14.4 6.99998 14.5 7 14.6 7C14.7 7 14.8 6.99998 14.9 7.09998C15 7.19998 15 7.30002 15 7.40002C15.2 7.30002 15.1 7.50005 14.9 7.80005ZM16.6 14.2001C16.6 15.0001 16.4 15.7 16 16.1C15.6 16.5 15.1 16.7001 14.5 16.7001C14.1 16.7001 13.7 16.6 13.4 16.4C13.1 16.2 12.8 16 12.7 15.6C12.5 15.2 12.4 14.8001 12.4 14.2001C12.4 13.3001 12.6 12.7 12.9 12.3C13.2 11.9 13.7 11.7001 14.5 11.7001C14.8 11.7001 15.1 11.8 15.4 11.9C15.7 12 15.9 12.2 16.1 12.4C16.3 12.6 16.4 12.9001 16.5 13.2001C16.6 13.4001 16.6 13.8001 16.6 14.2001ZM15.4 14.1C15.4 13.5 15.3 13.1 15.2 12.9C15.1 12.6 14.9 12.5 14.5 12.5C14.3 12.5 14.1 12.6001 14 12.7001C13.9 12.8001 13.8 13.0001 13.7 13.2001C13.6 13.4001 13.6 13.8 13.6 14.1C13.6 14.7 13.7 15.1 13.8 15.4C13.9 15.7 14.1 15.8 14.5 15.8C14.8 15.8 15 15.7 15.2 15.4C15.3 15.2 15.4 14.7 15.4 14.1Z" fill="currentColor" />
+                                             </svg>
+                                          </span>
+                                          <!--end::Svg Icon-->Reward Points
+                                          <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="" data-bs-original-title="Reward value earned by customer when purchasing this order."></i>
+                                       </div>
+                                    </td>
+                                    <td class="fw-bold text-end"> </td>
+                                 </tr>
+                                 <!--end::Rewards-->
+                              </tbody>
+                              <!--end::Table body-->
+                           </table>
+                           <!--end::Table-->
+                        </div>
+                     </div>
+                     <!--end::Card body-->
+                  </div>
+                  <!--end::Documents-->
+               </div>
+               <!--end::Order summary-->
+               <!--begin::Tab content-->
+               <div class="tab-content">
+                  <!--begin::Tab pane-->
+                  <div class="tab-pane fade show active" id="kt_ecommerce_sales_order_summary" role="tab-panel">
+                     <!--begin::Orders-->
+                     <div class="d-flex flex-column gap-7 gap-lg-10">
+                        <!--begin::Product List-->
+                        <div class="card card-flush py-4 flex-row-fluid overflow-hidden">
+                           <!--begin::Card header-->
+                           <div class="card-header">
+                              <div class="card-title">
+                                 <h2>Order {{order.0.ordersid}}</h2>
+                              </div>
+                           </div>
+                           <!--end::Card header-->
+                           <!--begin::Card body-->
+                           <div class="card-body pt-0">
+                              <div class="table-responsive">
+                                 <!--begin::Table-->
+                                 <table class="table align-middle table-row-dashed fs-6 gy-5 mb-0">
+                                    <!--begin::Table head-->
+                                    <thead>
+                                       <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                                          <th class="min-w-175px">Influencer Name</th>
+                                          <th class="min-w-100px">Order Discriptions</th>
+                                          <th class="min-w-70px text-end">Qty</th>
+                                          <!-- <th class="min-w-100px text-end">Price</th> -->
+                                          <th class="min-w-100px text-end">Total Price</th>
+                                          <th class="min-w-100px text-center">Order Status</th>
+                                          <th class="min-w-100px text-center">Orders Response</th>
+                                         
+                                          {%if order.0.orderstatus.status == 'Completed' %}
+                                          
+                                          <th class="min-w-100px text-center">Orders Review</th>
+                                       {%endif%}
+                                          
+
+                                       </tr>
+                                    </thead>
+                                    <!--end::Table head-->
+                                    <!--begin::Table body-->
+                                    <tbody class="fw-semibold text-gray-600">
+                                       <!--begin::Products-->
+                                       <tr>
+                                          <!--begin::Product-->
+                                          <td>
+                                             <div class="d-flex align-items-center">
+                                                <!--begin::Thumbnail-->
+                                                <a href="/influencer/{{order.0.influencerid.influencer_userid.username|striptags|slugify}}" class="symbol symbol-50px">
+                                                <span class="symbol-label" style="background-image:url(https://www.influencerhiring.com/media/{{order.0.influencerid.profileimage}});"></span>
+                                                </a>
+                                                <!--end::Thumbnail-->
+                                                <!--begin::Title-->
+                                                <div class="ms-5">
+                                                   <a href="/influencer/{{order.0.influencerid.influencer_userid.username|striptags|slugify}}" class="fw-bold text-gray-600 text-hover-primary">{{order.0.influencerid.fullname}}</a>
+                                                   <div class="fs-7 text-muted">Service Name: {{order.0.serviceid.subservice}}</div>
+                                                </div>
+                                                <!--end::Title-->
+                                             </div>
+                                          </td>
+                                          <!--end::Product-->
+                                          <!--begin::SKU-->
+                                          <td class="">“{{order.0.orderdescription}}</td>
+                                          <!--end::SKU-->
+                                          <!--begin::Quantity-->
+                                          <td class="text-end">1</td>
+                                          <!--end::Quantity-->
+                                          <!--begin::Price-->
+                                          <!-- <td class="text-end"><span class="badge badge-light-success fw-bold">{{order.0.paymentcurrency}} {% if order.0.iscouponapplied == true %}	
+                                             {{order.0.finalamtafterdiscount}}
+                                             {%else%}
+                                             {{order.0.finalamt}}
+                                             {%endif%}
+                                          </span>
+                                          </td> -->
+                                          <!--end::Price-->
+                                          <!--begin::Total-->
+                                          <td class="text-end"><span class="badge badge-light-success fw-bold">{{order.0.paymentcurrency}}
+                                             {% if order.0.iscouponapplied == True %}	
+                                             {{order.0.finalamtafterdiscount}}
+                                             {%else%}
+                                             {{order.0.finalamt}}
+                                             {%endif%}
+                                          </span>
+                                          </td>
+                                          <!--end::Total-->
+                                          <td align="center">
+                                             {%if order.0.orderstatus.status == 'Completed' %}
+                                             <div class="badge badge-light-success">{{order.0.orderstatus.status}}</div>
+                                             {%elif order.0.orderstatus.status == 'Processing' %}
+                                             <div class="badge badge-light-primary">{{order.0.orderstatus.status}}</div>
+                                             {%elif order.0.orderstatus.status == 'Cancelled' %}
+                                             <div class="badge badge-light-danger">{{order.0.orderstatus.status}}</div>
+                                             {%else%}
+                                             <div class="badge badge-light-warning">{{order.0.orderstatus.status}}</div>
+                                             {%endif%}
+                                          </td>
+                                          <td class="text-center">
+                                             <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target11" onclick="updateModal();">View </a>
+                                          </td>
+                                          
+                                          {%if order.0.orderstatus.status == 'Completed' %}
+                                          
+                                          <td class="text-center">
+                                             <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target112" onclick="updateModal();">Review</a>
+                                          </td>
+                                          
+                                       {%endif%}
+                                         
+                                       </tr>
+                                       <!--end::Products-->
+                                    </tbody>
+                                    <!--end::Table head-->
+                                 </table>
+                                 <!--end::Table-->
+                              </div>
+                           </div>
+                           <!--end::Card body-->
+                        </div>
+                        <!--end::Product List-->
+                     </div>
+                     <!--end::Orders-->
+                  </div>
+                  <!--end::Tab pane-->
+                  <!--begin::Tab pane-->
+                  <div class="tab-pane fade" id="kt_ecommerce_sales_order_history" role="tab-panel">
+                     <!--begin::Orders-->
+                     <div class="d-flex flex-column gap-7 gap-lg-10">
+                        <!--begin::Order history-->
+                        <div class="card card-flush py-4 flex-row-fluid">
+                           <!--begin::Card header-->
+                           <div class="card-header">
+                              <div class="card-title">
+                                 <h2>Order History</h2>
+                              </div>
+                           </div>
+                           <!--end::Card header-->
+                           <!--begin::Card body-->
+                           <div class="card-body pt-0">
+                              <div class="table-responsive">
+                                 <!--begin::Table-->
+                                 <table class="table align-middle table-row-dashed fs-6 gy-5 mb-0">
+                                    <!--begin::Table head-->
+                                    <thead>
+                                       <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                                          <th class="min-w-100px">Date Added</th>
+                                          <th class="min-w-175px">Comment</th>
+                                          <th class="min-w-70px">Order Status</th>
+                                          <th class="min-w-100px">Customer Notifed</th>
+                                       </tr>
+                                    </thead>
+                                    <!--end::Table head-->
+                                    <!--begin::Table body-->
+                                    <tbody class="fw-semibold text-gray-600">
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>23/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Order completed</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-success">Completed</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>No</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>22/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Order received by customer</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-success">Delivered</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>Yes</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>21/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Order shipped from warehouse</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-primary">Delivering</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>Yes</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>20/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Payment received</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-primary">Processing</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>No</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>19/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Pending payment</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-warning">Pending</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>No</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>18/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Payment method updated</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-warning">Pending</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>No</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>17/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Payment method expired</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-danger">Failed</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>Yes</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>16/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Pending payment</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-warning">Pending</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>No</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                       <tr>
+                                          <!--begin::Date-->
+                                          <td>15/11/2022</td>
+                                          <!--end::Date-->
+                                          <!--begin::Comment-->
+                                          <td>Order received</td>
+                                          <!--end::Comment-->
+                                          <!--begin::Status-->
+                                          <td>
+                                             <!--begin::Badges-->
+                                             <div class="badge badge-light-warning">Pending</div>
+                                             <!--end::Badges-->
+                                          </td>
+                                          <!--end::Status-->
+                                          <!--begin::Customer Notified-->
+                                          <td>Yes</td>
+                                          <!--end::Customer Notified-->
+                                       </tr>
+                                    </tbody>
+                                    <!--end::Table head-->
+                                 </table>
+                                 <!--end::Table-->
+                              </div>
+                           </div>
+                           <!--end::Card body-->
+                        </div>
+                        <!--end::Order history-->
+                        <!--begin::Order data-->
+                        <div class="card card-flush py-4 flex-row-fluid">
+                           <!--begin::Card header-->
+                           <div class="card-header">
+                              <div class="card-title">
+                                 <h2>Order Data</h2>
+                              </div>
+                           </div>
+                           <!--end::Card header-->
+                           <!--begin::Card body-->
+                           <div class="card-body pt-0">
+                              <div class="table-responsive">
+                                 <!--begin::Table-->
+                                 <table class="table align-middle table-row-bordered mb-0 fs-6 gy-5">
+                                    <!--begin::Table body-->
+                                    <tbody class="fw-semibold text-gray-600">
+                                       <!--begin::IP address-->
+                                       <tr>
+                                          <td class="text-muted">IP Address</td>
+                                          <td class="fw-bold text-end">172.68.221.26</td>
+                                       </tr>
+                                       <!--end::IP address-->
+                                       <!--begin::Forwarded IP-->
+                                       <tr>
+                                          <td class="text-muted">Forwarded IP</td>
+                                          <td class="fw-bold text-end">89.201.163.49</td>
+                                       </tr>
+                                       <!--end::Forwarded IP-->
+                                       <!--begin::User agent-->
+                                       <tr>
+                                          <td class="text-muted">User Agent</td>
+                                          <td class="fw-bold text-end">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36</td>
+                                       </tr>
+                                       <!--end::User agent-->
+                                       <!--begin::Accept language-->
+                                       <tr>
+                                          <td class="text-muted">Accept Language</td>
+                                          <td class="fw-bold text-end">en-GB,en-US;q=0.9,en;q=0.8</td>
+                                       </tr>
+                                       <!--end::Accept language-->
+                                    </tbody>
+                                    <!--end::Table body-->
+                                 </table>
+                                 <!--end::Table-->
+                              </div>
+                           </div>
+                           <!--end::Card body-->
+                        </div>
+                        <!--end::Order data-->
+                     </div>
+                     <!--end::Orders-->
+                  </div>
+                  <!--end::Tab pane-->
+               </div>
+               <!--end::Tab content-->
+            </div>
+            <!--end::Order details page-->
+         </div>
+         <!--end::Content container-->
+      </div>
+      <!--end::Content-->
+
+      <!--begin::Content-->
+      <div id="kt_app_content" class="app-content flex-column-fluid">
+         <div id="kt_app_content_container" class="app-container container-fluid">
+            <!--begin::Inbox App - View & Reply -->
+{%if ques%}
+            
+            <!--begin::Card-->
+            <div class="card mb-8">
+               <div class="card-header align-items-center py-5 gap-5 mb-0">
+                  <div class="d-flex flex-column flex-wrap gap-2">
+                     <!--begin::Heading-->
+                     <h2 class="fw-semibold me-3 my-1">Seller Requests</h2>
+                     <!--begin::Heading-->
+                  </div>
+               </div>
+               <div class="card-body">
+					<form method="post" action="" >
+                  {%csrf_token%}
+						<div class="accordion question_answer" id="accordionExample">
+                     {%for i in ques%}
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingOne-{{i.2}}">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-{{i.2}}" aria-expanded="true" aria-controls="collapseOne">
+										{{i.5}}
+									</button>
+								</h2>
+								<div id="collapseOne-{{i.2}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+									<div class="accordion-body answer_textarea">
+                              <input type="hidden" name="questionid" value="{{i.2}}"/>
+
+                           {%if i.1 is  None %}
+
+                           <textarea class="form-control form-control-solid" placeholder="{{i.6}}" name="answer"></textarea>
+               {%else%}
+               <textarea class="form-control form-control-solid" placeholder="{{i.1}}" name="answer"></textarea>
+               {%endif%}
+                             
+
+										
+                             
+                              
+
+									</div>
+								</div>
+							</div>
+{%endfor%}
+							<div class="d-flex align-items-center justify-content-end mt-4">
+								<div class="btn-group">
+								<button  class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send" type="submit">
+								<span class="indicator-label">Submit Answer</span>
+								<span class="indicator-progress">Please wait...
+								<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+								</button>
+								</div>
+								</div>
+						</div>
+					</form>
+               </div>
+            </div> 
+            <!--end::Card-->
+            {%else%}
+ {% comment %} <div class="card mb-8">
+               <div class="card-header align-items-center py-5 gap-5 mb-0">
+                  <div class="d-flex flex-column flex-wrap gap-2">
+                     <!--begin::Heading-->
+                     <h2 class="fw-semibold me-3 my-1">Seller Requests</h2>
+                     <!--begin::Heading-->
+                  </div>
+               </div>
+               <div class="card-body">
+					<form method="post" action="" >
+                  {%csrf_token%}
+						<div class="accordion question_answer" id="accordionExample">
+                     {%for i in ques%}
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingOne-{{i.influencerquestionsid}}">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-{{i.influencerquestionsid}}" aria-expanded="true" aria-controls="collapseOne">
+										{{i.question}}
+									</button>
+								</h2>
+								<div id="collapseOne-{{i.influencerquestionsid}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+									<div class="accordion-body answer_textarea">
+                              <input type="hidden" name="questionid" value="{{i.influencerquestionsid}}"/>
+										<textarea class="form-control form-control-solid" placeholder="{{i.subheading}}" name="answer" ></textarea>
+									</div>
+								</div>
+							</div>
+{%endfor%}
+							<div class="d-flex align-items-center justify-content-end mt-4">
+								<div class="btn-group">
+								<button  class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send" type="submit">
+								<span class="indicator-label">Submit Answer</span>
+								<span class="indicator-progress">Please wait...
+								<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+								</button>
+								</div>
+								</div>
+						</div>
+					</form>
+               </div>
+            </div> {% endcomment %}
+
+
+            {%endif%}
+
+
+            <!--begin::Card-->
+            <div class="card">
+               <div class="card-header align-items-center py-5 gap-5 mb-0">
+                  <div class="d-flex align-items-center flex-wrap gap-2">
+                     <!--begin::Heading-->
+                     <h2 class="fw-semibold me-3 my-1">Order Releted Query and Conversation. Thank you for flying with us!</h2>
+                     <!--begin::Heading-->
+                  </div>
+               </div>
+               <div class="card-body">
+                  {%for i in chtme%}
+                  <!--begin::Message accordion-->
+                  <div data-kt-inbox-message="message_wrapper">
+                     <!--begin::Message header-->
+                     <div class="d-flex flex-wrap gap-2 flex-stack cursor-pointer" data-kt-inbox-message="header">
+                        <!--begin::Author-->
+                        <div class="d-flex align-items-center">
+                           <!--begin::Avatar-->
+                           <div class="symbol symbol-50 me-4">
+                              {%if i.userid.roles == 'client' %}
+                              <span class="symbol-label bg-light-danger text-danger fs-6 fw-bolder">{{i.userid.username|slice:":1"}}</span>
+                              {%else%}
+                              <span class="symbol-label bg-light-primary text-primary fs-6 fw-bolder">{{i.userid.username|slice:":1"}}</span>
+                              {%endif%}
+                           </div>
+                           <!--end::Avatar-->
+                           <div class="pe-5">
+                              <!--begin::Author details-->
+                              <div class="d-flex align-items-center flex-wrap gap-1">
+                                 <a href="#" class="fw-bold text-dark text-hover-primary">{{i.userid.username}}</a>
+                                 <!--begin::Svg Icon | path: icons/duotune/abstract/abs050.svg-->
+                                 <span class="svg-icon svg-icon-7 svg-icon-success mx-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                       <circle fill="currentColor" cx="12" cy="12" r="8" />
+                                    </svg>
+                                 </span>
+                                 <!--end::Svg Icon-->
+                                 {%if i.time_diff1 is None %}
+                                 <span class="text-muted fw-bold">0 seconds ago</span>
+                                 {%else%}
+                                 <span class="text-muted fw-bold">{{i.time_diff1}}</span>
+                                 {%endif%}
+                              </div>
+                              <!--end::Author details-->
+                              <!--begin::Message details-->
+                              <div data-kt-inbox-message="details">
+                                 <span class="text-muted fw-semibold">{{i.text|slice:":50"}}.....</span>
+                                 <!--begin::Menu toggle-->
+                                 <a href="#" class="me-1" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start">
+                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                    <span class="svg-icon svg-icon-5 m-0">
+                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+                                       </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                 </a>
+                                 <!--end::Menu toggle-->
+                              </div>
+                              <!--end::Message details-->
+                              <!--begin::Preview message-->
+                              <div class="text-muted fw-semibold mw-450px d-none" data-kt-inbox-message="preview">Message</div>
+                              <!--end::Preview message-->
+                           </div>
+                        </div>
+                        <!--end::Author-->
+                        <!--begin::Actions-->
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                           <!--begin::Date-->
+                           <span class="fw-semibold text-muted text-end me-3">{{i.date}}</span>
+                           <!--end::Date-->
+                        </div>
+                        <!--end::Actions-->
+                     </div>
+                     <!--end::Message header-->
+                     <!--begin::Message content-->
+                     <div class="collapse fade" data-kt-inbox-message="message">
+                        <div class="py-5">
+                           {{i.text}}
+                        </div>
+                     </div>
+                     <!--end::Message content-->
+                  </div>
+                  <!--end::Message accordion-->
+                  <div class="separator my-6"> </div>
+                  {%endfor%}
+                  <!--begin::Form-->
+                  <form id="kt_inbox_reply_form" class="rounded border mt-10" method="post" action="" enctype="multipart/form-data" >
+                     {% csrf_token %}
+                     <!--begin::Body-->
+                     <div class="d-block sending-message">
+                        <!--begin::Message-->
+                        <textarea  class="border-0  px-3" name="content" placeholder="Type Text Here" id="myTextarea"></textarea>
+                        <!--end::Message-->
+                     </div>
+                     <!--end::Body-->
+                     <!--begin::Footer-->
+                     <div class="d-flex flex-stack flex-wrap gap-2 py-5 ps-8 pe-5 border-top">
+                        <!--begin::Actions-->
+                        <div class="d-flex align-items-center me-3">
+                           <!--begin::Send-->
+                           <div class="btn-group me-4">
+                              <!--begin::Submit-->
+                              <button id="myButton" class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send" type="submit" >
+                              <span class="indicator-label">Send</span>
+                              <span class="indicator-progress">Please wait...
+                              <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                              </button>
+                              <!--end::Submit-->
+                           </div>
+                           <!--end::Send-->
+                           {% comment %} <!--begin::Upload attachement-->
+                           <span class="btn btn-icon btn-sm btn-clean btn-active-light-primary me-2" id="kt_inbox_reply_attachments_select" data-kt-inbox-form="dropzone_upload">
+                              <!--begin::Svg Icon | path: icons/duotune/communication/com008.svg-->
+                              <span class="svg-icon svg-icon-2 m-0">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.3" d="M4.425 20.525C2.525 18.625 2.525 15.525 4.425 13.525L14.825 3.125C16.325 1.625 18.825 1.625 20.425 3.125C20.825 3.525 20.825 4.12502 20.425 4.52502C20.025 4.92502 19.425 4.92502 19.025 4.52502C18.225 3.72502 17.025 3.72502 16.225 4.52502L5.82499 14.925C4.62499 16.125 4.62499 17.925 5.82499 19.125C7.02499 20.325 8.82501 20.325 10.025 19.125L18.425 10.725C18.825 10.325 19.425 10.325 19.825 10.725C20.225 11.125 20.225 11.725 19.825 12.125L11.425 20.525C9.525 22.425 6.425 22.425 4.425 20.525Z" fill="currentColor" />
+                                    <path d="M9.32499 15.625C8.12499 14.425 8.12499 12.625 9.32499 11.425L14.225 6.52498C14.625 6.12498 15.225 6.12498 15.625 6.52498C16.025 6.92498 16.025 7.525 15.625 7.925L10.725 12.8249C10.325 13.2249 10.325 13.8249 10.725 14.2249C11.125 14.6249 11.725 14.6249 12.125 14.2249L19.125 7.22493C19.525 6.82493 19.725 6.425 19.725 5.925C19.725 5.325 19.525 4.825 19.125 4.425C18.725 4.025 18.725 3.42498 19.125 3.02498C19.525 2.62498 20.125 2.62498 20.525 3.02498C21.325 3.82498 21.725 4.825 21.725 5.925C21.725 6.925 21.325 7.82498 20.525 8.52498L13.525 15.525C12.325 16.725 10.525 16.725 9.32499 15.625Z" fill="currentColor" />
+                                 </svg>
+                              </span>
+                              <!--end::Svg Icon-->
+                           </span>
+                           <!--end::Upload attachement-->  {% endcomment %}
+                        </div>
+                        <!--end::Actions-->
+                     </div>
+                     <!--end::Footer-->
+                  </form>
+                  <!--end::Form-->
+               </div>
+            </div>
+            <!--end::Card-->
+         </div>
+         <!--end::Content container-->
+      </div>
+      <!--end::Content-->
+   </div>
+   <!--end::Content wrapper-->
+   <script>
+      // Function to be executed on page load
+      function onPageLoad() {
+      	// Get the textarea element by its id
+      	if ('{{order.0.orderstatus.status}}' == 'Completed'){
+      	var textarea = document.getElementById("myTextarea");
+      
+      	// Disable the textarea
+      	textarea.disabled = true;
+      	var button = document.getElementById("myButton");
+      
+      	// Disable the button
+      	button.disabled = true;
+      }
+      }
+      
+      // Call the onPageLoad function when the page finishes loading
+      
+      window.addEventListener("load", onPageLoad);
+      
+      
+   </script>
+</div>
+<div class="modal fade" id="kt_modal_new_target11" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered mw-450px">
+      <div class="modal-content rounded">
+         <div class="modal-header pb-0 border-0 justify-content-end">
+            <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+               <span class="svg-icon svg-icon-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                     <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+                  </svg>
+               </span>
+            </div>
+         </div>
+         <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+            <form id="kt_modal_new_target_form" class="form" action="" method="post">
+               {% csrf_token %}
+               <div class="mb-13 text-center">
+                  <h1 class="mb-3">Order Response</h1>
+                  <div class="text-muted fw-semibold fs-5">If you need more info, please check <a href="/terms-of-service/" target="_blank" class="fw-bold link-primary">Project Guidelines</a>.</div>
+               </div>
+               {%if order.0.serviceid.subservice == 'Greeting Messages'  %}
+               <div class="row g-9 mb-8">
+                  <label class="fs-6 fw-semibold mb-2">Video</label>
+                  <video controls id="video" preload="metadata" style="width: 400px; height: 400px; border-radius: 30px; object-fit: cover;">
+                     <source src="/media/{{res.0.videoid.videospath}}" type="video/mp4">
+                  </video>
+               </div>
+               {%endif%}
+               {%if order.0.serviceid.subservice == 'Greeting Messages' or order.0.serviceid.subservice == 'Brand Promotion' or order.0.serviceid.subservice == 'Instagram Shoutout' or order.0.serviceid.subservice == 'Youtube Shoutout'  %}
+               <div class="d-flex flex-column mb-8">
+                  <label class="fs-6 fw-semibold mb-2">Video Link</label>
+                  
+                  <a href="{{res.0.videolink.videosLink}}" target="_blank" id="uniqueid" class="form-control form-control-solid" readonly >{{res.0.videolink.videosLink}}</a>
+               </div>
+               {%endif%}
+               <div class="d-flex flex-column mb-8">
+                  <label class="fs-6 fw-semibold mb-2"> Order Summary</label>
+                  <textarea class="form-control form-control-solid" id="order-des" value="{{res.0.ordersummary}}" placeholder="{{res.0.ordersummary}}" rows="3" name="target_details1" readonly ></textarea>
+               </div>
+               {% comment %} 
+               <div class="d-flex justify-content-start gap-3" >
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" id="butid" value="" name="acceptorder" class="btn btn-primary">Accept</button>
+               </div>
+               {% endcomment %}
+               {%if order.0.orderstatus.status == 'Completed' or order.0.orderstatus.status == 'Cancelled' or order.0.orderstatus.status == 'Pending' %}
+               {% comment %} 
+               <div class="text-center">
+                  <button type="submit" class="btn btn-danger" id="butid1" value="" name="cancelorder" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target111">Cancel</button>
+                  <button type="submit" id="butid" value="" name="acceptorder" class="btn btn-primary">Approved</button>
+               </div>
+               {% endcomment %}
+               {%else%}
+               <div class="text-center">
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target111">Cancel</button>
+                  <button type="submit" id="butid" value="" name="acceptorder" class="btn btn-primary">Approved</button>
+               </div>
+               {%endif%}
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<!--end:::Main-->
+<div class="modal fade" id="kt_modal_new_target111" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered mw-650px">
+      <div class="modal-content rounded">
+         <div class="modal-header pb-0 border-0 justify-content-end">
+            <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+               <span class="svg-icon svg-icon-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                     <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+                  </svg>
+               </span>
+            </div>
+         </div>
+         <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+            <form id="kt_modal_new_target_form" class="form" action="" method="post" >
+               {%csrf_token%}
+               <div class="mb-13 text-center">
+                  <h1 class="mb-3">Reasons of Cancellations</h1>
+                  <div class="text-muted fw-semibold fs-5">If you need more info, please check <a href="/terms-of-service/" target="_blank" class="fw-bold link-primary">Project Guidelines</a>.</div>
+               </div>
+               <div class="d-flex flex-column mb-8">
+                  <label class="fs-6 fw-semibold mb-2">Reason of Cancellations</label>
+                  <textarea class="form-control form-control-solid" id="rseason" rows="3" value="" name="reason" ></textarea>
+               </div>
+               <div class="text-center">
+                  <button type="submit" id="butid1" value="" name="cancelorder" class="btn btn-primary">Submit</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+ <!--begin::Modal - New Target-->
+ <div class="modal fade" id="kt_modal_new_target112" tabindex="-1" aria-hidden="true">
+   <!--begin::Modal dialog-->
+   <div class="modal-dialog modal-dialog-centered mw-550px">
+      <!--begin::Modal content-->
+      <div class="modal-content rounded">
+         <!--begin::Modal header-->
+         <div class="modal-header pb-0 border-0 justify-content-end">
+            <!--begin::Close-->
+            <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+               <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+               <span class="svg-icon svg-icon-1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                     <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+                  </svg>
+               </span>
+               <!--end::Svg Icon-->
+            </div>
+            <!--end::Close-->
+         </div>
+         <!--begin::Modal header-->
+         <!--begin::Modal body-->
+         <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+            <!--begin:Form-->
+            <form id="kt_modal_new_target_form" class="form" action="#" method="post" >
+               {%csrf_token%}
+               <!--begin::Heading-->
+               <div class="mb-13 text-center">
+                  <!--begin::Title-->
+                  <h1 class="mb-3">Upload Orders Review</h1>
+                  <!--end::Title-->
+                  <!--begin::Description-->
+                  <div class="text-muted fw-semibold fs-5">You can submit your orders 
+                  <a  class="fw-bold link-primary">Review from here</a>.</div>
+                  <!--end::Description-->
+               </div>
+               <!--end::Heading-->
+               <!--begin::Input group-->
+               <div class="d-flex flex-column mb-8 fv-row">
+                  <!--begin::Label-->
+                  <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                     <span class="required">Rate</span>
+                  </label>
+                   <input class="rating rating--nojs" max="5" step="1" type="range" name="feedratevalue" value="{{shrew.rating}}"></label>
+               </div>
+               <!--end::Input group-->
+               <!--begin::Input group-->
+               {% comment %}<div class="d-flex flex-column mb-8">
+                   <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                  <span class="required">Name</span></label> {% endcomment %}
+                  <input type="hidden" class="form-control form-control-solid" name="feedname" placeholder="Your Name" value="{{request.user.agencyprofile.fullname}}" ></input>
+               {% comment %} </div> {% endcomment %}
+               <div class="d-flex flex-column mb-8">
+                  <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                  <span class="required">Message</span></label>
+                  {% if shrew.review_message %}
+                  <textarea class="form-control form-control-solid" rows="3" name="feedmess" placeholder="Your Message" >{{shrew.review_message}}</textarea>
+
+                  {%else%}
+                  <textarea class="form-control form-control-solid" rows="3" name="feedmess" placeholder="Your Message"  >{{random_review.reviews}}</textarea>
+
+                  {%endif%}
+
+                  <input type="hidden" name="feedctid" value={{order.0.clientid}} />
+                  <input type="hidden" name="feedinid" value={{order.0.influencerid}} />
+               </div>
+               <!--end::Input group-->
+        <div class="text-center">
+          <button type="reset" id="kt_modal_new_target_cancel" class="btn btn-light me-3">
+            Cancel
+            </button>
+            <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary" name="feedordid" value="{{order.0.ordersid}}"  >
+              <span class="indicator-label">
+                Submit
+              </span>
+              <span class="indicator-progress">
+                Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+              </span>
+            </button>
+              </div>
+            </form>
+            <!--end:Form-->
+         </div>
+         <!--end::Modal body-->
+      </div>
+      <!--end::Modal content-->
+   </div>
+   <!--end::Modal dialog-->
+</div>
+<!--end::Modal - New Target-->
+
+<div class="modal fade" id="kt_modal_new_target121" tabindex="-1" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered mw-650px">
+       <div class="modal-content rounded">
+           <div class="modal-header pb-0 border-0 justify-content-end">
+               <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal"> <span
+                       class="svg-icon svg-icon-1">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1"
+                               transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                           <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)"
+                               fill="currentColor" />
+                       </svg>
+                   </span> </div>
+           </div>
+           <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+               <form id="kt_modal_new_target_form" class="form" action="" method="post"  >
+                   {% csrf_token %}
+                   <div class="mb-13 text-center">
+                       <h1 class="mb-3">Request For Refund</h1>
+                       <div class="text-muted fw-semibold fs-5">For ORDER ID : <a href="#"
+                               class="fw-bold link-primary" >{{order.0.ordersid}}</a></div>
+                   </div>
+ 
+                   <div class="d-flex flex-column mb-8" required>
+                       <label class="fs-6 fw-semibold mb-2">Amount:</label>
+                       <input type="text"  name="requested_amount" id="reqamt" value="" class="form-control form-control-solid" readonly ></input>                  
+                   </div>
+ 
+                   <div class="d-flex flex-column mb-8">
+                       <label class="fs-6 fw-semibold mb-2">Message(Optional):</label>
+                       <textarea type="text" name="optional_message" value="" class="form-control form-control-solid"></textarea>                  
+                     </div>
+ 
+                   <div class="text-center">
+ 
+                      
+                       <button type="submit"  value="{{order.0.ordersid}}" name="ref_orderid" class="btn btn-success"> <span
+                               class="indicator-label">Request</span> <span class="indicator-progress">Please wait...
+                               <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                       </button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+ </div>
+<!--begin::Chat drawer-->
+<div id="kt_drawer_chat" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle" data-kt-drawer-close="#kt_drawer_chat_close">
+   <!--begin::Messenger-->
+   <div class="card w-100 rounded-0 border-0" id="kt_drawer_chat_messenger">
+      <!--begin::Card header-->
+      <div class="card-header pe-5" id="kt_drawer_chat_messenger_header">
+         <!--begin::Title-->
+         <div class="card-title">
+            <!--begin::User-->
+            <div class="d-flex align-items-center mb-2">
+               <!--begin::Avatar-->
+               <div class="symbol symbol-35px symbol-circle">
+                  <img alt="rmpic" src="/media/{{image}}/">
+               </div>
+               <!--end::Avatar-->
+               <!--begin::Details-->
+               <div class="ms-3">
+                  <a id="RMuserName" href="#" class="fs-4 fw-bold text-gray-900 text-hover-danger me-1 mb-2 lh-1">RM</a>
+                  <span class="badge badge-light-primary">Relationship Manager</span>
+               </div>
+               <!--end::Details-->
+            </div>
+            <!--end::User-->
+         </div>
+         <!--end::Title-->
+         <!--begin::Card toolbar-->
+         <div class="card-toolbar">
+            <!--begin::Close-->
+            <div class="btn btn-sm btn-icon btn-active-light-primary" id="kt_drawer_chat_close">
+               <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+               <span class="svg-icon svg-icon-2">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                     <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+                  </svg>
+               </span>
+               <!--end::Svg Icon-->
+            </div>
+            <!--end::Close-->
+         </div>
+         <!--end::Card toolbar-->
+      </div>
+      <!--end::Card header-->
+      <!--begin::Card body-->
+      <div class="card-body">
+         <!--begin::Messages-->
+         <div id="kt_drawer_chat_messenger_body" class="scroll-y me-n5 pe-5" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_drawer_chat_messenger_header, #kt_drawer_chat_messenger_footer" data-kt-scroll-wrappers="#kt_drawer_chat_messenger_body" data-kt-scroll-offset="0px">
+            
+         </div>
+         <!--end::Messages-->
+      </div>
+      <!--end::Card body-->
+      <!--begin::Card footer-->
+				<div class="card-footer pt-4" id="kt_drawer_chat_messenger_footer">
+					<!--begin:Toolbar-->
+					<div class="d-flex flex-stack">
+						<!--begin::Actions-->
+						<div class="d-flex align-items-center me-2">
+              <input id="fileUploaderInput" type="file" hidden />
+							<button id="fileUploader" class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Select File to upload...">
+								<i class="bi bi-paperclip fs-3"></i>
+							</button>
+						</div>
+						<!--end::Actions-->
+            <!--begin::Input-->
+            <textarea id="input_textarea" class="form-control form-control-flush mb-3 me-3" rows="1" data-kt-element="input" placeholder="Type a message"></textarea>
+            <!--end::Input-->
+						<!--begin::Send-->
+						<button id="kuchbhi" class="btn btn-primary" type="button" data-kt-element="send">Send</button>
+						<!--end::Send-->
+					</div>
+					<!--end::Toolbar-->
+          <div id="fileprogresscontainer" class="w-100 position-relative"> 
+						<!--<div id="fileprogressbar" class="progress my-5">
+						<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 50%" aria-valuenow="${precent}" aria-valuemin="0" aria-valuemax="100">${precent}%</div>
+						<a href="javascript:void(0);" class="delete_btn text-hover-primary p-0">x</a>
+						</div>-->
+					</div>
+				</div>
+				<!--end::Card footer-->
+   </div>
+   <!--end::Messenger-->
+</div>
+<!--end::Chat drawer-->
+
+
+
+
+{%endblock%}

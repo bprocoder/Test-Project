@@ -1,0 +1,2992 @@
+{% extends 'Super-Admin/index.html'%}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring |Account-Informations</title>
+{% endblock %}
+
+{%block sidebar%}
+<!--begin::sidebar menu-->
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+	<!--begin::Menu wrapper-->
+	<div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+		<!--begin::Menu-->
+		<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+			<div class="menu-item"> <a class="menu-link" href="/Admin-Dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+                  </svg>
+                  </span> </span> <span class="menu-title">Dashboards</span> </a>
+               </div> 
+
+    
+               <div class="menu-item"> <a class="menu-link active" href="/Account-Info/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor" />
+                <path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor" />
+                <path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor" />
+                <path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor" />
+                </svg>
+               </span> </span> <span class="menu-title">Accounts</span> </a>
+            </div> 
+			<!--begin:Menu item-->
+			<div class="menu-item pt-5">
+				<!--begin:Menu content-->
+				<div class="menu-content">
+					<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+				</div>
+				<!--end:Menu content-->
+			</div>
+			<!--end:Menu item-->
+
+
+
+			<!--begin:Menu item-->
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-icon">
+						<!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
+						<span class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="currentColor" />
+								<path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.1128C2.10209 18.0128 6.40208 22.0128 11.3021 21.9128C13.1021 21.8128 14.7021 21.3128 16.0021 20.4128C16.5021 20.1128 16.6021 19.3128 16.1021 18.9128L11.0021 13.7128Z" fill="currentColor"></path>
+								<path opacity="0.3" d="M21.9021 14.0128C21.7021 15.6128 21.1021 17.1128 20.1021 18.4128C19.7021 18.9128 19.0021 18.9128 18.6021 18.5128L13.0021 12.9128H20.9021C21.5021 12.9128 22.0021 13.4128 21.9021 14.0128Z" fill="currentColor"></path>
+								<rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor" />
+							</svg>
+						</span>
+						<!--end::Svg Icon-->
+					</span>
+					<span class="menu-title">Our Business</span>
+					<span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+				
+					
+					
+					<!--begin:Menu item-->
+					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+						<!--begin:Menu link-->
+						<span class="menu-link">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Orders-Details</span>
+							<span class="menu-arrow"></span>
+						</span>
+						<!--end:Menu link-->
+						<!--begin:Menu sub-->
+						<div class="menu-sub menu-sub-accordion menu-active-bg">
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="/Total-Orders/">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Total Orders</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="/Complete-Orders/">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Complete-Orders</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="/Pending-Orders/">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Pending Orders</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="/Cancelled-Orders/">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Cancelled-Orders</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							
+						</div>
+						<!--end:Menu sub-->
+					</div>
+					<!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-icon">
+						<!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+						<span class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
+								<path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
+							</svg>
+						</span>
+						<!--end::Svg Icon-->
+					</span>
+					<span class="menu-title">Users</span>
+					<span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link " href="/Agencies-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Agencies</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Account-User-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Accounts</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Brands-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Brands</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Clients-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Clients</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Creators-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Creaters</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link active" href="/RM-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">R M</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Managers-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Managers</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			</div>
+			<!--end:Menu item-->
+			
+				<!--begin:Menu item-->
+				<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+					<!--begin:Menu link-->
+					<span class="menu-link">
+						<span class="menu-icon">
+							<!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
+							<span class="svg-icon svg-icon-2">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor" />
+									<rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</span>
+						<span class="menu-title">Authentication</span>
+						<span class="menu-arrow"></span>
+					</span>
+					<!--end:Menu link-->
+					<!--begin:Menu sub-->
+					<div class="menu-sub menu-sub-accordion">
+					
+						
+						
+						<!--begin:Menu item-->
+						<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+							<!--begin:Menu link-->
+							<span class="menu-link">
+								<span class="menu-bullet">
+									<span class="bullet bullet-dot"></span>
+								</span>
+								<span class="menu-title">Email Templates</span>
+								<span class="menu-arrow"></span>
+							</span>
+							<!--end:Menu link-->
+							<!--begin:Menu sub-->
+							<div class="menu-sub menu-sub-accordion menu-active-bg">
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Welcome-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Welcome Message</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/'Reset-Password-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Reset Password</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Orders-Confirmed-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Orders Confirmed</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Card-Declined-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Credit Card Declined</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Promotions-Email1-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Promo Message 1</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Promotions-Email2-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Promo Message 2</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="Promotions-Email3-Message/'">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Promo Message 3</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+							</div>
+							<!--end:Menu sub-->
+						</div>
+						<!--end:Menu item-->
+					</div>
+					<!--end:Menu sub-->
+				</div>
+				<!--end:Menu item-->
+			
+			
+				<!--begin:Menu item-->
+				<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+					<!--begin:Menu link-->
+					<span class="menu-link">
+						<span class="menu-icon">
+							<!--begin::Svg Icon | path: icons/duotune/finance/fin001.svg-->
+							<span class="svg-icon svg-icon-2">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor" />
+									<path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</span>
+						<span class="menu-title">Blog</span>
+						<span class="menu-arrow"></span>
+					</span>
+					<!--end:Menu link-->
+					<!--begin:Menu sub-->
+					<div class="menu-sub menu-sub-accordion menu-active-bg">
+						<!--begin:Menu item-->
+						<div class="menu-item">
+							<!--begin:Menu link-->
+							<a class="menu-link" href="/Blogs-Home/">
+								<span class="menu-bullet">
+									<span class="bullet bullet-dot"></span>
+								</span>
+								<span class="menu-title">Blog Home</span>
+							</a>
+							<!--end:Menu link-->
+						</div>
+						<!--end:Menu item-->
+						
+					</div>
+					<!--end:Menu sub-->
+					<!--begin:Menu sub-->
+					<div class="menu-sub menu-sub-accordion menu-active-bg">
+						<!--begin:Menu item-->
+						<div class="menu-item">
+							<!--begin:Menu link-->
+							<a class="menu-link" href="/Total-Blog-List/">
+								<span class="menu-bullet">
+									<span class="bullet bullet-dot"></span>
+								</span>
+								<span class="menu-title">Total Blog List</span>
+							</a>
+							<!--end:Menu link-->
+						</div>
+						<!--end:Menu item-->
+					</div>
+					<!--end:Menu sub-->
+				</div>
+				<!--end:Menu item-->
+
+		<!--begin:Menu item-->
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <!--begin:Menu link-->
+            <span class="menu-link">
+                <span class="menu-icon">
+                    <!--begin::Svg Icon | path: icons/duotune/layouts/lay008.svg-->
+                    <span class="svg-icon svg-icon-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+                            <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                </span>
+                <span class="menu-title">Widgets</span>
+                <span class="menu-arrow"></span>
+            </span>
+            <!--end:Menu link-->
+            <!--begin:Menu sub-->
+            <div class="menu-sub menu-sub-accordion">
+                
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="/Data-Charts/">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Charts</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="/Data-Mixed/">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Mixed</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link " href="/Data-Tables/">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Tables</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                
+            </div>
+            <!--end:Menu sub-->
+        </div>
+        <!--end:Menu item-->
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			  <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+			  <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+			  <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+			</svg>
+			</span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+                <div class="menu-item"> <a class="menu-link" href="/Private-Chats/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Chat</span></a></div>
+                <div class="menu-item"> <a class="menu-link" href="/Groups-Chats/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Group Chat</span></a></div>
+                 
+			</div>
+		  </div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z" fill="currentColor"></path>
+				<path opacity="0.3" d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z" fill="currentColor"></path>
+			</svg>
+			</span> </span> <span class="menu-title">Role Management</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+                <div class="menu-item"> <a class="menu-link" href="/Role-Management/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Roles List</span></a></div>
+			</div>
+		  </div>
+
+
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="currentColor"></path>
+				<path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.1128C2.10209 18.0128 6.40208 22.0128 11.3021 21.9128C13.1021 21.8128 14.7021 21.3128 16.0021 20.4128C16.5021 20.1128 16.6021 19.3128 16.1021 18.9128L11.0021 13.7128Z" fill="currentColor"></path>
+				<path opacity="0.3" d="M21.9021 14.0128C21.7021 15.6128 21.1021 17.1128 20.1021 18.4128C19.7021 18.9128 19.0021 18.9128 18.6021 18.5128L13.0021 12.9128H20.9021C21.5021 12.9128 22.0021 13.4128 21.9021 14.0128Z" fill="currentColor"></path>
+			</svg>
+			</span> </span> <span class="menu-title">Career</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+               <div class="menu-item"> <a class="menu-link" href="/Upload-Job-Requirements/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">upload requirements</span></a></div>
+                <div class="menu-item"> <a class="menu-link" href="/Interested-Candidates/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Interested Candidates</span></a></div>
+				<div class="menu-item"> <a class="menu-link" href="/Employee-Review/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Employee Reviews</span></a></div>
+                 
+			</div>
+		  </div>
+
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="currentColor"></path>
+				<path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="currentColor"></path>
+			</svg>
+			</span> </span> <span class="menu-title">Seo Settings</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+                <div class="menu-item"> <a class="menu-link" href="/All-Page-SEO-Content/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">SEO Content for All</span></a></div>
+                <div class="menu-item"> <a class="menu-link" href="/Pagewise-SEOContent/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Page Wise SEO Content</span></a></div>
+			</div>
+		  </div>
+
+		  
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M11.7 8L7.49998 15.3L4.59999 20.3C3.49999 18.4 3.1 17.7 2.3 16.3C1.9 15.7 1.9 14.9 2.3 14.3L8.8 3L11.7 8Z" fill="currentColor"></path>
+				<path opacity="0.3" d="M11.7 8L8.79999 3H13.4C14.1 3 14.8 3.4 15.2 4L20.6 13.3H14.8L11.7 8ZM7.49997 15.2L4.59998 20.2H17.6C18.3 20.2 19 19.8 19.4 19.2C20.2 17.7 20.6 17 21.7 15.2H7.49997Z" fill="currentColor"></path>
+			</svg>
+			</span> </span> <span class="menu-title">User Referral</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+                <div class="menu-item"> <a class="menu-link" href="/User-Referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">User List</span></a></div>
+			</div>
+		  </div>
+		  
+		  <!--begin:Menu item-->
+		 <div class="menu-item">
+			<!--begin:Menu link-->
+			<a class="menu-link" href="/Calendar/">
+			 <span class="menu-icon">
+			 <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+			   <span class="svg-icon svg-icon-2">
+			   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			   <path opacity="0.3" d="M21 22H3C2.4 22 2 21.6 2 21V5C2 4.4 2.4 4 3 4H21C21.6 4 22 4.4 22 5V21C22 21.6 21.6 22 21 22Z" fill="currentColor" />
+			   <path d="M6 6C5.4 6 5 5.6 5 5V3C5 2.4 5.4 2 6 2C6.6 2 7 2.4 7 3V5C7 5.6 6.6 6 6 6ZM11 5V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V5C9 5.6 9.4 6 10 6C10.6 6 11 5.6 11 5ZM15 5V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V5C13 5.6 13.4 6 14 6C14.6 6 15 5.6 15 5ZM19 5V3C19 2.4 18.6 2 18 2C17.4 2 17 2.4 17 3V5C17 5.6 17.4 6 18 6C18.6 6 19 5.6 19 5Z" fill="currentColor" />
+			   <path d="M8.8 13.1C9.2 13.1 9.5 13 9.7 12.8C9.9 12.6 10.1 12.3 10.1 11.9C10.1 11.6 10 11.3 9.8 11.1C9.6 10.9 9.3 10.8 9 10.8C8.8 10.8 8.59999 10.8 8.39999 10.9C8.19999 11 8.1 11.1 8 11.2C7.9 11.3 7.8 11.4 7.7 11.6C7.6 11.8 7.5 11.9 7.5 12.1C7.5 12.2 7.4 12.2 7.3 12.3C7.2 12.4 7.09999 12.4 6.89999 12.4C6.69999 12.4 6.6 12.3 6.5 12.2C6.4 12.1 6.3 11.9 6.3 11.7C6.3 11.5 6.4 11.3 6.5 11.1C6.6 10.9 6.8 10.7 7 10.5C7.2 10.3 7.49999 10.1 7.89999 10C8.29999 9.90003 8.60001 9.80003 9.10001 9.80003C9.50001 9.80003 9.80001 9.90003 10.1 10C10.4 10.1 10.7 10.3 10.9 10.4C11.1 10.5 11.3 10.8 11.4 11.1C11.5 11.4 11.6 11.6 11.6 11.9C11.6 12.3 11.5 12.6 11.3 12.9C11.1 13.2 10.9 13.5 10.6 13.7C10.9 13.9 11.2 14.1 11.4 14.3C11.6 14.5 11.8 14.7 11.9 15C12 15.3 12.1 15.5 12.1 15.8C12.1 16.2 12 16.5 11.9 16.8C11.8 17.1 11.5 17.4 11.3 17.7C11.1 18 10.7 18.2 10.3 18.3C9.9 18.4 9.5 18.5 9 18.5C8.5 18.5 8.1 18.4 7.7 18.2C7.3 18 7 17.8 6.8 17.6C6.6 17.4 6.4 17.1 6.3 16.8C6.2 16.5 6.10001 16.3 6.10001 16.1C6.10001 15.9 6.2 15.7 6.3 15.6C6.4 15.5 6.6 15.4 6.8 15.4C6.9 15.4 7.00001 15.4 7.10001 15.5C7.20001 15.6 7.3 15.6 7.3 15.7C7.5 16.2 7.7 16.6 8 16.9C8.3 17.2 8.6 17.3 9 17.3C9.2 17.3 9.5 17.2 9.7 17.1C9.9 17 10.1 16.8 10.3 16.6C10.5 16.4 10.5 16.1 10.5 15.8C10.5 15.3 10.4 15 10.1 14.7C9.80001 14.4 9.50001 14.3 9.10001 14.3C9.00001 14.3 8.9 14.3 8.7 14.3C8.5 14.3 8.39999 14.3 8.39999 14.3C8.19999 14.3 7.99999 14.2 7.89999 14.1C7.79999 14 7.7 13.8 7.7 13.7C7.7 13.5 7.79999 13.4 7.89999 13.2C7.99999 13 8.2 13 8.5 13H8.8V13.1ZM15.3 17.5V12.2C14.3 13 13.6 13.3 13.3 13.3C13.1 13.3 13 13.2 12.9 13.1C12.8 13 12.7 12.8 12.7 12.6C12.7 12.4 12.8 12.3 12.9 12.2C13 12.1 13.2 12 13.6 11.8C14.1 11.6 14.5 11.3 14.7 11.1C14.9 10.9 15.2 10.6 15.5 10.3C15.8 10 15.9 9.80003 15.9 9.70003C15.9 9.60003 16.1 9.60004 16.3 9.60004C16.5 9.60004 16.7 9.70003 16.8 9.80003C16.9 9.90003 17 10.2 17 10.5V17.2C17 18 16.7 18.4 16.2 18.4C16 18.4 15.8 18.3 15.6 18.2C15.4 18.1 15.3 17.8 15.3 17.5Z" fill="currentColor" />
+			   </svg>
+			   </span>
+			 <!--end::Svg Icon-->
+			 </span>
+			<span class="menu-title">Calendar</span>
+			</a>
+		   <!--end:Menu link-->
+		   </div>
+		   <!--end:Menu item-->
+		</div>
+		<!--end::Menu-->
+	</div>
+	<!--end::Menu wrapper-->
+</div>
+<!--end::sidebar menu-->
+{%endblock%}
+ 
+
+
+{%block body%}
+<!--begin::Main-->
+<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+						<!--begin::Content wrapper-->
+						<div class="d-flex flex-column flex-column-fluid">
+							<!--begin::Toolbar-->
+							<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+								<!--begin::Toolbar container-->
+								<div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+									<!--begin::Page title-->
+									<div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+										<!--begin::Title-->
+										<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Finance Performance</h1>
+										<!--end::Title-->
+										<!--begin::Breadcrumb-->
+										<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+											<!--begin::Item-->
+											<li class="breadcrumb-item text-muted">
+												<a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Home</a>
+											</li>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<li class="breadcrumb-item">
+												<span class="bullet bg-gray-400 w-5px h-2px"></span>
+											</li>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<li class="breadcrumb-item text-muted">Dashboards</li>
+											<!--end::Item-->
+										</ul>
+										<!--end::Breadcrumb-->
+									</div>
+									<!--end::Page title-->
+								
+								</div>
+								<!--end::Toolbar container-->
+							</div>
+							<!--end::Toolbar-->
+							<!--begin::Content-->
+							<div id="kt_app_content" class="app-content flex-column-fluid">
+								<!--begin::Content container-->
+								<div id="kt_app_content_container" class="app-container container-xxl">
+									<!--begin::Row-->
+									<div class="row gy-5 g-xl-10">
+										<!--begin::Col-->
+										<div class="col-sm-6 col-xl-2 mb-xl-10">
+											<!--begin::Card widget 2-->
+											<div class="card h-lg-100">
+												<!--begin::Body-->
+												<div class="card-body d-flex justify-content-between align-items-start flex-column">
+													<!--begin::Icon-->
+													<div class="m-0">
+														<!--begin::Svg Icon | path: icons/duotune/maps/map004.svg-->
+														<span class="svg-icon svg-icon-2hx svg-icon-gray-600">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M18.4 5.59998C21.9 9.09998 21.9 14.8 18.4 18.3C14.9 21.8 9.2 21.8 5.7 18.3L18.4 5.59998Z" fill="currentColor" />
+																<path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM19.9 11H13V8.8999C14.9 8.6999 16.7 8.00005 18.1 6.80005C19.1 8.00005 19.7 9.4 19.9 11ZM11 19.8999C9.7 19.6999 8.39999 19.2 7.39999 18.5C8.49999 17.7 9.7 17.2001 11 17.1001V19.8999ZM5.89999 6.90002C7.39999 8.10002 9.2 8.8 11 9V11.1001H4.10001C4.30001 9.4001 4.89999 8.00002 5.89999 6.90002ZM7.39999 5.5C8.49999 4.7 9.7 4.19998 11 4.09998V7C9.7 6.8 8.39999 6.3 7.39999 5.5ZM13 17.1001C14.3 17.3001 15.6 17.8 16.6 18.5C15.5 19.3 14.3 19.7999 13 19.8999V17.1001ZM13 4.09998C14.3 4.29998 15.6 4.8 16.6 5.5C15.5 6.3 14.3 6.80002 13 6.90002V4.09998ZM4.10001 13H11V15.1001C9.1 15.3001 7.29999 16 5.89999 17.2C4.89999 16 4.30001 14.6 4.10001 13ZM18.1 17.1001C16.6 15.9001 14.8 15.2 13 15V12.8999H19.9C19.7 14.5999 19.1 16.0001 18.1 17.1001Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Icon-->
+													<!--begin::Section-->
+													<div class="d-flex flex-column my-7">
+														<!--begin::Number-->
+														<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">120000</span>
+														<!--end::Number-->
+														<!--begin::Follower-->
+														<div class="m-0">
+															<span class="fw-semibold fs-na text-gray-400">All service Total orders</span>
+														</div>
+														<!--end::Follower-->
+													</div>
+													<!--end::Section-->
+													<!--begin::Badge-->
+													<span class="badge badge-light-success fs-base">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+													<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+															<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->2.1%</span>
+													<!--end::Badge-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Card widget 2-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-sm-6 col-xl-2 mb-xl-10">
+											<!--begin::Card widget 2-->
+											<div class="card h-lg-100">
+												<!--begin::Body-->
+												<div class="card-body d-flex justify-content-between align-items-start flex-column">
+													<!--begin::Icon-->
+													<div class="m-0">
+														<!--begin::Svg Icon | path: icons/duotune/graphs/gra001.svg-->
+														<span class="svg-icon svg-icon-2hx svg-icon-gray-600">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M14 3V21H10V3C10 2.4 10.4 2 11 2H13C13.6 2 14 2.4 14 3ZM7 14H5C4.4 14 4 14.4 4 15V21H8V15C8 14.4 7.6 14 7 14Z" fill="currentColor" />
+																<path d="M21 20H20V8C20 7.4 19.6 7 19 7H17C16.4 7 16 7.4 16 8V20H3C2.4 20 2 20.4 2 21C2 21.6 2.4 22 3 22H21C21.6 22 22 21.6 22 21C22 20.4 21.6 20 21 20Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Icon-->
+													<!--begin::Section-->
+													<div class="d-flex flex-column my-7">
+														<!--begin::Number-->
+														<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">27,50,000</span>
+														<!--end::Number-->
+														<!--begin::Follower-->
+														<div class="m-0">
+															<span class="fw-semibold fs-na text-gray-400">Total Orders Value</span>
+														</div>
+														<!--end::Follower-->
+													</div>
+													<!--end::Section-->
+													<!--begin::Badge-->
+													<span class="badge badge-light-success fs-base">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+													<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+															<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->2.1%</span>
+													<!--end::Badge-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Card widget 2-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-sm-6 col-xl-2 mb-xl-10">
+											<!--begin::Card widget 2-->
+											<div class="card h-lg-100">
+												<!--begin::Body-->
+												<div class="card-body d-flex justify-content-between align-items-start flex-column">
+													<!--begin::Icon-->
+													<div class="m-0">
+														<!--begin::Svg Icon | path: icons/duotune/abstract/abs048.svg-->
+														<span class="svg-icon svg-icon-2hx svg-icon-gray-600">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor" />
+																<path d="M8.70001 6C8.10001 5.7 7.39999 5.40001 6.79999 5.10001C7.79999 4.00001 8.90001 3 10.1 2.2C10.7 2.1 11.4 2 12 2C12.7 2 13.3 2.1 13.9 2.2C12 3.2 10.2 4.5 8.70001 6ZM12 8.39999C13.9 6.59999 16.2 5.30001 18.7 4.60001C18.1 4.00001 17.4 3.6 16.7 3.2C14.4 4.1 12.2 5.40001 10.5 7.10001C11 7.50001 11.5 7.89999 12 8.39999ZM7 20C7 20.2 7 20.4 7 20.6C6.2 20.1 5.49999 19.6 4.89999 19C4.59999 18 4.00001 17.2 3.20001 16.6C2.80001 15.8 2.49999 15 2.29999 14.1C4.99999 14.7 7 17.1 7 20ZM10.6 9.89999C8.70001 8.09999 6.39999 6.9 3.79999 6.3C3.39999 6.9 2.99999 7.5 2.79999 8.2C5.39999 8.6 7.7 9.80001 9.5 11.6C9.8 10.9 10.2 10.4 10.6 9.89999ZM2.20001 10.1C2.10001 10.7 2 11.4 2 12C2 12 2 12 2 12.1C4.3 12.4 6.40001 13.7 7.60001 15.6C7.80001 14.8 8.09999 14.1 8.39999 13.4C6.89999 11.6 4.70001 10.4 2.20001 10.1ZM11 20C11 14 15.4 9.00001 21.2 8.10001C20.9 7.40001 20.6 6.8 20.2 6.2C13.8 7.5 9 13.1 9 19.9C9 20.4 9.00001 21 9.10001 21.5C9.80001 21.7 10.5 21.8 11.2 21.9C11.1 21.3 11 20.7 11 20ZM19.1 19C19.4 18 20 17.2 20.8 16.6C21.2 15.8 21.5 15 21.7 14.1C19 14.7 16.9 17.1 16.9 20C16.9 20.2 16.9 20.4 16.9 20.6C17.8 20.2 18.5 19.6 19.1 19ZM15 20C15 15.9 18.1 12.6 22 12.1C22 12.1 22 12.1 22 12C22 11.3 21.9 10.7 21.8 10.1C16.8 10.7 13 14.9 13 20C13 20.7 13.1 21.3 13.2 21.9C13.9 21.8 14.5 21.7 15.2 21.5C15.1 21 15 20.5 15 20Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Icon-->
+													<!--begin::Section-->
+													<div class="d-flex flex-column my-7">
+														<!--begin::Number-->
+														<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">15,00,000</span>
+														<!--end::Number-->
+														<!--begin::Follower-->
+														<div class="m-0">
+															<span class="fw-semibold fs-na text-gray-400">completed-orders value</span>
+														</div>
+														<!--end::Follower-->
+													</div>
+													<!--end::Section-->
+													<!--begin::Badge-->
+													<span class="badge badge-light-danger fs-base">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
+													<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
+															<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->0.47%</span>
+													<!--end::Badge-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Card widget 2-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-sm-6 col-xl-2 mb-xl-10">
+											<!--begin::Card widget 2-->
+											<div class="card h-lg-100">
+												<!--begin::Body-->
+												<div class="card-body d-flex justify-content-between align-items-start flex-column">
+													<!--begin::Icon-->
+													<div class="m-0">
+														<!--begin::Svg Icon | path: icons/duotune/maps/map002.svg-->
+														<span class="svg-icon svg-icon-2hx svg-icon-gray-600">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M8.7 4.19995L4 6.30005V18.8999L8.7 16.8V19L3.1 21.5C2.6 21.7 2 21.4 2 20.8V6C2 5.4 2.3 4.89995 2.9 4.69995L8.7 2.09998V4.19995Z" fill="currentColor" />
+																<path d="M15.3 19.8L20 17.6999V5.09992L15.3 7.19989V4.99994L20.9 2.49994C21.4 2.29994 22 2.59989 22 3.19989V17.9999C22 18.5999 21.7 19.1 21.1 19.3L15.3 21.8998V19.8Z" fill="currentColor" />
+																<path opacity="0.3" d="M15.3 7.19995L20 5.09998V17.7L15.3 19.8V7.19995Z" fill="currentColor" />
+																<path opacity="0.3" d="M8.70001 4.19995V2L15.4 5V7.19995L8.70001 4.19995ZM8.70001 16.8V19L15.4 22V19.8L8.70001 16.8Z" fill="currentColor" />
+																<path opacity="0.3" d="M8.7 16.8L4 18.8999V6.30005L8.7 4.19995V16.8Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Icon-->
+													<!--begin::Section-->
+													<div class="d-flex flex-column my-7">
+														<!--begin::Number-->
+														<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">17,0000</span>
+														<!--end::Number-->
+														<!--begin::Follower-->
+														<div class="m-0">
+															<span class="fw-semibold fs-na text-gray-400">Cancelled-Orders value</span>
+														</div>
+														<!--end::Follower-->
+													</div>
+													<!--end::Section-->
+													<!--begin::Badge-->
+													<span class="badge badge-light-success fs-base">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+													<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+															<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->2.1%</span>
+													<!--end::Badge-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Card widget 2-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-sm-6 col-xl-2 mb-5 mb-xl-10">
+											<!--begin::Card widget 2-->
+											<div class="card h-lg-100">
+												<!--begin::Body-->
+												<div class="card-body d-flex justify-content-between align-items-start flex-column">
+													<!--begin::Icon-->
+													<div class="m-0">
+														<!--begin::Svg Icon | path: icons/duotune/abstract/abs037.svg-->
+														<span class="svg-icon svg-icon-2hx svg-icon-gray-600">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M2.10001 10C3.00001 5.6 6.69998 2.3 11.2 2L8.79999 4.39999L11.1 7C9.60001 7.3 8.30001 8.19999 7.60001 9.59999L4.5 12.4L2.10001 10ZM19.3 11.5L16.4 14C15.7 15.5 14.4 16.6 12.7 16.9L15 19.5L12.6 21.9C17.1 21.6 20.8 18.2 21.7 13.9L19.3 11.5Z" fill="currentColor" />
+																<path d="M13.8 2.09998C18.2 2.99998 21.5 6.69998 21.8 11.2L19.4 8.79997L16.8 11C16.5 9.39998 15.5 8.09998 14 7.39998L11.4 4.39998L13.8 2.09998ZM12.3 19.4L9.69998 16.4C8.29998 15.7 7.3 14.4 7 12.8L4.39999 15.1L2 12.7C2.3 17.2 5.7 20.9 10 21.8L12.3 19.4Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Icon-->
+													<!--begin::Section-->
+													<div class="d-flex flex-column my-7">
+														<!--begin::Number-->
+														<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">72,480</span>
+														<!--end::Number-->
+														<!--begin::Follower-->
+														<div class="m-0">
+															<span class="fw-semibold fs-na text-gray-400">Pending Orders value</span>
+														</div>
+														<!--end::Follower-->
+													</div>
+													<!--end::Section-->
+													<!--begin::Badge-->
+													<span class="badge badge-light-danger fs-base">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
+													<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
+															<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->0.647%</span>
+													<!--end::Badge-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Card widget 2-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-sm-6 col-xl-2 mb-5 mb-xl-10">
+											<!--begin::Card widget 2-->
+											<div class="card h-lg-100">
+												<!--begin::Body-->
+												<div class="card-body d-flex justify-content-between align-items-start flex-column">
+													<!--begin::Icon-->
+													<div class="m-0">
+														<!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
+														<span class="svg-icon svg-icon-2hx svg-icon-gray-600">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="currentColor" />
+																<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Icon-->
+													<!--begin::Section-->
+													<div class="d-flex flex-column my-7">
+														<!--begin::Number-->
+														<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">15,00,000</span>
+														<!--end::Number-->
+														<!--begin::Follower-->
+														<div class="m-0">
+															<span class="fw-semibold fs-na text-gray-400"> Total Saving</span>
+														</div>
+														<!--end::Follower-->
+													</div>
+													<!--end::Section-->
+													<!--begin::Badge-->
+													<span class="badge badge-light-success fs-base">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+													<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+															<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->2.1%</span>
+													<!--end::Badge-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Card widget 2-->
+										</div>
+										<!--end::Col-->
+									</div>
+									<!--end::Row-->
+									<!--begin::Row-->
+									<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+										<!--begin::Col-->
+										<div class="col-xl-4">
+											<!--begin::Chart widget 19-->
+											<div class="card card-flush h-100 mb-5 mb-xl-10">
+												<!--begin::Header-->
+												<div class="card-header pt-7">
+													<!--begin::Title-->
+													<h3 class="card-title align-items-start flex-column">
+														<span class="card-label fw-bold text-dark">Recent Transactions in Platform</span>
+														<span class="text-gray-400 pt-2 fw-semibold fs-6">Last Orders & Transactions</span>
+													</h3>
+													<!--end::Title-->
+													<!--begin::Toolbar-->
+													<div class="card-toolbar">
+														
+													</div>
+													<!--end::Toolbar-->
+												</div>
+												<!--end::Header-->
+												<!--begin::Body-->
+												<div class="card-body pt-0">
+													<!--begin::Tab Content (ishlamayabdi)-->
+													<div class="tab-content">
+														<!--begin::Tap pane-->
+														<div class="tab-pane fade show active" id="kt_chart_widget_19_tab_content_1">
+															
+															<!--begin::Items-->
+															<div class="m-0">
+															
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Anveshi Jain </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Shoutout</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Ritika Sajdeh </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Brand Promotion</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Ritika Sajdeh </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Video Chat Service</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																
+
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Anveshi Jain </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Greeting Service</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic2.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Anveshi Jain </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Video Chat Service</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic2.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Anveshi Jain </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Greeting Service</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2070</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic2.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Ritika Sajdeh </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Brand Promotion</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 1078</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Anveshi Jain </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Brand Promotion</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Ritika Sajdeh </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Brand Promotion</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic2.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Anveshi Jain </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Brand Promotion</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 1078</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Ritika Sajdeh </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Brand Promotion</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Ritika Sajdeh </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Brand Promotion</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="https://www.influencerhiring.com/media/Profileimages/pic5.webp" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary ">Ritika Sajdeh </a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Brand Promotion</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			
+																			<!--end::Svg Icon-->Rs. 2978</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+			
+															</div>
+															<!--end::Items-->
+														</div>
+														<!--end::Tap pane-->
+														<!--begin::Tap pane-->
+														<div class="tab-pane fade" id="kt_chart_widget_19_tab_content_2">
+															<!--begin::Chart container-->
+															<div id="kt_charts_widget_19_chart_2" class="w-100 h-400px mb-13 mt-n4"></div>
+															<!--end::Chart container-->
+															<!--begin::Items-->
+															<div class="m-0">
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="assets/media/svg/brand-logos/atica.svg" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Abstergo Ltd.</a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Community</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		<!--begin::Number-->
+																		<span class="text-gray-800 fw-bold fs-4 me-3">579</span>
+																		<!--end::Number-->
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->2.6%</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="assets/media/svg/brand-logos/telegram-2.svg" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Binford Ltd.</a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Social Media</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		<!--begin::Number-->
+																		<span class="text-gray-800 fw-bold fs-4 me-3">2,588</span>
+																		<!--end::Number-->
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-danger fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
+																			<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
+																					<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->0.4%</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="assets/media/svg/brand-logos/balloon.svg" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Barone LLC.</a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Messanger</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		<!--begin::Number-->
+																		<span class="text-gray-800 fw-bold fs-4 me-3">794</span>
+																		<!--end::Number-->
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->0.2%</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="assets/media/svg/brand-logos/kickstarter.svg" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Abstergo Ltd.</a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Video Channel</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		<!--begin::Number-->
+																		<span class="text-gray-800 fw-bold fs-4 me-3">1,578</span>
+																		<!--end::Number-->
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->4.1%</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="assets/media/svg/brand-logos/vimeo.svg" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Biffco Enterprises</a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Social Network</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		<!--begin::Number-->
+																		<span class="text-gray-800 fw-bold fs-4 me-3">3,458</span>
+																		<!--end::Number-->
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->8.3%</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+																<!--begin::Separator-->
+																<div class="separator separator-dashed my-4"></div>
+																<!--end::Separator-->
+																<!--begin::Item-->
+																<div class="d-flex flex-stack">
+																	<!--begin::Section-->
+																	<div class="d-flex align-items-center me-5">
+																		<!--begin::Flag-->
+																		<img src="assets/media/svg/brand-logos/plurk.svg" class="me-4 w-30px" style="border-radius: 4px" alt="" />
+																		<!--end::Flag-->
+																		<!--begin::Content-->
+																		<div class="me-5">
+																			<!--begin::Title-->
+																			<a href="#" class="text-gray-800 fw-bold text-hover-primary fs-6">Big Kahuna Burger</a>
+																			<!--end::Title-->
+																			<!--begin::Desc-->
+																			<span class="text-gray-400 fw-semibold fs-7 d-block text-start ps-0">Social Network</span>
+																			<!--end::Desc-->
+																		</div>
+																		<!--end::Content-->
+																	</div>
+																	<!--end::Section-->
+																	<!--begin::Wrapper-->
+																	<div class="d-flex align-items-center">
+																		<!--begin::Number-->
+																		<span class="text-gray-800 fw-bold fs-4 me-3">2,047</span>
+																		<!--end::Number-->
+																		<!--begin::Info-->
+																		<div class="m-0">
+																			<!--begin::Label-->
+																			<span class="badge badge-light-success fs-base">
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																			<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon-->1.9%</span>
+																			<!--end::Label-->
+																		</div>
+																		<!--end::Info-->
+																	</div>
+																	<!--end::Wrapper-->
+																</div>
+																<!--end::Item-->
+															</div>
+															<!--end::Items-->
+														</div>
+														<!--end::Tap pane-->
+													</div>
+													<!--end::Tab Content-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Chart widget 19-->
+										</div>
+										<!--end::Col-->
+										<!--begin::Col-->
+										<div class="col-xl-8 mb-5 mb-xl-10">
+											<!--begin::Chart widget 38-->
+											<div class="card card-flush h-xl-50 mb-xl-10">
+												<!--begin::Header-->
+												<div class="card-header pt-7">
+													<!--begin::Title-->
+													<h3 class="card-title align-items-start flex-column">
+														<span class="card-label fw-bold text-gray-800">Total Earning analysis of all orders</span>
+														<span class="text-gray-400 mt-1 fw-semibold fs-6">Calculate in Percentage</span>
+													</h3>
+													<!--end::Title-->
+													<!--begin::Toolbar-->
+													<div class="card-toolbar">
+														
+													</div>
+													<!--end::Toolbar-->
+												</div>
+												<!--end::Header-->
+												<!--begin::Body-->
+												<div class="card-body d-flex align-items-end px-0 pt-3 pb-5">
+													<!--begin::Chart-->
+													<div id="chartdiv" class="h-325px w-100 min-h-auto ps-4 pe-6"></div>
+													<!--end::Chart-->
+												</div>
+												<!--end: Card Body-->
+											</div>
+											<!--end::Chart widget 38-->
+											<!--begin::Chart widget 20-->
+											<div class="card card-flush h-xl-50">
+												<!--begin::Header-->
+												<div class="card-header py-5">
+													<!--begin::Title-->
+													<h3 class="card-title fw-bold text-gray-800"> Revenue & Expenses & Profit </h3>
+													<!--end::Title-->
+													<!--begin::Toolbar-->
+													<div class="card-toolbar">
+														
+													</div>
+													<!--end::Toolbar-->
+												</div>
+												<!--end::Header-->
+												<!--begin::Card body-->
+												<div class="card-body d-flex justify-content-between flex-column pb-0 px-0 pt-1">
+													<!--begin::Items-->
+													<div class="d-flex flex-wrap d-grid gap-5 px-9 mb-5">
+														<!--begin::Item-->
+														<div class="me-md-2">
+															<!--begin::Statistics-->
+															<div class="d-flex mb-2">
+																<span class="fs-4 fw-semibold text-gray-400 me-1">Rs.</span>
+																<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">12,706</span>
+															</div>
+															<!--end::Statistics-->
+															<!--begin::Description-->
+															<span class="fs-6 fw-semibold text-gray-400">Total Revenue</span>
+															<!--end::Description-->
+														</div>
+														<!--end::Item-->
+														<!--begin::Item-->
+														<div class="border-start-dashed border-end-dashed border-1 border-gray-300 px-5 ps-md-10 pe-md-7 me-md-5">
+															<!--begin::Statistics-->
+															<div class="d-flex mb-2">
+																<span class="fs-4 fw-semibold text-gray-400 me-1">Rs.</span>
+																<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">8,035</span>
+															</div>
+															<!--end::Statistics-->
+															<!--begin::Description-->
+															<span class="fs-6 fw-semibold text-gray-400">Total Expenses</span>
+															<!--end::Description-->
+														</div>
+														<!--end::Item-->
+														<!--begin::Item-->
+														<div class="m-0">
+															<!--begin::Statistics-->
+															<div class="d-flex align-items-center mb-2">
+																<!--begin::Currency-->
+																<span class="fs-4 fw-semibold text-gray-400 align-self-start me-1">Rs.</span>
+																<!--end::Currency-->
+																<!--begin::Value-->
+																<span class="fw-semibold fs-3x text-gray-800 lh-1 ls-n2">4,684</span>
+																<!--end::Value-->
+																
+															</div>
+															<!--end::Statistics-->
+															<!--begin::Description-->
+															<span class="fs-6 fw-semibold text-gray-400">Total Profit</span>
+															<!--end::Description-->
+														</div>
+														<!--end::Item-->
+													</div>
+													<!--end::Items-->
+													<!--begin::Chart-->
+													<div id="kt_charts_widget_6_chart" style="height: 350px; min-height: 365px;">
+													<!--end::Chart-->
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Chart widget 20-->
+										</div>
+										<!--end::Col-->
+									</div>
+								</div>
+									<!--end::Row-->
+
+									<!--begin::Billing Address-->
+									<div class="card mb-5 mb-xl-10">
+										<!--begin::Card header-->
+										<div class="card-header">
+											<!--begin::Title-->
+											<div class="card-title">
+												<h3>Billing Address</h3>
+											</div>
+											<!--end::Title-->
+										</div>
+										<!--end::Card header-->
+										<!--begin::Card body-->
+										<div class="card-body">
+											<!--begin::Addresses-->
+											<div class="row gx-9 gy-6">
+												<!--begin::Col-->
+												<div class="col-xl-6" data-kt-billing-element="address">
+													<!--begin::Address-->
+													<div class="card card-dashed h-xl-100 flex-row flex-stack flex-wrap p-6">
+														<!--begin::Details-->
+														<div class="d-flex flex-column py-2">
+															<div class="d-flex align-items-center fs-5 fw-bold mb-5">Address 1
+															<span class="badge badge-light-success fs-7 ms-2">Primary</span></div>
+															<div class="fs-6 fw-semibold text-gray-600">Ap #285-7193 Ullamcorper Avenue
+															<br />Amesbury HI 93373
+															<br />US</div>
+														</div>
+														<!--end::Details-->
+														<!--begin::Actions-->
+														<div class="d-flex align-items-center py-2">
+															<button class="btn btn-sm btn-light btn-active-light-primary me-3" data-kt-billing-action="address-delete">
+																<!--begin::Indicator label-->
+																<span class="indicator-label">Delete</span>
+																<!--end::Indicator label-->
+																<!--begin::Indicator progress-->
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+																<!--end::Indicator progress-->
+															</button>
+															<button class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Edit</button>
+														</div>
+														<!--end::Actions-->
+													</div>
+													<!--end::Address-->
+												</div>
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="col-xl-6" data-kt-billing-element="address">
+													<!--begin::Address-->
+													<div class="card card-dashed h-xl-100 flex-row flex-stack flex-wrap p-6">
+														<!--begin::Details-->
+														<div class="d-flex flex-column py-2">
+															<div class="d-flex align-items-center fs-5 fw-bold mb-3">Address 2</div>
+															<div class="fs-6 fw-semibold text-gray-600">Ap #285-7193 Ullamcorper Avenue
+															<br />Amesbury HI 93373
+															<br />US</div>
+														</div>
+														<!--end::Details-->
+														<!--begin::Actions-->
+														<div class="d-flex align-items-center py-2">
+															<button class="btn btn-sm btn-light btn-active-light-primary me-3" data-kt-billing-action="address-delete">
+																<!--begin::Indicator label-->
+																<span class="indicator-label">Delete</span>
+																<!--end::Indicator label-->
+																<!--begin::Indicator progress-->
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+																<!--end::Indicator progress-->
+															</button>
+															<button class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Edit</button>
+														</div>
+														<!--end::Actions-->
+													</div>
+													<!--end::Address-->
+												</div>
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="col-xl-6" data-kt-billing-element="address">
+													<!--begin::Address-->
+													<div class="card card-dashed h-xl-100 flex-row flex-stack flex-wrap p-6">
+														<!--begin::Details-->
+														<div class="d-flex flex-column py-2">
+															<div class="d-flex align-items-center fs-5 fw-bold mb-3">Address 3</div>
+															<div class="fs-6 fw-semibold text-gray-600">Ap #285-7193 Ullamcorper Avenue
+															<br />Amesbury HI 93373
+															<br />US</div>
+														</div>
+														<!--end::Details-->
+														<!--begin::Actions-->
+														<div class="d-flex align-items-center py-2">
+															<button class="btn btn-sm btn-light btn-active-light-primary me-3" data-kt-billing-action="address-delete">
+																<!--begin::Indicator label-->
+																<span class="indicator-label">Delete</span>
+																<!--end::Indicator label-->
+																<!--begin::Indicator progress-->
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+																<!--end::Indicator progress-->
+															</button>
+															<button class="btn btn-sm btn-light btn-active-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Edit</button>
+														</div>
+														<!--end::Actions-->
+													</div>
+													<!--end::Address-->
+												</div>
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="col-xl-6">
+													<!--begin::Notice-->
+													<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed flex-stack h-xl-100 mb-10 p-6">
+														<!--begin::Wrapper-->
+														<div class="d-flex flex-stack flex-grow-1 flex-wrap flex-md-nowrap">
+															<!--begin::Content-->
+															<div class="mb-3 mb-md-0 fw-semibold">
+																<h4 class="text-gray-900 fw-bold">This is a very important note!</h4>
+																<div class="fs-6 text-gray-700 pe-7">Writing headlines for blog posts is much science and probably cool audience</div>
+															</div>
+															<!--end::Content-->
+															<!--begin::Action-->
+															<a href="#" class="btn btn-primary px-6 align-self-center text-nowrap" data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">New Address</a>
+															<!--end::Action-->
+														</div>
+														<!--end::Wrapper-->
+													</div>
+													<!--end::Notice-->
+												</div>
+												<!--end::Col-->
+											</div>
+											<!--end::Addresses-->
+											<!--begin::Tax info-->
+											<div class="mt-10">
+												<h3 class="mb-3">Tax Location</h3>
+												<div class="fw-semibold text-gray-600 fs-6">United States - 10% VAT
+												<br />
+												<a class="fw-bold" href="#">More Info</a></div>
+											</div>
+											<!--end::Tax info-->
+										</div>
+										<!--end::Card body-->
+									</div>
+									<!--end::Billing Address-->
+									
+
+                                    <!--begin::Content-->
+							      <div id="kt_app_content" class="app-content flex-column-fluid">
+									<!--begin::Card-->
+									<div class="card">
+										<!--begin::Card header-->
+										<div class="card-header border-0 pt-6">
+											<!--begin::Card title-->
+											<div class="card-title">
+												<!--begin::Search-->
+												<div class="d-flex align-items-center position-relative my-1">
+													<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+													<span class="svg-icon svg-icon-1 position-absolute ms-6">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+															<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->
+													<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Customers" />
+												</div>
+												<!--end::Search-->
+											</div>
+											<!--begin::Card title-->
+											<!--begin::Card toolbar-->
+											<div class="card-toolbar">
+												<!--begin::Toolbar-->
+												<div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
+													<!--begin::Filter-->
+													<button type="button" class="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+													<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
+													<span class="svg-icon svg-icon-2">
+													
+													</span>
+													<!--end::Svg Icon-->Platform Transaction History</button>
+													
+													<!--end::Filter-->
+													
+													
+												</div>
+												<!--end::Toolbar-->
+												<!--begin::Group actions-->
+												<div class="d-flex justify-content-end align-items-center d-none" data-kt-customer-table-toolbar="selected">
+													<div class="fw-bold me-5">
+													<span class="me-2" data-kt-customer-table-select="selected_count"></span>Selected</div>
+													<button type="button" class="btn btn-danger" data-kt-customer-table-select="delete_selected">Delete Selected</button>
+												</div>
+												<!--end::Group actions-->
+											</div>
+											<!--end::Card toolbar-->
+										</div>
+										<!--end::Card header-->
+										<!--begin::Card body-->
+										<div class="card-body pt-0">
+											<!--begin::Table-->
+											<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+												<!--begin::Table head-->
+												<thead>
+													<!--begin::Table row-->
+													<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+														<th class="w-10px pe-2">
+															<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+																<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
+															</div>
+														</th>
+														<th class="min-w-125px">Customer Name</th>
+														<th class="min-w-125px">Email</th>
+														<th class="min-w-125px">Service Name</th>
+														<th class="min-w-125px">Payment Method</th>
+														<th class="min-w-125px">Created Date</th>
+														<th class="text-end min-w-70px">Actions</th>
+													</tr>
+													<!--end::Table row-->
+												</thead>
+												<!--end::Table head-->
+												<!--begin::Table body-->
+												<tbody class="fw-semibold text-gray-600">
+													<tr>
+														<!--begin::Checkbox-->
+														<td>
+															<div class="form-check form-check-sm form-check-custom form-check-solid">
+																<input class="form-check-input" type="checkbox" value="1" />
+															</div>
+														</td>
+														<!--end::Checkbox-->
+														<!--begin::Name=-->
+														<td>
+															<a href="../../demo1/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
+														</td>
+														<!--end::Name=-->
+														<!--begin::Email=-->
+														<td>
+															<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
+														</td>
+														<!--end::Email=-->
+														<!--begin::Company=-->
+														<td><div class="badge badge-light-success">Brand Promotion</div></td>
+														<!--end::Company=-->
+														<!--begin::Payment method=-->
+														<td data-filter="mastercard">
+														<img src="{%static 'asset/media/svg/card-logos/mastercard.svg'%}" class="w-35px me-3" alt="" />**** 9216</td>
+														<!--end::Payment method=-->
+														<!--begin::Date=-->
+														<td>14 Dec 2020, 8:43 pm</td>
+														<!--end::Date=-->
+														<!--begin::Action=-->
+														<td class="text-end">
+															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+															<span class="svg-icon svg-icon-5 m-0">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon--></a>
+															<!--begin::Menu-->
+															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="../../demo1/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																</div>
+																<!--end::Menu item-->
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																</div>
+																<!--end::Menu item-->
+															</div>
+															<!--end::Menu-->
+														</td>
+														<!--end::Action=-->
+													</tr>
+												
+													<tr>
+														<!--begin::Checkbox-->
+														<td>
+															<div class="form-check form-check-sm form-check-custom form-check-solid">
+																<input class="form-check-input" type="checkbox" value="1" />
+															</div>
+														</td>
+														<!--end::Checkbox-->
+														<!--begin::Name=-->
+														<td>
+															<a href="../../demo1/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Melody Macy</a>
+														</td>
+														<!--end::Name=-->
+														<!--begin::Email=-->
+														<td>
+															<a href="#" class="text-gray-600 text-hover-primary mb-1">melody@altbox.com</a>
+														</td>
+														<!--end::Email=-->
+														<!--begin::Company=-->
+														<td><div class="badge badge-light-primary">Greeting Service</div></td>
+														<!--end::Company=-->
+														<!--begin::Payment method=-->
+														<td data-filter="visa">
+														<img src="{%static 'asset/media/svg/card-logos/visa.svg'%}" class="w-35px me-3" alt="" />**** 3068</td>
+														<!--end::Payment method=-->
+														<!--begin::Date=-->
+														<td>01 Dec 2020, 10:12 am</td>
+														<!--end::Date=-->
+														<!--begin::Action=-->
+														<td class="text-end">
+															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+															<span class="svg-icon svg-icon-5 m-0">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon--></a>
+															<!--begin::Menu-->
+															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="../../demo1/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																</div>
+																<!--end::Menu item-->
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																</div>
+																<!--end::Menu item-->
+															</div>
+															<!--end::Menu-->
+														</td>
+														<!--end::Action=-->
+													</tr>
+													<tr>
+														<!--begin::Checkbox-->
+														<td>
+															<div class="form-check form-check-sm form-check-custom form-check-solid">
+																<input class="form-check-input" type="checkbox" value="1" />
+															</div>
+														</td>
+														<!--end::Checkbox-->
+														<!--begin::Name=-->
+														<td>
+															<a href="../../demo1/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Max Smith</a>
+														</td>
+														<!--end::Name=-->
+														<!--begin::Email=-->
+														<td>
+															<a href="#" class="text-gray-600 text-hover-primary mb-1">max@kt.com</a>
+														</td>
+														<!--end::Email=-->
+														<!--begin::Company=-->
+														<td><div class="badge badge-light-danger">Video Chat</div></td>
+														<!--end::Company=-->
+														<!--begin::Payment method=-->
+														<td data-filter="mastercard">
+														<img src="{%static 'asset/media/svg/card-logos/mastercard.svg'%}" class="w-35px me-3" alt="" />**** 5096</td>
+														<!--end::Payment method=-->
+														<!--begin::Date=-->
+														<td>12 Nov 2020, 2:01 pm</td>
+														<!--end::Date=-->
+														<!--begin::Action=-->
+														<td class="text-end">
+															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+															<span class="svg-icon svg-icon-5 m-0">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon--></a>
+															<!--begin::Menu-->
+															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="../../demo1/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																</div>
+																<!--end::Menu item-->
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																</div>
+																<!--end::Menu item-->
+															</div>
+															<!--end::Menu-->
+														</td>
+														<!--end::Action=-->
+													</tr>
+													<tr>
+														<!--begin::Checkbox-->
+														<td>
+															<div class="form-check form-check-sm form-check-custom form-check-solid">
+																<input class="form-check-input" type="checkbox" value="1" />
+															</div>
+														</td>
+														<!--end::Checkbox-->
+														<!--begin::Name=-->
+														<td>
+															<a href="../../demo1/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Sean Bean</a>
+														</td>
+														<!--end::Name=-->
+														<!--begin::Email=-->
+														<td>
+															<a href="#" class="text-gray-600 text-hover-primary mb-1">sean@dellito.com</a>
+														</td>
+														<!--end::Email=-->
+														<!--begin::Company=-->
+														<td><div class="badge badge-light-warning">Brand Promotion</div></td>
+														<!--end::Company=-->
+														<!--begin::Payment method=-->
+														<td data-filter="american_express">
+														<img src="{%static 'asset/media/svg/card-logos/american-express.svg'%}" class="w-35px me-3" alt="" />**** 2938</td>
+														<!--end::Payment method=-->
+														<!--begin::Date=-->
+														<td>21 Oct 2020, 5:54 pm</td>
+														<!--end::Date=-->
+														<!--begin::Action=-->
+														<td class="text-end">
+															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+															<span class="svg-icon svg-icon-5 m-0">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon--></a>
+															<!--begin::Menu-->
+															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="../../demo1/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																</div>
+																<!--end::Menu item-->
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																</div>
+																<!--end::Menu item-->
+															</div>
+															<!--end::Menu-->
+														</td>
+														<!--end::Action=-->
+													</tr>
+													<tr>
+														<!--begin::Checkbox-->
+														<td>
+															<div class="form-check form-check-sm form-check-custom form-check-solid">
+																<input class="form-check-input" type="checkbox" value="1" />
+															</div>
+														</td>
+														<!--end::Checkbox-->
+														<!--begin::Name=-->
+														<td>
+															<a href="../../demo1/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Sean Bean</a>
+														</td>
+														<!--end::Name=-->
+														<!--begin::Email=-->
+														<td>
+															<a href="#" class="text-gray-600 text-hover-primary mb-1">sean@dellito.com</a>
+														</td>
+														<!--end::Email=-->
+														<!--begin::Company=-->
+														<td><div class="badge badge-light-info">Influencer Acquisition</div></td>
+														<!--end::Company=-->
+														<!--begin::Payment method=-->
+														<td data-filter="american_express">
+														<img src="{%static 'asset/media/svg/card-logos/american-express.svg'%}" class="w-35px me-3" alt="" />**** 2938</td>
+														<!--end::Payment method=-->
+														<!--begin::Date=-->
+														<td>21 Oct 2020, 5:54 pm</td>
+														<!--end::Date=-->
+														<!--begin::Action=-->
+														<td class="text-end">
+															<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+															<span class="svg-icon svg-icon-5 m-0">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon--></a>
+															<!--begin::Menu-->
+															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="../../demo1/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																</div>
+																<!--end::Menu item-->
+																<!--begin::Menu item-->
+																<div class="menu-item px-3">
+																	<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																</div>
+																<!--end::Menu item-->
+															</div>
+															<!--end::Menu-->
+														</td>
+														<!--end::Action=-->
+													</tr>
+												</tbody>
+												<!--end::Table body-->
+											</table>
+											<!--end::Table-->
+										</div>
+										<!--end::Card body-->
+									</div>
+									<!--end::Card-->
+							</div>
+							<!--end::Content-->
+									
+								</div>
+								<!--end::Content container-->
+							</div>
+							<!--end::Content-->
+						</div>
+                        
+						<!--end::Content wrapper-->
+
+                        <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+                        <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+                        <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+						
+
+						<script>
+							am5.ready(function() {
+							
+							
+							var root = am5.Root.new("chartdiv");
+							var myTheme = am5.Theme.new(root);
+							myTheme.rule("Label").set("fontSize", "0.8em");
+							
+							
+							root.setThemes([
+							  am5themes_Animated.new(root),
+							  myTheme
+							]);
+							
+						
+							var container = root.container.children.push(am5.Container.new(root, {
+							  width: am5.p100,
+							  height: am5.p100,
+							  layout: root.horizontalLayout
+							}));
+							
+							
+							var chart0 = container.children.push(am5percent.PieChart.new(root, {
+							  innerRadius: am5.p50,
+							  tooltip: am5.Tooltip.new(root, {})
+							}));
+							
+							var series0 = chart0.series.push(am5percent.PieSeries.new(root, {
+							  valueField: "value",
+							  categoryField: "category",
+							  alignLabels: false
+							}));
+							
+							series0.labels.template.setAll({
+							  textType: "circular",
+							  templateField: "dummyLabelSettings"
+							});
+							
+							series0.ticks.template.set("forceHidden", true);
+							
+							var sliceTemplate0 = series0.slices.template;
+							sliceTemplate0.setAll({
+							  draggable: true,
+							  templateField: "settings",
+							  cornerRadius: 5
+							});
+							
+							
+							container.children.push(am5.Line.new(root, {
+							  layer: 1,
+							  height: am5.percent(60),
+							  y: am5.p50,
+							  centerY: am5.p50,
+							  strokeDasharray: [4, 4],
+							  stroke: root.interfaceColors.get("alternativeBackground"),
+							  strokeOpacity: 0.5
+							}));
+							
+							
+							container.children.push(am5.Label.new(root, {
+							  layer: 1,
+							  text: "Drag slices over the line",
+							  y: am5.p50,
+							  textAlign: "center",
+							  rotation: -90,
+							  isMeasured: false
+							}));
+							
+							
+							var chart1 = container.children.push(am5percent.PieChart.new(root, {
+							  innerRadius: am5.p50,
+							  tooltip: am5.Tooltip.new(root, {})
+							}));
+							
+							
+							var series1 = chart1.series.push(am5percent.PieSeries.new(root, {
+							  valueField: "value",
+							  categoryField: "category",
+							  alignLabels: false
+							}));
+							
+							series1.labels.template.setAll({
+							  textType: "circular",
+							  radius: 20,
+							  templateField: "dummyLabelSettings"
+							});
+							
+							series1.ticks.template.set("forceHidden", true);
+							
+							var sliceTemplate1 = series1.slices.template;
+							sliceTemplate1.setAll({
+							  draggable: true,
+							  templateField: "settings",
+							  cornerRadius: 5
+							});
+							
+							var previousDownSlice;
+							
+							
+							sliceTemplate0.events.on("pointerdown", function (e) {
+							  if (previousDownSlice) {
+								
+							  }
+							  e.target.set("layer", 1);
+							  previousDownSlice = e.target;
+							});
+							
+							sliceTemplate1.events.on("pointerdown", function (e) {
+							  if (previousDownSlice) {
+								
+							  }
+							  e.target.set("layer", 1);
+							  previousDownSlice = e.target;
+							});
+							
+							
+							sliceTemplate0.events.on("pointerup", function (e) {
+							  series0.hideTooltip();
+							  series1.hideTooltip();
+							
+							  var slice = e.target;
+							  if (slice.x() > container.width() / 4) {
+								var index = series0.slices.indexOf(slice);
+								slice.dataItem.hide();
+							
+								var series1DataItem = series1.dataItems[index];
+								series1DataItem.show();
+								series1DataItem.get("slice").setAll({ x: 0, y: 0 });
+							
+								handleDummy(series0);
+								handleDummy(series1);
+							  } else {
+								slice.animate({
+								  key: "x",
+								  to: 0,
+								  duration: 500,
+								  easing: am5.ease.out(am5.ease.cubic)
+								});
+								slice.animate({
+								  key: "y",
+								  to: 0,
+								  duration: 500,
+								  easing: am5.ease.out(am5.ease.cubic)
+								});
+							  }
+							});
+							
+							sliceTemplate1.events.on("pointerup", function (e) {
+							  var slice = e.target;
+							
+							  series0.hideTooltip();
+							  series1.hideTooltip();
+							
+							  if (slice.x() < container.width() / 4) {
+								var index = series1.slices.indexOf(slice);
+								slice.dataItem.hide();
+							
+								var series0DataItem = series0.dataItems[index];
+								series0DataItem.show();
+								series0DataItem.get("slice").setAll({ x: 0, y: 0 });
+							
+								handleDummy(series0);
+								handleDummy(series1);
+							  } else {
+								slice.animate({
+								  key: "x",
+								  to: 0,
+								  duration: 500,
+								  easing: am5.ease.out(am5.ease.cubic)
+								});
+								slice.animate({
+								  key: "y",
+								  to: 0,
+								  duration: 500,
+								  easing: am5.ease.out(am5.ease.cubic)
+								});
+							  }
+							});
+							
+							// data
+							var data = [
+							  {
+								category: "Dummy",
+								value: 1000,
+								settings: {
+								  fill: am5.color(0xdadada),
+								  stroke: am5.color(0xdadada),
+								  fillOpacity: 0.3,
+								  strokeDasharray: [4, 4],
+								  tooltipText: null,
+								  draggable: false
+								},
+								dummyLabelSettings: {
+								  forceHidden: true
+								}
+							  },
+							  {
+								category: "Total Orders",
+								value: 10000
+							  },
+							  {
+								category: "Completed ",
+								value: 4000
+							  },
+							  {
+								category: "Cancelled",
+								value: 2000
+							  },
+							  {
+								category: "Pendings",
+								value: 2500
+							  },
+							  {
+								category: "Saveing",
+								value: 1500
+							  },
+							 
+							];
+							
+							function handleDummy(series) {
+							  var visibleCount = 0;
+							  am5.array.each(series.dataItems, function (dataItem) {
+								if (!dataItem.isHidden()) {
+								  visibleCount++;
+								}
+							  });
+							 
+							  if (visibleCount == 0) {
+								series.dataItems[0].show();
+							  } else {
+								series.dataItems[0].hide();
+							  }
+							}
+							
+							series0.data.setAll(data);
+							series1.data.setAll(data);
+							
+							
+							am5.array.each(series1.dataItems, function (dataItem) {
+							  if (dataItem.get("category") != "Dummy") {
+								dataItem.hide(0);
+							  }
+							});
+							
+							
+							series0.dataItems[0].hide(0);
+							
+							
+							container.appear(1000, 100);
+							
+							}); 
+							</script>
+
+
+                      <!-- Chart code -->
+<script>
+	am5.ready(function() {
+	
+	// Create root element
+	// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+	var root = am5.Root.new("chartdiv1");
+	
+	// Set themes
+	// https://www.amcharts.com/docs/v5/concepts/themes/
+	root.setThemes([
+	  am5themes_Animated.new(root)
+	]);
+	
+	root.dateFormatter.setAll({
+	  dateFormat: "yyyy-MM-dd",
+	  dateFields: ["valueX"]
+	});
+	
+	var data = [
+	  {
+		date: "2021-01-01",
+		steps: 4561
+	  },
+	  {
+		date: "2021-01-02",
+		steps: 5687
+	  },
+	  {
+		date: "2021-01-03",
+		steps: 6348
+	  },
+	  {
+		date: "2021-01-04",
+		steps: 4878
+	  },
+	  {
+		date: "2021-01-05",
+		steps: 9867
+	  },
+	  {
+		date: "2021-01-06",
+		steps: 7561
+	  },
+	  {
+		date: "2021-01-07",
+		steps: 1287
+	  },
+	  {
+		date: "2021-01-08",
+		steps: 3298
+	  },
+	  {
+		date: "2021-01-09",
+		steps: 5697
+	  },
+	  {
+		date: "2021-01-10",
+		steps: 4878
+	  },
+	  {
+		date: "2021-01-11",
+		steps: 8788
+	  },
+	  {
+		date: "2021-01-12",
+		steps: 9560
+	  },
+	  {
+		date: "2021-01-13",
+		steps: 11687
+	  },
+	  {
+		date: "2021-01-14",
+		steps: 5878
+	  },
+	  {
+		date: "2021-01-15",
+		steps: 9789
+	  },
+	  {
+		date: "2021-01-16",
+		steps: 3987
+	  },
+	  {
+		date: "2021-01-17",
+		steps: 5898
+	  },
+	  {
+		date: "2021-01-18",
+		steps: 9878
+	  },
+	  {
+		date: "2021-01-19",
+		steps: 13687
+	  },
+	  {
+		date: "2021-01-20",
+		steps: 6789
+	  },
+	  {
+		date: "2021-01-21",
+		steps: 4531
+	  },
+	  {
+		date: "2021-01-22",
+		steps: 5856
+	  },
+	  {
+		date: "2021-01-23",
+		steps: 5737
+	  },
+	  {
+		date: "2021-01-24",
+		steps: 9987
+	  },
+	  {
+		date: "2021-01-25",
+		steps: 16457
+	  },
+	  {
+		date: "2021-01-26",
+		steps: 7878
+	  },
+	  {
+		date: "2021-01-27",
+		steps: 6845
+	  },
+	  {
+		date: "2021-01-28",
+		steps: 4659
+	  },
+	  {
+		date: "2021-01-29",
+		steps: 7892
+	  },
+	  {
+		date: "2021-01-30",
+		steps: 7362
+	  },
+	  {
+		date: "2021-01-31",
+		steps: 3268
+	  }
+	];
+	
+	// Create chart
+	// https://www.amcharts.com/docs/v5/charts/xy-chart/
+	var chart = root.container.children.push(
+	  am5xy.XYChart.new(root, {
+		focusable: true,
+		panX: true,
+		panY: false,
+		wheelX: "panX",
+		wheelY: "none"
+	  })
+	);
+	
+	var easing = am5.ease.linear;
+	
+	// hide zoomout button
+	chart.zoomOutButton.set("forceHidden", true);
+	
+	// add label
+	chart.plotContainer.children.push(
+	  am5.Label.new(root, { text: "Pan chart to change date", x: 100, y: 50 })
+	);
+	
+	// Create axes
+	// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+	var xRenderer = am5xy.AxisRendererX.new(root, {
+	  minGridDistance: 50,
+	  strokeOpacity: 0.2
+	});
+	xRenderer.grid.template.set("forceHidden", true);
+	
+	var xAxis = chart.xAxes.push(
+	  am5xy.DateAxis.new(root, {
+		maxDeviation: 0.49,
+		snapTooltip: false,
+		baseInterval: {
+		  timeUnit: "day",
+		  count: 1
+		},
+		renderer: xRenderer,
+		tooltip: am5.Tooltip.new(root, {})
+	  })
+	);
+	
+	var yRenderer = am5xy.AxisRendererY.new(root, { inside: true });
+	yRenderer.grid.template.set("forceHidden", true);
+	
+	var yAxis = chart.yAxes.push(
+	  am5xy.ValueAxis.new(root, {
+		maxDeviation: 0,
+		renderer: yRenderer
+	  })
+	);
+	
+	// Add series
+	// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+	var series = chart.series.push(
+	  am5xy.ColumnSeries.new(root, {
+		xAxis: xAxis,
+		yAxis: yAxis,
+		valueYField: "steps",
+		valueXField: "date",
+		tooltip: am5.Tooltip.new(root, {
+		  pointerOrientation: "vertical",
+		  labelText: "{valueY}"
+		})
+	  })
+	);
+	
+	series.columns.template.setAll({
+	  cornerRadiusTL: 15,
+	  cornerRadiusTR: 15,
+	  maxWidth: 30,
+	  strokeOpacity: 0
+	});
+	
+	series.columns.template.adapters.add("fill", function (fill, target) {
+	  if (target.dataItem.get("valueY") < 6000) {
+		return am5.color(0xdadada);
+	  }
+	  return fill;
+	});
+	
+	// Set up data processor to parse string dates
+	// https://www.amcharts.com/docs/v5/concepts/data/#Pre_processing_data
+	series.data.processor = am5.DataProcessor.new(root, {
+	  dateFormat: "yyyy-MM-dd",
+	  dateFields: ["date"]
+	});
+	
+	series.data.setAll(data);
+	
+	// do not allow tooltip  to move horizontally
+	series.get("tooltip").adapters.add("x", function (x) {
+	  return chart.plotContainer.toGlobal({
+		x: chart.plotContainer.width() / 2,
+		y: 0
+	  }).x;
+	});
+	
+	// add ranges
+	var goalRange = yAxis.createAxisRange(yAxis.makeDataItem({
+	  value: 6000
+	}));
+	
+	goalRange.get("grid").setAll({
+	  forceHidden: false,
+	  strokeOpacity: 0.2
+	});
+	
+	var goalLabel = goalRange.get("label");
+	
+	goalLabel.setAll({
+	  centerY: am5.p100,
+	  centerX: am5.p100,
+	  text: "Goal"
+	});
+	
+	// put to other side
+	goalLabel.adapters.add("x", function (x) {
+	  return chart.plotContainer.width();
+	});
+	
+	var goalRange2 = yAxis.createAxisRange(yAxis.makeDataItem({
+	  value: 12000
+	}));
+	
+	goalRange2.get("grid").setAll({
+	  forceHidden: false,
+	  strokeOpacity: 0.2
+	});
+	
+	var goalLabel2 = goalRange2.get("label");
+	
+	goalLabel2.setAll({
+	  centerY: am5.p100,
+	  centerX: am5.p100,
+	  text: "2 x Goal"
+	});
+	
+	// put to other side
+	goalLabel2.adapters.add("x", function (x) {
+	  return chart.plotContainer.width();
+	});
+	
+	// reposition when width changes
+	chart.plotContainer.onPrivate("width", function () {
+	  goalLabel.markDirtyPosition();
+	  goalLabel2.markDirtyPosition();
+	});
+	
+	// Add cursor
+	// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+	var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+	  alwaysShow: true,
+	  behavior: "none",
+	  positionX: 0.5 // make it always be at the center
+	}));
+	cursor.lineY.set("visible", false);
+	
+	// zoom to last 11 days
+	series.events.on("datavalidated", function () {
+	  var toTime =
+		series.dataItems[series.dataItems.length - 1].get("valueX") +
+		am5.time.getDuration("day", 1);
+	  var fromTime = series.dataItems[series.dataItems.length - 11].get("valueX");
+	
+	  xAxis.zoomToValues(fromTime, toTime);
+	});
+	
+	// when plot are is released, round zoom to nearest days
+	chart.plotContainer.events.on("globalpointerup", function () {
+	  var dayDuration = am5.time.getDuration("day", 1);
+	
+	  var firstTime = am5.time
+		.round(new Date(series.dataItems[0].get("valueX")), "day", 1)
+		.getTime();
+	  var lastTime =
+		series.dataItems[series.dataItems.length - 1].get("valueX") + dayDuration;
+	  var totalTime = lastTime - firstTime;
+	  var days = totalTime / dayDuration;
+	
+	  var roundedStart =
+		firstTime + Math.round(days * xAxis.get("start")) * dayDuration;
+	  var roundedEnd =
+		firstTime + Math.round(days * xAxis.get("end")) * dayDuration;
+	
+	  xAxis.zoomToValues(roundedStart, roundedEnd);
+	});
+	
+	// Make stuff animate on load
+	// https://www.amcharts.com/docs/v5/concepts/animations/
+	chart.appear(1000, 50);
+	
+	}); // end am5.ready()
+	</script>
+
+							
+
+	
+				
+{%endblock%}
+
+
+	

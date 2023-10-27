@@ -1,0 +1,429 @@
+{% extends 'SEO/blog-insert.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | Blogs Details </title>
+{% endblock %}
+
+{%block sidebar%}
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+	<div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true"
+		data-kt-scroll-activate="true" data-kt-scroll-height="auto"
+		data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer"
+		data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+		<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true"
+			data-kt-menu-expand="false">
+			<div class="menu-item"> <a class="menu-link" href="/BlogsHome/"> <span class="menu-icon"> <span
+							class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+								<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+								<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+								<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+							</svg>
+						</span> </span> <span class="menu-title">Explore Blogs</span> </a> </div>
+
+			<!--begin:Menu item-->
+			<div class="menu-item pt-5">
+				<!--begin:Menu content-->
+				<div class="menu-content">
+					<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+				</div>
+				<!--end:Menu content-->
+			</div>
+			<!--end:Menu item-->
+
+
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span
+						class="menu-icon"> <span class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z"
+									fill="currentColor"></path>
+								<path opacity="0.3"
+									d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z"
+									fill="currentColor"></path>
+							</svg>
+						</span> </span> <span class="menu-title">Blogs Upload</span><span
+						class="menu-arrow"></span></span>
+				<div class="menu-sub menu-sub-accordion">
+					<div class="menu-item"> <a class="menu-link" href="/InsertBlog/"><span class="menu-bullet"><span
+									class="bullet bullet-dot"></span> </span> <span class="menu-title">Insert
+								Blogs</span></a></div>
+					<div class="menu-item"> <a class="menu-link" href="/addblogcontent/"><span class="menu-bullet"><span
+									class="bullet bullet-dot"></span> </span> <span class="menu-title">Insert Blogs
+								Content</span></a></div>
+
+				</div>
+			</div>
+
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span
+						class="menu-icon"> <span class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.3"
+									d="M7 20.5L2 17.6V11.8L7 8.90002L12 11.8V17.6L7 20.5ZM21 20.8V18.5L19 17.3L17 18.5V20.8L19 22L21 20.8Z"
+									fill="currentColor"></path>
+								<path d="M22 14.1V6L15 2L8 6V14.1L15 18.2L22 14.1Z" fill="currentColor"></path>
+							</svg>
+						</span> </span> <span class="menu-title">Blog Comments</span><span
+						class="menu-arrow"></span></span>
+				<div class="menu-sub menu-sub-accordion">
+					<div class="menu-item"> <a class="menu-link" href="/Blog-Comments-Status/"><span
+								class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span
+								class="menu-title">Approve Comments</span></a></div>
+				</div>
+			</div>
+
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span
+						class="menu-icon"> <span class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.3"
+									d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+									fill="currentColor"></path>
+								<path
+									d="M8.70001 6C8.10001 5.7 7.39999 5.40001 6.79999 5.10001C7.79999 4.00001 8.90001 3 10.1 2.2C10.7 2.1 11.4 2 12 2C12.7 2 13.3 2.1 13.9 2.2C12 3.2 10.2 4.5 8.70001 6ZM12 8.39999C13.9 6.59999 16.2 5.30001 18.7 4.60001C18.1 4.00001 17.4 3.6 16.7 3.2C14.4 4.1 12.2 5.40001 10.5 7.10001C11 7.50001 11.5 7.89999 12 8.39999ZM7 20C7 20.2 7 20.4 7 20.6C6.2 20.1 5.49999 19.6 4.89999 19C4.59999 18 4.00001 17.2 3.20001 16.6C2.80001 15.8 2.49999 15 2.29999 14.1C4.99999 14.7 7 17.1 7 20ZM10.6 9.89999C8.70001 8.09999 6.39999 6.9 3.79999 6.3C3.39999 6.9 2.99999 7.5 2.79999 8.2C5.39999 8.6 7.7 9.80001 9.5 11.6C9.8 10.9 10.2 10.4 10.6 9.89999ZM2.20001 10.1C2.10001 10.7 2 11.4 2 12C2 12 2 12 2 12.1C4.3 12.4 6.40001 13.7 7.60001 15.6C7.80001 14.8 8.09999 14.1 8.39999 13.4C6.89999 11.6 4.70001 10.4 2.20001 10.1ZM11 20C11 14 15.4 9.00001 21.2 8.10001C20.9 7.40001 20.6 6.8 20.2 6.2C13.8 7.5 9 13.1 9 19.9C9 20.4 9.00001 21 9.10001 21.5C9.80001 21.7 10.5 21.8 11.2 21.9C11.1 21.3 11 20.7 11 20ZM19.1 19C19.4 18 20 17.2 20.8 16.6C21.2 15.8 21.5 15 21.7 14.1C19 14.7 16.9 17.1 16.9 20C16.9 20.2 16.9 20.4 16.9 20.6C17.8 20.2 18.5 19.6 19.1 19ZM15 20C15 15.9 18.1 12.6 22 12.1C22 12.1 22 12.1 22 12C22 11.3 21.9 10.7 21.8 10.1C16.8 10.7 13 14.9 13 20C13 20.7 13.1 21.3 13.2 21.9C13.9 21.8 14.5 21.7 15.2 21.5C15.1 21 15 20.5 15 20Z"
+									fill="currentColor"></path>
+							</svg>
+						</span> </span> <span class="menu-title">Total Blogs</span><span
+						class="menu-arrow"></span></span>
+				<div class="menu-sub menu-sub-accordion">
+					<div class="menu-item"> <a class="menu-link" href="/Blog-Edit/"><span class="menu-bullet"><span
+									class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs
+								List</span></a></div>
+								<div class="menu-item"> <a class="menu-link" href="/Blog-Content/"><span class="menu-bullet"><span
+                                    class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs Content</span></a></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+{%endblock%}
+
+
+<!--begin::Footer-->
+<div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
+	<a href="/terms-of-service/" target="_blank"
+		class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100"
+		data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click" title="platform term and service">
+		<span class="btn-label">Terms of Services</span>
+		<!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
+		<span class="svg-icon btn-icon svg-icon-2 m-0">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path opacity="0.3"
+					d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z"
+					fill="currentColor" />
+				<rect x="7" y="17" width="6" height="2" rx="1" fill="currentColor" />
+				<rect x="7" y="12" width="10" height="2" rx="1" fill="currentColor" />
+				<rect x="7" y="7" width="6" height="2" rx="1" fill="currentColor" />
+				<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="currentColor" />
+			</svg>
+		</span>
+		<!--end::Svg Icon-->
+	</a>
+</div>
+<!--end::Footer-->
+</div>
+
+{%block body%}
+<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+	<div class="d-flex flex-column flex-column-fluid">
+		<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+			<div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+				<div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+					<!--begin::Title-->
+					<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Blog
+						Details</h1>
+					<!--end::Title-->
+					<!--begin::Breadcrumb-->
+					<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+						<!--begin::Item-->
+						<li class="breadcrumb-item text-muted">
+							<a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Home</a>
+						</li>
+						<!--end::Item-->
+						<!--begin::Item-->
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<!--end::Item-->
+						<!--begin::Item-->
+						<li class="breadcrumb-item text-muted">Blog</li>
+						<!--end::Item-->
+					</ul>
+					<!--end::Breadcrumb-->
+				</div>
+				<!--end::Page title-->
+				<!--begin::Actions-->
+				<div class="d-flex align-items-center gap-2 gap-lg-3">
+
+				</div>
+				<!--end::Actions-->
+			</div>
+			<!--end::Toolbar container-->
+		</div>
+		<!--end::Toolbar-->
+		<!--begin::Content-->
+		<div id="kt_app_content" class="app-content flex-column-fluid">
+			<div id="kt_app_content_container" class="app-container container-fluid">
+				<!--begin::Post card-->
+				<div class="card">
+					<!--begin::Body-->
+					<div class="card-body p-lg-20 pb-lg-0">
+						<!--begin::Layout-->
+						<div class="d-flex flex-column flex-xl-row">
+							<!--begin::Content-->
+							<div class="flex-lg-row-fluid me-xl-15">
+								<!--begin::Post content-->
+								<div class="mb-10">
+									<!--begin::Wrapper-->
+									<div class="mb-8">
+										<!--begin::Info-->
+										<div class="d-flex flex-wrap mb-6">
+											<!--begin::Item-->
+											<div class="me-9 my-1">
+												<!--begin::Icon-->
+												<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+												<span class="svg-icon svg-icon-primary svg-icon-2 me-1">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<rect x="2" y="2" width="9" height="9" rx="2"
+															fill="currentColor" />
+														<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2"
+															fill="currentColor" />
+														<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2"
+															fill="currentColor" />
+														<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2"
+															fill="currentColor" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+												<!--end::Icon-->
+												<!--begin::Label-->
+												<span class="fw-bold text-gray-400">{{det.date}}</span>
+												<!--end::Label-->
+											</div>
+											<!--end::Item-->
+											<!--begin::Item-->
+
+											<!--end::Item-->
+											<!--begin::Item-->
+											<div class="my-1">
+												<!--begin::Icon-->
+												<!--begin::Svg Icon | path: icons/duotune/communication/com003.svg-->
+												<span class="svg-icon svg-icon-primary svg-icon-2 me-1">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path opacity="0.3"
+															d="M2 4V16C2 16.6 2.4 17 3 17H13L16.6 20.6C17.1 21.1 18 20.8 18 20V17H21C21.6 17 22 16.6 22 16V4C22 3.4 21.6 3 21 3H3C2.4 3 2 3.4 2 4Z"
+															fill="currentColor" />
+														<path
+															d="M18 9H6C5.4 9 5 8.6 5 8C5 7.4 5.4 7 6 7H18C18.6 7 19 7.4 19 8C19 8.6 18.6 9 18 9ZM16 12C16 11.4 15.6 11 15 11H6C5.4 11 5 11.4 5 12C5 12.6 5.4 13 6 13H15C15.6 13 16 12.6 16 12Z"
+															fill="currentColor" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+												<!--end::Icon-->
+												<!--begin::Label-->
+												<span class="fw-bold text-gray-400">{{num}} Comments</span>
+												<!--end::Label-->
+											</div>
+											<!--end::Item-->
+										</div>
+										<!--end::Info-->
+										<!--begin::Title-->
+										<h1 class="text-dark text-hover-primary fs-2 fw-bold">{{det.title}}
+											</h2>
+											<!--end::Title-->
+											<!--begin::Container-->
+											<div class="overlay mt-8">
+												<!--begin::Image-->
+												<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px"
+													style="background-image:url('/media/{{det.image}}')"></div>
+												<!--end::Image-->
+
+											</div>
+											<!--end::Container-->
+									</div>
+									<!--end::Wrapper-->
+									<!--begin::Description-->
+									<div class="fs-5 fw-semibold text-gray-600">
+
+										<!--begin::Text-->
+										{{det.discription|safe}}
+										<!--end::Text-->
+
+
+									</div>
+									<!--end::Description-->
+								</div>
+
+								{%for i in content%}
+								<div class="mb-10">
+									<!--begin::Wrapper-->
+									<div class="mb-8">
+										<!--begin::Title-->
+
+										<h2 class="text-dark text-hover-primary fs-2 fw-bold">{{i.title}}</h2>
+										<!--end::Title-->
+										<!--begin::Container-->
+										{% if i.image == '' %}
+										<p></p>
+										{%else%}
+										<div class="overlay mt-8">
+											<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px"
+												style="background-image:url('/media/{{i.image}}')"></div>
+										</div>
+
+										{% endif %}
+
+										<!--end::Container-->
+									</div>
+									<!--end::Wrapper-->
+									<!--begin::Description-->
+									<div class="fs-5 fw-semibold text-gray-600">{{i.discription|safe}}</div>
+									<!--end::Description-->
+								</div>
+								<!--end::Post content-->
+								{%endfor%}
+							</div>
+							<!--end::Content-->
+							<!--begin::Sidebar-->
+							<div class="flex-column flex-lg-row-auto w-100 w-xl-300px mb-10">
+
+								<!--begin::Catigories-->
+								<div class="mb-16">
+									<h4 class="text-dark mb-7">Categories</h4>
+									{%for i in cate%}
+									<!--begin::Item-->
+									<div class="d-flex flex-stack fw-semibold fs-5 text-muted mb-4">
+										<!--begin::Text-->
+										<a href="/BlogsHome/{{i.blogcategory}}/"
+											class="text-muted text-hover-primary pe-2">{{i.blogcategory}}</a>
+										<!--end::Text-->
+										<!--begin::Number-->
+										<div class="m-0">{{i.blogcategory_count}}</div>
+										<!--end::Number-->
+									</div>
+									<!--end::Item-->
+									{%endfor%}
+								</div>
+								<!--end::Catigories-->
+								<!--begin::Recent posts-->
+								<div class="m-0">
+									<h4 class="text-dark mb-7">Recent Posts</h4>
+									{%for i in rc%}
+									<!--begin::Item-->
+									<div class="d-flex flex-stack mb-7">
+										<!--begin::Symbol-->
+										<div class="symbol symbol-60px symbol-2by3 me-4">
+											<div class="symbol-label"
+												style="background-image: url('/media/{{i.image}}')"></div>
+										</div>
+										<!--end::Symbol-->
+										<!--begin::Title-->
+										<div class="m-0">
+											<a href="/BlogsDetails/{{i.title|striptags|slugify}}/"
+												class="text-dark fw-bold text-hover-primary fs-6">{{i.title}}</a>
+											<span class="text-gray-600 fw-semibold d-block pt-1 fs-7">{{i.date}}</span>
+										</div>
+										<!--end::Title-->
+									</div>
+									<!--end::Item-->
+									{%endfor%}
+								</div>
+								<!--end::Recent posts-->
+							</div>
+							<!--end::Sidebar-->
+						</div>
+						<!--end::Layout-->
+
+						<!--begin::Section-->
+						<div class="mb-17">
+							<!--begin::Content-->
+							<div class="d-flex flex-stack mb-5">
+								<!--begin::Title-->
+								<h3 class="text-dark">Other Blogs</h3>
+								<!--end::Title-->
+
+							</div>
+							<!--end::Content-->
+							<!--begin::Separator-->
+							<div class="separator separator-dashed mb-9"></div>
+							<!--end::Separator-->
+							<!--begin::Row-->
+							<div class="row g-10">
+
+								{%for i in blogdeatils%}
+								<!--begin::Col-->
+								<div class="col-md-4">
+									<!--begin::Hot sales post-->
+									<div class="card-xl-stretch me-md-6">
+										<!--begin::Overlay-->
+										<a class="d-block overlay" data-fslightbox="lightbox-hot-sales"
+											href="/media/{{i.image}}/">
+											<!--begin::Image-->
+											<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"
+												style="background-image:url('/media/{{i.image}}/')"></div>
+											<!--end::Image-->
+											<!--begin::Action-->
+											<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+												<i class="bi bi-eye-fill fs-2x text-white"></i>
+											</div>
+											<!--end::Action-->
+										</a>
+										<!--end::Overlay-->
+										<!--begin::Body-->
+										<div class="mt-5">
+											<!--begin::Title-->
+											<a href="/BlogsDetails/{{i.url_structure}}/"
+												class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{i.title}}</a>
+											<!--end::Title-->
+											<!--begin::Text-->
+											<div class="fw-semibold fs-5 text-gray-600 text-dark mt-3">
+												{{i.short_discription}}</div>
+											<!--end::Text-->
+
+										</div>
+										<!--end::Body-->
+									</div>
+									<!--end::Hot sales post-->
+
+								</div>
+								<!--end::Col-->
+								{%endfor%}
+							</div>
+							<!--end::Row-->
+						</div>
+						<!--end::Section-->
+					</div>
+					<!--end::Body-->
+				</div>
+				<!--end::Post card-->
+			</div>
+			<!--end::Content container-->
+		</div>
+		<!--end::Content-->
+	</div>
+	<!--end::Content wrapper-->
+
+</div>
+<!--end:::Main-->
+{%endblock%}
+
+
+<div id="kt_app_footer" class="app-footer">
+	<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+		<div class="text-dark order-2 order-md-1"> <span class="text-muted fw-semibold me-1">2022&copy;</span> <a
+				href="" class="text-gray-800 text-hover-primary">BOL7.COM</a> </div>
+		<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
+			<li class="menu-item"> <a href="/About/" target="_blank" class="menu-link px-2">About</a> </li>
+			<li class="menu-item"> <a href="/contact/" target="_blank" class="menu-link px-2">Support</a> </li>
+			<li class="menu-item"> <a href="/privacy-policy/" target="_blank" class="menu-link px-2">privacy policy</a>
+			</li>
+		</ul>
+	</div>
+</div>

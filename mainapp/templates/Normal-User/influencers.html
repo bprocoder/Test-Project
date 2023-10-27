@@ -1,0 +1,894 @@
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+
+{% block title%}
+
+{% if request.path == '/influencers/' %}
+
+
+	{% for i in Seo1 %}
+	{% if i.page.pagename == 'Explore'%}
+<title>{{i.title}}</title>
+<meta name="title" content="{{i.title}}">
+<meta name="description" content="{{i.description}}">
+<meta name="keywords" content="{{i.keyword}}">
+	{% endif %}
+	{%endfor%}
+
+  {%else%}
+  <title>{{expodet.page_title}}</title>
+  <meta name="title" content="{{expodet.page_title}}">
+  <meta name="description" content="{{expodet.meta_description}}">
+  <meta name="keywords" content="{{expodet.keywords}}">
+  {%endif%}
+{% endblock %}
+
+{% block canonical%}
+<link rel="canonical" href="https://www.influencerhiring.com/influencers/">
+{%endblock%}
+
+{%block head%}
+<div class="header dash-header ">
+{%endblock%}
+
+{%block active%}
+          <li> <a href="/" class="">Home</a> </li>
+          <li> <a href="/influencers/" class="active">Explore</a> </li>
+          <li> <a href="/blogs/" class="">Blogs</a> </li>
+          <li> <a href="/webstories/">Web-Stories</a> </li>
+          <li> <a href="/casting-call/">Casting Call</a> </li>
+          <li> <a href="/whitepaper/" class="">White Paper</a> </li>
+{%endblock%}
+
+{% block body %}
+  
+
+<section class="influencer-section pt-80 pb-40 hello">
+  <div class="container-fluid g-0">
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav class="sidebar-widget has-select2" id="sidebar">
+    
+            <div class="mb-3">
+            
+                {% csrf_token %}
+              <div class="input-group add-on">
+                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" onclick="filter();"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+
+          </div>
+            <div class="sidebar-header mb-3">
+              <h6 class="sidebar-widget__title">Services</h6>
+              {% csrf_token %}
+                <div class="radio-wrapper">
+                  {%for i in Ser%}
+                  <div class="custom--radio my-1">
+                    <input class="form-check-input completedJob" type="radio" onclick="filter({{i.serviceid}})" value="{{i.serviceid}}" name="complete_job" id="service-{{i.serviceid}}">
+                    <label class="form-check-label" for="service-{{i.serviceid}}"> {{i.subservice}} </label>
+                  </div>
+                {%endfor%}
+                </div>
+            </div>
+            <div class="sidebar-header plateform_dropdown mb-3">
+              {% comment %} <h6 class="sidebar-widget__title">Plateform</h6> {% endcomment %}
+              <div class="w-100 border-bottom pb-3">
+                <div class="dropdown sik-dropdown" id="sik-select" >
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Platform
+                  </button>
+                  <ul class="dropdown-menu" >
+{%for i in Plat%}
+                    <li onclick="filter()">
+                      <span class="dropdown-item"   data-value="{{i.platformid}}">
+                        <input type="hidden" id="platfrom" value="{{i.platformid}}">
+                        <img class="crypto-icon" src="/media/{{i.imagepath}}" alt="eth" />
+                          {{i.platform_name}}
+                      </span>
+                  </li>
+{%endfor%}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-header Select_country mb-3">
+              {% comment %} <h6 class="sidebar-widget__title">Country</h6> {% endcomment %}
+                <select class="form-select rounded-pill" onchange="filter()" aria-label="Default select example" id="coun">
+                  <option value="">Select Country</option>
+                  {%for i in cont%}
+                  <option value="{{i}}">{{i}}</option>
+                  {%endfor%}
+                </select>
+            </div>
+
+            <div class="sidebar-header Price_range mb-3">
+              <h6 class="sidebar-widget__title">Price</h6>
+              <div class="range-slider">
+                  <div class="price-input">
+                  <div class="field">
+                    <span>Min</span>
+                    <input type="number" value="" placeholder="25000" min="0" max="120000" id="minp" />
+                  </div>
+                  <div class="separator">-</div>
+                  <div class="field">
+                    <span>Max</span>
+                    <input type="number" value="" placeholder="50000" min="0" max="120000" id="maxp" />
+                  </div>
+                  <input value="25000" min="0" max="120000" step="500" type="range" onclick="filter()"/>
+                  <input value="50000" min="0" max="120000" step="500" type="range" onclick="filter()"/>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-header Price_range mb-3">
+              <h6 class="sidebar-widget__title">Followers</h6>
+              <div class="range-slider-one">
+                  <div class="price-input">
+                  <div class="field">
+                    <span>Min</span>
+                    <input type="number" value="" placeholder="25000" min="0" max="50000000" id="minfoll"/>
+                  </div>
+                  <div class="separator">-</div>
+                  <div class="field">
+                    <span>Max</span>
+                    <input type="number" value="" placeholder="500000" min="0" max="50000000" id="maxfoll"/>
+                  </div>
+                  <input value="25000" min="0" max="50000000" step="500" type="range" onclick="filter()"/>
+                  <input value="500000" min="0" max="50000000" step="500" type="range" onclick="filter()"/>
+                </div>
+              </div>
+            </div>
+        </nav>
+       <!-- Page Content  -->
+       <div id="content">
+        <div class="w-100 d-flex">
+        <div class="d-inline-block side-bar">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-danger">
+                    <i class="fas fa-align-left"></i>
+                </button>
+            </div>
+        </nav>
+        </div>
+
+          <div class="d-inline-block rightbar-content">
+            
+            <div class="row mb-3">
+              <div class="col-lg-12">
+                <div class="owl-slider">
+                  <div id="carousel" class="owl-carousel">
+
+                    {%for i in Cate%}  
+                    <div class="item">
+                      <a href="/influencers/{{i.categoryname|striptags|slugify}}/">
+                      <div class="categories_list">
+                        <img src="/media/{{i.image}}" alt="icon" class="img-fluid" width="20" height="25">
+                        <span>{{i.categoryname}}</span>
+                      </div>
+                    </a>
+                    </div>
+                    {%endfor%}
+
+
+                  </div>
+                  </div>
+              </div>
+            </div>
+            
+           
+
+            <div class="pt-4 talk-to-celebrity" id="brity">
+              
+
+              <div class="influencer-listing">
+              {%for i in info%}
+
+              <div class="card_list">
+                <div class="tab data_" data-scroll-watch>
+                  <div class="effect effect-two">
+                    <a href="/influencer/{{i.1|striptags|slugify}}/">
+                  <img src="/media/{{i.2}}" class="img-fluid" width="244" height="366" alt="influencer">
+                </a>
+                  <div class="placement">
+                    {% if user.is_authenticated %}
+                    {%if i.11 == True %}
+                    <div class="heart is-active" onclick="checkwishlist({{i.7}});">
+                      <input type="hidden" id="checkwish-{{i.7}}" name="checkwish" value="True"/>
+                    </div>
+                  {%else%}
+                  <div class="heart" onclick="checkwishlist({{i.7}});">
+                    <input type="hidden" id="checkwish-{{i.7}}" name="checkwish" value="False"/>
+                  </div>
+                  {%endif%}
+                  {%else%}
+                  <a href="/login/"><div class="heart"></div></a>
+                  {%endif%}
+    
+               
+                  </div>
+                  <div class="dghtp">
+                {% if i.7 in topc %}
+                  <a href="#"><div class="tpcreater"><img src="/mainapp/static/images/medal.png" alt="title" width="50" height="50"> Top Creator  </div></a>
+                
+    
+                  <a href="#"><div class="tpcreater"><img src="/mainapp/static/images/energy.png" alt="title" width="50" height="50"> Responds Fast</div></a>
+                  {%endif%}
+    
+                  </div>
+                  <a href="/influencer/{{i.1|striptags|slugify}}/"><div class="tab-text">
+                  <h2>{{i.3}}</h2>
+                  <div class="star_rating mb-4">
+                  <!-- <i class="lar la-star {% if i.6 > 0%} las la-star {%endif%}"></i
+                  ><i class="lar la-star {% if i.6 > 1%}las la-star {%endif%}"></i
+                  ><i class="lar la-star {% if i.6 > 2%} las la-star {%endif%}"></i
+                  ><i class="lar la-star {% if i.6 > 3%} las la-star {%endif%}"></i
+                  ><i class="lar la-star {% if i.6 > 4%} las la-star {%endif%}"></i> -->
+                  <i class="far fa-star {% if i.6 > 0%} fas fa-star {%endif%}"></i>
+                  <i class="far fa-star {% if i.6 > 1%}fas fa-star {%endif%}"></i>
+                  <i class="far fa-star {% if i.6 > 2%} fas fa-star {%endif%}"></i>
+                  <i class="far fa-star {% if i.6 > 3%} fas fa-star {%endif%}"></i>
+                  <i class="far fa-star {% if i.6 > 4%} fas fa-star {%endif%}"></i> 
+                  </div>
+                  <div class="description d-block w-100">
+                  <a href="/influencer/{{i.1|striptags|slugify}}/" tabindex="0">Hire Now</a>
+                  <a href="javascript:cart({{i.7}});" class="addtocart-btn celebrity-cart-url-ambika-ranjankar cart-hide-btn cd-add-to-cart" tabindex="0" data-price="25.99" ><span class="globaladdtocart" onclick="showmessage()">Add to Cart </span></a>
+                  <input type="hidden" id="curruser" name="curruser" value="{{request.user.id}}" />
+                  </div>
+                  </div></a>
+                  </div>
+                  <h3 class="text-center mt-3">Starts from <span>{{i.10}}{{i.5}}</span></h3>
+                  <p class="text-center">
+                  <span class="me-2"><a href="#" tabindex="0">{{i.4}}</a> </span>
+                  </p>
+                  </div>
+              </div>
+
+              <!-- <div class="col-xl-3 col-lg-3 col-md-6 col-6 mb-4">
+              <div class="tab data_" data-scroll-watch>
+              <div class="effect effect-two">
+                <a href="/influencer/{{i.1|striptags|slugify}}/">
+              <img src="/media/{{i.2}}" class="img-fluid" width="244" height="366" alt="influencer">
+            </a>
+              <div class="placement">
+                {% if user.is_authenticated %}
+                {%if i.11 == True %}
+                <div class="heart is-active" onclick="checkwishlist({{i.7}});">
+                  <input type="hidden" id="checkwish-{{i.7}}" name="checkwish" value="True"/>
+                </div>
+              {%else%}
+              <div class="heart" onclick="checkwishlist({{i.7}});">
+                <input type="hidden" id="checkwish-{{i.7}}" name="checkwish" value="False"/>
+              </div>
+              {%endif%}
+              {%else%}
+              <a href="/login/"><div class="heart"></div></a>
+              {%endif%}
+
+           
+              </div>
+              <div class="dghtp">
+            {% if i.7 in topc %}
+              <a href="#"><div class="tpcreater"><img src="/mainapp/static/images/medal.png" alt="title" width="50" height="50"> Top Creator  </div></a>
+            
+
+              <a href="#"><div class="tpcreater"><img src="/mainapp/static/images/energy.png" alt="title" width="50" height="50"> Responds Fast</div></a>
+              {%endif%}
+
+              </div>
+              <a href="/influencer/{{i.1|striptags|slugify}}/"><div class="tab-text">
+              <h2>{{i.3}}</h2>
+              <div class="star_rating mb-4">
+              <i class="far fa-star {% if i.6 > 0%} fas fa-star {%endif%}"></i>
+              <i class="far fa-star {% if i.6 > 1%}fas fa-star {%endif%}"></i>
+              <i class="far fa-star {% if i.6 > 2%} fas fa-star {%endif%}"></i>
+              <i class="far fa-star {% if i.6 > 3%} fas fa-star {%endif%}"></i>
+              <i class="far fa-star {% if i.6 > 4%} fas fa-star {%endif%}"></i> 
+              </div>
+              <div class="description d-block w-100">
+              <a href="/influencer/{{i.1|striptags|slugify}}/" tabindex="0">Hire Now</a>
+              <a href="javascript:cart({{i.7}});" class="addtocart-btn celebrity-cart-url-ambika-ranjankar cart-hide-btn cd-add-to-cart" tabindex="0" data-price="25.99" ><span class="globaladdtocart" onclick="showmessage()">Add to Cart </span></a>
+              <input type="hidden" id="curruser" name="curruser" value="{{request.user.id}}" />
+              </div>
+              </div></a>
+              </div>
+              <h3 class="text-center mt-3">Starts from <span>{{i.10}}{{i.5}}</span></h3>
+              <p class="text-center">
+              <span class="me-2"><a href="#" tabindex="0">{{i.4}}</a> </span>
+              </p>
+              </div>
+              </div> -->
+              {%endfor%}
+              </div>
+             
+              </div>
+              </div>
+              </div>
+            </div> 
+
+
+
+            <div class="pt-5 talk-to-celebrity" id="talk" >
+              <div class="row gx-lg-2 g-0" id="cele">
+
+              </div>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+<div id="snackbar">Influencer added to cart..</div>
+
+
+
+<script>
+
+
+  function switchcart() {
+    prebody.innerHTML=postbody.innerHTML;
+    var x=document.getElementById("postbody");
+    var y=document.getElementById("prebody");
+  }
+
+
+function checkwishlist(id){
+  var checkwish = document.getElementById("checkwish-"+id).value;
+  if (checkwish==="False"){
+    wishlist(id);
+    console.log("execute wishlist.");
+    document.getElementById("checkwish-"+id).value="True";
+
+  }
+  else{
+    delwishlist(id);
+    console.log("execute delwishlist.");
+    document.getElementById("checkwish-"+id).value="False";
+  }
+}
+
+
+
+
+
+
+function wishlist(id=null){
+  switchcart();
+  var loguser = document.getElementById("curruser").value;
+  $('#usercart').empty();
+  $.ajax({
+      type:'POST',
+      url:'{% url "mywishlist" %}',
+      data:
+      {
+        id:id,
+        login:loguser,
+        csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+      },
+      success: function(response){
+        console.log("Rahul");
+        console.log(response);
+       for (var key in response){
+console.log("Lkey");
+console.log(key);
+        for (var i=0; i<response[key].length;i++)
+        {
+          console.log("values");
+          console.log(response[key][0]);
+          var html="";
+          html+=`
+          <div class="row m-0 fadeout-box full-cart-div">
+            <div class="cart-box d-flex flex-wrap">
+              <div class="row">
+                <div class="col-3 p-0">
+                <div class="celeb-cart enter-booking-details">
+                  <a href="/influencer/`+response[key][i][8]+`">
+                    <img src="/media/`+response[key][i][5]+`" class="celeb-cart-img img-fluid" alt="cart">
+                  </a>
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="celeb-cart-detail">
+                  <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                 
+                  <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                    <div class="cart-occasion">
+                      <p class="cart-subheading">`+response[key][i][2]+`</p>
+                    </div>
+                  </div>
+                  <div class="celeb-prize-sec d-flex">
+                    <p class="celeb-amount">`+response[key][i][1]+`</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+           
+            <div class="col-12 prime-applied-div">
+              <div class="coupen-code-sec">
+                <div class="coupen-code-div">
+                  <p class="coupen-text">Starts from </p>
+                  <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                </div>
+                <div class="coupen-prize-div">
+                  <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon" alt="detele" width="16" height="16"></a>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          `
+          $('#usercart').append(html);
+        }
+       
+      }
+
+      }
+     
+      })
+  };
+
+
+  function delwishlist(id){
+    switchcart();
+    var loguser = document.getElementById("curruser").value;
+    $('#usercart').empty();
+    $.ajax({
+        type:'POST',
+        url:'{% url "delmywhishlist" %}',
+        data:
+        {
+          id:id,
+          login:loguser,
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+        success: function(response){
+          console.log("Rahul");
+          console.log(response);
+          for (var key in response){
+            console.log("Lkey");
+            console.log(key);
+            console.log("Lenght of the response");
+            console.log(response[key].length);
+              
+if (response[key].length===0){
+var html1="";
+html1+=`
+<div class="cart-empty-content d-block">
+              <img src="{%static 'images/wish_empty.webp'%}" class="cart-empty-img" alt="wishlist_empty_img" loading="lazy">
+              <p class="empty-heading">Wishlist  Empty add your Favourite Influencers ..</p>
+              <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+              <a href="/" target="_blank" class="explore-celeb-btn">Explore Influencers</a>
+            </div>
+            `
+            $('#usercart').append(html1);
+          }
+          else{
+
+
+
+                    for (var i=0; i<response[key].length;i++)
+                    {
+                      console.log("values");
+                      console.log(response[key][0]);
+                      var html="";
+                      html+=`
+                      <div class="row m-0 fadeout-box full-cart-div">
+                        <div class="cart-box d-flex flex-wrap">
+                          <div class="row">
+                            <div class="col-3 p-0">
+                            <div class="celeb-cart enter-booking-details">
+                              <a href="/influencer/`+response[key][i][8]+`">
+                                <img src="/media/`+response[key][i][5]+`" class="celeb-cart-img img-fluid" alt="cart">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class="celeb-cart-detail">
+                              <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                              <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                <div class="cart-occasion">
+                                  <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                </div>
+                              </div>
+                              <div class="celeb-prize-sec d-flex">
+                                <p class="celeb-amount">`+response[key][i][1]+`</p>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-12 prime-applied-div">
+                          <div class="coupen-code-sec">
+                            <div class="coupen-code-div">
+                              <p class="coupen-text">Starts from </p>
+                              <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                            </div>
+                            <div class="coupen-prize-div">
+                            <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon" alt="delete" width="16" height="16"></a>
+                              </div>
+                           
+                          </div>
+                        </div>
+                       
+                      </div>
+                      `
+                      $('#usercart').append(html);
+                    }
+                  }
+                  }
+        }
+        })
+      };
+
+
+
+  
+
+
+      function switchcart1() {
+        prebody1.innerHTML=postbody2.innerHTML;
+      }
+
+function cart(id=null){
+  switchcart1();
+    var loguser = document.getElementById("curruser").value;
+    $('#usercart3').empty();
+    $.ajax({
+        type:'POST',
+        url:'{% url "mycart" %}',
+        data:
+        {
+          client:loguser,
+          influencer:id,
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+        success: function(response){
+          console.log("Rahul");
+          console.log(response);
+          for (var key in response){
+            console.log("Lkey");
+            console.log(key);
+                    for (var i=0; i<response[key].length;i++)
+                    {
+                      console.log("values");
+                      console.log(response[key][0]);
+                      var html="";
+                      html+=`
+                      <div class="row m-0 fadeout-box full-cart-div">
+                        <div class="cart-box d-flex flex-wrap">
+                          <div class="row">
+                            <div class="col-3 p-0">
+                            <div class="celeb-cart enter-booking-details">
+                              <a href="/influencer/`+response[key][i][8]+`">
+                                <img src="/media/`+response[key][i][5]+`" class="celeb-cart-img img-fluid" alt="cart">
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <div class="celeb-cart-detail">
+                              <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                              <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                <div class="cart-occasion">
+                                  <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                </div>
+                              </div>
+                              <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                
+                                <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-12 prime-applied-div">
+                          <div class="coupen-code-sec">
+                            <div class="coupen-code-div">
+                              <p class="coupen-text">Starts from </p>
+                              <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                            </div>
+                            <div class="coupen-prize-div">
+            <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon" alt="delete" width="16" height="16"></a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      `
+                      $('#usercart3').append(html);
+                    }
+                  }
+  
+        }
+       
+        })
+  };
+
+
+
+  function delcart(id){
+    switchcart1();
+      var loguser = document.getElementById("curruser").value;
+      $('#usercart3').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmycart" %}',
+          data:
+          {
+            id:id,
+            login:loguser,
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response); for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+             
+              if (response[key].length===0){
+                var html1="";
+                html1+=`
+                <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/cart_empty.webp'%}" class="cart-empty-img" alt="cart_empty_img" loading="lazy">
+                  <p class="empty-heading">Cart Empty add Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Add Influencers</a>
+                </div>
+                            `
+                            $('#usercart3').append(html1);
+                          }
+                          else{
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" class="celeb-cart-img img-fluid" alt="cart">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                  
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+              <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" class="cart-delete-icon" alt="delete" width="16" height="16"></a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                        $('#usercart3').append(html);
+                      }
+                     
+                    }
+                  }
+    
+          }
+          })
+        };
+  
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+<script>
+  
+  function switchVisible() {
+    brity.innerHTML=talk.innerHTML;
+  }
+
+
+
+  function filter (id=null){
+    switchVisible();
+    
+    var ser=document.getElementById("srch-term").value;
+    var x = document.getElementById("minp").value;
+    var y = document.getElementById("maxp").value;
+    var u = document.getElementById("minfoll").value;
+    var t = document.getElementById("maxfoll").value;
+    var z=document.getElementById("coun").value;
+    $('#cele').empty();
+    $.ajax({
+        type:'POST',
+        url:'{% url "filter" %}',
+        data:
+        {
+          platform:$("#platfrom").val(),
+            service:$("#service-"+id).val(),
+            minprice:x,
+                maxprice:y,
+                minfollow:u,
+                    maxfollow:t,
+                    country:z,
+                    ser:ser,
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        },
+        success: function(response){
+          for (var key in response){
+
+console.log("rahul");
+console.log(response[key].length);
+console.log("Barwal");
+
+          for (var i=0; i<response[key].length;i++)
+          {
+            console.log(response[key][i][11]);
+
+            if(response[key][i][11]===true){
+              console.log("execute rahul barawal");
+              chht=`
+              <div class="heart is-active" onclick="checkwishlist(`+response[key][i][7]+`);">
+                <input type="hidden" id="checkwish-`+response[key][i][7]+`" name="checkwish" value="True"/>
+              </div>
+              `
+            }
+            else{
+              chht=`  <div class="heart" onclick="checkwishlist(`+response[key][i][7]+`);">
+                <input type="hidden" id="checkwish-`+response[key][i][7]+`" name="checkwish" value="False"/>
+              </div>
+              `
+            }
+
+
+            var html="";
+            if (response[key][i][6] > 0)
+            { star="las la-star"}
+            else{
+              star="lar la-star"
+            }
+            html+=`
+            <div class="col-xl-3 col-lg-3 col-md-6 col-6 mb-4" >
+              <div class="tab">
+                              <div class="effect effect-two">
+                                <a href="/influencer/`+response[key][i][1]+`/">
+                              <img src="/media/`+response[key][i][2]+`/" class="img-fluid" alt="influencer">
+                            </a>
+                              <div class="placement">
+
+                                {% if user.is_authenticated %}
+                                `+chht+`
+                              {%else%}
+                              <a href="/login/"><div class="heart"></div></a>
+                              {%endif%}
+                              </div>
+                              <div class="dghtp">
+                               <a href="#"><div class="tpcreater"><img src="/mainapp/static/images/medal.png" alt="title" width="50" height="50"> Top Creator</div></a>
+                               <a href="#"><div class="tpcreater"><img src="/mainapp/static/images/energy.png" alt="title" width="50" height="50"> Responds Fast</div></a>
+                              </div>
+                              <input type="hidden" id="curruser" name="curruser" value="{{request.user.id}}" />
+                                <a href="/influencer/`+response[key][i][1]+`/">
+                                  <div class="tab-text">
+                                    <h2>`+response[key][i][3]+`</h2>
+                              <div class="star_rating mb-4">
+                              <i class="`+star+`"></i
+                              ><i class="`+star+`"></i
+                              ><i class="`+star+`"></i
+                              ><i class="`+star+`"></i
+                              ><i class="`+star+`"></i>
+                              </div>
+                              <div class="description d-block w-100">
+                              <a href="/influencer/`+response[key][i][1]+`/" tabindex="0">Hire Now</a>
+                              <a href="javascript:cart(`+response[key][i][7]+`);" class="addtocart-btn celebrity-cart-url-ambika-ranjankar cart-hide-btn " tabindex="0"><span class="globaladdtocart" onclick="showmessage()">Add to Cart </span></a>
+                              </div>
+                              </div></a>
+                              </div>
+                              <h3 class="text-center mt-3">Starts from <span>`+response[key][i][10]+response[key][i][5]+`</span></h3>
+                              <p class="text-center">
+                                <span class="me-2"><a href="#" tabindex="0">`+response[key][i][4]+`</a>  </span>
+                              </p>
+                          </div>
+                        </div>
+            `
+            $('#cele').append(html);
+            
+   
+            
+
+          }
+         
+        }
+      
+          $('.heart').on("click",function() {
+              $(this).toggleClass("is-active");
+          });
+      
+
+
+        }
+       
+        })
+    };
+    </script>
+    <script src="https://rawgit.com/edull24/ScrollWatch/v2.0.1/dist/ScrollWatch-2.0.1.min.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+  
+  var addElements = function() {
+
+    var txt = document.createTextNode('I am lazy and late to the party.');
+    var el;
+
+    el = document.createElement('.data_');
+    el.appendChild(txt);
+    document.body.appendChild(el);
+    
+    // If we want newly injected elements to be watched, refresh ScrollWatch. It will re-query the dom and start watching new elements.
+    swInstance.refresh();
+      
+  };
+  
+  var swInstance = new ScrollWatch({
+    watch: '.data_',
+    infiniteScroll: true,
+    infiniteOffset: 200,
+    onInfiniteYInView: addElements
+  });
+  
+})();
+</script>
+<script>
+  function showmessage() {
+    var userthatiwanttoshow = "{{request.user.username}}";
+  // Get the snackbar DIVxz
+  if (userthatiwanttoshow !== '') {
+  var x = document.getElementById("snackbar");
+  
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  } else {
+    window.location.href = "https://www.influencerhiring.com/login/";
+  }
+}
+</script>
+
+{% endblock  %}
+

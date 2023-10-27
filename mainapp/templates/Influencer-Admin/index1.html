@@ -1,0 +1,459 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"
+    />
+    <title>User Dashboard</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <link rel="shortcut icon" href="{%static 'assets1/images/favicon.ico'%}" />
+    <link rel="stylesheet" href="{%static 'plugins/morris/morris.css'%}" />
+    <link
+      href="{%static 'assets1/css/bootstrap.min.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/metismenu.min.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/icons.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/style.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- Top Bar Start -->
+      <div class="topbar">
+        <!-- LOGO -->
+        <div class="topbar-left">
+          <a href="/index1/" class="logo">
+            <span>
+              <img
+                src="{%static 'assets1/images/logo-light.png'%}"
+                alt=""
+                height="60"
+              />
+            </span>
+            <i>
+              <img
+                src="{%static 'assets1/images/logo-sm.png'%}"
+                alt=""
+                height="42"
+              />
+            </i>
+          </a>
+        </div>
+
+        <nav class="navbar-custom">
+          <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li class="dropdown notification-list d-none d-sm-block">
+              <form role="search" class="app-search">
+                <div class="form-group mb-0">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search.."
+                  />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </form>
+            </li>
+
+            <li class="dropdown notification-list">
+              <a
+                class="nav-link dropdown-toggle arrow-none waves-effect"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >
+                <i class="ti-bell noti-icon"></i>
+                <span class="badge badge-pill badge-danger noti-icon-badge"
+                  >3</span
+                >
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                <!-- item-->
+                <h6 class="dropdown-item-text">Notifications (258)</h6>
+                <div class="slimscroll notification-item-list">
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item active"
+                  >
+                    <div class="notify-icon bg-success">
+                      <i class="mdi mdi-cart-outline"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your order is placed<span class="text-muted"
+                        >Dummy text of the printing and typesetting
+                        industry.</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-warning">
+                      <i class="mdi mdi-message"></i>
+                    </div>
+                    <p class="notify-details">
+                      New Message received<span class="text-muted"
+                        >You have 87 unread messages</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-info">
+                      <i class="mdi mdi-martini"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your item is shipped<span class="text-muted"
+                        >It is a long established fact that a reader will</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-primary">
+                      <i class="mdi mdi-cart-outline"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your order is placed<span class="text-muted"
+                        >Dummy text of the printing and typesetting
+                        industry.</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-danger">
+                      <i class="mdi mdi-message"></i>
+                    </div>
+                    <p class="notify-details">
+                      New Message received<span class="text-muted"
+                        >You have 87 unread messages</span
+                      >
+                    </p>
+                  </a>
+                </div>
+                <!-- All-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item text-center text-primary"
+                >
+                  View all <i class="fi-arrow-right"></i>
+                </a>
+              </div>
+            </li>
+            <li class="dropdown notification-list">
+              <div class="dropdown notification-list nav-pro-img">
+                <a
+                  class="dropdown-toggle nav-link arrow-none waves-effect nav-user"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="{%static 'assets1/images/users/user-4.jpg'%}"
+                    alt="user"
+                    class="rounded-circle"
+                  />
+                </a>
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                  <!-- item-->
+                  <a class="dropdown-item" href="/profile/"
+                    ><i class="mdi mdi-account-circle m-r-5"></i> Profile</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a
+                  >
+                  <a class="dropdown-item d-block" href="#"
+                    ><span class="badge badge-success float-right">11</span
+                    ><i class="mdi mdi-settings m-r-5"></i> Settings</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock
+                    screen</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="/login/"
+                    ><i class="mdi mdi-power text-danger"></i> Logout</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="list-inline menu-left mb-0">
+            <li class="float-left">
+              <button class="button-menu-mobile open-left waves-effect">
+                <i class="mdi mdi-menu"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- ========== Left Sidebar Start ========== -->
+
+      <div class="left side-menu">
+        <div class="slimscroll-menu" id="remove-scroll">
+          <div id="sidebar-menu">
+            <ul class="metismenu" id="side-menu">
+              <li>
+                <a href="/index1/" class="waves-effect">
+                  <i class="mdi mdi-view-dashboard"></i
+                  ><span class="badge badge-primary badge-pill float-right"
+                    >2</span
+                  ><span>Dashboard</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="javascript:void(0);" class="waves-effect"
+                  ><i class="mdi mdi-email-outline"></i
+                  ><span
+                    >Our Business<span class="float-right menu-arrow"
+                      ><i class="mdi mdi-chevron-right"></i
+                    ></span> </span
+                ></a>
+                <ul class="submenu">
+                  <li><a href="/current-order/">Orders</a></li>
+                  <li><a href="/buyer-requests/">Buyer Requests</a></li>
+                  <li><a href="/earnings/">Earnings</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/profile/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i><span>Profile</span></a
+                >
+              </li>
+              <li><a href="/profile-preview/" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>Clients View</span></a></li>
+              <li>
+                <a href="/accounts/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>Accounts</span></a
+                >
+              </li>
+              <li>
+                <a href="/photo-gallery/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>Photo Gallery</span></a
+                >
+              </li>
+<li>
+                <a href="/video-gallery/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>video Gallery</span></a
+                >
+              </li>
+              <li>
+                <a href="/chat/" class="waves-effect"
+                  ><i class="mdi mdi-email-outline"></i
+                  ><span>Chat us</span></a
+                >
+              </li>
+               
+            </ul>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="page-title-box">
+                  <h4 class="page-title">Dashboard</h4>
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item active">
+                      Welcome to Lexa Dashboard
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-xl-3 col-md-6">
+                <div class="card mini-stat bg-c-red">
+                  <div class="card-body mini-stat-img">
+                    <div class="mini-stat-icon">
+                      <i class="mdi mdi-cube-outline float-right"></i>
+                    </div>
+                    <div class="text-black">
+                      <h6 class="text-uppercase mb-3">Orders</h6>
+                      <h4 class="mb-4">300</h4>
+                      <span class="badge badge-info"> +11% </span>
+                      <span class="ml-2">From previous period</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card mini-stat bg-c-blue">
+                  <div class="card-body mini-stat-img">
+                    <div class="mini-stat-icon">
+                      <i class="mdi mdi-buffer float-right"></i>
+                    </div>
+                    <div class="text-black">
+                      <h6 class="text-uppercase mb-3">Revenue</h6>
+                      <h4 class="mb-4"><i class="fa fa-rupee-sign"></i> 60K</h4>
+                      <span class="badge badge-danger"> -29% </span>
+                      <span class="ml-2">From previous period</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card mini-stat bg-c-green">
+                  <div class="card-body mini-stat-img">
+                    <div class="mini-stat-icon">
+                      <i class="mdi mdi-tag-text-outline float-right"></i>
+                    </div>
+                    <div class="text-black">
+                      <h6 class="text-uppercase mb-3">Average Price</h6>
+                      <h4 class="mb-4">$15.9</h4>
+                      <span class="badge badge-warning"> 0% </span>
+                      <span class="ml-2">From previous period</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card mini-stat bg-c-yellow">
+                  <div class="card-body mini-stat-img">
+                    <div class="mini-stat-icon">
+                      <i class="mdi mdi-briefcase-check float-right"></i>
+                    </div>
+                    <div class="text-black">
+                      <h6 class="text-uppercase mb-3">Product Sold</h6>
+                      <h4 class="mb-4">1890</h4>
+                      <span class="badge badge-info"> +89% </span>
+                      <span class="ml-2">From previous period</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="card m-b-20">
+                  <div class="card-body">
+                    <h4 class="mt-0 header-title">Monthly Earnings</h4>
+
+                    <div class="row text-center m-t-20">
+                      <div class="col-6">
+                        <h5 class="">$56241</h5>
+                        <p class="text-muted">Marketplace</p>
+                      </div>
+                      <div class="col-6">
+                        <h5 class="">$23651</h5>
+                        <p class="text-muted">Total Income</p>
+                      </div>
+                    </div>
+
+                    <div
+                      id="morris-donut-example"
+                      class="dashboard-charts morris-charts"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-6">
+                <div class="card m-b-20">
+                  <div class="card-body">
+                    <h4 class="mt-0 header-title">Email Sent</h4>
+
+                    <div class="row text-center m-t-20">
+                      <div class="col-4">
+                        <h5 class="">$ 89425</h5>
+                        <p class="text-muted">Marketplace</p>
+                      </div>
+                      <div class="col-4">
+                        <h5 class="">$ 56210</h5>
+                        <p class="text-muted">Total Income</p>
+                      </div>
+                      <div class="col-4">
+                        <h5 class="">$ 8974</h5>
+                        <p class="text-muted">Last Month</p>
+                      </div>
+                    </div>
+
+                    <div
+                      id="morris-area-example"
+                      class="dashboard-charts morris-charts"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+
+        <footer class="footer">© 2022 - 2023 All Right Resvered.</footer>
+      </div>
+    </div>
+    <!-- END wrapper -->
+
+    <!-- jQuery  -->
+    <script src="{%static 'assets1/js/jquery.min.js'%}"></script>
+    <script src="{%static 'assets1/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets1/js/metisMenu.min.js'%}"></script>
+    <script src="{%static 'assets1/js/jquery.slimscroll.js'%}"></script>
+    <script src="{%static 'assets1/js/waves.min.js'%}"></script>
+
+    <script src="{%static 'plugins/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+
+    <!--Morris Chart-->
+    <script src="{%static 'plugins/morris/morris.min.js'%}"></script>
+    <script src="{%static 'plugins/raphael/raphael-min.js'%}"></script>
+    <script src="{%static 'assets1/pages/dashboard.js'%}"></script>
+
+    <!-- App js -->
+    <script src="{%static 'assets1/js/app.js'%}"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+Profile Update Needed
+
+ To get started, please fill out your profile with your information and set up your service plan. This will help clients understand what you offer.
+
+
+KYC Completed!
+
+ Congratulations! Your KYC verification is complete. You can now view and accept orders from our platform.
+
+
+Meet Your Relationship Manager!
+
+ {RM_Name} is now your personal Relationship Manager. Feel free to reach out for any assistance regarding our platform.
+
+
+Review Your Profile!
+
+ Please review your profile and service offerings to ensure they accurately represent your brand and services. Make any necessary updates.
+
+
+Welcome to Influencer Hiring!
+
+ Hi {Influencer_Name}, We're thrilled to have you on board. To start using your account, please complete your profile and service plan.
+
+
+Order-{Order_Id} Accepted!
+
+ You have accepted an order. Please remember to complete the order within the given timeframe. You can now chat with the client for any order-related queries.
+
+
+Chat Initiated with Client!
+
+ The chat with your client has been initiated. All conversations are supervised by your assigned RM. Feel free to ask them any questions you might have.
+
+
+Order Declined!
+
+ The client has declined the order-{Order_Id} with the following reason: {reason}. Please review their feedback and take the necessary action to address the issue.
+
+
+New Chat Request from Potential Client-{Influencer_Name}!
+
+ A user wishes to chat with you before placing an order. This is a limited chat where the user can send up to 12 messages, with a maximum of 50 characters per message. Please respond promptly to ensure a potential collaboration.!
+
+
+Order Approved!
+
+ Congratulations! Your completed order-{Order_Id} has been approved by the client.
+
+
+New Order Received!
+
+ You've got a new order-{Order_Id}! Please review the order details and decide if you wish to accept it.
+
+
+Order Completed-{Order_Id}
+
+ Great job on completing the order! The order has been sent to the client for review.
+
+
+your web strory is published!
+
+ Hi, Your webstory is published to portal you users can view it now.
+
+
+Your webstory is rejected by our platform!!
+
+ Hi, your webstory is not following our guidelines so we are unable to publish it. if any questions regarding it please contact to your RM.
+
+
+Web Story Added Successfully
+
+ Great work! Your web story has been added and is currently under review. We'll notify you once it's live. Visit your dashboard for more updates.
+
+
+Oder-{Order_Id} is delaying!!
+
+ Hi, your order has reched the time limit to complete. Please communicate with your RM for any obstacle you are facing.!!!
+
+
+Your request for casting call '{Order_Id}' has been submitted successfully!
+
+ Your request for casting call '{Order_Id}' has been submitted for review. You can check its status on your dashboard.
+
+
+Your request for casting call {Order_Id} is approved.
+
+ Hi, your request for casting call is approved for more detils please contact to agency or log in to your dashboard.
+
+
+your request for casting call {Order_Id} is declined.
+
+ your request for casting call is declined by the agency.
+
+
+🕒 One Hour to Your Call with {Influencer_Name}!
+
+ Hi! Your call with {Influencer_Name} is in 1 hour. Please ensure you’re prepared and on time!
+
+
+⏰ Almost Time for Your Call with {Influencer_Name}!
+
+ Heads Up! You're up in 15 minutes with {Influencer_Name}. Please be ready and set up!
+
+

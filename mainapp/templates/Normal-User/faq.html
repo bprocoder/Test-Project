@@ -1,0 +1,356 @@
+
+{% extends 'Normal-User/index.html' %}
+{% load static %}
+
+{% block title%}
+	{% for i in Seo1 %}
+	{% if i.page.pagename == 'Faq'%}
+<title>{{i.title}}</title>
+<meta name="title" content="{{i.title}}">
+<meta name="description" content="{{i.description}}">
+<meta name="keywords" content="{{i.keyword}}">
+	{% endif %}
+	{%endfor%}
+{% endblock %}
+
+{% block canonical%}
+<link rel="canonical" href="https://www.influencerhiring.com/faq/">
+
+
+<!-- <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How does InfluencerHiring.com work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "InfluencerHiring.com is a marketplace connecting brands, influencers, and users. Brands can discover and collaborate with influencers for marketing campaigns, while users can engage with influencers through various services offered on the platform."
+      }
+    },{
+      "@type": "Question",
+      "name": "How do I find influencers on InfluencerHiring.com?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can browse through our curated list of influencers, filter by industry or niche, and view their profiles to assess their suitability for your campaign or project. You can also use our search feature to find influencers based on specific criteria."
+      }
+    },{
+      "@type": "Question",
+      "name": "How do I hire an influencer on InfluencerHiring.com?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once you have found an influencer you want to work with, you can send them a direct message to discuss your requirements, negotiate terms, and finalize the collaboration. Payments and project details can be managed securely through our platform."
+      }
+    },{
+      "@type": "Question",
+      "name": "What services do influencers offer on InfluencerHiring.com?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Influencers on our platform offer a range of services, including sponsored posts, video promotions, shoutouts, video chats, greetings, and more. You can explore the specific services offered by each influencer on their profile."
+      }
+    },{
+      "@type": "Question",
+      "name": "How does the payment process work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Payments are securely processed through our platform. Once you have agreed on the terms with the influencer, you can make the payment using our integrated payment system. Influencers will receive their payment after the completion of the agreed-upon service."
+      }
+    },{
+      "@type": "Question",
+      "name": "How can I ensure the authenticity and quality of the influencers on InfluencerHiring.com?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have a verification process in place to ensure the authenticity of influencers on our platform. Influencers are required to provide relevant information and demonstrate their expertise in their respective fields. User reviews and ratings also provide insights into the quality of their work."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can I request revisions or modifications to the work done by the influencer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The possibility of revisions or modifications depends on the specific agreement you have with the influencer. It is recommended to discuss this aspect before finalizing the collaboration to ensure clarity and avoid any misunderstandings."
+      }
+    },{
+      "@type": "Question",
+      "name": "How do I contact customer support for any issues or queries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you have any questions or encounter any issues, you can reach out to our customer support team through the contact information provided on our website. We are here to assist you and address any concerns you may have."
+      }
+    },{
+      "@type": "Question",
+      "name": "What is InfluencerHiring.com?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "InfluencerHiring.com is a premier online platform that connects brands with influencers. It is a leading influencer marketplace where brands can find the perfect influencer match for their marketing campaigns, and influencers can discover exciting collaboration opportunities."
+      }
+    }]
+  }
+  </script> -->
+
+
+{%endblock%}
+
+{%block head%}
+<div class="header dash-header ">
+{%endblock%}
+{%block active%}
+<li> <a href="/" class="">Home</a> </li>
+<li> <a href="/influencers/" >Explore</a> </li>
+<li> <a href="/blogs/">Blogs</a> </li>
+<li> <a href="/webstories/">Web-Stories</a> </li>
+<li> <a href="/casting-call/">Casting Call</a> </li>
+<li> <a href="/whitepaper/" class="">White Paper</a> </li>
+{%endblock%}
+
+{% block body %}
+    <section class="faqs-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title t_left">
+                <h5>Some Important FAQ's</h5>
+                <h3 class="title">FREQUENTLY ASKED QUESTIONS</h3>
+                <p>Insurance out perspiciatis unde omnis iste natus error voluptatem best
+                accusantium doloremque laudantium totam aperiam eaque proper to a
+                inventore veritatis et quasi architecto beatae.</p>
+            </div>
+            
+            <div class="accordion accordion-flush accordian_scroll" id="accordionFlushExample">
+              {%for i in Faq%}
+              <div class="accordion-item">
+                <h1 class="accordion-header" id="flush-headingOne-{{i.id}}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-{{i.id}}" aria-expanded="false" aria-controls="flush-collapseOne-{{i.id}}">
+                    {{i.Title}}
+                  </button>
+                </h1>
+                <div id="flush-collapseOne-{{i.id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne-{{i.id}}" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">{{i.Description}}</div>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+            
+          </div>
+          <div class="col-lg-6">
+            <div class="faq_img">
+              <img src="/media/{{ban.0.faqimage}}" alt="influencerhiring.com faq" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+<script>
+
+
+  function switchcart() {
+    prebody.innerHTML=postbody.innerHTML;
+    var x=document.getElementById("postbody");
+    var y=document.getElementById("prebody");
+  }
+
+
+
+
+
+
+    function delwishlist(id){
+      switchcart();
+    
+      $('#usercart').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmywhishlist" %}',
+          data:
+          {
+            id:id,
+            
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+            for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+                
+if (response[key].length===0){
+  var html1="";
+  html1+=`
+  <div class="cart-empty-content d-block">
+                <img src="{%static 'images/wish_empty.webp'%}" class="cart-empty-img" alt="wishlist_empty_img" loading="lazy">
+                <p class="empty-heading">Wishlist  Empty add your Favourite Influencers ..</p>
+                <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                <a href="/" target="_blank" class="explore-celeb-btn">Explore Influencers</a>
+              </div>
+              `
+              $('#usercart').append(html1);
+            }
+            else{
+
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex">
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">₹`+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+                              <a href="javascript:checkwishlist(`+response[key][i][6]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                </div>
+                             
+                            </div>
+                          </div>
+                         
+                        </div>
+                        `
+                        $('#usercart').append(html);
+                      }
+                    }
+                    }
+          }
+          })
+        };
+        
+    function switchcart1() {
+      prebody1.innerHTML=postbody2.innerHTML;
+    }
+  
+    function delcart(id){
+      switchcart1();
+      
+      $('#usercart3').empty();
+      $.ajax({
+          type:'POST',
+          url:'{% url "delmycart" %}',
+          data:
+          {
+            id:id,
+           
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response);
+                  for (var key in response){
+              console.log("Lkey");
+              console.log(key);
+              console.log("Lenght of the response");
+              console.log(response[key].length);
+             
+              if (response[key].length===0){
+                var html1="";
+                html1+=`
+                <div class="cart-empty-content d-block">
+                  <img src="{%static 'images/cart_empty.webp'%}" class="cart-empty-img" alt="cart_empty_img" loading="lazy">
+                  <p class="empty-heading">Cart Empty add Influencers ..</p>
+                  <p class="cart-choice">Your Cart is empty add Influencers to it Now </p>
+                  <a href="/" target="_blank" class="explore-celeb-btn">Add Influencers</a>
+                </div>
+                            `
+                            $('#usercart3').append(html1);
+                          }
+                          else{
+
+
+                      for (var i=0; i<response[key].length;i++)
+                      {
+                        console.log("values");
+                        console.log(response[key][0]);
+                        var html="";
+                        html+=`
+                        <div class="row m-0 fadeout-box full-cart-div">
+                          <div class="cart-box d-flex flex-wrap">
+                            <div class="row">
+                              <div class="col-3 p-0">
+                              <div class="celeb-cart enter-booking-details">
+                                <a href="/influencer/`+response[key][i][8]+`">
+                                  <img src="/media/`+response[key][i][5]+`" alt="image" class="celeb-cart-img img-fluid">
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-9">
+                              <div class="celeb-cart-detail">
+                                <h3 class="cart-celeb-name enter-booking-details">`+response[key][i][0]+`</h3>
+                                <div class="celeb-occasion-detail occasion-bottom d-flex mt-2 enter-booking-details">
+                                  <div class="cart-occasion">
+                                    <p class="cart-subheading">`+response[key][i][2]+`</p>
+                                  </div>
+                                </div>
+                                <div class="celeb-prize-sec d-flex justify-content-between align-items-center">
+                                  
+                                  <p class="celeb-amount">`+response[key][i][1]+`</p>
+                                  <a href="/influencer/`+response[key][i][8]+`/" class="continue-btn mt-2">Continue</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="col-12 prime-applied-div">
+                            <div class="coupen-code-sec">
+                              <div class="coupen-code-div">
+                                <p class="coupen-text">Starts from </p>
+                                <p class="coupen-chip">`+response[key][i][6]+` `+response[key][i][3]+`</p>
+                              </div>
+                              <div class="coupen-prize-div">
+              <a href="javascript:delcart(`+response[key][i][7]+`);"><img src="{%static 'images/Dustbin_Red.png'%}" alt="image" class="cart-delete-icon"></a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        `
+                        $('#usercart3').append(html);
+                      }
+                     
+                    }
+                  }
+    
+          }
+          })
+        };
+  
+  
+  
+      </script>
+
+   
+{% endblock  %}
+

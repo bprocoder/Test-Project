@@ -1,0 +1,779 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"
+    />
+    <title>Profile Preview</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <link rel="shortcut icon" href="{%static 'assets1/images/favicon.ico'%}" />
+    <link rel="stylesheet" href="{%static 'plugins/morris/morris.css'%}" />
+    
+<link rel="shortcut icon" href="{%static 'images/logoIcon/favicon.png'%}" type="image/x-icon">
+<link rel="icon" type="image/png" href="{%static 'images/logoIcon/favicon.png'%}" sizes="16x16">
+<link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{%static 'css/all.min.css' %}">
+<link rel="stylesheet" href="{%static 'css/line-awesome.min.css' %}">
+<link rel="stylesheet" href="{%static 'css/lib/animate.css' %}">
+<!-- Plugin Link -->
+<link rel="stylesheet" href="{%static 'css/lib/slick.css' %}">
+<link rel="stylesheet" href="{%static 'css/lib/magnific-popup.css' %}">
+<!-- Main css -->
+<link rel="stylesheet" href="{%static 'css/main.css' %}">
+<link rel="stylesheet" href="{%static 'css/custom.css' %}">
+<link rel="stylesheet" href="{%static 'css/colore31b.css' %}">
+<link rel="stylesheet" href="{%static 'css/select2.min.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' %}">
+<link href="{%static 'css/owl.carousel.min.css' %}">
+
+    <link
+      href="{%static 'assets1/css/bootstrap.min.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/metismenu.min.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/icons.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{%static 'assets1/css/style.css'%}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .basic_pri .custom--nav-tabs .nav-item .nav-link{
+        background-color: #f7f7f7;
+        padding: 17px 17.6px;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- Top Bar Start -->
+      <div class="topbar">
+        <!-- LOGO -->
+        <div class="topbar-left">
+          <a href="/index1/" class="logo">
+            <span>
+              <img
+                src="{%static 'assets1/images/logo-light.png'%}"
+                alt=""
+                height="60"
+              />
+            </span>
+            <i>
+              <img
+                src="{%static 'assets1/images/logo-sm.png'%}"
+                alt=""
+                height="42"
+              />
+            </i>
+          </a>
+        </div>
+
+        <nav class="navbar-custom">
+          <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li class="dropdown notification-list d-none d-sm-block">
+              <form role="search" class="app-search">
+                <div class="form-group mb-0">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search.."
+                  />
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </form>
+            </li>
+
+            <li class="dropdown notification-list">
+              <a
+                class="nav-link dropdown-toggle arrow-none waves-effect"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="false"
+                aria-expanded="false"
+              >                <i class="ti-bell noti-icon"></i>
+                <span class="badge badge-pill badge-danger noti-icon-badge"
+                  >3</span
+                >
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                <!-- item-->
+                <h6 class="dropdown-item-text">Notifications (258)</h6>
+                <div class="slimscroll notification-item-list">
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item active"
+                  >
+                    <div class="notify-icon bg-success">
+                      <i class="mdi mdi-cart-outline"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your order is placed<span class="text-muted"
+                        >Dummy text of the printing and typesetting
+                        industry.</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-warning">
+                      <i class="mdi mdi-message"></i>
+                    </div>
+                    <p class="notify-details">
+                      New Message received<span class="text-muted"
+                        >You have 87 unread messages</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-info">
+                      <i class="mdi mdi-martini"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your item is shipped<span class="text-muted"
+                        >It is a long established fact that a reader will</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-primary">
+                      <i class="mdi mdi-cart-outline"></i>
+                    </div>
+                    <p class="notify-details">
+                      Your order is placed<span class="text-muted"
+                        >Dummy text of the printing and typesetting
+                        industry.</span
+                      >
+                    </p>
+                  </a>
+                  <!-- item-->
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-item notify-item"
+                  >
+                    <div class="notify-icon bg-danger">
+                      <i class="mdi mdi-message"></i>
+                    </div>
+                    <p class="notify-details">
+                      New Message received<span class="text-muted"
+                        >You have 87 unread messages</span
+                      >
+                    </p>
+                  </a>
+                </div>
+                <!-- All-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item text-center text-primary"
+                >
+                  View all <i class="fi-arrow-right"></i>
+                </a>
+              </div>
+            </li>
+            <li class="dropdown notification-list">
+              <div class="dropdown notification-list nav-pro-img">
+                <a
+                  class="dropdown-toggle nav-link arrow-none waves-effect nav-user"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="{%static 'assets1/images/users/user-4.jpg'%}"
+                    alt="user"
+                    class="rounded-circle"
+                  />
+                </a>
+                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                  <!-- item-->
+                  <a class="dropdown-item" href="/profile/"
+                    ><i class="mdi mdi-account-circle m-r-5"></i> Profile</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a
+                  >
+                  <a class="dropdown-item d-block" href="#"
+                    ><span class="badge badge-success float-right">11</span
+                    ><i class="mdi mdi-settings m-r-5"></i> Settings</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    ><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock
+                    screen</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="/login/"
+                    ><i class="mdi mdi-power text-danger"></i> Logout</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="list-inline menu-left mb-0">
+            <li class="float-left">
+              <button class="button-menu-mobile open-left waves-effect">
+                <i class="mdi mdi-menu"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- ========== Left Sidebar Start ========== -->
+
+      <div class="left side-menu">
+        <div class="slimscroll-menu" id="remove-scroll">
+          <div id="sidebar-menu">
+            <ul class="metismenu" id="side-menu">
+              <li>
+                <a href="/index1/" class="waves-effect">
+                  <i class="mdi mdi-view-dashboard"></i
+                  ><span class="badge badge-primary badge-pill float-right"
+                    >2</span
+                  ><span>Dashboard</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="javascript:void(0);" class="waves-effect"
+                  ><i class="mdi mdi-email-outline"></i
+                  ><span
+                    >Our Business<span class="float-right menu-arrow"
+                      ><i class="mdi mdi-chevron-right"></i
+                    ></span> </span
+                ></a>
+                <ul class="submenu">
+                  <li><a href="/current-order/">Orders</a></li>
+                  <li><a href="/buyer-requests/">Buyer Requests</a></li>
+                  <li><a href="/earnings/">Earnings</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="/profile/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i><span>Profile</span></a
+                >
+              </li>
+              <li><a href="/profile-preview/" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span>Clients View</span></a></li>
+              <li>
+                <a href="/accounts/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>Accounts</span></a
+                >
+              </li>
+              <li>
+                <a href="/photo-gallery/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>Photo Gallery</span></a
+                >
+              </li>
+<li>
+                <a href="/video-gallery/" class="waves-effect"
+                  ><i class="mdi mdi-calendar-check"></i
+                  ><span>video Gallery</span></a
+                >
+              </li>
+              <li>
+                <a href="/chat/" class="waves-effect"
+                  ><i class="mdi mdi-email-outline"></i
+                  ><span>Chat us</span></a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="content-page">
+       
+        <!-- Start content -->
+        <div class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="page-title-box">
+                    <h4 style="text-align:center; margin-bottom:-400px"> Clients View</h4>
+                  <ol class="breadcrumb">
+                    
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+              <section class="story-details pt-80 pb-60">
+                <div class="container">
+                  <div class="row gy-4">
+                    <div class="col-lg-8">
+                      <div class="insta_feed">
+                        <div class="personal_page">
+                        </div>
+          
+                        <h3>I will do an instagram shoutout on a 100k personal page</h3>
+          
+                        <div class="row">
+                          <div class="col-md-9">
+                            <div class="awesome__slider">
+                              {%for i in images%}
+                              <div>
+                                <img src="/media/{{i.imagepath}}" alt="Image 1" />
+                              </div>
+                              {%endfor%}
+                              <div>
+                                {%for i in video%}
+                                <video class="col-lg-3" autoplay="autoplay" controls="controls" preload="preload" width="100" height="300" >
+                                  <source src="/media/{{i.videospath}}" type="video/mp4"></source>
+                                </video>
+                                {%endfor%}
+                              </div>
+                              <div>
+                                {%for i in link %}
+                               <iframe
+                                  style="width: 100%; height: 290px"
+                                  src="{{i.videosLink}}"
+                                  title="YouTube video player"
+                                  frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowfullscreen
+                                ></iframe>
+                                {%endfor%}
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="awesome__thumbnails">
+                              {%for i in images%}
+                              <div class="thumb active" data-rel="0">
+                                <img src="/media/{{i.imagepath}}" alt="Image 1" />
+                              </div>
+                              {%endfor%}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="col-lg-4">
+                      <div class="basic_pri">
+                        <div class="col-lg-12" id="review-section">
+                          <ul
+                            class="nav nav-tabs custom--nav-tabs"
+                            id="myTab"
+                            role="tablist"
+                          >
+                            <li class="nav-item" role="presentation">
+                              <button
+                                class="nav-link active"
+                                id="review-taba"
+                                data-bs-toggle="tab"
+                                data-bs-target="#rr"
+                                type="button"
+                                role="tab"
+                                aria-controls="rr"
+                              >
+                                Basic
+                              </button>
+                            </li>
+          
+                            <li class="nav-item" role="presentation">
+                              <button
+                                class="nav-link"
+                                id="review-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#rrrr"
+                                type="button"
+                                role="tab"
+                                aria-controls="rrrr"
+                              >
+                                Standard
+                              </button>
+                            </li>
+          
+                            <li class="nav-item" role="presentation">
+                              <button
+                                class="nav-link"
+                                id="review-tabs"
+                                data-bs-toggle="tab"
+                                data-bs-target="#sss"
+                                type="button"
+                                role="tab"
+                                aria-controls="sss"
+                              >
+                                Premium
+                              </button>
+                            </li>
+                          </ul>
+          
+                          <div class="tab-content mt-3" id="myTabContent">
+                            <div
+                              class="tab-pane fade show active"
+                              id="rr"
+                              role="tabpanel"
+                              aria-labelledby="description-tab"
+                            >
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <h3>Instagram Story</h3>
+                                </div>
+                                <div class="col-lg-4"><h2>₹2,500</h2></div>
+          
+                                <div class="col-lg-12">
+                                  <div class="influser_tbl">
+                                    <ul>
+                                      <li>7 Days Delivery</li>
+                                      <li>Post an image (stories)</li>
+                                      <li>Post an image</li>
+                                      <li>Add a web link</li>
+                                      <li>Add a description</li>
+                                      <li>1 free revision</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="col-lg-12">
+                                  <a href="" class="btn btn--outline-base btn--md w-100">
+                                    Contact Now
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div
+                              class="tab-pane fade"
+                              id="rrrr"
+                              role="tabpanel"
+                              aria-labelledby="rrrr"
+                            >
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <h3>Instagram Story</h3>
+                                </div>
+                                <div class="col-lg-4"><h2>₹ 2,537</h2></div>
+                                <div class="col-lg-12">
+                                  <div class="influser_tbl">
+                                    <ul>
+                                      <li>5 Days Delivery</li>
+                                      <li>Post an image (stories)</li>
+                                      <li>Post an image</li>
+                                      <li>Add a description</li>
+                                      <li>Add hashtags</li>
+                                      <li>2 free revision</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="col-lg-12">
+                                  <a href="" class="btn btn--outline-base btn--md w-100">
+                                    Contact Now
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div
+                              class="tab-pane fade"
+                              id="sss"
+                              role="tabpanel"
+                              aria-labelledby="sss"
+                            >
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <h3>Instagram Story</h3>
+                                </div>
+                                <div class="col-lg-4"><h2>₹ 5,000</h2></div>
+                                <div class="col-lg-12">
+                                  <div class="influser_tbl">
+                                    <ul>
+                                      <li>3 Days Delivery</li>
+                                      <li>Post an image (stories)</li>
+                                      <li>Post an image</li>
+                                      <li>Add a web link</li>
+                                      <li>Add a description</li>
+                                      <li>Add hashtags</li>
+                                      <li>Add a geolocation</li>
+                                      <li>Post a video (stories)</li>
+                                      <li>2 free revision</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="col-lg-12">
+                                  <a href="" class="btn btn--outline-base btn--md w-100">
+                                    Contact Now
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+                  <section id="teachers-single">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-6">
+                          <div class="teachers-left mt-50">
+                            <div class="hero">
+                              <img src="/media/{{data.0.profileimage}}" alt="Teachers" />
+                            </div>
+                            <div class="name">
+                              <h6>{{data.0.fullname}}</h6>
+                              <span>{{data.0.desc_title}}</span>
+                            </div>
+                            <div
+                              class="rating d-flex justify-content-center align-items-center mt-2"
+                            >
+                              <span class="me-1">
+                                <i class="lar la-star {% if data.0.rating > 0%} las la-star {%endif%}"></i
+                                  ><i class="lar la-star {% if data.0.rating > 1%}las la-star {%endif%}"></i
+                                  ><i class="lar la-star {% if data.0.rating > 2%} las la-star {%endif%}"></i
+                                  ><i class="lar la-star {% if data.0.rating > 3%} las la-star {%endif%}"></i
+                                  ><i class="lar la-star {% if data.0.rating > 4%} las la-star {%endif%}"></i>
+                                  ({{data.0.rating}})
+                              </span>
+
+                            </div>
+                            <div class="social">
+                              <ul>
+                                <li>
+                                  <a href="#"
+                                    ><img src="{%static 'images/instagram.png'%}" width="20" /> 6.3M</a
+                                  >
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    ><img src="{%static 'images/youtube logo.png'%}" width="20" /> 3.0M
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    ><img src="{%static 'images/tiktok logo.png'%}" width="20" /> 2.3M
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"
+                                    ><img src="{%static 'images/fb logo.png'%}" width="20" /> 1.3M
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- teachers left -->
+                        </div>
+              
+                        <div class="col-lg-9">
+                          <div class="summery">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <h2>About This Gig</h2>
+                                <p>
+                                  {{data.0.aboutgig}}
+                                </p>
+                                <h3>Why choose me?</h3>
+                                <ol>
+                                  {%for i in choose%}
+                                  <li>
+                                   {{i}}
+                                  </li>
+                                    {%endfor%}
+                                </ol>
+              
+                                <h3>Rules for this Gig:</h3>
+                                <ol>
+                                  {%for i in rule%}
+                                  <li>
+                                    {{i}}
+                                  </li>
+                                  {%endfor%}
+                                </ol>
+                              </div>
+              
+                              <div class="col-lg-12">
+                                <h2>You're in good hands…</h2>
+                                <hr />
+              
+                                <div class="row">
+                                  <div class="col-lg-4">
+                                    <h4>Platform type</h4>
+
+                                    {% comment %} {%for i in plat%}
+                                    <h3>
+                                      {{i}}
+                                    </h3>
+                                    {%endfor%} {% endcomment %}
+                                  </div>
+              
+                               
+                                  <div class="col-lg-4">
+                                    <h4>Target audience</h4>
+                                    <h3>
+                                      <ul>
+                                        {%for i in cate%}
+                                        <li>{{i}}</li>
+                                     {%endfor%}
+                                      </ul>
+                                    </h3>
+                                  </div>
+              
+                                  <div class="col-lg-4">
+                                    <h4>Audience age groups</h4>
+                                    <h3>
+                                      <ul>
+                                        <li>{{data.0.audienceagegroup}}</li>
+                                      
+                                      </ul>
+                                    </h3>
+                                  </div>
+              
+                                  <div class="col-lg-4">
+                                    <h4>Audience Country</h4>
+                                    <h3>
+                                      {{data.0.country}}
+                                    </h3>
+                                  </div>
+              
+                                  <div class="col-lg-4">
+                                    <h4>Audience gender</h4>
+                                    <h3>{{data.0.audiencegender}}</h3>
+                                  </div>
+              
+                                  <div class="col-lg-12">
+                                    <hr />
+                                    <h2>My portfolio</h2>
+                                    <section>
+                                      <div class="gallery">
+                                        {%for i in images%}
+                                        <div class="gallery-item item-3x4">
+                                          <img src="/media/{{i.imagepath}}" />
+                                          <div class="caption"><span>{{i.imagecaption}}</span></div>
+                                        </div>
+                                    {%endfor%}
+                                      </div>
+                                    </section>
+                                  </div>
+              
+                                  <!-- <div class="col-lg-12">
+                 <div class="rating-wrapper"> 
+                   <span class="text--warning service-rating"><span class="text--dark">Review</span> <i class="lar la-star"></i><i class="lar la-star"></i><i class="lar la-star"></i><i class="lar la-star"></i><i class="lar la-star"></i> (0) </span> </div>
+                   </div>-->    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+
+            <!-- end row -->
+          </div>
+        </div>
+
+        <footer class="footer">© 2022 - 2023 All Right Resvered.</footer>
+      </div>
+    </div>
+    <!-- END wrapper -->
+
+    <!-- jQuery  -->
+    <script src="{%static 'assets1/js/jquery.min.js'%}"></script>
+    <script src="{%static 'assets1/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets1/js/metisMenu.min.js'%}"></script>
+    <script src="{%static 'assets1/js/jquery.slimscroll.js'%}"></script>
+    <script src="{%static 'assets1/js/waves.min.js'%}"></script>
+
+    <script src="{%static 'plugins/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+
+    <!--Morris Chart-->
+    <script src="{%static 'plugins/morris/morris.min.js'%}"></script>
+    <script src="{%static 'plugins/raphael/raphael-min.js'%}"></script>
+    <script src="{%static 'assets1/pages/dashboard.js'%}"></script>
+
+    <!-- App js -->
+    <script src="{%static 'assets1/js/app.js'%}"></script>
+    <script src="{%static 'js/jquery-3.6.0.min.js'%}"></script> 
+    <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script> 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script> 
+    <script  src="{%static 'js/script.js'%}"></sc>
+    <!-- Pluglin Link --> 
+    <script src="{%static 'js/lib/slick.min.js'%}"></script> 
+    <script src="{%static 'js/lib/magnific-popup.min.js'%}"></script> 
+    <script src="{%static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{%static 'js/2903eb4599.js'%}"></script>
+    <!-- Main js -->   
+    <script src="{%static 'js/main.js'%}"></script> 
+        
+     <script>
+        $(function() {
+      // Reference the tab links.
+      const tabLinks = $('#tab-links li a');
+      
+      // Handle link clicks.
+      tabLinks.click(function(event) {
+        var $this = $(this);
+         
+        event.preventDefault();
+         
+        $('#tab-links a.active, section.active').removeClass('active');
+         
+        $this.addClass('active');
+        $($this.attr('href')).addClass('active');
+      });
+    });
+        </script>
+        
+        <script>
+      $(function () {
+             $(".like").click(function () {
+                 var input = $(this).find('.qty1');
+                 input.val(parseInt(input.val())+ 1);
+        
+             });
+         
+      });
+      </script>
+  
+  </body>
+</html>
+    
+
+ 
+    

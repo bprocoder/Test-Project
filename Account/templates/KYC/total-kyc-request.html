@@ -1,0 +1,452 @@
+{% extends 'KYC/index.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | New Kyc Request</title>
+{% endblock %}
+
+{%block sidebar%}
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+  <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+    <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+      <div class="menu-item"> <a class="menu-link" href="/kyc-dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+        </svg>
+        </span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+
+<!--begin:Menu item-->
+<div class="menu-item pt-5">
+<!--begin:Menu content-->
+  <div class="menu-content">
+    <span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+  </div>
+  <!--end:Menu content-->
+  </div>
+<!--end:Menu item-->
+       
+  
+
+<div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+          <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+        </svg>
+        </span> </span> <span class="menu-title">Users KYC</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/brand-kyc-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Brands KYC Request</span></a></div>
+			<div class="menu-item"> <a class="menu-link active" href="/pending-kyc-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Creators KYC Request</span></a></div>
+      <div class="menu-item"> <a class="menu-link" href="/completed-brand-kyc/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Completed Brand KYC</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/completed-kyc-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Completed Creator KYC</span></a></div>
+          
+        </div>
+      </div>
+<!--begin:Menu item-->
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+<!--begin:Menu link-->
+<span class="menu-link">
+  <span class="menu-icon">
+    <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+    <span class="svg-icon svg-icon-2">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
+        <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
+      </svg>
+    </span>
+    <!--end::Svg Icon-->
+  </span>
+  <span class="menu-title">Users</span>
+  <span class="menu-arrow"></span>
+</span>
+<!--end:Menu link-->
+<!--begin:Menu sub-->
+<div class="menu-sub menu-sub-accordion">
+  <!--begin:Menu item-->
+  <div class="menu-item">
+    <!--begin:Menu link-->
+    <a class="menu-link" href="/brands-lists/">
+      <span class="menu-bullet">
+        <span class="bullet bullet-dot"></span>
+      </span>
+      <span class="menu-title">Brands</span>
+    </a>
+    <!--end:Menu link-->
+  </div>
+  <!--end:Menu item-->
+  
+  <!--begin:Menu item-->
+  <div class="menu-item">
+    <!--begin:Menu link-->
+    <a class="menu-link" href="/clients-lists/">
+      <span class="menu-bullet">
+        <span class="bullet bullet-dot"></span>
+      </span>
+      <span class="menu-title">Clients</span>
+    </a>
+    <!--end:Menu link-->
+  </div>
+  <!--end:Menu item-->
+  
+  <!--begin:Menu item-->
+  <div class="menu-item">
+    <!--begin:Menu link-->
+    <a class="menu-link" href="/creators-lists/">
+      <span class="menu-bullet">
+        <span class="bullet bullet-dot"></span>
+      </span>
+      <span class="menu-title">Creaters</span>
+    </a>
+    <!--end:Menu link-->
+  </div>
+  <!--end:Menu item-->
+</div>
+<!--end:Menu sub-->
+</div>
+<!--end:Menu item-->
+
+
+      <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor"></path>
+          <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor"></path>
+        </svg>
+        </span> </span> <span class="menu-title">My Profile</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/profile-settings/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Profile Setting</span></a></div>
+        </div>
+      </div>
+
+
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+            <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+          </svg>
+        </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/blogshome/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blog</span></a></div>
+  <div class="menu-item"> <a class="menu-link" href="/blogs-comments/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs Review</span></a></div>
+        </div>
+      </div>
+
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" d="M7 20.5L2 17.6V11.8L7 8.90002L12 11.8V17.6L7 20.5ZM21 20.8V18.5L19 17.3L17 18.5V20.8L19 22L21 20.8Z" fill="currentColor"></path>
+            <path d="M22 14.1V6L15 2L8 6V14.1L15 18.2L22 14.1Z" fill="currentColor"></path>
+          </svg>
+        </span> </span> <span class="menu-title">Review & Comments</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/platform-review/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Platform Review</span></a></div>
+  <div class="menu-item"> <a class="menu-link" href="/blogs-comments/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs Review</span></a></div>
+  <div class="menu-item"> <a class="menu-link" href="/influencer-review/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Influencer Review</span></a></div>
+        </div>
+      </div>
+
+      <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <span class="svg-icon svg-icon-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 5.91517C15.8 6.41517 18 8.81519 18 11.8152C18 12.5152 17.9 13.2152 17.6 13.9152L20.1 15.3152C20.6 15.6152 21.4 15.4152 21.6 14.8152C21.9 13.9152 22.1 12.9152 22.1 11.8152C22.1 7.01519 18.8 3.11521 14.3 2.01521C13.7 1.91521 13.1 2.31521 13.1 3.01521V5.91517H13Z" fill="currentColor"></path>
+                <path opacity="0.3" d="M19.1 17.0152C19.7 17.3152 19.8 18.1152 19.3 18.5152C17.5 20.5152 14.9 21.7152 12 21.7152C9.1 21.7152 6.50001 20.5152 4.70001 18.5152C4.30001 18.0152 4.39999 17.3152 4.89999 17.0152L7.39999 15.6152C8.49999 16.9152 10.2 17.8152 12 17.8152C13.8 17.8152 15.5 17.0152 16.6 15.6152L19.1 17.0152ZM6.39999 13.9151C6.19999 13.2151 6 12.5152 6 11.8152C6 8.81517 8.2 6.41515 11 5.91515V3.01519C11 2.41519 10.4 1.91519 9.79999 2.01519C5.29999 3.01519 2 7.01517 2 11.8152C2 12.8152 2.2 13.8152 2.5 14.8152C2.7 15.4152 3.4 15.7152 4 15.3152L6.39999 13.9151Z" fill="currentColor"></path>
+            </svg>
+        </span>
+                </span> </span> <span class="menu-title">Webstories</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/webstories-approval/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Webstories</span></a></div>
+                </div>
+              </div>
+              
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="currentColor"></path>
+  <path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.1128C2.10209 18.0128 6.40208 22.0128 11.3021 21.9128C13.1021 21.8128 14.7021 21.3128 16.0021 20.4128C16.5021 20.1128 16.6021 19.3128 16.1021 18.9128L11.0021 13.7128Z" fill="currentColor"></path>
+  <path opacity="0.3" d="M21.9021 14.0128C21.7021 15.6128 21.1021 17.1128 20.1021 18.4128C19.7021 18.9128 19.0021 18.9128 18.6021 18.5128L13.0021 12.9128H20.9021C21.5021 12.9128 22.0021 13.4128 21.9021 14.0128Z" fill="currentColor"></path>
+        </svg>
+        </span> </span> <span class="menu-title">Casting Call</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/all-castingcall/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title"> New Casting Call</span></a></div>
+  <div class="menu-item"> <a class="menu-link" href="/active-castingcall/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title"> Active Casting Call</span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}
+        {% block body %}
+        <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+          <div class="d-flex flex-column flex-column-fluid">
+            <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+            <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+              <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                      <!--begin::Title-->
+                      <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">New KYC Request</h1>
+                      <!--end::Title-->
+                      <!--begin::Breadcrumb-->
+                      <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">
+                          <a href="/kyc-dashboard/" class="text-muted text-hover-primary">Home</a>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item">
+                          <span class="bullet bg-gray-400 w-5px h-2px"></span>
+                        </li>
+                        <!--end::Item-->
+                        <!--begin::Item-->
+                        <li class="breadcrumb-item text-muted">Users KYC</li>
+                        <!--end::Item-->
+
+                      </ul>
+                      <!--end::Breadcrumb-->
+                    </div>
+                    <!--end::Page title-->
+                    <!--begin::Actions-->
+                    <div class="d-flex align-items-center gap-2 gap-lg-3">
+                     
+                    </div>
+                    <!--end::Actions-->
+                  </div>
+                  <!--end::Toolbar container-->
+                </div>
+                <!--end::Toolbar-->
+                <div id="kt_app_content" class="app-content flex-column-fluid">
+                  <div id="kt_app_content_container" class="app-container container-fluid">
+                    <!--begin::Products-->
+                    <div class="card card-flush">
+                      <!--begin::Card header-->
+                      <div class="card-header align-items-center py-5 gap-2 gap-md-5">
+                        <!--begin::Card title-->
+                        <div class="card-title">
+                          <!--begin::Search-->
+                          <div class="d-flex align-items-center position-relative my-1">
+                            <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                            <span class="svg-icon svg-icon-1 position-absolute ms-4">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+                                <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+                              </svg>
+                            </span>
+                            <!--end::Svg Icon-->
+                            <input type="text" data-kt-ecommerce-order-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search Order" />
+                          </div>
+                          <!--end::Search-->
+                        </div>
+                        <!--end::Card title-->
+                        <!--begin::Card toolbar-->
+                        <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+                        
+                        </div>
+                        <!--end::Card toolbar-->
+                      </div>
+                      <!--end::Card header-->
+                      <!--begin::Card body-->
+                      <div class="card-body pt-0">
+                        <!--begin::Table-->
+                        <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_sales_table">
+                          <!--begin::Table head-->
+                          <thead>
+                            <!--begin::Table row-->
+                            <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                              <th class="w-10px pe-2">
+                                <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                                  <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_ecommerce_sales_table .form-check-input" value="1" />
+                                </div>
+                              </th>
+                              <th class="min-w-70px">User's ID</th>
+                              <th class="min-w-150px">User Details</th>
+                              <th class="text-center min-w-100px">Roles</th>
+                              <th class="text-end min-w-100px">register date</th>
+                              <th class="text-end min-w-100px">KYC Status</th>
+                              <th class="text-end min-w-100px">Profile Status</th>
+                              <th class="text-end min-w-100px">Actions</th>
+                            </tr>
+                            <!--end::Table row-->
+                          </thead>
+                          <!--end::Table head-->
+                          <!--begin::Table body-->
+                          <tbody class="fw-semibold text-gray-600">
+                            {% for i in infodet  %}
+                            <!--begin::Table row-->
+                            <tr>
+                              <!--begin::Checkbox-->
+                              <td>
+                                <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                  <input class="form-check-input" type="checkbox" value="1" />
+                                </div>
+                              </td>
+                              <!--end::Checkbox-->
+                              <!--begin::Order ID=-->
+                              <td data-kt-ecommerce-order-filter="order_id">
+                                <span class="badge badge-light fw-bold">
+
+                                  {{i.influencer_userid}}
+                                </span>
+                              </td>
+                              <!--end::Order ID=-->
+                              <!--begin::Customer=-->
+                              <td class="d-flex align-items-center">
+                                <!--begin:: Avatar -->
+                                <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
+                                  <div class="symbol-label fs-3 bg-light-primary text-primary">{{i.influencer_userid.username|slice:":1"}}</div>
+                                </div>
+                                <!--end::Avatar-->
+                                <!--begin::User details-->
+                                <div class="d-flex flex-column">
+                                  <a href="#" class="text-gray-800 text-hover-primary mb-1">{{i.influencer_userid.username}}</a>
+                                  <span>{{i.influencer_userid.email}}</span>
+                                </div>
+                                <!--begin::User details-->
+                              </td>
+                              
+                              <td class="text-end">
+                                <span class="badge badge-light-primary fw-bold">{{i.influencer_userid.roles}}</span>
+                              </td>
+                              <!--begin::Date Added=-->
+                              <td class="text-end">
+                                <span class="fw-bold">{{i.influencer_userid.date_joined}}</span>
+                              </td>
+                              <!--end::Date Added=-->
+                              <td class="text-end pe-0">
+                                <!--begin::Badges-->
+                                {% if i.kyc == True %}
+                                <div class="badge badge-light-success">Completed</div>
+                                {%else%}
+                                <div class="badge badge-light-warning">Under Review</div>
+                                {%endif%}
+                                <!--end::Badges-->
+                              </td>
+                             
+                              <td class="text-center pe-0">
+                                <span class="badge badge-light-success fs-base">{{i.influencer_userid.influencerprofile.filled_percentage|floatformat:"0"}}%</span>
+                              </td>
+                              <!--begin::Action=-->
+                              <td class="text-end">
+                                <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                <span class="svg-icon svg-icon-5 m-0">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+                                  </svg>
+                                </span>
+                                <!--end::Svg Icon--></a>
+                                <!--begin::Menu-->
+                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+                                  <!--begin::Menu item-->
+                                  <div class="menu-item px-3">
+                                    {% csrf_token %}
+
+                                    <a href="#" class="menu-link px-3" onclick="event.preventDefault(); filter({{i.influencer_userid.id}});" >View Profile</a>
+                                  </div>
+                                  <!--end::Menu item-->
+                                </div>
+                                <!--end::Menu-->
+                              </td>
+                              <!--end::Action=-->
+                            </tr>
+                            {%endfor%}
+
+
+
+                            <!--end::Table row-->
+                          </tbody>
+                          <!--end::Table body-->
+                        </table>
+                        <!--end::Table-->
+                      </div>
+                      <!--end::Card body-->
+                    </div>
+                    <!--end::Products-->
+                  </div>
+                  <!--end::Content container-->
+                </div>
+                <!--end::Content-->
+              </div>
+              <!--end::Content wrapper-->
+            
+            </div>
+            <!--end:::Main-->
+      </div>
+    </div>
+  </div>
+  
+  
+  <script>
+    function filter(id){
+  
+        $.ajax({
+          type:'POST',
+          url:'{% url "infoselectid2" %}',
+          headers: {
+            'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+          },
+          data:
+          {
+            orderid:id,     
+          },
+          success: function(response){
+            console.log("Rahul");
+            console.log(response['results']);
+            if (response['results']==='ok')
+            {
+            redirecttourl('/Creators-Overview/');
+          }
+          }
+          
+           
+          })
+          
+      };
+    
+    
+  
+        function redirecttourl(url){
+        window.location.href=url;
+        }
+    
+    
+  
+  
+  </script>
+
+<script>
+    
+
+  function filters(id){
+
+      $.ajax({
+        type:'POST',
+        url:'{% url "clientselectid2" %}',
+        headers: {
+          'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+        },
+        data:
+        {
+          orderid:id,     
+        },
+        success: function(response){
+          console.log(response['results']);
+          if (response['results']==='ok')
+          {
+          redirecttourl('/Client-Profile/');
+        } 
+        }
+        
+         
+        })
+        
+    };
+  
+  
+
+      function redirecttourl(url){
+      window.location.href=url;
+      }
+  
+  
+
+
+</script>
+  
+  {%endblock%}

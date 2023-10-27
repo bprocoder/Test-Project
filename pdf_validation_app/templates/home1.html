@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Validation</title>
+</head>
+<body>
+
+    <h1>Unique Code: {{ unique_code }}</h1>
+<img src="{{ qr_code_data_uri }}" alt="QR Code">
+    <h1>PDF Documents</h1>
+    <ul>
+    {% for pdf_document in pdf_documents %}
+        <li>
+            <h3>Document ID: {{ pdf_document.id }}</h3>
+            <img src="{{ pdf_document.qr_code.url }}" alt="QR Code">
+            <a href="{{ pdf_document.document_file.url }}" target="_blank">Open PDF Document</a>
+            <button class="validate-btn" data-document-id="{{ pdf_document.id }}">Validate</button>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.validate-btn').click(function() {
+            var documentId = $(this).data('document-id');
+            var scannedData = prompt('Enter scanned data:');
+
+            $.ajax({
+                type: 'POST',
+                url: "{%url 'validate_pdf_document' %}",
+                data: {
+                    'scanned_data': scannedData,
+                    'pdf_document_id': documentId
+                },
+                success: function(response) {
+                    if (response.status === 'valid') {
+                        alert('PDF document is valid!');
+                    } else if (response.status === 'invalid') {
+                        alert('PDF document is invalid!');
+                    } else if (response.status === 'not_found') {
+                        alert('PDF document not found!');
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,2097 @@
+{% extends 'KYC/index.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | Profile Settings</title>
+{% endblock %}
+
+{%block sidebar%}
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+  <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+    <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+      <div class="menu-item"> <a class="menu-link " href="/kyc-dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+          <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+        </svg>
+        </span> </span> <span class="menu-title">Dashboards</span> </a> </div> 
+
+<!--begin:Menu item-->
+<div class="menu-item pt-5">
+<!--begin:Menu content-->
+  <div class="menu-content">
+    <span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+  </div>
+  <!--end:Menu content-->
+  </div>
+<!--end:Menu item-->
+       
+  
+
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+          <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+        </svg>
+        </span> </span> <span class="menu-title">Users KYC</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+			<div class="menu-item"> <a class="menu-link" href="/brand-kyc-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Brands KYC Request</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/pending-kyc-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Creators KYC Request</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/completed-brand-kyc/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Completed Brand KYC</span></a></div>
+			<div class="menu-item"> <a class="menu-link" href="/completed-kyc-request/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Completed Creator KYC</span></a></div>
+          
+        </div>
+      </div>
+<!--begin:Menu item-->
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+<!--begin:Menu link-->
+<span class="menu-link">
+  <span class="menu-icon">
+    <!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+    <span class="svg-icon svg-icon-2">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
+        <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
+      </svg>
+    </span>
+    <!--end::Svg Icon-->
+  </span>
+  <span class="menu-title">Users</span>
+  <span class="menu-arrow"></span>
+</span>
+<!--end:Menu link-->
+<!--begin:Menu sub-->
+<div class="menu-sub menu-sub-accordion">
+  <!--begin:Menu item-->
+  <div class="menu-item">
+    <!--begin:Menu link-->
+    <a class="menu-link" href="/brands-lists/">
+      <span class="menu-bullet">
+        <span class="bullet bullet-dot"></span>
+      </span>
+      <span class="menu-title">Brands</span>
+    </a>
+    <!--end:Menu link-->
+  </div>
+  <!--end:Menu item-->
+  
+  <!--begin:Menu item-->
+  <div class="menu-item">
+    <!--begin:Menu link-->
+    <a class="menu-link" href="/clients-lists/">
+      <span class="menu-bullet">
+        <span class="bullet bullet-dot"></span>
+      </span>
+      <span class="menu-title">Clients</span>
+    </a>
+    <!--end:Menu link-->
+  </div>
+  <!--end:Menu item-->
+  
+  <!--begin:Menu item-->
+  <div class="menu-item">
+    <!--begin:Menu link-->
+    <a class="menu-link" href="/creators-lists/">
+      <span class="menu-bullet">
+        <span class="bullet bullet-dot"></span>
+      </span>
+      <span class="menu-title">Creaters</span>
+    </a>
+    <!--end:Menu link-->
+  </div>
+  <!--end:Menu item-->
+</div>
+<!--end:Menu sub-->
+</div>
+<!--end:Menu item-->
+
+
+      <div data-kt-menu-trigger="click" class="menu-item show menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor"></path>
+          <path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor"></path>
+        </svg>
+        </span> </span> <span class="menu-title">My Profile</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link active" href="/profile-settings/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Profile Setting</span></a></div>
+        </div>
+      </div>
+
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor"></path>
+            <path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor"></path>
+          </svg>
+        </span> </span> <span class="menu-title">Blogs</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/blogshome/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blog</span></a></div>
+  <div class="menu-item"> <a class="menu-link" href="/blogs-comments/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs Review</span></a></div>
+        </div>
+      </div>
+
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" d="M7 20.5L2 17.6V11.8L7 8.90002L12 11.8V17.6L7 20.5ZM21 20.8V18.5L19 17.3L17 18.5V20.8L19 22L21 20.8Z" fill="currentColor"></path>
+            <path d="M22 14.1V6L15 2L8 6V14.1L15 18.2L22 14.1Z" fill="currentColor"></path>
+          </svg>
+        </span> </span> <span class="menu-title">Review & Comments</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/platform-review/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Platform Review</span></a></div>
+  <div class="menu-item"> <a class="menu-link" href="/blogs-comments/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Blogs Review</span></a></div>
+  <div class="menu-item"> <a class="menu-link" href="/influencer-review/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Influencer Review</span></a></div>
+        </div>
+      </div>
+
+	  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+        <span class="svg-icon svg-icon-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 5.91517C15.8 6.41517 18 8.81519 18 11.8152C18 12.5152 17.9 13.2152 17.6 13.9152L20.1 15.3152C20.6 15.6152 21.4 15.4152 21.6 14.8152C21.9 13.9152 22.1 12.9152 22.1 11.8152C22.1 7.01519 18.8 3.11521 14.3 2.01521C13.7 1.91521 13.1 2.31521 13.1 3.01521V5.91517H13Z" fill="currentColor"></path>
+                <path opacity="0.3" d="M19.1 17.0152C19.7 17.3152 19.8 18.1152 19.3 18.5152C17.5 20.5152 14.9 21.7152 12 21.7152C9.1 21.7152 6.50001 20.5152 4.70001 18.5152C4.30001 18.0152 4.39999 17.3152 4.89999 17.0152L7.39999 15.6152C8.49999 16.9152 10.2 17.8152 12 17.8152C13.8 17.8152 15.5 17.0152 16.6 15.6152L19.1 17.0152ZM6.39999 13.9151C6.19999 13.2151 6 12.5152 6 11.8152C6 8.81517 8.2 6.41515 11 5.91515V3.01519C11 2.41519 10.4 1.91519 9.79999 2.01519C5.29999 3.01519 2 7.01517 2 11.8152C2 12.8152 2.2 13.8152 2.5 14.8152C2.7 15.4152 3.4 15.7152 4 15.3152L6.39999 13.9151Z" fill="currentColor"></path>
+            </svg>
+        </span>
+                </span> </span> <span class="menu-title">Webstories</span><span class="menu-arrow"></span></span>
+                <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/webstories-approval/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Webstories</span></a></div>
+                </div>
+              </div>
+
+<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="currentColor"></path>
+  <path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.1128C2.10209 18.0128 6.40208 22.0128 11.3021 21.9128C13.1021 21.8128 14.7021 21.3128 16.0021 20.4128C16.5021 20.1128 16.6021 19.3128 16.1021 18.9128L11.0021 13.7128Z" fill="currentColor"></path>
+  <path opacity="0.3" d="M21.9021 14.0128C21.7021 15.6128 21.1021 17.1128 20.1021 18.4128C19.7021 18.9128 19.0021 18.9128 18.6021 18.5128L13.0021 12.9128H20.9021C21.5021 12.9128 22.0021 13.4128 21.9021 14.0128Z" fill="currentColor"></path>
+        </svg>
+        </span> </span> <span class="menu-title">Casting Call</span><span class="menu-arrow"></span></span>
+        <div class="menu-sub menu-sub-accordion">
+          <div class="menu-item"> <a class="menu-link" href="/all-castingcall/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title"> New Casting Call</span></a></div>
+  <div class="menu-item"> <a class="menu-link" href="/active-castingcall/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title"> Active Casting Call</span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}
+
+
+{% block body %}
+<!--begin::Main-->
+<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+	<div class="d-flex flex-column flex-column-fluid">
+	  <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+		<div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+		  <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+					<!--begin::Title-->
+					<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Profile Details</h1>
+					<!--end::Title-->
+					<!--begin::Breadcrumb-->
+					<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+						<!--begin::Item-->
+						<li class="breadcrumb-item text-muted">
+							<a href="/kyc-dashboard/" class="text-muted text-hover-primary">Home</a>
+						</li>
+						<!--end::Item-->
+						<!--begin::Item-->
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<!--end::Item-->
+						<!--begin::Item-->
+						<li class="breadcrumb-item text-muted">Settings</li>
+						<!--end::Item-->
+						<!--begin::Item-->
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<!--end::Item-->
+						<!--begin::Item-->
+						<li class="breadcrumb-item text-muted">Profile</li>
+						<!--end::Item-->
+					</ul>
+					<!--end::Breadcrumb-->
+				</div>
+				<!--end::Page title-->
+				
+			</div>
+			<!--end::Toolbar container-->
+		</div>
+		<!--end::Toolbar-->
+		<!--begin::Content-->
+		<div id="kt_app_content" class="app-content flex-column-fluid">
+			<div id="kt_app_content_container" class="app-container container-fluid">
+				<!--begin::Layout-->
+				<div class="d-flex flex-column flex-xl-row">
+					<!--begin::Sidebar-->
+					<div class="flex-column flex-lg-row-auto w-100 w-xl-350px mb-10">
+						<!--begin::Card-->
+						<div class="card mb-5 mb-xl-8">
+							<!--begin::Card body-->
+							<div class="card-body pt-15">
+								<!--begin::Summary-->
+								<div class="d-flex flex-center flex-column mb-5">
+									<!--begin::Avatar-->
+									<div class="symbol symbol-150px symbol-circle mb-7">
+										<img src="/media/{{request.user.kycprofile.profilepic}}" alt="image" />
+									</div>
+									<!--end::Avatar-->
+									<!--begin::Name-->
+									<a href="#" class="fs-3 text-gray-800 text-hover-primary fw-bold mb-1">{{request.user.kycprofile.name}}</a>
+									<!--end::Name-->
+									<!--begin::Email-->
+									<a href="#" class="fs-5 fw-semibold text-muted text-hover-primary mb-6">{{request.user.email}}</a>
+									<!--end::Email-->
+								</div>
+								<!--end::Summary-->
+								<!--begin::Details toggle-->
+								<div class="d-flex flex-stack fs-4 py-3">
+									<div class="fw-bold">Details</div>
+									<!--begin::Badge-->
+									<div class="badge badge-light-info d-inline">KYC-Manager</div>
+									<!--begin::Badge-->
+								</div>
+								<!--end::Details toggle-->
+								<div class="separator separator-dashed my-3"></div>
+								<!--begin::Details content-->
+								<div class="pb-5 fs-6">
+									<!--begin::Details item-->
+									<div class="fw-bold mt-5">User ID</div>
+									<div class="text-gray-600">{{request.user.id}}</div>
+									<!--begin::Details item-->
+									<!--begin::Details item-->
+									<div class="fw-bold mt-5">User Name</div>
+									<div class="text-gray-600">{{request.user.username}}</div>
+									<!--begin::Details item-->
+									<!--begin::Details item-->
+									<div class="fw-bold mt-5">Email ID</div>
+									<div class="text-gray-600">
+										<a href="#" class="text-gray-600 text-hover-primary">{{request.user.email}}</a>
+									</div>
+									<!--begin::Details item-->
+									<!--begin::Details item-->
+									<div class="fw-bold mt-5">Phone</div>
+									<div class="text-gray-600">
+										<a href="#" class="text-gray-600 text-hover-primary">{{request.user.kycprofile.number}}</a>
+									</div>
+									<!--begin::Details item-->
+									<!--begin::Details item-->
+									<div class="fw-bold mt-5">Address</div>
+									<div class="text-gray-600">
+										{{request.user.kycprofile.address}}
+									</div>
+									
+									<!--begin::Details item-->
+									<!--begin::Details item-->
+									<div class="fw-bold mt-5">Country</div>
+									<div class="text-gray-600">{{request.user.kycprofile.country}}</div>
+									<!--begin::Details item-->
+									<!--begin::Details item-->
+								</div>
+								<!--end::Details content-->
+							</div>
+							<!--end::Card body-->
+						</div>
+						<!--end::Card-->
+					</div>
+					<!--end::Sidebar-->
+					<!--begin::Content-->
+					<div class="flex-lg-row-fluid ms-lg-15">
+						<!--begin:::Tabs-->
+						<ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semibold mb-8">
+							<!--begin:::Tab item-->
+							<li class="nav-item">
+								<a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_ecommerce_customer_overview">Overview</a>
+							</li>
+							<!--end:::Tab item-->
+							<!--begin:::Tab item-->
+							<li class="nav-item">
+								<a class="nav-link text-active-primary pb-4" data-bs-toggle="tab" href="#kt_ecommerce_customer_general">General Settings</a>
+							</li>
+							<!--end:::Tab item-->
+							
+						</ul>
+						<!--end:::Tabs-->
+						<!--begin:::Tab content-->
+						<div class="tab-content" id="myTabContent">
+							<!--begin:::Tab pane-->
+							<div class="tab-pane fade show active" id="kt_ecommerce_customer_overview" role="tabpanel">
+								<div class="row row-cols-1 row-cols-md-2 mb-6 mb-xl-9">
+									<div class="col">
+										<!--begin::Card-->
+										<div class="card pt-4 h-md-100 mb-6 mb-md-0">
+											<!--begin::Card header-->
+											<div class="card-header border-0">
+												<!--begin::Card title-->
+												<div class="card-title">
+													<h2 class="fw-bold">Rating Points</h2>
+												</div>
+												<!--end::Card title-->
+											</div>
+											<!--end::Card header-->
+											<!--begin::Card body-->
+											<div class="card-body pt-0">
+												<div class="fw-bold fs-2">
+													<div class="d-flex">
+														<!--begin::Svg Icon | path: icons/duotune/general/gen030.svg-->
+														<span class="svg-icon svg-icon-info svg-icon-2x">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M18.3721 4.65439C17.6415 4.23815 16.8052 4 15.9142 4C14.3444 4 12.9339 4.73924 12.003 5.89633C11.0657 4.73913 9.66 4 8.08626 4C7.19611 4 6.35789 4.23746 5.62804 4.65439C4.06148 5.54462 3 7.26056 3 9.24232C3 9.81001 3.08941 10.3491 3.25153 10.8593C4.12155 14.9013 9.69287 20 12.0034 20C14.2502 20 19.875 14.9013 20.7488 10.8593C20.9109 10.3491 21 9.81001 21 9.24232C21.0007 7.26056 19.9383 5.54462 18.3721 4.65439Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+														<div class="ms-2">*
+														<span class="text-muted fs-4 fw-semibold">Review Earned</span></div>
+													</div>
+													<div class="fs-7 fw-normal text-muted">Earn reward points with every Orders.</div>
+												</div>
+											</div>
+											<!--end::Card body-->
+										</div>
+										<!--end::Card-->
+									</div>
+									<div class="col">
+										<!--begin::Reward Tier-->
+										<a href="#" class="card bg-info hoverable h-md-100">
+											<!--begin::Body-->
+											<div class="card-body">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen020.svg-->
+												<span class="svg-icon svg-icon-white svg-icon-3x ms-n1">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14 18V16H10V18L9 20H15L14 18Z" fill="currentColor" />
+														<path opacity="0.3" d="M20 4H17V3C17 2.4 16.6 2 16 2H8C7.4 2 7 2.4 7 3V4H4C3.4 4 3 4.4 3 5V9C3 11.2 4.8 13 7 13C8.2 14.2 8.8 14.8 10 16H14C15.2 14.8 15.8 14.2 17 13C19.2 13 21 11.2 21 9V5C21 4.4 20.6 4 20 4ZM5 9V6H7V11C5.9 11 5 10.1 5 9ZM19 9C19 10.1 18.1 11 17 11V6H19V9ZM17 21V22H7V21C7 20.4 7.4 20 8 20H16C16.6 20 17 20.4 17 21ZM10 9C9.4 9 9 8.6 9 8V5C9 4.4 9.4 4 10 4C10.6 4 11 4.4 11 5V8C11 8.6 10.6 9 10 9ZM10 13C9.4 13 9 12.6 9 12V11C9 10.4 9.4 10 10 10C10.6 10 11 10.4 11 11V12C11 12.6 10.6 13 10 13Z" fill="currentColor" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+												<div class="text-white fw-bold fs-2 mt-5"> KYC Manager</div>
+												<div class="fw-semibold text-white">Tier Milestone Reached</div>
+											</div>
+											<!--end::Body-->
+										</a>
+										<!--end::Reward Tier-->
+									</div>
+								</div>
+								<!--begin::Card-->
+								<div class="card pt-4 mb-6 mb-xl-9">
+									<!--begin::Card header-->
+									<div class="card-header border-0">
+										<!--begin::Card title-->
+										<div class="card-title">
+											<h2>Login History</h2>
+										</div>
+										<!--end::Card title-->
+									</div>
+									<!--end::Card header-->
+									<!--begin::Card body-->
+									<div class="card-body pt-0 pb-5">
+										<div class="table-responsive">
+											<!--begin::Table-->
+											<table class="table align-middle table-row-dashed gy-5" id="kt_table_customers_payment">
+												<!--begin::Table head-->
+												<thead class="border-bottom border-gray-200 fs-7 fw-bold">
+													<!--begin::Table row-->
+													<tr class="text-start text-muted text-uppercase gs-0">
+														<th class="min-w-100px">Logs id</th>
+														<th>Location</th>
+														<th>Device</th>
+														<th class="min-w-100px">IP Address</th>
+														<th class="min-w-100px">Login Time</th>
+													</tr>
+													<!--end::Table row-->
+												</thead>
+												<!--end::Table head-->
+												<!--begin::Table body-->
+												<tbody class="fs-6 fw-semibold text-gray-600">
+	{%for i in log%}
+													<!--begin::Table row-->
+													<tr>
+														<!--begin::order=-->
+														<td>
+															{{i.LoginIPid}}
+														</td>
+														<!--end::order=-->
+														<!--begin::Status=-->
+														<td>
+															<span class="badge badge-light-success">{{i.location}}</span>
+														</td>
+														<!--end::Status=-->
+														<!--begin::Amount=-->
+														<td>{{i.device}}</td>
+														<!--end::Amount=-->
+														<!--begin::Amount=-->
+														<td>{{i.IP_Address}}</td>
+														<!--end::Amount=-->
+														<!--begin::Date=-->
+														<td>{{i.date}}</td>
+														<!--end::Date=-->
+													</tr>
+													<!--end::Table row-->
+				{%endfor%}									
+													
+												</tbody>
+												<!--end::Table body-->
+											</table>
+											<!--end::Table-->
+									    </div>	
+									</div>
+									<!--end::Card body-->
+								</div>
+								<!--end::Card-->
+							</div>
+							<!--end:::Tab pane-->
+							<!--begin:::Tab pane-->
+							<div class="tab-pane fade" id="kt_ecommerce_customer_general" role="tabpanel">
+								<!--begin::Card-->
+								<div class="card pt-4 mb-6 mb-xl-9">
+									<!--begin::Card header-->
+									<div class="card-header border-0">
+										<!--begin::Card title-->
+										<div class="card-title">
+											<h2>Profile</h2>
+										</div>
+										<!--end::Card title-->
+									</div>
+									<!--end::Card header-->
+									<!--begin::Card body-->
+									<div class="card-body pt-0 pb-5">
+										<!--begin::Form-->
+										<form class="form" id="kt_ecommerce_customer_profile" method="post" action="" enctype="multipart/form-data" >
+											{%csrf_token%}
+											
+											<!--begin::Input group-->
+                                            <div class="mb-7">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">
+                                                    <span>Update Profile Image</span>
+                                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Allowed file types: png, jpg, webp, jpeg."></i>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Image input wrapper-->
+                                                <div class="mt-1">
+                                                    
+                                                    <!--begin::Image input-->
+                                                    <div class="image-input image-input-outline image-input-placeholder" data-kt-image-input="true">
+                                                        <!--begin::Preview existing avatar-->
+                                                        <div class="image-input-wrapper w-125px h-125px" style="background-image: url(/media/{{request.user.kycprofile.profilepic}})"></div>
+                                                        <!--end::Preview existing avatar-->
+                                                        <!--begin::Edit-->
+                                                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                                            <i class="bi bi-pencil-fill fs-7"></i>
+                                                            <!--begin::Inputs-->
+                                                            <input type="file" name="avatar" id="iamge" accept=".png, .jpg, .jpeg, .webp" />
+                                                            <input type="hidden" name="avatar_remove" />
+                                                            <!--end::Inputs-->
+                                                        </label>
+                                                        <!--end::Edit-->
+                                                        <!--begin::Cancel-->
+                                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                                            <i class="bi bi-x fs-2"></i>
+                                                        </span>
+                                                        <!--end::Cancel-->
+                                                        <!--begin::Remove-->
+                                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                                            <i class="bi bi-x fs-2"></i>
+                                                        </span>
+                                                        <!--end::Remove-->
+                                                    </div>
+                                                    <!--end::Image input-->
+                                                </div>
+                                                <!--end::Image input wrapper-->
+                                            </div>
+                                            <!--end::Input group-->
+
+											
+											<!--end::Input group-->
+											<!--begin::Row-->
+											<div class="row row-cols-1 row-cols-md-2">
+												<!--begin::Input group-->
+											  <div class="col">
+												<div class="fv-row mb-7">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2 required">Name</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<input type="text" class="form-control form-control-solid" placeholder="Enter the name" name="name" value="" />
+												<!--end::Input-->
+												</div>
+											</div>
+												<!--begin::Col-->
+												<div class="col">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold mb-2">
+															<span class="required">Email Address</span>
+															<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Email address must be active"></i>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="email" class="form-control form-control-solid" placeholder="Enter the email address" name="emailaddress" value="" />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+												</div>
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="col">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold mb-2">
+															<span class="required">Phone </span>
+															<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Phone number must be active"></i>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid" placeholder="Enter the phone" name="phone" value="" />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+												</div>
+												<!--begin::Row-->
+											
+												<!--begin::Col-->
+												<div class="col">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold mb-2">
+															<span class="required">PIN / Postal Code</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid" placeholder="Enter the pin-code" name="pin" value="" />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+												</div>
+												<!--end::Col-->
+
+												<!--begin::Col-->
+												<div class="col">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold mb-2">
+															<span class="required">State </span>
+														
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid" placeholder="Enter the state" name="state" value="" />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+												</div>
+												<!--begin::Row-->
+											
+												<!--begin::Col-->
+												<div class="col">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold mb-2">
+															<span class="required">City</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid" placeholder="Enter the city" name="city" value="" />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+												</div>
+												<!--end::Col-->
+												<!--end::Col-->
+											</div>
+											<!--end::Row-->
+
+											<!--begin::Row-->
+											<div class="row row-cols-1 row-cols-md-2">
+												<!--begin::Col-->
+												<div class="col-6">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold mb-2">
+															<span class="required">Country</span>
+															<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+														</label>
+														<!--end::Label-->
+															<!--begin::Col-->
+															<div class="">
+																<select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a country..." class="form-control form-control-solid">
+																	<option value="">Select a Country...</option>
+																	<option data-kt-flag="flags/afghanistan.svg" value="Afghanistan">Afghanistan</option>
+																	<option data-kt-flag="flags/aland-islands.svg" value="Aland Islands">Aland Islands</option>
+																	<option data-kt-flag="flags/albania.svg" value="Albania">Albania</option>
+																	<option data-kt-flag="flags/algeria.svg" value="Albania">Algeria</option>
+																	<option data-kt-flag="flags/american-samoa.svg" value="American Samoa">American Samoa</option>
+																	<option data-kt-flag="flags/andorra.svg" value="Andorra">Andorra</option>
+																	<option data-kt-flag="flags/angola.svg" value="Angola">Angola</option>
+																	<option data-kt-flag="flags/anguilla.svg" value="Anguilla">Anguilla</option>
+																	<option data-kt-flag="flags/antigua-and-barbuda.svg" value="Antigua and Barbuda">Antigua and Barbuda</option>
+																	<option data-kt-flag="flags/argentina.svg" value="Argentina">Argentina</option>
+																	<option data-kt-flag="flags/armenia.svg" value="Armenia">Armenia</option>
+																	<option data-kt-flag="flags/aruba.svg" value="Aruba">Aruba</option>
+																	<option data-kt-flag="flags/australia.svg" value="Australia">Australia</option>
+																	<option data-kt-flag="flags/austria.svg" value="Austria">Austria</option>
+																	<option data-kt-flag="flags/azerbaijan.svg" value="Azerbaijan">Azerbaijan</option>
+																	<option data-kt-flag="flags/bahamas.svg" value="Bahamas">Bahamas</option>
+																	<option data-kt-flag="flags/bahrain.svg" value="Bahrain">Bahrain</option>
+																	<option data-kt-flag="flags/bangladesh.svg" value="Bangladesh">Bangladesh</option>
+																	<option data-kt-flag="flags/barbados.svg" value="Barbados">Barbados</option>
+																	<option data-kt-flag="flags/belarus.svg" value="Belarus">Belarus</option>
+																	<option data-kt-flag="flags/belgium.svg" value="Belgium">Belgium</option>
+																	<option data-kt-flag="flags/belize.svg" value="Belize">Belize</option>
+																	<option data-kt-flag="flags/benin.svg" value="Benin">Benin</option>
+																	<option data-kt-flag="flags/bermuda.svg" value="Bermuda">Bermuda</option>
+																	<option data-kt-flag="flags/bhutan.svg" value="Bhutan">Bhutan</option>
+																	<option data-kt-flag="flags/bolivia.svg" value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+																	<option data-kt-flag="flags/bonaire.svg" value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+																	<option data-kt-flag="flags/bosnia-and-herzegovina.svg" value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+																	<option data-kt-flag="flags/botswana.svg" value="Botswana">Botswana</option>
+																	<option data-kt-flag="flags/brazil.svg" value="Brazil">Brazil</option>
+																	<option data-kt-flag="flags/british-indian-ocean-territory.svg" value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+																	<option data-kt-flag="flags/brunei.svg" value="Brunei Darussalam">Brunei Darussalam</option>
+																	<option data-kt-flag="flags/bulgaria.svg" value="Bulgaria">Bulgaria</option>
+																	<option data-kt-flag="flags/burkina-faso.svg" value="Burkina Faso">Burkina Faso</option>
+																	<option data-kt-flag="flags/burundi.svg" value="Burundi">Burundi</option>
+																	<option data-kt-flag="flags/cambodia.svg" value="Cambodia">Cambodia</option>
+																	<option data-kt-flag="flags/cameroon.svg" value="Cameroon">Cameroon</option>
+																	<option data-kt-flag="flags/canada.svg" value="Canada">Canada</option>
+																	<option data-kt-flag="flags/cape-verde.svg" value="Cape Verde">Cape Verde</option>
+																	<option data-kt-flag="flags/cayman-islands.svg" value="Cayman Islands">Cayman Islands</option>
+																	<option data-kt-flag="flags/central-african-republic.svg" value="Central African Republic">Central African Republic</option>
+																	<option data-kt-flag="flags/chad.svg" value="Chad">Chad</option>
+																	<option data-kt-flag="flags/chile.svg" value="Chile">Chile</option>
+																	<option data-kt-flag="flags/china.svg" value="China">China</option>
+																	<option data-kt-flag="flags/christmas-island.svg" value="Christmas Island">Christmas Island</option>
+																	<option data-kt-flag="flags/cocos-island.svg" value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+																	<option data-kt-flag="flags/colombia.svg" value="Colombia">Colombia</option>
+																	<option data-kt-flag="flags/comoros.svg" value="Comoros">Comoros</option>
+																	<option data-kt-flag="flags/cook-islands.svg" value="Cook Islands">Cook Islands</option>
+																	<option data-kt-flag="flags/costa-rica.svg" value="Costa Rica">Costa Rica</option>
+																	<option data-kt-flag="flags/ivory-coast.svg" value="Côte d'Ivoire">Côte d'Ivoire</option>
+																	<option data-kt-flag="flags/croatia.svg" value="Croatia">Croatia</option>
+																	<option data-kt-flag="flags/cuba.svg" value="Cuba">Cuba</option>
+																	<option data-kt-flag="flags/curacao.svg" value="Curaçao">Curaçao</option>
+																	<option data-kt-flag="flags/czech-republic.svg" value="Czech Republic">Czech Republic</option>
+																	<option data-kt-flag="flags/denmark.svg" value="Denmark">Denmark</option>
+																	<option data-kt-flag="flags/djibouti.svg" value="Djibouti">Djibouti</option>
+																	<option data-kt-flag="flags/dominica.svg" value="Dominica">Dominica</option>
+																	<option data-kt-flag="flags/dominican-republic.svg" value="Dominican Republic">Dominican Republic</option>
+																	<option data-kt-flag="flags/ecuador.svg" value="Ecuador">Ecuador</option>
+																	<option data-kt-flag="flags/egypt.svg" value="Egypt">Egypt</option>
+																	<option data-kt-flag="flags/el-salvador.svg" value="El Salvador">El Salvador</option>
+																	<option data-kt-flag="flags/equatorial-guinea.svg" value="Equatorial Guinea">Equatorial Guinea</option>
+																	<option data-kt-flag="flags/eritrea.svg" value="Eritrea">Eritrea</option>
+																	<option data-kt-flag="flags/estonia.svg" value="Estonia">Estonia</option>
+																	<option data-kt-flag="flags/ethiopia.svg" value="Ethiopia">Ethiopia</option>
+																	<option data-kt-flag="flags/falkland-islands.svg" value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+																	<option data-kt-flag="flags/fiji.svg" value="Fiji">Fiji</option>
+																	<option data-kt-flag="flags/finland.svg" value="Finland">Finland</option>
+																	<option data-kt-flag="flags/france.svg" value="France">France</option>
+																	<option data-kt-flag="flags/french-polynesia.svg" value="French Polynesia">French Polynesia</option>
+																	<option data-kt-flag="flags/gabon.svg" value="Gabon">Gabon</option>
+																	<option data-kt-flag="flags/gambia.svg" value="Gambia">Gambia</option>
+																	<option data-kt-flag="flags/georgia.svg" value="Georgia">Georgia</option>
+																	<option data-kt-flag="flags/germany.svg" value="Germany">Germany</option>
+																	<option data-kt-flag="flags/ghana.svg" value="Ghana">Ghana</option>
+																	<option data-kt-flag="flags/gibraltar.svg" value="Gibraltar">Gibraltar</option>
+																	<option data-kt-flag="flags/greece.svg" value="Greece">Greece</option>
+																	<option data-kt-flag="flags/greenland.svg" value="Greenland">Greenland</option>
+																	<option data-kt-flag="flags/grenada.svg" value="Grenada">Grenada</option>
+																	<option data-kt-flag="flags/guam.svg" value="Guam">Guam</option>
+																	<option data-kt-flag="flags/guatemala.svg" value="Guatemala">Guatemala</option>
+																	<option data-kt-flag="flags/guernsey.svg" value="Guernsey">Guernsey</option>
+																	<option data-kt-flag="flags/guinea.svg" value="Guinea">Guinea</option>
+																	<option data-kt-flag="flags/guinea-bissau.svg" value="Guinea-Bissau">Guinea-Bissau</option>
+																	<option data-kt-flag="flags/haiti.svg" value="Haiti">Haiti</option>
+																	<option data-kt-flag="flags/vatican-city.svg" value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+																	<option data-kt-flag="flags/honduras.svg" value="Honduras">Honduras</option>
+																	<option data-kt-flag="flags/hong-kong.svg" value="Hong Kong">Hong Kong</option>
+																	<option data-kt-flag="flags/hungary.svg" value="Hungary">Hungary</option>
+																	<option data-kt-flag="flags/iceland.svg" value="Iceland">Iceland</option>
+																	<option data-kt-flag="flags/india.svg" value="India">India</option>
+																	<option data-kt-flag="flags/indonesia.svg" value="Indonesia">Indonesia</option>
+																	<option data-kt-flag="flags/iran.svg" value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+																	<option data-kt-flag="flags/iraq.svg" value="Iraq">Iraq</option>
+																	<option data-kt-flag="flags/ireland.svg" value="Ireland">Ireland</option>
+																	<option data-kt-flag="flags/isle-of-man.svg" value="Isle of Man">Isle of Man</option>
+																	<option data-kt-flag="flags/israel.svg" value="Israel">Israel</option>
+																	<option data-kt-flag="flags/italy.svg" value="Italy">Italy</option>
+																	<option data-kt-flag="flags/jamaica.svg" value="Jamaica">Jamaica</option>
+																	<option data-kt-flag="flags/japan.svg" value="Japan">Japan</option>
+																	<option data-kt-flag="flags/jersey.svg" value="Jersey">Jersey</option>
+																	<option data-kt-flag="flags/jordan.svg" value="Jordan">Jordan</option>
+																	<option data-kt-flag="flags/kazakhstan.svg" value="Kazakhstan">Kazakhstan</option>
+																	<option data-kt-flag="flags/kenya.svg" value="Kenya">Kenya</option>
+																	<option data-kt-flag="flags/kiribati.svg" value="Kiribati">Kiribati</option>
+																	<option data-kt-flag="flags/north-korea.svg" value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+																	<option data-kt-flag="flags/kuwait.svg" value="Kuwait">Kuwait</option>
+																	<option data-kt-flag="flags/kyrgyzstan.svg" value="Kyrgyzstan">Kyrgyzstan</option>
+																	<option data-kt-flag="flags/laos.svg" value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+																	<option data-kt-flag="flags/latvia.svg" value="Latvia">Latvia</option>
+																	<option data-kt-flag="flags/lebanon.svg" value="Lebanon">Lebanon</option>
+																	<option data-kt-flag="flags/lesotho.svg" value="Lesotho">Lesotho</option>
+																	<option data-kt-flag="flags/liberia.svg" value="Liberia">Liberia</option>
+																	<option data-kt-flag="flags/libya.svg" value="Libya">Libya</option>
+																	<option data-kt-flag="flags/liechtenstein.svg" value="Liechtenstein">Liechtenstein</option>
+																	<option data-kt-flag="flags/lithuania.svg" value="Lithuania">Lithuania</option>
+																	<option data-kt-flag="flags/luxembourg.svg" value="Luxembourg">Luxembourg</option>
+																	<option data-kt-flag="flags/macao.svg" value="Macao">Macao</option>
+																	<option data-kt-flag="flags/madagascar.svg" value="Madagascar">Madagascar</option>
+																	<option data-kt-flag="flags/malawi.svg" value="Malawi">Malawi</option>
+																	<option data-kt-flag="flags/malaysia.svg" value="Malaysia">Malaysia</option>
+																	<option data-kt-flag="flags/maldives.svg" value="Maldives">Maldives</option>
+																	<option data-kt-flag="flags/mali.svg" value="Mali">Mali</option>
+																	<option data-kt-flag="flags/malta.svg" value="Malta">Malta</option>
+																	<option data-kt-flag="flags/marshall-island.svg" value="Marshall Islands">Marshall Islands</option>
+																	<option data-kt-flag="flags/martinique.svg" value="Martinique">Martinique</option>
+																	<option data-kt-flag="flags/mauritania.svg" value="Mauritania">Mauritania</option>
+																	<option data-kt-flag="flags/mauritius.svg" value="Mauritius">Mauritius</option>
+																	<option data-kt-flag="flags/mexico.svg" value="Mexico">Mexico</option>
+																	<option data-kt-flag="flags/micronesia.svg" value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+																	<option data-kt-flag="flags/moldova.svg" value="Moldova, Republic of">Moldova, Republic of</option>
+																	<option data-kt-flag="flags/monaco.svg" value="Monaco">Monaco</option>
+																	<option data-kt-flag="flags/mongolia.svg" value="Mongolia">Mongolia</option>
+																	<option data-kt-flag="flags/montenegro.svg" value="Montenegro">Montenegro</option>
+																	<option data-kt-flag="flags/montserrat.svg" value="Montserrat">Montserrat</option>
+																	<option data-kt-flag="flags/morocco.svg" value="Morocco">Morocco</option>
+																	<option data-kt-flag="flags/mozambique.svg" value="Mozambique">Mozambique</option>
+																	<option data-kt-flag="flags/myanmar.svg" value="Myanmar">Myanmar</option>
+																	<option data-kt-flag="flags/namibia.svg" value="Namibia">Namibia</option>
+																	<option data-kt-flag="flags/nauru.svg" value="Nauru">Nauru</option>
+																	<option data-kt-flag="flags/nepal.svg" value="Nepal">Nepal</option>
+																	<option data-kt-flag="flags/netherlands.svg" value="Netherlands">Netherlands</option>
+																	<option data-kt-flag="flags/new-zealand.svg" value="New Zealand">New Zealand</option>
+																	<option data-kt-flag="flags/nicaragua.svg" value="Nicaragua">Nicaragua</option>
+																	<option data-kt-flag="flags/niger.svg" value="Niger">Niger</option>
+																	<option data-kt-flag="flags/nigeria.svg" value="Nigeria">Nigeria</option>
+																	<option data-kt-flag="flags/niue.svg" value="Niue">Niue</option>
+																	<option data-kt-flag="flags/norfolk-island.svg" value="Norfolk Island">Norfolk Island</option>
+																	<option data-kt-flag="flags/northern-mariana-islands.svg" value="Northern Mariana Islands">Northern Mariana Islands</option>
+																	<option data-kt-flag="flags/norway.svg" value="Norway">Norway</option>
+																	<option data-kt-flag="flags/oman.svg" value="Oman">Oman</option>
+																	<option data-kt-flag="flags/pakistan.svg" value="Pakistan">Pakistan</option>
+																	<option data-kt-flag="flags/palau.svg" value="Palau">Palau</option>
+																	<option data-kt-flag="flags/palestine.svg" value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+																	<option data-kt-flag="flags/panama.svg" value="Panama">Panama</option>
+																	<option data-kt-flag="flags/papua-new-guinea.svg" value="Papua New Guinea">Papua New Guinea</option>
+																	<option data-kt-flag="flags/paraguay.svg" value="Paraguay">Paraguay</option>
+																	<option data-kt-flag="flags/peru.svg" value="Peru">Peru</option>
+																	<option data-kt-flag="flags/philippines.svg" value="Philippines">Philippines</option>
+																	<option data-kt-flag="flags/poland.svg" value="Poland">Poland</option>
+																	<option data-kt-flag="flags/portugal.svg" value="Portugal">Portugal</option>
+																	<option data-kt-flag="flags/puerto-rico.svg" value="Puerto Rico">Puerto Rico</option>
+																	<option data-kt-flag="flags/qatar.svg" value="Qatar">Qatar</option>
+																	<option data-kt-flag="flags/romania.svg" value="Romania">Romania</option>
+																	<option data-kt-flag="flags/russia.svg" value="Russian Federation">Russian Federation</option>
+																	<option data-kt-flag="flags/rwanda.svg" value="Rwanda">Rwanda</option>
+																	<option data-kt-flag="flags/st-barts.svg" value="Saint Barthélemy">Saint Barthélemy</option>
+																	<option data-kt-flag="flags/saint-kitts-and-nevis.svg" value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+																	<option data-kt-flag="flags/st-lucia.svg" value="Saint Lucia">Saint Lucia</option>
+																	<option data-kt-flag="flags/sint-maarten.svg" value="Saint Martin (French part)">Saint Martin (French part)</option>
+																	<option data-kt-flag="flags/st-vincent-and-the-grenadines.svg" value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+																	<option data-kt-flag="flags/samoa.svg" value="Samoa">Samoa</option>
+																	<option data-kt-flag="flags/san-marino.svg" value="San Marino">San Marino</option>
+																	<option data-kt-flag="flags/sao-tome-and-prince.svg" value="Sao Tome and Principe">Sao Tome and Principe</option>
+																	<option data-kt-flag="flags/saudi-arabia.svg" value="Saudi Arabia">Saudi Arabia</option>
+																	<option data-kt-flag="flags/senegal.svg" value="Senegal">Senegal</option>
+																	<option data-kt-flag="flags/serbia.svg" value="Serbia">Serbia</option>
+																	<option data-kt-flag="flags/seychelles.svg" value="Seychelles">Seychelles</option>
+																	<option data-kt-flag="flags/sierra-leone.svg" value="Sierra Leone">Sierra Leone</option>
+																	<option data-kt-flag="flags/singapore.svg" value="Singapore">Singapore</option>
+																	<option data-kt-flag="flags/sint-maarten.svg" value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+																	<option data-kt-flag="flags/slovakia.svg" value="Slovakia">Slovakia</option>
+																	<option data-kt-flag="flags/slovenia.svg" value="Slovenia">Slovenia</option>
+																	<option data-kt-flag="flags/solomon-islands.svg" value="Solomon Islands">Solomon Islands</option>
+																	<option data-kt-flag="flags/somalia.svg" value="Somalia">Somalia</option>
+																	<option data-kt-flag="flags/south-africa.svg" value="South Africa">South Africa</option>
+																	<option data-kt-flag="flags/south-korea.svg" value="South Korea">South Korea</option>
+																	<option data-kt-flag="flags/south-sudan.svg" value="South Sudan">South Sudan</option>
+																	<option data-kt-flag="flags/spain.svg" value="Spain">Spain</option>
+																	<option data-kt-flag="flags/sri-lanka.svg" value="Sri Lanka">Sri Lanka</option>
+																	<option data-kt-flag="flags/sudan.svg" value="Sudan">Sudan</option>
+																	<option data-kt-flag="flags/suriname.svg" value="Suriname">Suriname</option>
+																	<option data-kt-flag="flags/swaziland.svg" value="Swaziland">Swaziland</option>
+																	<option data-kt-flag="flags/sweden.svg" value="Sweden">Sweden</option>
+																	<option data-kt-flag="flags/switzerland.svg" value="Switzerland">Switzerland</option>
+																	<option data-kt-flag="flags/syria.svg" value="Syrian Arab Republic">Syrian Arab Republic</option>
+																	<option data-kt-flag="flags/taiwan.svg" value="Taiwan, Province of China">Taiwan, Province of China</option>
+																	<option data-kt-flag="flags/tajikistan.svg" value="Tajikistan">Tajikistan</option>
+																	<option data-kt-flag="flags/tanzania.svg" value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+																	<option data-kt-flag="flags/thailand.svg" value="Thailand">Thailand</option>
+																	<option data-kt-flag="flags/togo.svg" value="Togo">Togo</option>
+																	<option data-kt-flag="flags/tokelau.svg" value="Tokelau">Tokelau</option>
+																	<option data-kt-flag="flags/tonga.svg" value="Tonga">Tonga</option>
+																	<option data-kt-flag="flags/trinidad-and-tobago.svg" value="Trinidad and Tobago">Trinidad and Tobago</option>
+																	<option data-kt-flag="flags/tunisia.svg" value="Tunisia">Tunisia</option>
+																	<option data-kt-flag="flags/turkey.svg" value="Turkey">Turkey</option>
+																	<option data-kt-flag="flags/turkmenistan.svg" value="Turkmenistan">Turkmenistan</option>
+																	<option data-kt-flag="flags/turks-and-caicos.svg" value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+																	<option data-kt-flag="flags/tuvalu.svg" value="Tuvalu">Tuvalu</option>
+																	<option data-kt-flag="flags/uganda.svg" value="Uganda">Uganda</option>
+																	<option data-kt-flag="flags/ukraine.svg" value="Ukraine">Ukraine</option>
+																	<option data-kt-flag="flags/united-arab-emirates.svg" value="United Arab Emirates">United Arab Emirates</option>
+																	<option data-kt-flag="flags/united-kingdom.svg" value="United Kingdom">United Kingdom</option>
+																	<option data-kt-flag="flags/united-states.svg" value="United States">United States</option>
+																	<option data-kt-flag="flags/uruguay.svg" value="Uruguay">Uruguay</option>
+																	<option data-kt-flag="flags/uzbekistan.svg" value="Uzbekistan">Uzbekistan</option>
+																	<option data-kt-flag="flags/vanuatu.svg" value="Vanuatu">Vanuatu</option>
+																	<option data-kt-flag="flags/venezuela.svg" value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+																	<option data-kt-flag="flags/vietnam.svg" value="Vietnam">Vietnam</option>
+																	<option data-kt-flag="flags/virgin-islands.svg" value="Virgin Islands">Virgin Islands</option>
+																	<option data-kt-flag="flags/yemen.svg" value="Yemen">Yemen</option>
+																	<option data-kt-flag="flags/zambia.svg" value="Zambia">Zambia</option>
+																	<option data-kt-flag="flags/zimbabwe.svg" value="Zimbabwe">Zimbabwe</option>
+																</select>
+															</div>
+															<!--end::Col-->
+													</div>
+													<!--end::Input group-->
+												</div>
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="col">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold mb-2"><span class="required">Language</span></label>
+														<!--end::Label-->
+														<!--begin::Col-->
+														<div class="">
+															<!--begin::Input-->
+															<select name="language" aria-label="Select a Language" data-control="select2" data-placeholder="Select a language..." class="form-control form-control-solid">
+																<option value="">Select a Language...</option>
+																{%for i in ln%}
+																<option  value="{{i.languageid}}">{{i.languages}}</option>
+
+																{%endfor%}
+															</select>
+															<!--end::Input-->
+														</div>
+														<!--end::Col-->
+													</div>
+													<!--end::Input group-->
+												</div>
+												<!--end::Col-->
+											</div>
+											<!--end::Row-->
+
+											<!--begin::Input group-->
+											<div class="fv-row mb-7">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2 required">Full Address</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<textarea type="text" class="form-control form-control-solid" placeholder="Enter the address" name="address" value=""></textarea>
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<div class="d-flex justify-content-end">
+												<!--begin::Button-->
+												<button type="submit"  class="btn btn-light-primary">
+													<span class="indicator-label">Save</span>
+
+												</button>
+												<!--end::Button-->
+											</div>
+										</form>
+										<!--end::Form-->
+									</div>
+									<!--end::Card body-->
+								</div>
+								<!--end::Card-->
+
+								<!--begin::Card-->
+								<div class="card pt-4 mb-6 mb-xl-9">
+									<!--begin::Card header-->
+									<div class="card-header border-0">
+										<!--begin::Card title-->
+										<div class="card-title">
+											<h2>Security Details</h2>
+										</div>
+										<!--end::Card title-->
+									</div>
+									<!--end::Card header-->
+									<!--begin::Card body-->
+									<div class="card-body pt-0 pb-5">
+										<!--begin::Table wrapper-->
+										<div class="table-responsive">
+											<!--begin::Table-->
+											<table class="table align-middle table-row-dashed gy-5" id="kt_table_users_login_session">
+												<!--begin::Table body-->
+												<tbody class="fs-6 fw-semibold text-gray-600">
+													<tr>
+														<td>Phone</td>
+														<td>{{request.user.rmprofile.number}}</td>
+														<td class="text-end">
+															<button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#kt_modal_update_phone">
+																<!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+																<span class="svg-icon svg-icon-3">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																		<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td>Password</td>
+														<td>******** </td>
+														{% comment %} <td>{{cltdet.0.client_userid.password}}</td> {% endcomment %}
+														<td class="text-end">
+															<button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#kt_modal_update_password">
+																<!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+																<span class="svg-icon svg-icon-3">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																		<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</button>
+														</td>
+													</tr>
+												</tbody>
+												<!--end::Table body-->
+											</table>
+											<!--end::Table-->
+										</div>
+										<!--end::Table wrapper-->
+									</div>
+									<!--end::Card body-->
+								</div>
+								<!--end::Card-->
+							</div>
+							<!--end:::Tab pane-->
+						
+						</div>
+						<!--end:::Tab content-->
+					</div>
+					<!--end::Content-->
+				</div>
+				<!--end::Layout-->
+				<!--begin::Modals-->
+				<!--begin::Modal - New Address-->
+				<div class="modal fade" id="kt_modal_update_address" tabindex="-1" aria-hidden="true">
+					<!--begin::Modal dialog-->
+					<div class="modal-dialog modal-dialog-centered mw-650px">
+						<!--begin::Modal content-->
+						<div class="modal-content">
+							<!--begin::Form-->
+							<form class="form" action="#" id="kt_modal_update_address_form">
+								<!--begin::Modal header-->
+								<div class="modal-header" id="kt_modal_update_address_header">
+									<!--begin::Modal title-->
+									<h2 class="fw-bold">Update Address</h2>
+									<!--end::Modal title-->
+									<!--begin::Close-->
+									<div id="kt_modal_update_address_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+										<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+										<span class="svg-icon svg-icon-1">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+												<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+											</svg>
+										</span>
+										<!--end::Svg Icon-->
+									</div>
+									<!--end::Close-->
+								</div>
+								<!--end::Modal header-->
+								<!--begin::Modal body-->
+								<div class="modal-body py-10 px-lg-17">
+									<!--begin::Scroll-->
+									<div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_update_address_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_update_address_header" data-kt-scroll-wrappers="#kt_modal_update_address_scroll" data-kt-scroll-offset="300px">
+										<!--begin::Billing toggle-->
+										<div class="fw-bold fs-3 rotate collapsible collapsed mb-7" data-bs-toggle="collapse" href="#kt_modal_update_address_billing_info" role="button" aria-expanded="false" aria-controls="kt_modal_update_address_billing_info">Shipping Information
+										<span class="ms-2 rotate-180">
+											<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+											<span class="svg-icon svg-icon-3">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</span></div>
+										<!--end::Billing toggle-->
+										<!--begin::Billing form-->
+										<div id="kt_modal_update_address_billing_info" class="collapse show">
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2 required">Address Line 1</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<input class="form-control form-control-solid" placeholder="" name="address1" value="101, Collins Street" />
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2">Address Line 2</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<input class="form-control form-control-solid" placeholder="" name="address2" />
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2 required">City / Town</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<input class="form-control form-control-solid" placeholder="" name="city" value="Melbourne" />
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="row g-9 mb-7">
+												<!--begin::Col-->
+												<div class="col-md-6 fv-row">
+													<!--begin::Label-->
+													<label class="fs-6 fw-semibold mb-2 required">State / Province</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<input class="form-control form-control-solid" placeholder="" name="state" value="Victoria" />
+													<!--end::Input-->
+												</div>
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="col-md-6 fv-row">
+													<!--begin::Label-->
+													<label class="fs-6 fw-semibold mb-2 required">Post Code</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<input class="form-control form-control-solid" placeholder="" name="postcode" value="3000" />
+													<!--end::Input-->
+												</div>
+												<!--end::Col-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2">
+													<span class="required">Country</span>
+													<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+												</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a Country..." data-dropdown-parent="#kt_modal_update_address" class="form-select form-select-solid fw-bold">
+													<option value="">Select a Country...</option>
+													<option value="AF">Afghanistan</option>
+													<option value="AX">Aland Islands</option>
+													<option value="AL">Albania</option>
+													<option value="DZ">Algeria</option>
+													<option value="AS">American Samoa</option>
+													<option value="AD">Andorra</option>
+													<option value="AO">Angola</option>
+													<option value="AI">Anguilla</option>
+													<option value="AG">Antigua and Barbuda</option>
+													<option value="AR">Argentina</option>
+													<option value="AM">Armenia</option>
+													<option value="AW">Aruba</option>
+													<option value="AU" selected="selected">Australia</option>
+													<option value="AT">Austria</option>
+													<option value="AZ">Azerbaijan</option>
+													<option value="BS">Bahamas</option>
+													<option value="BH">Bahrain</option>
+													<option value="BD">Bangladesh</option>
+													<option value="BB">Barbados</option>
+													<option value="BY">Belarus</option>
+													<option value="BE">Belgium</option>
+													<option value="BZ">Belize</option>
+													<option value="BJ">Benin</option>
+													<option value="BM">Bermuda</option>
+													<option value="BT">Bhutan</option>
+													<option value="BO">Bolivia, Plurinational State of</option>
+													<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+													<option value="BA">Bosnia and Herzegovina</option>
+													<option value="BW">Botswana</option>
+													<option value="BR">Brazil</option>
+													<option value="IO">British Indian Ocean Territory</option>
+													<option value="BN">Brunei Darussalam</option>
+													<option value="BG">Bulgaria</option>
+													<option value="BF">Burkina Faso</option>
+													<option value="BI">Burundi</option>
+													<option value="KH">Cambodia</option>
+													<option value="CM">Cameroon</option>
+													<option value="CA">Canada</option>
+													<option value="CV">Cape Verde</option>
+													<option value="KY">Cayman Islands</option>
+													<option value="CF">Central African Republic</option>
+													<option value="TD">Chad</option>
+													<option value="CL">Chile</option>
+													<option value="CN">China</option>
+													<option value="CX">Christmas Island</option>
+													<option value="CC">Cocos (Keeling) Islands</option>
+													<option value="CO">Colombia</option>
+													<option value="KM">Comoros</option>
+													<option value="CK">Cook Islands</option>
+													<option value="CR">Costa Rica</option>
+													<option value="CI">Côte d'Ivoire</option>
+													<option value="HR">Croatia</option>
+													<option value="CU">Cuba</option>
+													<option value="CW">Curaçao</option>
+													<option value="CZ">Czech Republic</option>
+													<option value="DK">Denmark</option>
+													<option value="DJ">Djibouti</option>
+													<option value="DM">Dominica</option>
+													<option value="DO">Dominican Republic</option>
+													<option value="EC">Ecuador</option>
+													<option value="EG">Egypt</option>
+													<option value="SV">El Salvador</option>
+													<option value="GQ">Equatorial Guinea</option>
+													<option value="ER">Eritrea</option>
+													<option value="EE">Estonia</option>
+													<option value="ET">Ethiopia</option>
+													<option value="FK">Falkland Islands (Malvinas)</option>
+													<option value="FJ">Fiji</option>
+													<option value="FI">Finland</option>
+													<option value="FR">France</option>
+													<option value="PF">French Polynesia</option>
+													<option value="GA">Gabon</option>
+													<option value="GM">Gambia</option>
+													<option value="GE">Georgia</option>
+													<option value="DE">Germany</option>
+													<option value="GH">Ghana</option>
+													<option value="GI">Gibraltar</option>
+													<option value="GR">Greece</option>
+													<option value="GL">Greenland</option>
+													<option value="GD">Grenada</option>
+													<option value="GU">Guam</option>
+													<option value="GT">Guatemala</option>
+													<option value="GG">Guernsey</option>
+													<option value="GN">Guinea</option>
+													<option value="GW">Guinea-Bissau</option>
+													<option value="HT">Haiti</option>
+													<option value="VA">Holy See (Vatican City State)</option>
+													<option value="HN">Honduras</option>
+													<option value="HK">Hong Kong</option>
+													<option value="HU">Hungary</option>
+													<option value="IS">Iceland</option>
+													<option value="IN">India</option>
+													<option value="ID">Indonesia</option>
+													<option value="IR">Iran, Islamic Republic of</option>
+													<option value="IQ">Iraq</option>
+													<option value="IE">Ireland</option>
+													<option value="IM">Isle of Man</option>
+													<option value="IL">Israel</option>
+													<option value="IT">Italy</option>
+													<option value="JM">Jamaica</option>
+													<option value="JP">Japan</option>
+													<option value="JE">Jersey</option>
+													<option value="JO">Jordan</option>
+													<option value="KZ">Kazakhstan</option>
+													<option value="KE">Kenya</option>
+													<option value="KI">Kiribati</option>
+													<option value="KP">Korea, Democratic People's Republic of</option>
+													<option value="KW">Kuwait</option>
+													<option value="KG">Kyrgyzstan</option>
+													<option value="LA">Lao People's Democratic Republic</option>
+													<option value="LV">Latvia</option>
+													<option value="LB">Lebanon</option>
+													<option value="LS">Lesotho</option>
+													<option value="LR">Liberia</option>
+													<option value="LY">Libya</option>
+													<option value="LI">Liechtenstein</option>
+													<option value="LT">Lithuania</option>
+													<option value="LU">Luxembourg</option>
+													<option value="MO">Macao</option>
+													<option value="MG">Madagascar</option>
+													<option value="MW">Malawi</option>
+													<option value="MY">Malaysia</option>
+													<option value="MV">Maldives</option>
+													<option value="ML">Mali</option>
+													<option value="MT">Malta</option>
+													<option value="MH">Marshall Islands</option>
+													<option value="MQ">Martinique</option>
+													<option value="MR">Mauritania</option>
+													<option value="MU">Mauritius</option>
+													<option value="MX">Mexico</option>
+													<option value="FM">Micronesia, Federated States of</option>
+													<option value="MD">Moldova, Republic of</option>
+													<option value="MC">Monaco</option>
+													<option value="MN">Mongolia</option>
+													<option value="ME">Montenegro</option>
+													<option value="MS">Montserrat</option>
+													<option value="MA">Morocco</option>
+													<option value="MZ">Mozambique</option>
+													<option value="MM">Myanmar</option>
+													<option value="NA">Namibia</option>
+													<option value="NR">Nauru</option>
+													<option value="NP">Nepal</option>
+													<option value="NL">Netherlands</option>
+													<option value="NZ">New Zealand</option>
+													<option value="NI">Nicaragua</option>
+													<option value="NE">Niger</option>
+													<option value="NG">Nigeria</option>
+													<option value="NU">Niue</option>
+													<option value="NF">Norfolk Island</option>
+													<option value="MP">Northern Mariana Islands</option>
+													<option value="NO">Norway</option>
+													<option value="OM">Oman</option>
+													<option value="PK">Pakistan</option>
+													<option value="PW">Palau</option>
+													<option value="PS">Palestinian Territory, Occupied</option>
+													<option value="PA">Panama</option>
+													<option value="PG">Papua New Guinea</option>
+													<option value="PY">Paraguay</option>
+													<option value="PE">Peru</option>
+													<option value="PH">Philippines</option>
+													<option value="PL">Poland</option>
+													<option value="PT">Portugal</option>
+													<option value="PR">Puerto Rico</option>
+													<option value="QA">Qatar</option>
+													<option value="RO">Romania</option>
+													<option value="RU">Russian Federation</option>
+													<option value="RW">Rwanda</option>
+													<option value="BL">Saint Barthélemy</option>
+													<option value="KN">Saint Kitts and Nevis</option>
+													<option value="LC">Saint Lucia</option>
+													<option value="MF">Saint Martin (French part)</option>
+													<option value="VC">Saint Vincent and the Grenadines</option>
+													<option value="WS">Samoa</option>
+													<option value="SM">San Marino</option>
+													<option value="ST">Sao Tome and Principe</option>
+													<option value="SA">Saudi Arabia</option>
+													<option value="SN">Senegal</option>
+													<option value="RS">Serbia</option>
+													<option value="SC">Seychelles</option>
+													<option value="SL">Sierra Leone</option>
+													<option value="SG">Singapore</option>
+													<option value="SX">Sint Maarten (Dutch part)</option>
+													<option value="SK">Slovakia</option>
+													<option value="SI">Slovenia</option>
+													<option value="SB">Solomon Islands</option>
+													<option value="SO">Somalia</option>
+													<option value="ZA">South Africa</option>
+													<option value="KR">South Korea</option>
+													<option value="SS">South Sudan</option>
+													<option value="ES">Spain</option>
+													<option value="LK">Sri Lanka</option>
+													<option value="SD">Sudan</option>
+													<option value="SR">Suriname</option>
+													<option value="SZ">Swaziland</option>
+													<option value="SE">Sweden</option>
+													<option value="CH">Switzerland</option>
+													<option value="SY">Syrian Arab Republic</option>
+													<option value="TW">Taiwan, Province of China</option>
+													<option value="TJ">Tajikistan</option>
+													<option value="TZ">Tanzania, United Republic of</option>
+													<option value="TH">Thailand</option>
+													<option value="TG">Togo</option>
+													<option value="TK">Tokelau</option>
+													<option value="TO">Tonga</option>
+													<option value="TT">Trinidad and Tobago</option>
+													<option value="TN">Tunisia</option>
+													<option value="TR">Turkey</option>
+													<option value="TM">Turkmenistan</option>
+													<option value="TC">Turks and Caicos Islands</option>
+													<option value="TV">Tuvalu</option>
+													<option value="UG">Uganda</option>
+													<option value="UA">Ukraine</option>
+													<option value="AE">United Arab Emirates</option>
+													<option value="GB">United Kingdom</option>
+													<option value="US">United States</option>
+													<option value="UY">Uruguay</option>
+													<option value="UZ">Uzbekistan</option>
+													<option value="VU">Vanuatu</option>
+													<option value="VE">Venezuela, Bolivarian Republic of</option>
+													<option value="VN">Vietnam</option>
+													<option value="VI">Virgin Islands</option>
+													<option value="YE">Yemen</option>
+													<option value="ZM">Zambia</option>
+													<option value="ZW">Zimbabwe</option>
+												</select>
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="fv-row mb-7">
+												<!--begin::Wrapper-->
+												<div class="d-flex flex-stack">
+													<!--begin::Label-->
+													<div class="me-5">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold">Use as a billing address?</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+														<!--end::Input-->
+													</div>
+													<!--end::Label-->
+													<!--begin::Switch-->
+													<label class="form-check form-switch form-check-custom form-check-solid">
+														<!--begin::Input-->
+														<input class="form-check-input" name="billing" type="checkbox" value="1" id="kt_modal_update_address_billing" checked="checked" />
+														<!--end::Input-->
+														<!--begin::Label-->
+														<span class="form-check-label fw-semibold text-muted" for="kt_modal_update_address_billing">Yes</span>
+														<!--end::Label-->
+													</label>
+													<!--end::Switch-->
+												</div>
+												<!--begin::Wrapper-->
+											</div>
+											<!--end::Input group-->
+										</div>
+										<!--end::Billing form-->
+									</div>
+									<!--end::Scroll-->
+								</div>
+								<!--end::Modal body-->
+								<!--begin::Modal footer-->
+								<div class="modal-footer flex-center">
+									<!--begin::Button-->
+									<button type="reset" id="kt_modal_update_address_cancel" class="btn btn-light me-3">Discard</button>
+									<!--end::Button-->
+									<!--begin::Button-->
+									<button type="submit" id="kt_modal_update_address_submit" class="btn btn-primary">
+										<span class="indicator-label">Submit</span>
+										<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+									</button>
+									<!--end::Button-->
+								</div>
+								<!--end::Modal footer-->
+							</form>
+							<!--end::Form-->
+						</div>
+					</div>
+				</div>
+				<!--end::Modal - New Address-->
+				<!--begin::Modal - Update password-->
+				<div class="modal fade" id="kt_modal_update_password" tabindex="-1" aria-hidden="true">
+					<!--begin::Modal dialog-->
+					<div class="modal-dialog modal-dialog-centered mw-650px">
+						<!--begin::Modal content-->
+						<div class="modal-content">
+							<!--begin::Modal header-->
+							<div class="modal-header">
+								<!--begin::Modal title-->
+								<h2 class="fw-bold">Update Password</h2>
+								<!--end::Modal title-->
+								<!--begin::Close-->
+								<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+									<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+									<span class="svg-icon svg-icon-1">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+											<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</div>
+								<!--end::Close-->
+							</div>
+							<!--end::Modal header-->
+							<!--begin::Modal body-->
+							<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+								<!--begin::Form-->
+								<form id="kt_modal_update_password_form" class="form" action="" method="post">
+									{%csrf_token%}
+									
+									<!--begin::Input group-->
+									<div class="mb-10 fv-row" data-kt-password-meter="true">
+										<!--begin::Wrapper-->
+										<div class="mb-1">
+											<!--begin::Label-->
+											<label class="form-label fw-semibold fs-6 mb-2">New Password</label>
+											<!--end::Label-->
+											<!--begin::Input wrapper-->
+											<div class="position-relative mb-3">
+												<input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="new_password" autocomplete="off" />
+												<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+													<i class="bi bi-eye-slash fs-2"></i>
+													<i class="bi bi-eye fs-2 d-none"></i>
+												</span>
+											</div>
+											<!--end::Input wrapper-->
+											<!--begin::Meter-->
+											<div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
+												<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+												<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+												<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+												<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+											</div>
+											<!--end::Meter-->
+										</div>
+										<!--end::Wrapper-->
+										<!--begin::Hint-->
+										<div class="text-muted">Use 8 or more characters with a mix of letters, numbers & symbols.</div>
+										<!--end::Hint-->
+									</div>
+									<!--end::Input group=-->
+									<!--begin::Input group=-->
+									<div class="fv-row mb-10">
+										<label class="form-label fw-semibold fs-6 mb-2">Confirm New Password</label>
+										<input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="confirm_password" autocomplete="off" />
+									</div>
+									<!--end::Input group=-->
+									<!--begin::Actions-->
+									<div class="text-center pt-15">
+										<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+										<button type="submit" class="btn btn-primary" >
+											<span class="indicator-label">Submit</span>
+
+										</button>
+									</div>
+									<!--end::Actions-->
+								</form>
+								<!--end::Form-->
+							</div>
+							<!--end::Modal body-->
+						</div>
+						<!--end::Modal content-->
+					</div>
+					<!--end::Modal dialog-->
+				</div>
+				<!--end::Modal - Update password-->
+				<!--begin::Modal - Update email-->
+				<div class="modal fade" id="kt_modal_update_phone" tabindex="-1" aria-hidden="true">
+					<!--begin::Modal dialog-->
+					<div class="modal-dialog modal-dialog-centered mw-650px">
+						<!--begin::Modal content-->
+						<div class="modal-content">
+							<!--begin::Modal header-->
+							<div class="modal-header">
+								<!--begin::Modal title-->
+								<h2 class="fw-bold">Update Phone Number</h2>
+								<!--end::Modal title-->
+								<!--begin::Close-->
+								<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+									<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+									<span class="svg-icon svg-icon-1">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+											<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</div>
+								<!--end::Close-->
+							</div>
+							<!--end::Modal header-->
+							<!--begin::Modal body-->
+							<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+								<!--begin::Form-->
+								<form id="kt_modal_update_phone_form" class="form" action="" method="post">
+									{%csrf_token%}
+									<!--begin::Notice-->
+									<!--begin::Notice-->
+									<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+										<!--begin::Icon-->
+										<!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+										<span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
+												<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="currentColor" />
+												<rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="currentColor" />
+											</svg>
+										</span>
+										<!--end::Svg Icon-->
+										<!--end::Icon-->
+										<!--begin::Wrapper-->
+										<div class="d-flex flex-stack flex-grow-1">
+											<!--begin::Content-->
+											<div class="fw-semibold">
+												<div class="fs-6 text-gray-700">Please note that a valid phone number may be required for order or shipping rescheduling.</div>
+											</div>
+											<!--end::Content-->
+										</div>
+										<!--end::Wrapper-->
+									</div>
+									<!--end::Notice-->
+									<!--end::Notice-->
+									<!--begin::Input group-->
+									<div class="fv-row mb-7">
+										<!--begin::Label-->
+										<label class="fs-6 fw-semibold form-label mb-2">
+											<span class="required">Phone</span>
+										</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control form-control-solid" placeholder="Enter the new number" name="profile_phone" value="" />
+										<!--end::Input-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Actions-->
+									<div class="text-center pt-15">
+										<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+										<button type="submit" class="btn btn-primary" >
+											<span class="indicator-label">Submit</span>
+										</button>
+									</div>
+									<!--end::Actions-->
+								</form>
+								<!--end::Form-->
+							</div>
+							<!--end::Modal body-->
+						</div>
+						<!--end::Modal content-->
+					</div>
+					<!--end::Modal dialog-->
+				</div>
+				<!--end::Modal - Update email-->
+				<!--begin::Modal - New Address-->
+				<div class="modal fade" id="kt_modal_add_address" tabindex="-1" aria-hidden="true">
+					<!--begin::Modal dialog-->
+					<div class="modal-dialog modal-dialog-centered mw-650px">
+						<!--begin::Modal content-->
+						<div class="modal-content">
+							<!--begin::Form-->
+							<form class="form" action="#" id="kt_modal_add_address_form">
+								<!--begin::Modal header-->
+								<div class="modal-header" id="kt_modal_add_address_header">
+									<!--begin::Modal title-->
+									<h2 class="fw-bold">Add New Address</h2>
+									<!--end::Modal title-->
+									<!--begin::Close-->
+									<div id="kt_modal_add_address_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+										<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+										<span class="svg-icon svg-icon-1">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+												<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+											</svg>
+										</span>
+										<!--end::Svg Icon-->
+									</div>
+									<!--end::Close-->
+								</div>
+								<!--end::Modal header-->
+								<!--begin::Modal body-->
+								<div class="modal-body py-10 px-lg-17">
+									<!--begin::Scroll-->
+									<div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_add_address_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_address_header" data-kt-scroll-wrappers="#kt_modal_add_address_scroll" data-kt-scroll-offset="300px">
+										<!--begin::Billing toggle-->
+										<div class="fw-bold fs-3 rotate collapsible collapsed mb-7" data-bs-toggle="collapse" href="#kt_modal_add_address_billing_info" role="button" aria-expanded="false" aria-controls="kt_modal_add_address_billing_info">Shipping Information
+										<span class="ms-2 rotate-180">
+											<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+											<span class="svg-icon svg-icon-3">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</span></div>
+										<!--end::Billing toggle-->
+										<!--begin::Billing form-->
+										<div id="kt_modal_add_address_billing_info" class="collapse show">
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2 required">Address Name</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<input class="form-control form-control-solid" placeholder="" name="name" value="" />
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2 required">Address Line 1</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<input class="form-control form-control-solid" placeholder="" name="address1" value="" />
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2">Address Line 2</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<input class="form-control form-control-solid" placeholder="" name="address2" />
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2 required">City / Town</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<input class="form-control form-control-solid" placeholder="" name="city" value="" />
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="row g-9 mb-7">
+												<!--begin::Col-->
+												<div class="col-md-6 fv-row">
+													<!--begin::Label-->
+													<label class="fs-6 fw-semibold mb-2 required">State / Province</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<input class="form-control form-control-solid" placeholder="" name="state" value="" />
+													<!--end::Input-->
+												</div>
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="col-md-6 fv-row">
+													<!--begin::Label-->
+													<label class="fs-6 fw-semibold mb-2 required">Post Code</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<input class="form-control form-control-solid" placeholder="" name="postcode" value="" />
+													<!--end::Input-->
+												</div>
+												<!--end::Col-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="d-flex flex-column mb-7 fv-row">
+												<!--begin::Label-->
+												<label class="fs-6 fw-semibold mb-2">
+													<span class="required">Country</span>
+													<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+												</label>
+												<!--end::Label-->
+												<!--begin::Input-->
+												<select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a Country..." data-dropdown-parent="#kt_modal_add_address" class="form-select form-select-solid fw-bold">
+													<option value="">Select a Country...</option>
+													<option value="AF">Afghanistan</option>
+													<option value="AX">Aland Islands</option>
+													<option value="AL">Albania</option>
+													<option value="DZ">Algeria</option>
+													<option value="AS">American Samoa</option>
+													<option value="AD">Andorra</option>
+													<option value="AO">Angola</option>
+													<option value="AI">Anguilla</option>
+													<option value="AG">Antigua and Barbuda</option>
+													<option value="AR">Argentina</option>
+													<option value="AM">Armenia</option>
+													<option value="AW">Aruba</option>
+													<option value="AU">Australia</option>
+													<option value="AT">Austria</option>
+													<option value="AZ">Azerbaijan</option>
+													<option value="BS">Bahamas</option>
+													<option value="BH">Bahrain</option>
+													<option value="BD">Bangladesh</option>
+													<option value="BB">Barbados</option>
+													<option value="BY">Belarus</option>
+													<option value="BE">Belgium</option>
+													<option value="BZ">Belize</option>
+													<option value="BJ">Benin</option>
+													<option value="BM">Bermuda</option>
+													<option value="BT">Bhutan</option>
+													<option value="BO">Bolivia, Plurinational State of</option>
+													<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+													<option value="BA">Bosnia and Herzegovina</option>
+													<option value="BW">Botswana</option>
+													<option value="BR">Brazil</option>
+													<option value="IO">British Indian Ocean Territory</option>
+													<option value="BN">Brunei Darussalam</option>
+													<option value="BG">Bulgaria</option>
+													<option value="BF">Burkina Faso</option>
+													<option value="BI">Burundi</option>
+													<option value="KH">Cambodia</option>
+													<option value="CM">Cameroon</option>
+													<option value="CA">Canada</option>
+													<option value="CV">Cape Verde</option>
+													<option value="KY">Cayman Islands</option>
+													<option value="CF">Central African Republic</option>
+													<option value="TD">Chad</option>
+													<option value="CL">Chile</option>
+													<option value="CN">China</option>
+													<option value="CX">Christmas Island</option>
+													<option value="CC">Cocos (Keeling) Islands</option>
+													<option value="CO">Colombia</option>
+													<option value="KM">Comoros</option>
+													<option value="CK">Cook Islands</option>
+													<option value="CR">Costa Rica</option>
+													<option value="CI">Côte d'Ivoire</option>
+													<option value="HR">Croatia</option>
+													<option value="CU">Cuba</option>
+													<option value="CW">Curaçao</option>
+													<option value="CZ">Czech Republic</option>
+													<option value="DK">Denmark</option>
+													<option value="DJ">Djibouti</option>
+													<option value="DM">Dominica</option>
+													<option value="DO">Dominican Republic</option>
+													<option value="EC">Ecuador</option>
+													<option value="EG">Egypt</option>
+													<option value="SV">El Salvador</option>
+													<option value="GQ">Equatorial Guinea</option>
+													<option value="ER">Eritrea</option>
+													<option value="EE">Estonia</option>
+													<option value="ET">Ethiopia</option>
+													<option value="FK">Falkland Islands (Malvinas)</option>
+													<option value="FJ">Fiji</option>
+													<option value="FI">Finland</option>
+													<option value="FR">France</option>
+													<option value="PF">French Polynesia</option>
+													<option value="GA">Gabon</option>
+													<option value="GM">Gambia</option>
+													<option value="GE">Georgia</option>
+													<option value="DE">Germany</option>
+													<option value="GH">Ghana</option>
+													<option value="GI">Gibraltar</option>
+													<option value="GR">Greece</option>
+													<option value="GL">Greenland</option>
+													<option value="GD">Grenada</option>
+													<option value="GU">Guam</option>
+													<option value="GT">Guatemala</option>
+													<option value="GG">Guernsey</option>
+													<option value="GN">Guinea</option>
+													<option value="GW">Guinea-Bissau</option>
+													<option value="HT">Haiti</option>
+													<option value="VA">Holy See (Vatican City State)</option>
+													<option value="HN">Honduras</option>
+													<option value="HK">Hong Kong</option>
+													<option value="HU">Hungary</option>
+													<option value="IS">Iceland</option>
+													<option value="IN">India</option>
+													<option value="ID">Indonesia</option>
+													<option value="IR">Iran, Islamic Republic of</option>
+													<option value="IQ">Iraq</option>
+													<option value="IE">Ireland</option>
+													<option value="IM">Isle of Man</option>
+													<option value="IL">Israel</option>
+													<option value="IT">Italy</option>
+													<option value="JM">Jamaica</option>
+													<option value="JP">Japan</option>
+													<option value="JE">Jersey</option>
+													<option value="JO">Jordan</option>
+													<option value="KZ">Kazakhstan</option>
+													<option value="KE">Kenya</option>
+													<option value="KI">Kiribati</option>
+													<option value="KP">Korea, Democratic People's Republic of</option>
+													<option value="KW">Kuwait</option>
+													<option value="KG">Kyrgyzstan</option>
+													<option value="LA">Lao People's Democratic Republic</option>
+													<option value="LV">Latvia</option>
+													<option value="LB">Lebanon</option>
+													<option value="LS">Lesotho</option>
+													<option value="LR">Liberia</option>
+													<option value="LY">Libya</option>
+													<option value="LI">Liechtenstein</option>
+													<option value="LT">Lithuania</option>
+													<option value="LU">Luxembourg</option>
+													<option value="MO">Macao</option>
+													<option value="MG">Madagascar</option>
+													<option value="MW">Malawi</option>
+													<option value="MY">Malaysia</option>
+													<option value="MV">Maldives</option>
+													<option value="ML">Mali</option>
+													<option value="MT">Malta</option>
+													<option value="MH">Marshall Islands</option>
+													<option value="MQ">Martinique</option>
+													<option value="MR">Mauritania</option>
+													<option value="MU">Mauritius</option>
+													<option value="MX">Mexico</option>
+													<option value="FM">Micronesia, Federated States of</option>
+													<option value="MD">Moldova, Republic of</option>
+													<option value="MC">Monaco</option>
+													<option value="MN">Mongolia</option>
+													<option value="ME">Montenegro</option>
+													<option value="MS">Montserrat</option>
+													<option value="MA">Morocco</option>
+													<option value="MZ">Mozambique</option>
+													<option value="MM">Myanmar</option>
+													<option value="NA">Namibia</option>
+													<option value="NR">Nauru</option>
+													<option value="NP">Nepal</option>
+													<option value="NL">Netherlands</option>
+													<option value="NZ">New Zealand</option>
+													<option value="NI">Nicaragua</option>
+													<option value="NE">Niger</option>
+													<option value="NG">Nigeria</option>
+													<option value="NU">Niue</option>
+													<option value="NF">Norfolk Island</option>
+													<option value="MP">Northern Mariana Islands</option>
+													<option value="NO">Norway</option>
+													<option value="OM">Oman</option>
+													<option value="PK">Pakistan</option>
+													<option value="PW">Palau</option>
+													<option value="PS">Palestinian Territory, Occupied</option>
+													<option value="PA">Panama</option>
+													<option value="PG">Papua New Guinea</option>
+													<option value="PY">Paraguay</option>
+													<option value="PE">Peru</option>
+													<option value="PH">Philippines</option>
+													<option value="PL">Poland</option>
+													<option value="PT">Portugal</option>
+													<option value="PR">Puerto Rico</option>
+													<option value="QA">Qatar</option>
+													<option value="RO">Romania</option>
+													<option value="RU">Russian Federation</option>
+													<option value="RW">Rwanda</option>
+													<option value="BL">Saint Barthélemy</option>
+													<option value="KN">Saint Kitts and Nevis</option>
+													<option value="LC">Saint Lucia</option>
+													<option value="MF">Saint Martin (French part)</option>
+													<option value="VC">Saint Vincent and the Grenadines</option>
+													<option value="WS">Samoa</option>
+													<option value="SM">San Marino</option>
+													<option value="ST">Sao Tome and Principe</option>
+													<option value="SA">Saudi Arabia</option>
+													<option value="SN">Senegal</option>
+													<option value="RS">Serbia</option>
+													<option value="SC">Seychelles</option>
+													<option value="SL">Sierra Leone</option>
+													<option value="SG">Singapore</option>
+													<option value="SX">Sint Maarten (Dutch part)</option>
+													<option value="SK">Slovakia</option>
+													<option value="SI">Slovenia</option>
+													<option value="SB">Solomon Islands</option>
+													<option value="SO">Somalia</option>
+													<option value="ZA">South Africa</option>
+													<option value="KR">South Korea</option>
+													<option value="SS">South Sudan</option>
+													<option value="ES">Spain</option>
+													<option value="LK">Sri Lanka</option>
+													<option value="SD">Sudan</option>
+													<option value="SR">Suriname</option>
+													<option value="SZ">Swaziland</option>
+													<option value="SE">Sweden</option>
+													<option value="CH">Switzerland</option>
+													<option value="SY">Syrian Arab Republic</option>
+													<option value="TW">Taiwan, Province of China</option>
+													<option value="TJ">Tajikistan</option>
+													<option value="TZ">Tanzania, United Republic of</option>
+													<option value="TH">Thailand</option>
+													<option value="TG">Togo</option>
+													<option value="TK">Tokelau</option>
+													<option value="TO">Tonga</option>
+													<option value="TT">Trinidad and Tobago</option>
+													<option value="TN">Tunisia</option>
+													<option value="TR">Turkey</option>
+													<option value="TM">Turkmenistan</option>
+													<option value="TC">Turks and Caicos Islands</option>
+													<option value="TV">Tuvalu</option>
+													<option value="UG">Uganda</option>
+													<option value="UA">Ukraine</option>
+													<option value="AE">United Arab Emirates</option>
+													<option value="GB">United Kingdom</option>
+													<option value="US">United States</option>
+													<option value="UY">Uruguay</option>
+													<option value="UZ">Uzbekistan</option>
+													<option value="VU">Vanuatu</option>
+													<option value="VE">Venezuela, Bolivarian Republic of</option>
+													<option value="VN">Vietnam</option>
+													<option value="VI">Virgin Islands</option>
+													<option value="YE">Yemen</option>
+													<option value="ZM">Zambia</option>
+													<option value="ZW">Zimbabwe</option>
+												</select>
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+											<!--begin::Input group-->
+											<div class="fv-row mb-7">
+												<!--begin::Wrapper-->
+												<div class="d-flex flex-stack">
+													<!--begin::Label-->
+													<div class="me-5">
+														<!--begin::Label-->
+														<label class="fs-6 fw-semibold">Use as a billing address?</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+														<!--end::Input-->
+													</div>
+													<!--end::Label-->
+													<!--begin::Switch-->
+													<label class="form-check form-switch form-check-custom form-check-solid">
+														<!--begin::Input-->
+														<input class="form-check-input" name="billing" type="checkbox" value="1" id="kt_modal_add_address_billing" checked="checked" />
+														<!--end::Input-->
+														<!--begin::Label-->
+														<span class="form-check-label fw-semibold text-muted" for="kt_modal_add_address_billing">Yes</span>
+														<!--end::Label-->
+													</label>
+													<!--end::Switch-->
+												</div>
+												<!--begin::Wrapper-->
+											</div>
+											<!--end::Input group-->
+										</div>
+										<!--end::Billing form-->
+									</div>
+									<!--end::Scroll-->
+								</div>
+								<!--end::Modal body-->
+								<!--begin::Modal footer-->
+								<div class="modal-footer flex-center">
+									<!--begin::Button-->
+									<button type="reset" id="kt_modal_add_address_cancel" class="btn btn-light me-3">Discard</button>
+									<!--end::Button-->
+									<!--begin::Button-->
+									<button type="submit" id="kt_modal_add_address_submit" class="btn btn-primary">
+										<span class="indicator-label">Submit</span>
+										<span class="indicator-progress">Please wait...
+										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+									</button>
+									<!--end::Button-->
+								</div>
+								<!--end::Modal footer-->
+							</form>
+							<!--end::Form-->
+						</div>
+					</div>
+				</div>
+				<!--end::Modal - New Address-->
+				<!--begin::Modal - Add task-->
+				<div class="modal fade" id="kt_modal_add_auth_app" tabindex="-1" aria-hidden="true">
+					<!--begin::Modal dialog-->
+					<div class="modal-dialog modal-dialog-centered mw-650px">
+						<!--begin::Modal content-->
+						<div class="modal-content">
+							<!--begin::Modal header-->
+							<div class="modal-header">
+								<!--begin::Modal title-->
+								<h2 class="fw-bold">Add Authenticator App</h2>
+								<!--end::Modal title-->
+								<!--begin::Close-->
+								<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+									<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+									<span class="svg-icon svg-icon-1">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+											<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</div>
+								<!--end::Close-->
+							</div>
+							<!--end::Modal header-->
+							<!--begin::Modal body-->
+							<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+								<!--begin::Content-->
+								<div class="fw-bold d-flex flex-column justify-content-center mb-5">
+									<!--begin::Label-->
+									<div class="text-center mb-5" data-kt-add-auth-action="qr-code-label">Download the
+									<a href="#">Authenticator app</a>, add a new account, then scan this barcode to set up your account.</div>
+									<div class="text-center mb-5 d-none" data-kt-add-auth-action="text-code-label">Download the
+									<a href="#">Authenticator app</a>, add a new account, then enter this code to set up your account.</div>
+									<!--end::Label-->
+									<!--begin::QR code-->
+									<div class="d-flex flex-center" data-kt-add-auth-action="qr-code">
+										<img src="{%static 'asset/media/misc/qr.png'%}" alt="Scan this QR code" />
+									</div>
+									<!--end::QR code-->
+									<!--begin::Text code-->
+									<div class="border rounded p-5 d-flex flex-center d-none" data-kt-add-auth-action="text-code">
+										<div class="fs-1">gi2kdnb54is709j</div>
+									</div>
+									<!--end::Text code-->
+								</div>
+								<!--end::Content-->
+								<!--begin::Action-->
+								<div class="d-flex flex-center">
+									<div class="btn btn-light-primary" data-kt-add-auth-action="text-code-button">Enter code manually</div>
+									<div class="btn btn-light-primary d-none" data-kt-add-auth-action="qr-code-button">Scan barcode instead</div>
+								</div>
+								<!--end::Action-->
+							</div>
+							<!--end::Modal body-->
+						</div>
+						<!--end::Modal content-->
+					</div>
+					<!--end::Modal dialog-->
+				</div>
+				<!--end::Modal - Add task-->
+				<!--begin::Modal - Add task-->
+				<div class="modal fade" id="kt_modal_add_one_time_password" tabindex="-1" aria-hidden="true">
+					<!--begin::Modal dialog-->
+					<div class="modal-dialog modal-dialog-centered mw-650px">
+						<!--begin::Modal content-->
+						<div class="modal-content">
+							<!--begin::Modal header-->
+							<div class="modal-header">
+								<!--begin::Modal title-->
+								<h2 class="fw-bold">Update Active Phone numbers</h2>
+								<!--end::Modal title-->
+								<!--begin::Close-->
+								<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+									<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+									<span class="svg-icon svg-icon-1">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+											<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</div>
+								<!--end::Close-->
+							</div>
+							<!--end::Modal header-->
+							<!--begin::Modal body-->
+							<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+								<!--begin::Form-->
+								<form class="form" id="kt_modal_add_one_time_password_form" action="" method="post" >
+									{%csrf_token%}
+									<!--begin::Label-->
+									<div class="fw-bold mb-9">Enter the new phone number to receive an Notification and update</div>
+									<!--end::Label-->
+									<!--begin::Input group-->
+									<div class="fv-row mb-7">
+										<!--begin::Label-->
+										<label class="fs-6 fw-semibold form-label mb-2">
+											<span class="required">Mobile number</span>
+											<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="A valid mobile number is required to receive the one-time password to validate your account login."></i>
+										</label>
+										<!--end::Label-->
+										<!--begin::Input-->
+										<input class="form-control form-control-solid" placeholder="Enter the new number" name="profile_phone" value="" />
+										<!--end::Input-->
+									</div>
+									<!--end::Input group-->
+									<!--begin::Separator-->
+									<div class="separator saperator-dashed my-5"></div>
+									<!--end::Separator-->
+								
+									<!--begin::Actions-->
+									<div class="text-center pt-15">
+										<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+										<button type="submit" class="btn btn-primary" >
+											<span class="indicator-label">Submit</span>
+										</button>
+									</div>
+									<!--end::Actions-->
+								</form>
+								<!--end::Form-->
+							</div>
+							<!--end::Modal body-->
+						</div>
+						<!--end::Modal content-->
+					</div>
+					<!--end::Modal dialog-->
+				</div>
+				<!--end::Modal - Add task-->
+				<!--end::Modals-->
+			</div>
+			<!--end::Content container-->
+		</div>
+		<!--end::Content-->
+	</div>
+	<!--end::Content wrapper-->
+</div>
+<!--end:::Main-->
+</div>
+<!--end::Wrapper-->
+</div>
+<!--end::Page-->
+</div>
+<!--end::App-->
+<!--begin::Drawers-->
+
+
+
+
+
+	
+{%endblock%}
+
+

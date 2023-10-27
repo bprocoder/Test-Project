@@ -1,0 +1,15 @@
+.dark_color {color: #ff2d7b !important}
+.social-btn .btn {border: none;margin: 10px 3px 0;opacity: 1}
+.social-btn .btn:hover {opacity: .9;color: #fff;}
+.social-btn .btn-secondary, .social-btn .btn-secondary:active {background: #507cc0 !important;color: #fff;}
+.account-content .social-btn .btn:hover {opacity: 1;color: #fff}
+.social-btn .btn-infor, .social-btn .btn-infor:active {background: #25D366 !important}
+.social-btn .btn-danger, .social-btn .btn-danger:active {background: #df4930 !important; color: #fff}
+.or-seperator {margin-top: 20px;text-align: center;border-top: 1px solid #ccc;}
+.or-seperator i {padding: 0 10px;background: #f7f7f7;position: relative;top: -11px;z-index: 1;border-radius: 5px;}
+
+@media(max-width:767px){
+
+    .social-btn .btn {margin: 10px auto 0;width: 70%;display: block;}
+
+}

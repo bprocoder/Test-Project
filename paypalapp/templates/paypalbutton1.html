@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paypal Test</title>
+</head>
+<body>
+{% comment %} action="https://www.sandbox.paypal.com/cgi-bin/webscr" {% endcomment %}
+<form id="paypal-form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick" id="id_cmd"><input type="hidden" name="charset" value="utf-8" id="id_charset"><input type="hidden" name="currency_code" value="USD" id="id_currency_code"><input type="hidden" name="no_shipping" value="1" id="id_no_shipping"><input type="hidden" name="business" value="ankit@bol7.com" id="id_business"><input type="hidden" name="amount" value="17.89" id="id_amount"><input type="hidden" name="item_name" value="product1" id="id_item_name"><input type="hidden" name="invoice" value="8d7f3615-35af-49f1-80fc-841adceabb05" id="id_invoice"><input type="hidden" name="notify_url" value="http://influencerhiring.com/paypalipn/" id="id_notify_url"><input type="hidden" name="return" value="http://influencerhiring.com/paypal_reverse/" id="id_return"><input type="hidden" name="cancel_return" value="http://influencerhiring.com/paypal_cancel/" id="id_cancel_return">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy it Now" />
+</form>
+<script>
+        // Trigger form submission on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('paypal-form').submit();
+        });
+    </script>
+</body>
+</html>

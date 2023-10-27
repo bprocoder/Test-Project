@@ -1,0 +1,2688 @@
+{% extends 'Super-Admin/index.html' %}
+{% load static %}
+{% block title%}
+<title>Influencer Hiring | User Profile</title>
+{% endblock %}
+
+{%block sidebar%}
+<!--begin::sidebar menu-->
+<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+	<!--begin::Menu wrapper-->
+	<div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+		<!--begin::Menu-->
+		<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+			<div class="menu-item"> <a class="menu-link" href="/Admin-Dashboard/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+                  <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+                  </svg>
+                  </span> </span> <span class="menu-title">Dashboards</span> </a>
+               </div> 
+
+			   
+			   <div class="menu-item"> <a class="menu-link" href="/Account-Info/"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="currentColor" />
+				<path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="currentColor" />
+				<path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="currentColor" />
+				<path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="currentColor" />
+				</svg>
+			   </span> </span> <span class="menu-title">Accounts</span> </a>
+			</div> 
+			<!--begin:Menu item-->
+			<div class="menu-item pt-5">
+				<!--begin:Menu content-->
+				<div class="menu-content">
+					<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+				</div>
+				<!--end:Menu content-->
+			</div>
+			<!--end:Menu item-->
+
+			<!--begin:Menu item-->
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-icon">
+						<!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
+						<span class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="currentColor" />
+								<path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.1128C2.10209 18.0128 6.40208 22.0128 11.3021 21.9128C13.1021 21.8128 14.7021 21.3128 16.0021 20.4128C16.5021 20.1128 16.6021 19.3128 16.1021 18.9128L11.0021 13.7128Z" fill="currentColor"></path>
+								<path opacity="0.3" d="M21.9021 14.0128C21.7021 15.6128 21.1021 17.1128 20.1021 18.4128C19.7021 18.9128 19.0021 18.9128 18.6021 18.5128L13.0021 12.9128H20.9021C21.5021 12.9128 22.0021 13.4128 21.9021 14.0128Z" fill="currentColor"></path>
+								<rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor" />
+							</svg>
+						</span>
+						<!--end::Svg Icon-->
+					</span>
+					<span class="menu-title">Our Business</span>
+					<span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+				
+					
+					
+					<!--begin:Menu item-->
+					<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+						<!--begin:Menu link-->
+						<span class="menu-link">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Orders-Details</span>
+							<span class="menu-arrow"></span>
+						</span>
+						<!--end:Menu link-->
+						<!--begin:Menu sub-->
+						<div class="menu-sub menu-sub-accordion menu-active-bg">
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="/Total-Orders/">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Total Orders</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="/Complete-Orders/">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Complete-Orders</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="/Pending-Orders/">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Pending Orders</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							<!--begin:Menu item-->
+							<div class="menu-item">
+								<!--begin:Menu link-->
+								<a class="menu-link" href="/Cancelled-Orders/">
+									<span class="menu-bullet">
+										<span class="bullet bullet-dot"></span>
+									</span>
+									<span class="menu-title">Cancelled-Orders</span>
+								</a>
+								<!--end:Menu link-->
+							</div>
+							<!--end:Menu item-->
+							
+						</div>
+						<!--end:Menu sub-->
+					</div>
+					<!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			</div>
+			<!--end:Menu item-->
+			<!--begin:Menu item-->
+			<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+				<!--begin:Menu link-->
+				<span class="menu-link">
+					<span class="menu-icon">
+						<!--begin::Svg Icon | path: icons/duotune/communication/com005.svg-->
+						<span class="svg-icon svg-icon-2">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20 14H18V10H20C20.6 10 21 10.4 21 11V13C21 13.6 20.6 14 20 14ZM21 19V17C21 16.4 20.6 16 20 16H18V20H20C20.6 20 21 19.6 21 19ZM21 7V5C21 4.4 20.6 4 20 4H18V8H20C20.6 8 21 7.6 21 7Z" fill="currentColor" />
+								<path opacity="0.3" d="M17 22H3C2.4 22 2 21.6 2 21V3C2 2.4 2.4 2 3 2H17C17.6 2 18 2.4 18 3V21C18 21.6 17.6 22 17 22ZM10 7C8.9 7 8 7.9 8 9C8 10.1 8.9 11 10 11C11.1 11 12 10.1 12 9C12 7.9 11.1 7 10 7ZM13.3 16C14 16 14.5 15.3 14.3 14.7C13.7 13.2 12 12 10.1 12C8.10001 12 6.49999 13.1 5.89999 14.7C5.59999 15.3 6.19999 16 7.39999 16H13.3Z" fill="currentColor" />
+							</svg>
+						</span>
+						<!--end::Svg Icon-->
+					</span>
+					<span class="menu-title">Users</span>
+					<span class="menu-arrow"></span>
+				</span>
+				<!--end:Menu link-->
+				<!--begin:Menu sub-->
+				<div class="menu-sub menu-sub-accordion">
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link " href="/Agencies-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Agencies</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Account-User-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Accounts</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Brands-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Brands</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Clients-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Clients</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Creators-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Creaters</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/RM-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">R M</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+					<!--begin:Menu item-->
+					<div class="menu-item">
+						<!--begin:Menu link-->
+						<a class="menu-link" href="/Managers-List/">
+							<span class="menu-bullet">
+								<span class="bullet bullet-dot"></span>
+							</span>
+							<span class="menu-title">Managers</span>
+						</a>
+						<!--end:Menu link-->
+					</div>
+					<!--end:Menu item-->
+				</div>
+				<!--end:Menu sub-->
+			</div>
+			<!--end:Menu item-->
+			
+				<!--begin:Menu item-->
+				<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+					<!--begin:Menu link-->
+					<span class="menu-link">
+						<span class="menu-icon">
+							<!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
+							<span class="svg-icon svg-icon-2">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor" />
+									<rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</span>
+						<span class="menu-title">Authentication</span>
+						<span class="menu-arrow"></span>
+					</span>
+					<!--end:Menu link-->
+					<!--begin:Menu sub-->
+					<div class="menu-sub menu-sub-accordion">
+					
+						
+						
+						<!--begin:Menu item-->
+						<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+							<!--begin:Menu link-->
+							<span class="menu-link">
+								<span class="menu-bullet">
+									<span class="bullet bullet-dot"></span>
+								</span>
+								<span class="menu-title">Email Templates</span>
+								<span class="menu-arrow"></span>
+							</span>
+							<!--end:Menu link-->
+							<!--begin:Menu sub-->
+							<div class="menu-sub menu-sub-accordion menu-active-bg">
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Welcome-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Welcome Message</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/'Reset-Password-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Reset Password</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Orders-Confirmed-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Orders Confirmed</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Card-Declined-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Credit Card Declined</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Promotions-Email1-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Promo Message 1</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="/Promotions-Email2-Message/">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Promo Message 2</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+								<!--begin:Menu item-->
+								<div class="menu-item">
+									<!--begin:Menu link-->
+									<a class="menu-link" href="Promotions-Email3-Message/'">
+										<span class="menu-bullet">
+											<span class="bullet bullet-dot"></span>
+										</span>
+										<span class="menu-title">Promo Message 3</span>
+									</a>
+									<!--end:Menu link-->
+								</div>
+								<!--end:Menu item-->
+							</div>
+							<!--end:Menu sub-->
+						</div>
+						<!--end:Menu item-->
+					</div>
+					<!--end:Menu sub-->
+				</div>
+				<!--end:Menu item-->
+			
+			
+				<!--begin:Menu item-->
+				<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+					<!--begin:Menu link-->
+					<span class="menu-link">
+						<span class="menu-icon">
+							<!--begin::Svg Icon | path: icons/duotune/finance/fin001.svg-->
+							<span class="svg-icon svg-icon-2">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 19.725V18.725C20 18.125 19.6 17.725 19 17.725H5C4.4 17.725 4 18.125 4 18.725V19.725H3C2.4 19.725 2 20.125 2 20.725V21.725H22V20.725C22 20.125 21.6 19.725 21 19.725H20Z" fill="currentColor" />
+									<path opacity="0.3" d="M22 6.725V7.725C22 8.325 21.6 8.725 21 8.725H18C18.6 8.725 19 9.125 19 9.725C19 10.325 18.6 10.725 18 10.725V15.725C18.6 15.725 19 16.125 19 16.725V17.725H15V16.725C15 16.125 15.4 15.725 16 15.725V10.725C15.4 10.725 15 10.325 15 9.725C15 9.125 15.4 8.725 16 8.725H13C13.6 8.725 14 9.125 14 9.725C14 10.325 13.6 10.725 13 10.725V15.725C13.6 15.725 14 16.125 14 16.725V17.725H10V16.725C10 16.125 10.4 15.725 11 15.725V10.725C10.4 10.725 10 10.325 10 9.725C10 9.125 10.4 8.725 11 8.725H8C8.6 8.725 9 9.125 9 9.725C9 10.325 8.6 10.725 8 10.725V15.725C8.6 15.725 9 16.125 9 16.725V17.725H5V16.725C5 16.125 5.4 15.725 6 15.725V10.725C5.4 10.725 5 10.325 5 9.725C5 9.125 5.4 8.725 6 8.725H3C2.4 8.725 2 8.325 2 7.725V6.725L11 2.225C11.6 1.925 12.4 1.925 13.1 2.225L22 6.725ZM12 3.725C11.2 3.725 10.5 4.425 10.5 5.225C10.5 6.025 11.2 6.725 12 6.725C12.8 6.725 13.5 6.025 13.5 5.225C13.5 4.425 12.8 3.725 12 3.725Z" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</span>
+						<span class="menu-title">Blog</span>
+						<span class="menu-arrow"></span>
+					</span>
+					<!--end:Menu link-->
+					<!--begin:Menu sub-->
+					<div class="menu-sub menu-sub-accordion menu-active-bg">
+						<!--begin:Menu item-->
+						<div class="menu-item">
+							<!--begin:Menu link-->
+							<a class="menu-link" href="/Blogs-Home/">
+								<span class="menu-bullet">
+									<span class="bullet bullet-dot"></span>
+								</span>
+								<span class="menu-title">Blog Home</span>
+							</a>
+							<!--end:Menu link-->
+						</div>
+						<!--end:Menu item-->
+						
+					</div>
+					<!--end:Menu sub-->
+
+					<!--begin:Menu sub-->
+					<div class="menu-sub menu-sub-accordion menu-active-bg">
+						<!--begin:Menu item-->
+						<div class="menu-item">
+							<!--begin:Menu link-->
+							<a class="menu-link" href="/Total-Blog-List/">
+								<span class="menu-bullet">
+									<span class="bullet bullet-dot"></span>
+								</span>
+								<span class="menu-title">Total Blog List</span>
+							</a>
+							<!--end:Menu link-->
+						</div>
+						<!--end:Menu item-->
+					</div>
+					<!--end:Menu sub-->
+				</div>
+				<!--end:Menu item-->
+	
+		<!--begin:Menu item-->
+        <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <!--begin:Menu link-->
+            <span class="menu-link">
+                <span class="menu-icon">
+                    <!--begin::Svg Icon | path: icons/duotune/layouts/lay008.svg-->
+                    <span class="svg-icon svg-icon-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z" fill="currentColor" />
+                            <path opacity="0.3" d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                </span>
+                <span class="menu-title">Widgets</span>
+                <span class="menu-arrow"></span>
+            </span>
+            <!--end:Menu link-->
+            <!--begin:Menu sub-->
+            <div class="menu-sub menu-sub-accordion">
+                
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="/Data-Charts/">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Charts</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="/Data-Mixed/">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Mixed</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                <!--begin:Menu item-->
+                <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link " href="/Data-Tables/">
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">Tables</span>
+                    </a>
+                    <!--end:Menu link-->
+                </div>
+                <!--end:Menu item-->
+                
+            </div>
+            <!--end:Menu sub-->
+        </div>
+        <!--end:Menu item-->
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			  <path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="currentColor"></path>
+			  <rect x="6" y="12" width="7" height="2" rx="1" fill="currentColor"></rect>
+			  <rect x="6" y="7" width="12" height="2" rx="1" fill="currentColor"></rect>
+			</svg>
+			</span> </span> <span class="menu-title">Chat</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+                <div class="menu-item"> <a class="menu-link" href="/Private-Chats/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Chat</span></a></div>
+                <div class="menu-item"> <a class="menu-link" href="/Groups-Chats/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Group Chat</span></a></div>
+                 
+			</div>
+		  </div>
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M6.5 11C8.98528 11 11 8.98528 11 6.5C11 4.01472 8.98528 2 6.5 2C4.01472 2 2 4.01472 2 6.5C2 8.98528 4.01472 11 6.5 11Z" fill="currentColor"></path>
+				<path opacity="0.3" d="M13 6.5C13 4 15 2 17.5 2C20 2 22 4 22 6.5C22 9 20 11 17.5 11C15 11 13 9 13 6.5ZM6.5 22C9 22 11 20 11 17.5C11 15 9 13 6.5 13C4 13 2 15 2 17.5C2 20 4 22 6.5 22ZM17.5 22C20 22 22 20 22 17.5C22 15 20 13 17.5 13C15 13 13 15 13 17.5C13 20 15 22 17.5 22Z" fill="currentColor"></path>
+			</svg>
+			</span> </span> <span class="menu-title">Role Management</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+                <div class="menu-item"> <a class="menu-link" href="/Role-Management/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Roles List</span></a></div>
+			</div>
+		  </div>
+
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="currentColor"></path>
+				<path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.1128C2.10209 18.0128 6.40208 22.0128 11.3021 21.9128C13.1021 21.8128 14.7021 21.3128 16.0021 20.4128C16.5021 20.1128 16.6021 19.3128 16.1021 18.9128L11.0021 13.7128Z" fill="currentColor"></path>
+				<path opacity="0.3" d="M21.9021 14.0128C21.7021 15.6128 21.1021 17.1128 20.1021 18.4128C19.7021 18.9128 19.0021 18.9128 18.6021 18.5128L13.0021 12.9128H20.9021C21.5021 12.9128 22.0021 13.4128 21.9021 14.0128Z" fill="currentColor"></path>
+			</svg>
+			</span> </span> <span class="menu-title">Career</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+               <div class="menu-item"> <a class="menu-link" href="/Upload-Job-Requirements/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">upload requirements</span></a></div>
+                <div class="menu-item"> <a class="menu-link" href="/Interested-Candidates/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Interested Candidates</span></a></div>
+				<div class="menu-item"> <a class="menu-link" href="/Employee-Review/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Employee Reviews</span></a></div>
+                 
+			</div>
+		  </div>
+
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path opacity="0.3" d="M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z" fill="currentColor"></path>
+				<path d="M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z" fill="currentColor"></path>
+			</svg>
+			</span> </span> <span class="menu-title">Seo Settings</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+                <div class="menu-item"> <a class="menu-link" href="/All-Page-SEO-Content/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">SEO Content for All</span></a></div>
+                <div class="menu-item"> <a class="menu-link" href="/Pagewise-SEOContent/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">Page Wise SEO Content</span></a></div>
+			</div>
+		  </div>
+
+		  
+		  <div data-kt-menu-trigger="click" class="menu-item menu-accordion"> <span class="menu-link"> <span class="menu-icon"> <span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M11.7 8L7.49998 15.3L4.59999 20.3C3.49999 18.4 3.1 17.7 2.3 16.3C1.9 15.7 1.9 14.9 2.3 14.3L8.8 3L11.7 8Z" fill="currentColor"></path>
+				<path opacity="0.3" d="M11.7 8L8.79999 3H13.4C14.1 3 14.8 3.4 15.2 4L20.6 13.3H14.8L11.7 8ZM7.49997 15.2L4.59998 20.2H17.6C18.3 20.2 19 19.8 19.4 19.2C20.2 17.7 20.6 17 21.7 15.2H7.49997Z" fill="currentColor"></path>
+			</svg>
+			</span> </span> <span class="menu-title">User Referral</span><span class="menu-arrow"></span></span>
+			<div class="menu-sub menu-sub-accordion">
+                <div class="menu-item"> <a class="menu-link" href="/User-Referral/"><span class="menu-bullet"><span class="bullet bullet-dot"></span> </span> <span class="menu-title">User List</span></a></div>
+			</div>
+		  </div>
+		  
+		   <!--begin:Menu item-->
+		 <div class="menu-item">
+			<!--begin:Menu link-->
+			<a class="menu-link" href="/Calendar/">
+			 <span class="menu-icon">
+			 <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+			   <span class="svg-icon svg-icon-2">
+			   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			   <path opacity="0.3" d="M21 22H3C2.4 22 2 21.6 2 21V5C2 4.4 2.4 4 3 4H21C21.6 4 22 4.4 22 5V21C22 21.6 21.6 22 21 22Z" fill="currentColor" />
+			   <path d="M6 6C5.4 6 5 5.6 5 5V3C5 2.4 5.4 2 6 2C6.6 2 7 2.4 7 3V5C7 5.6 6.6 6 6 6ZM11 5V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V5C9 5.6 9.4 6 10 6C10.6 6 11 5.6 11 5ZM15 5V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V5C13 5.6 13.4 6 14 6C14.6 6 15 5.6 15 5ZM19 5V3C19 2.4 18.6 2 18 2C17.4 2 17 2.4 17 3V5C17 5.6 17.4 6 18 6C18.6 6 19 5.6 19 5Z" fill="currentColor" />
+			   <path d="M8.8 13.1C9.2 13.1 9.5 13 9.7 12.8C9.9 12.6 10.1 12.3 10.1 11.9C10.1 11.6 10 11.3 9.8 11.1C9.6 10.9 9.3 10.8 9 10.8C8.8 10.8 8.59999 10.8 8.39999 10.9C8.19999 11 8.1 11.1 8 11.2C7.9 11.3 7.8 11.4 7.7 11.6C7.6 11.8 7.5 11.9 7.5 12.1C7.5 12.2 7.4 12.2 7.3 12.3C7.2 12.4 7.09999 12.4 6.89999 12.4C6.69999 12.4 6.6 12.3 6.5 12.2C6.4 12.1 6.3 11.9 6.3 11.7C6.3 11.5 6.4 11.3 6.5 11.1C6.6 10.9 6.8 10.7 7 10.5C7.2 10.3 7.49999 10.1 7.89999 10C8.29999 9.90003 8.60001 9.80003 9.10001 9.80003C9.50001 9.80003 9.80001 9.90003 10.1 10C10.4 10.1 10.7 10.3 10.9 10.4C11.1 10.5 11.3 10.8 11.4 11.1C11.5 11.4 11.6 11.6 11.6 11.9C11.6 12.3 11.5 12.6 11.3 12.9C11.1 13.2 10.9 13.5 10.6 13.7C10.9 13.9 11.2 14.1 11.4 14.3C11.6 14.5 11.8 14.7 11.9 15C12 15.3 12.1 15.5 12.1 15.8C12.1 16.2 12 16.5 11.9 16.8C11.8 17.1 11.5 17.4 11.3 17.7C11.1 18 10.7 18.2 10.3 18.3C9.9 18.4 9.5 18.5 9 18.5C8.5 18.5 8.1 18.4 7.7 18.2C7.3 18 7 17.8 6.8 17.6C6.6 17.4 6.4 17.1 6.3 16.8C6.2 16.5 6.10001 16.3 6.10001 16.1C6.10001 15.9 6.2 15.7 6.3 15.6C6.4 15.5 6.6 15.4 6.8 15.4C6.9 15.4 7.00001 15.4 7.10001 15.5C7.20001 15.6 7.3 15.6 7.3 15.7C7.5 16.2 7.7 16.6 8 16.9C8.3 17.2 8.6 17.3 9 17.3C9.2 17.3 9.5 17.2 9.7 17.1C9.9 17 10.1 16.8 10.3 16.6C10.5 16.4 10.5 16.1 10.5 15.8C10.5 15.3 10.4 15 10.1 14.7C9.80001 14.4 9.50001 14.3 9.10001 14.3C9.00001 14.3 8.9 14.3 8.7 14.3C8.5 14.3 8.39999 14.3 8.39999 14.3C8.19999 14.3 7.99999 14.2 7.89999 14.1C7.79999 14 7.7 13.8 7.7 13.7C7.7 13.5 7.79999 13.4 7.89999 13.2C7.99999 13 8.2 13 8.5 13H8.8V13.1ZM15.3 17.5V12.2C14.3 13 13.6 13.3 13.3 13.3C13.1 13.3 13 13.2 12.9 13.1C12.8 13 12.7 12.8 12.7 12.6C12.7 12.4 12.8 12.3 12.9 12.2C13 12.1 13.2 12 13.6 11.8C14.1 11.6 14.5 11.3 14.7 11.1C14.9 10.9 15.2 10.6 15.5 10.3C15.8 10 15.9 9.80003 15.9 9.70003C15.9 9.60003 16.1 9.60004 16.3 9.60004C16.5 9.60004 16.7 9.70003 16.8 9.80003C16.9 9.90003 17 10.2 17 10.5V17.2C17 18 16.7 18.4 16.2 18.4C16 18.4 15.8 18.3 15.6 18.2C15.4 18.1 15.3 17.8 15.3 17.5Z" fill="currentColor" />
+			   </svg>
+			   </span>
+			 <!--end::Svg Icon-->
+			 </span>
+			<span class="menu-title">Calendar</span>
+			</a>
+		   <!--end:Menu link-->
+		   </div>
+		   <!--end:Menu item-->
+		</div>
+		<!--end::Menu-->
+	</div>
+	<!--end::Menu wrapper-->
+</div>
+<!--end::sidebar menu-->
+{%endblock%}
+                   
+{%block body%}
+
+					<!--begin::Main-->
+					<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+						<!--begin::Content wrapper-->
+						<div class="d-flex flex-column flex-column-fluid">
+							<!--begin::Toolbar-->
+							<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+								<!--begin::Toolbar container-->
+								<div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+									<!--begin::Page title-->
+									<div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+										<!--begin::Title-->
+										<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">View Client Details</h1>
+										<!--end::Title-->
+										<!--begin::Breadcrumb-->
+										<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+											<!--begin::Item-->
+											<li class="breadcrumb-item text-muted">
+												<a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Home</a>
+											</li>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<li class="breadcrumb-item">
+												<span class="bullet bg-gray-400 w-5px h-2px"></span>
+											</li>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<li class="breadcrumb-item text-muted">User Management</li>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<li class="breadcrumb-item">
+												<span class="bullet bg-gray-400 w-5px h-2px"></span>
+											</li>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<li class="breadcrumb-item text-muted">Users</li>
+											<!--end::Item-->
+										</ul>
+										<!--end::Breadcrumb-->
+									</div>
+									<!--end::Page title-->
+									<!--begin::Actions-->
+									<div class="d-flex align-items-center gap-2 gap-lg-3">
+									
+									</div>
+									<!--end::Actions-->
+								</div>
+								<!--end::Toolbar container-->
+							</div>
+							<!--end::Toolbar-->
+							<!--begin::Content-->
+							<div id="kt_app_content" class="app-content flex-column-fluid">
+								<!--begin::Content container-->
+								<div id="kt_app_content_container" class="app-container container-xxl">
+									<!--begin::Layout-->
+									<div class="d-flex flex-column flex-lg-row">
+										<!--begin::Sidebar-->
+										<div class="flex-column flex-lg-row-auto w-lg-250px w-xl-350px mb-10">
+											<!--begin::Card-->
+											<div class="card mb-5 mb-xl-8">
+												<!--begin::Card body-->
+												<div class="card-body">
+													<!--begin::Summary-->
+													<!--begin::User Info-->
+													<div class="d-flex flex-center flex-column py-5">
+														<!--begin::Avatar-->
+														<div class="symbol symbol-100px symbol-circle mb-7">
+															<img src="/media/{{cltdet.0.profileimage}}" alt="image"/>
+														</div>
+														<!--end::Avatar-->
+														<!--begin::Name-->
+														<a href="#" class="fs-3 text-gray-800 text-hover-primary fw-bold mb-3">{{cltdet.0.fullname}}</a>
+														<!--end::Name-->
+														<!--begin::Position-->
+														<div class="mb-9">
+															<!--begin::Badge-->
+															<div class="badge badge-lg badge-light-primary d-inline">{{cltdet.0.client_userid.username}}</div>
+															<!--begin::Badge-->
+														</div>
+														<!--end::Position-->
+														<!--begin::Info-->
+														<!--begin::Info heading-->
+														<div class="fw-bold mb-3">Assigned Orders
+														<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Number of support tickets assigned, closed and pending this week."></i></div>
+														<!--end::Info heading-->
+														<div class="d-flex flex-wrap flex-center">
+															<!--begin::Stats-->
+															<div class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3">
+																<div class="fs-4 fw-bold text-gray-700">
+
+																	<span class="w-75px"> {{ total|length }}</span>
+
+
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																	<span class="svg-icon svg-icon-3 svg-icon-info">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																			<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<div class="fw-semibold text-muted">Total</div>
+															</div>
+															<!--end::Stats-->
+															
+															
+															<!--begin::Stats-->
+															<div class="border border-gray-300 border-dashed rounded py-3 px-3 mx-4 mb-3">
+																<div class="fs-4 fw-bold text-gray-700">
+																	<span class="w-50px">{{Pen|length}}</span>
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
+																	<span class="svg-icon svg-icon-3 svg-icon-warning">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
+																			<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<div class="fw-semibold text-muted">Pending</div>
+															</div>
+															<!--end::Stats-->
+															<!--begin::Stats-->
+															<div class="border border-gray-300 border-dashed rounded py-3 px-3 mx-4 mb-3">
+																<div class="fs-4 fw-bold text-gray-700">
+																	<span class="w-50px">{{Pro|length}}</span>
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg-->
+																	<span class="svg-icon svg-icon-3 svg-icon-primary">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																			<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<div class="fw-semibold text-muted">Processing</div>
+															</div>
+															<!--end::Stats-->
+															<!--begin::Stats-->
+															<div class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3">
+																<div class="fs-4 fw-bold text-gray-700">
+																	<span class="w-50px">{{Can|length}}</span>
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																	<span class="svg-icon svg-icon-3 svg-icon-danger">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
+																			<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<div class="fw-semibold text-muted">Cancelled</div>
+															</div>
+															<!--end::Stats-->
+															<!--begin::Stats-->
+															<div class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3">
+																<div class="fs-4 fw-bold text-gray-700">
+
+																	<span class="w-75px"> {{Comp|length}}</span>
+
+
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+																	<span class="svg-icon svg-icon-3 svg-icon-success">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																			<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<div class="fw-semibold text-muted">Completed</div>
+															</div>
+															<!--end::Stats-->
+														</div>
+														<!--end::Info-->
+													</div>
+													<!--end::User Info-->
+													<!--end::Summary-->
+													<!--begin::Details toggle-->
+													<div class="d-flex flex-stack fs-4 py-3">
+														<div class="fw-bold rotate collapsible" data-bs-toggle="collapse" href="#kt_user_view_details" role="button" aria-expanded="false" aria-controls="kt_user_view_details">Details
+														<span class="ms-2 rotate-180">
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</span></div>
+														<span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit customer details">
+															<a href="#" class="btn btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_update_details">Edit</a>
+														</span>
+													</div>
+													<!--end::Details toggle-->
+													<div class="separator"></div>
+													<!--begin::Details content-->
+													<div id="kt_user_view_details" class="collapse show">
+														<div class="pb-5 fs-6">
+															<!--begin::Details item-->
+															<div class="fw-bold mt-5">User ID</div>
+															<div class="text-gray-600">{{cltdet.0.client_userid.id}}</div>
+															<div class="fw-bold mt-5">Profile ID</div>
+															<div class="text-gray-600">{{cltdet.0.client_profile_id}}</div>
+															<!--begin::Details item-->
+															<!--begin::Details item-->
+															<div class="fw-bold mt-5">Email</div>
+															<div class="text-gray-600">
+																<a href="#" class="text-gray-600 text-hover-primary">{{cltdet.0.client_userid.email}}</a>
+															</div>
+															<!--begin::Details item-->
+                                                            <!--begin::Details item-->
+															<div class="fw-bold mt-5">Phone</div>
+															<div class="text-gray-600">
+																<a href="#" class="text-gray-600 text-hover-primary">{{cltdet.0.mobile}}</a>
+															</div>
+															<!--begin::Details item-->
+															<!--begin::Details item-->
+															<div class="fw-bold mt-5">Address</div>
+															<div class="text-gray-600">{{cltdet.0.address}}
+															</div>
+															<!--begin::Details item-->
+                                                            <!--begin::Details item-->
+															<div class="fw-bold mt-5">Postal/Pin</div>
+															<div class="text-gray-600">{{cltdet.0.postalcode}}</div>
+															<!--begin::Details item-->
+															<!--begin::Details item-->
+															<div class="fw-bold mt-5">Country</div>
+															<div class="text-gray-600">{{cltdet.0.country}}</div>
+															<!--begin::Details item-->
+															<!--begin::Details item-->
+															<div class="fw-bold mt-5">Last Login</div>
+															<div class="text-gray-600">{{cltdet.0.client_userid.last_login}}</div>
+															<!--begin::Details item-->
+														</div>
+													</div>
+													<!--end::Details content-->
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Card-->
+											
+										</div>
+										<!--end::Sidebar-->
+										<!--begin::Content-->
+										<div class="flex-lg-row-fluid ms-lg-15">
+											<!--begin:::Tabs-->
+											<ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semibold mb-8">
+												<!--begin:::Tab item-->
+												<li class="nav-item">
+													<a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_user_view_overview_tab">Overview</a>
+												</li>
+												<!--end:::Tab item-->
+												<!--begin:::Tab item-->
+												<li class="nav-item">
+													<a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_user_view_overview_security">Security</a>
+												</li>
+												<!--end:::Tab item-->
+												<!--begin:::Tab item-->
+												<li class="nav-item">
+													<a class="nav-link text-active-primary pb-4" data-bs-toggle="tab" href="#kt_user_view_overview_events_and_logs_tab">Events & Logs</a>
+												</li>
+												<!--end:::Tab item-->
+												
+											</ul>
+											<!--end:::Tabs-->
+											<!--begin:::Tab content-->
+											<div class="tab-content" id="myTabContent">
+												<!--begin:::Tab pane-->
+												<div class="tab-pane fade show active" id="kt_user_view_overview_tab" role="tabpanel">
+													<!--begin::Main column-->
+										<div class="d-flex flex-column flex-lg-row-fluid gap-7 gap-lg-10">
+											<!--begin::Order details-->
+											<div class="card card-flush py-4">
+												<!--begin::Card header-->
+												<div class="card-header">
+													<div class="card-title">
+														<h2>Orders Summary</h2>
+													</div>
+                                                    <a href="/Clients-Total-Orders/" class="btn btn-sm btn-light-primary">View all Orders</a>
+												</div>
+                                               
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-0">
+													<div class="d-flex flex-column gap-10">
+														<!--begin::Input group-->
+														
+														<!--end::Input group-->
+														<!--begin::Separator-->
+														<div class="separator"></div>
+														<!--end::Separator-->
+														<!--begin::Search products-->
+														<div class="d-flex align-items-center position-relative mb-n7">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+															<span class="svg-icon svg-icon-1 position-absolute ms-4">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor" />
+																	<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+															<input type="text" data-kt-ecommerce-edit-order-filter="search" class="form-control form-control-solid w-100 w-lg-50 ps-14" placeholder="Search Products" />
+														</div>
+														<!--end::Search products-->
+														<!--begin::Table-->
+														<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_edit_order_product_table">
+															<!--begin::Table head-->
+															<thead>
+																<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+																	<th class="w-25px pe-2"></th>
+																	<th class="min-w-200px">Influencer</th>
+																	<th class="min-w-100px text-end pe-5">Total Price </th>
+																</tr>
+															</thead>
+															<!--end::Table head-->
+															<!--begin::Table body-->
+															<tbody class="fw-semibold text-gray-600">
+																
+																
+																{%for i in total%}
+																
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Checkbox-->
+																	<td>
+																		<div class="form-check form-check-sm form-check-custom form-check-solid">
+																			<input class="form-check-input" type="checkbox" value="1" />
+																		</div>
+																	</td>
+																	<!--end::Checkbox-->
+																	<!--begin::Product=-->
+																	<td>
+																		<div class="d-flex align-items-center" data-kt-ecommerce-edit-order-filter="product" data-kt-ecommerce-edit-order-id="product_1">
+																			<!--begin::Thumbnail-->
+																			<a href="../../demo1/dist/apps/ecommerce/catalog/edit-product.html" class="symbol symbol-50px">
+																				<span class="symbol-label" style="background-image:url('/media/{{i.influencerid.profileimage}}');"></span>
+																			</a>
+																			<!--end::Thumbnail-->
+																			<div class="ms-5">
+																				<!--begin::Title-->
+																				{% csrf_token %}
+																				<a href="#" onclick="event.preventDefault(); filter({{i.ordersid}})" class="text-gray-800 text-hover-primary fs-5 fw-bold">{{i.influencerid.fullname}}</a>
+																				<!--end::Title-->
+																				<!--begin::Price-->
+																				<div class="fw-semibold fs-7">Service Name: {{i.serviceid.servicename}}
+
+																			
+																			
+																			</div>
+
+																				<!--end::Price-->
+																				<!--begin::SKU-->
+																				<div class="text-muted fs-7">Ord-ID: {{i.ordersid}}</div>
+																				<!--end::SKU-->
+																			</div>
+																		</div>
+																	</td>
+																	<!--end::Product=-->
+																	<!--begin::Qty=-->
+																	<td class="text-end pe-5" data-order="20">
+																		{% if i.iscouponapplied == true %}
+																		<span class="fw-bold ms-3">{{i.paymentcurrency}} {{i.finalamtafterdiscount}}</span>
+																		{%else%}
+																		<span class="fw-bold ms-3">{{i.paymentcurrency}} {{i.finalamt}}</span>
+																		{%endif%}
+																	</td>
+																	<!--end::Qty=-->
+																</tr>
+																<!--end::Table row-->
+																{%endfor%}
+
+
+
+
+															</tbody>
+															<!--end::Table body-->
+														</table>
+														<!--end::Table-->
+
+
+														<script>
+    
+
+															function filter(id){
+														
+																	$.ajax({
+																		type:'POST',
+																		url:'{% url "orderdet" %}',
+																		headers: {
+																			'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+																		},
+																		data:
+																		{
+																		orderid:id,     
+																		},
+																		success: function(response){
+																		  console.log("Rahul");
+																		  console.log(response['results']);
+																		  if (response['results']==='ok')
+																		  {
+																		  redirecttourl('/Orders-Details/');
+																		} 
+																		}
+																	  
+																	   
+																		})
+																	  
+																};
+															
+															
+														
+																  function redirecttourl(url){
+																	window.location.href=url;
+																  }
+															
+															
+														
+														
+														</script>
+														
+
+													</div>
+												</div>
+												<!--end::Card header-->
+											</div>
+											<!--end::Order details-->
+											
+										</div>
+										<!--end::Main column-->
+												
+												</div>
+												<!--end:::Tab pane-->
+												<!--begin:::Tab pane-->
+												<div class="tab-pane fade" id="kt_user_view_overview_security" role="tabpanel">
+													
+													<!--begin::Card-->
+													<div class="card pt-4 mb-6 mb-xl-9">
+														<!--begin::Card header-->
+														<div class="card-header border-0">
+															<!--begin::Card title-->
+															<div class="card-title">
+																<h2>Profile</h2>
+															</div>
+															<!--end::Card title-->
+														</div>
+														<!--end::Card header-->
+														<!--begin::Card body-->
+														<div class="card-body pt-0 pb-5">
+															<!--begin::Table wrapper-->
+															<div class="table-responsive">
+																<!--begin::Table-->
+																<table class="table align-middle table-row-dashed gy-5" id="kt_table_users_login_session">
+																	<!--begin::Table body-->
+																	<tbody class="fs-6 fw-semibold text-gray-600">
+																		<tr>
+																			<td>Email</td>
+																			<td>{{cltdet.0.client_userid.email}}</td>
+																			<td class="text-end">
+																				<button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#kt_modal_update_email">
+																					<!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+																					<span class="svg-icon svg-icon-3">
+																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																							<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																							<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																						</svg>
+																					</span>
+																					<!--end::Svg Icon-->
+																				</button>
+																			</td>
+																		</tr>
+																		{% comment %} <tr>
+																			<td>Password</td>
+																			<td>{{cltdet.0.client_userid.password}}</td>
+																			<td class="text-end">
+																				<button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#kt_modal_update_password">
+																					<!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+																					<span class="svg-icon svg-icon-3">
+																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																							<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																							<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																						</svg>
+																					</span>
+																					<!--end::Svg Icon-->
+																				</button>
+																			</td>
+																		</tr> {% endcomment %}
+																		<tr>
+																			<td>Role</td>
+																			<td>{{cltdet.0.client_userid.roles}}</td>
+																			<td class="text-end">
+																				<button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#kt_modal_update_role">
+																					<!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+																					<span class="svg-icon svg-icon-3">
+																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																							<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																							<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																						</svg>
+																					</span>
+																					<!--end::Svg Icon-->
+																				</button>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Phone</td>
+																			<td>{{cltdet.0.mobile}}</td>
+																			<td class="text-end">
+																				<button type="button" class="btn btn-icon btn-active-light-primary w-30px h-30px ms-auto" data-bs-toggle="modal" data-bs-target="#kt_modal_update_mobile">
+																					<!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+																					<span class="svg-icon svg-icon-3">
+																						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																							<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																							<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																						</svg>
+																					</span>
+																					<!--end::Svg Icon-->
+																				</button>
+																			</td>
+																		</tr>
+																	</tbody>
+																	<!--end::Table body-->
+																</table>
+																<!--end::Table-->
+															</div>
+															<!--end::Table wrapper-->
+														</div>
+														<!--end::Card body-->
+													</div>
+													<!--end::Card-->
+													
+													
+													
+												</div>
+												<!--end:::Tab pane-->
+												<!--begin:::Tab pane-->
+												<div class="tab-pane fade" id="kt_user_view_overview_events_and_logs_tab" role="tabpanel">
+													<!--begin::Card-->
+													<div class="card pt-4 mb-6 mb-xl-9">
+														<!--begin::Card header-->
+														<div class="card-header border-0">
+															<!--begin::Card title-->
+															<div class="card-title">
+																<h2>Login Sessions</h2>
+															</div>
+															<!--end::Card title-->
+															{% comment %} <!--begin::Card toolbar-->
+															<div class="card-toolbar">
+																<!--begin::Filter-->
+																<button type="button" class="btn btn-sm btn-flex btn-light-primary" id="kt_modal_sign_out_sesions">
+																<!--begin::Svg Icon | path: icons/duotune/arrows/arr077.svg-->
+																<span class="svg-icon svg-icon-3">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<rect opacity="0.3" x="4" y="11" width="12" height="2" rx="1" fill="currentColor" />
+																		<path d="M5.86875 11.6927L7.62435 10.2297C8.09457 9.83785 8.12683 9.12683 7.69401 8.69401C7.3043 8.3043 6.67836 8.28591 6.26643 8.65206L3.34084 11.2526C2.89332 11.6504 2.89332 12.3496 3.34084 12.7474L6.26643 15.3479C6.67836 15.7141 7.3043 15.6957 7.69401 15.306C8.12683 14.8732 8.09458 14.1621 7.62435 13.7703L5.86875 12.3073C5.67684 12.1474 5.67684 11.8526 5.86875 11.6927Z" fill="currentColor" />
+																		<path d="M8 5V6C8 6.55228 8.44772 7 9 7C9.55228 7 10 6.55228 10 6C10 5.44772 10.4477 5 11 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H11C10.4477 19 10 18.5523 10 18C10 17.4477 9.55228 17 9 17C8.44772 17 8 17.4477 8 18V19C8 20.1046 8.89543 21 10 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H10C8.89543 3 8 3.89543 8 5Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->Sign out all sessions</button>
+																<!--end::Filter-->
+															</div>
+															<!--end::Card toolbar--> {% endcomment %}
+														</div>
+														<!--end::Card header-->
+														<!--begin::Card body-->
+														<div class="card-body pt-0 pb-5">
+															<!--begin::Table wrapper-->
+															<div class="table-responsive">
+																<!--begin::Table-->
+																<table class="table align-middle table-row-dashed gy-5" id="kt_table_users_login_session">
+																	<!--begin::Table head-->
+																	<thead class="border-bottom border-gray-200 fs-7 fw-bold">
+																		<!--begin::Table row-->
+																		<tr class="text-start text-muted text-uppercase gs-0">
+																			<th class="min-w-100px">Login Session Id</th>
+																			<th >Location</th>
+																			<th>Device</th>
+																			<th>IP Address</th>
+																			<th class="min-w-125px">Login Time</th>
+																		</tr>
+																		<!--end::Table row-->
+																	</thead>
+																	<!--end::Table head-->
+																	<!--begin::Table body-->
+																	<tbody class="fs-6 fw-semibold text-gray-600">
+{%for i in logses%}
+																		<tr>
+																			<!--begin::Action=-->
+																			<td>{{i.LoginIPid}}</td>
+																			<!--end::Action=-->
+																			<!--begin::Invoice=-->
+																			<td>{{i.location}}</td>
+																			<!--end::Invoice=-->
+																			<!--begin::Status=-->
+																			<td>{{i.device}}</td>
+																			<!--end::Status=-->
+																			<!--begin::Amount=-->
+																			<td>{{i.IP_Address}}</td>
+																			<!--end::Amount=-->
+																			<!--begin::Date=-->
+																			<td>{{i.date}}</td>
+																			<!--end::Date=-->
+																			
+																		</tr>
+																	{%endfor%}
+																	</tbody>
+																	<!--end::Table body-->
+																</table>
+																<!--end::Table-->
+															</div>
+															<!--end::Table wrapper-->
+														</div>
+														<!--end::Card body-->
+													</div>
+													<!--end::Card-->
+													
+													
+												</div>
+												<!--end:::Tab pane-->
+											</div>
+											<!--end:::Tab content-->
+										</div>
+										<!--end::Content-->
+									</div>
+									<!--end::Layout-->
+									<!--begin::Modals-->
+									
+									<!--begin::Modal - Add schedule-->
+									<div class="modal fade" id="kt_modal_add_schedule" tabindex="-1" aria-hidden="true">
+										<!--begin::Modal dialog-->
+										<div class="modal-dialog modal-dialog-centered mw-650px">
+											<!--begin::Modal content-->
+											<div class="modal-content">
+												<!--begin::Modal header-->
+												<div class="modal-header">
+													<!--begin::Modal title-->
+													<h2 class="fw-bold">Add an Event</h2>
+													<!--end::Modal title-->
+													<!--begin::Close-->
+													<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+														<span class="svg-icon svg-icon-1">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Close-->
+												</div>
+												<!--end::Modal header-->
+												<!--begin::Modal body-->
+												<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+													<!--begin::Form-->
+													<form id="kt_modal_add_schedule_form" class="form" action="#">
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-semibold form-label mb-2">Event Name</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid" name="event_name" value="" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold form-label mb-2">
+																<span class="required">Date & Time</span>
+																<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Select a date & time."></i>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input class="form-control form-control-solid" placeholder="Pick date & time" name="event_datetime" id="kt_modal_add_schedule_datepicker" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-semibold form-label mb-2">Event Organiser</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid" name="event_org" value="" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-semibold form-label mb-2">Send Event Details To</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input id="kt_modal_add_schedule_tagify" type="text" class="form-control form-control-solid" name="event_invitees" value="smith@kpmg.com, melody@altbox.com" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Actions-->
+														<div class="text-center pt-15">
+															<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+															<button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+																<span class="indicator-label">Submit</span>
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+															</button>
+														</div>
+														<!--end::Actions-->
+													</form>
+													<!--end::Form-->
+												</div>
+												<!--end::Modal body-->
+											</div>
+											<!--end::Modal content-->
+										</div>
+										<!--end::Modal dialog-->
+									</div>
+									<!--end::Modal - Add schedule-->
+									<!--begin::Modal - Add task-->
+									<div class="modal fade" id="kt_modal_add_task" tabindex="-1" aria-hidden="true">
+										<!--begin::Modal dialog-->
+										<div class="modal-dialog modal-dialog-centered mw-650px">
+											<!--begin::Modal content-->
+											<div class="modal-content">
+												<!--begin::Modal header-->
+												<div class="modal-header">
+													<!--begin::Modal title-->
+													<h2 class="fw-bold">Add a Task</h2>
+													<!--end::Modal title-->
+													<!--begin::Close-->
+													<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+														<span class="svg-icon svg-icon-1">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Close-->
+												</div>
+												<!--end::Modal header-->
+												<!--begin::Modal body-->
+												<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+													<!--begin::Form-->
+													<form id="kt_modal_add_task_form" class="form" action="#">
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="required fs-6 fw-semibold form-label mb-2">Task Name</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid" name="task_name" value="" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold form-label mb-2">
+																<span class="required">Task Due Date</span>
+																<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Select a due date."></i>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input class="form-control form-control-solid" placeholder="Pick date" name="task_duedate" id="kt_modal_add_task_datepicker" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold form-label mb-2">Task Description</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<textarea class="form-control form-control-solid rounded-3"></textarea>
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Actions-->
+														<div class="text-center pt-15">
+															<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+															<button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+																<span class="indicator-label">Submit</span>
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+															</button>
+														</div>
+														<!--end::Actions-->
+													</form>
+													<!--end::Form-->
+												</div>
+												<!--end::Modal body-->
+											</div>
+											<!--end::Modal content-->
+										</div>
+										<!--end::Modal dialog-->
+									</div>
+									<!--end::Modal - Add task-->
+									<!--begin::Modal - Update email-->
+									<div class="modal fade" id="kt_modal_update_email" tabindex="-1" aria-hidden="true">
+										<!--begin::Modal dialog-->
+										<div class="modal-dialog modal-dialog-centered mw-650px">
+											<!--begin::Modal content-->
+											<div class="modal-content">
+												<!--begin::Modal header-->
+												<div class="modal-header">
+													<!--begin::Modal title-->
+													<h2 class="fw-bold">Update Email Address</h2>
+													<!--end::Modal title-->
+													<!--begin::Close-->
+													<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+														<span class="svg-icon svg-icon-1">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Close-->
+												</div>
+												<!--end::Modal header-->
+												<!--begin::Modal body-->
+												<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+													<!--begin::Form-->
+													<form id="kt_modal_update_email_form" class="form" method="post" action="" enctype="multipart/form-data" >
+														{% csrf_token %}
+														<!--begin::Notice-->
+														<!--begin::Notice-->
+														<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+															<!--begin::Icon-->
+															<!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+															<span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
+																	<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="currentColor" />
+																	<rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+															<!--end::Icon-->
+															<!--begin::Wrapper-->
+															<div class="d-flex flex-stack flex-grow-1">
+																<!--begin::Content-->
+																<div class="fw-semibold">
+																	<div class="fs-6 text-gray-700">Please note that a valid email address is required to complete the email verification.</div>
+																</div>
+																<!--end::Content-->
+															</div>
+															<!--end::Wrapper-->
+														</div>
+														<!--end::Notice-->
+														<!--end::Notice-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold form-label mb-2">
+																<span class="required">Email Address</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input class="form-control form-control-solid" placeholder="{{cltdet.0.client_userid.email}}" name="profile_email" value="" />
+															<input type="hidden" name="preid" value="{{cltdet.0.client_userid.id}}" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Actions-->
+														<div class="text-center pt-15">
+															<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+															<button type="submit" class="btn btn-primary" id="submit-btn" data-kt-users-modal-action="submit">
+																<span class="indicator-label">Submit</span>
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+															</button>
+														</div>
+														<!--end::Actions-->
+													</form>
+													<!--end::Form-->
+												</div>
+												<!--end::Modal body-->
+											</div>
+											<!--end::Modal content-->
+											
+<script>
+	// Attach event listener to submit button
+	document.getElementById('submit-btn').addEventListener('click', function(event) {
+	  // Prevent default form submission behavior
+	  event.preventDefault();
+  
+	  // Get form data
+	  var formData = new FormData(document.getElementById('kt_modal_update_email_form'));
+  
+	  // Submit form using AJAX
+	  fetch('/Clients-Profile-Details/', {
+		method: 'POST',
+		body: formData
+	  })
+	  .then(response => response.json())
+	  .then(data => {
+		// Handle response data
+		console.log(data['result']);
+
+if (data['result']==='ok'){
+
+	redirecttourl('/Clients-Profile-Details/');
+}
+
+	  })
+	  .catch(error => {
+		// Handle errors
+		console.error(error);
+	  });
+	});
+
+	function redirecttourl(url){
+		window.location.href=url;
+	  }
+
+
+
+
+  </script>
+
+
+
+  
+										</div>
+										<!--end::Modal dialog-->
+									</div>
+									<!--end::Modal - Update email-->
+
+
+
+
+<!--begin::Modal - Update email-->
+<div class="modal fade" id="kt_modal_update_mobile" tabindex="-1" aria-hidden="true">
+	<!--begin::Modal dialog-->
+	<div class="modal-dialog modal-dialog-centered mw-650px">
+		<!--begin::Modal content-->
+		<div class="modal-content">
+			<!--begin::Modal header-->
+			<div class="modal-header">
+				<!--begin::Modal title-->
+				<h2 class="fw-bold">Update Phone</h2>
+				<!--end::Modal title-->
+				<!--begin::Close-->
+				<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+					<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+					<span class="svg-icon svg-icon-1">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+							<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+						</svg>
+					</span>
+					<!--end::Svg Icon-->
+				</div>
+				<!--end::Close-->
+			</div>
+			<!--end::Modal header-->
+			<!--begin::Modal body-->
+			<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+				<!--begin::Form-->
+				<form id="kt_modal_update_mobile_form" class="form" method="post" action="" enctype="multipart/form-data" >
+					{% csrf_token %}
+					<!--begin::Notice-->
+					<!--begin::Notice-->
+					{% comment %} <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+						<!--begin::Icon-->
+						<!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+						<span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
+								<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="currentColor" />
+								<rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="currentColor" />
+							</svg>
+						</span>
+						<!--end::Svg Icon-->
+						<!--end::Icon-->
+						{% comment %} <!--begin::Wrapper-->
+						<div class="d-flex flex-stack flex-grow-1">
+							<!--begin::Content-->
+							{% comment %} <div class="fw-semibold">
+								<div class="fs-6 text-gray-700">Please note that a valid email address is required to complete the email verification.</div>
+							</div> 
+							<!--end::Content-->
+						</div>
+						<!--end::Wrapper--> 
+					</div>
+					<!--end::Notice--> {% endcomment %}
+					<!--end::Notice-->
+					<!--begin::Input group-->
+					<div class="fv-row mb-7">
+						<!--begin::Label-->
+						<label class="fs-6 fw-semibold form-label mb-2">
+							<span class="required">Phone</span>
+						</label>
+						<!--end::Label-->
+						<!--begin::Input-->
+						<input class="form-control form-control-solid" placeholder="{{cltdet.0.mobile}}" name="profile_mobile" value="" />
+						<!--end::Input-->
+					</div>
+					<!--end::Input group-->
+					<!--begin::Actions-->
+					<div class="text-center pt-15">
+						<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+						<button type="submit" class="btn btn-primary" id="submit-btn3" data-kt-users-modal-action="submit">
+							<span class="indicator-label">Submit</span>
+							<span class="indicator-progress">Please wait...
+							<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+						</button>
+					</div>
+					<!--end::Actions-->
+				</form>
+				<!--end::Form-->
+			</div>
+			<!--end::Modal body-->
+		</div>
+		<!--end::Modal content-->
+		
+<script>
+// Attach event listener to submit button
+document.getElementById('submit-btn3').addEventListener('click', function(event) {
+// Prevent default form submission behavior
+event.preventDefault();
+
+// Get form data
+var formData = new FormData(document.getElementById('kt_modal_update_mobile_form'));
+
+// Submit form using AJAX
+fetch('/Clients-Profile-Details/', {
+method: 'POST',
+body: formData
+})
+.then(response => response.json())
+.then(data => {
+// Handle response data
+console.log(data['result']);
+
+if (data['result']==='ok'){
+
+redirecttourl('/Clients-Profile-Details/');
+}
+
+})
+.catch(error => {
+// Handle errors
+console.error(error);
+});
+});
+
+
+</script>
+
+
+
+
+	</div>
+	<!--end::Modal dialog-->
+</div>
+<!--end::Modal - Update email-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									<!--begin::Modal - Update password-->
+									<div class="modal fade" id="kt_modal_update_password" tabindex="-1" aria-hidden="true">
+										<!--begin::Modal dialog-->
+										<div class="modal-dialog modal-dialog-centered mw-650px">
+											<!--begin::Modal content-->
+											<div class="modal-content">
+												<!--begin::Modal header-->
+												<div class="modal-header">
+													<!--begin::Modal title-->
+													<h2 class="fw-bold">Update Password</h2>
+													<!--end::Modal title-->
+													<!--begin::Close-->
+													<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+														<span class="svg-icon svg-icon-1">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Close-->
+												</div>
+												<!--end::Modal header-->
+												<!--begin::Modal body-->
+												<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+													<!--begin::Form-->
+													<form id="kt_modal_update_password_form" class="form" method="post" action="" enctype="multipart/form-data" >
+														{% csrf_token %}
+														<!--begin::Input group=-->
+														<div class="fv-row mb-10">
+															<label class="required form-label fs-6 mb-2">Current Password</label>
+															<input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="current_password" autocomplete="off" />
+														</div>
+														<!--end::Input group=-->
+														<!--begin::Input group-->
+														<div class="mb-10 fv-row" data-kt-password-meter="true">
+															<!--begin::Wrapper-->
+															<div class="mb-1">
+																<!--begin::Label-->
+																<label class="form-label fw-semibold fs-6 mb-2">New Password</label>
+																<!--end::Label-->
+																<!--begin::Input wrapper-->
+																<div class="position-relative mb-3">
+																	<input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="new_password" autocomplete="off" />
+																	<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+																		<i class="bi bi-eye-slash fs-2"></i>
+																		<i class="bi bi-eye fs-2 d-none"></i>
+																		<input type="hidden" name="preid1" value="{{cltdet.0.client_userid.id}}" />
+																	</span>
+																</div>
+																<!--end::Input wrapper-->
+																<!--begin::Meter-->
+																<div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
+																	<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+																	<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+																	<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+																	<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+																</div>
+																<!--end::Meter-->
+															</div>
+															<!--end::Wrapper-->
+															<!--begin::Hint-->
+															<div class="text-muted">Use 8 or more characters with a mix of letters, numbers & symbols.</div>
+															<!--end::Hint-->
+														</div>
+														<!--end::Input group=-->
+														<!--begin::Input group=-->
+														<div class="fv-row mb-10">
+															<label class="form-label fw-semibold fs-6 mb-2">Confirm New Password</label>
+															<input class="form-control form-control-lg form-control-solid" type="password" placeholder="" name="confirm_password" autocomplete="off" />
+														</div>
+														<!--end::Input group=-->
+														<!--begin::Actions-->
+														<div class="text-center pt-15">
+															<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+															<button type="submit" class="btn btn-primary" id="submit-btn1" data-kt-users-modal-action="submit">
+																<span class="indicator-label">Submit</span>
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+															</button>
+														</div>
+														<!--end::Actions-->
+													</form>
+													<!--end::Form-->
+												</div>
+												<!--end::Modal body-->
+											</div>
+											<!--end::Modal content-->
+										</div>
+										<script>
+											// Attach event listener to submit button
+											document.getElementById('submit-btn1').addEventListener('click', function(event) {
+											  // Prevent default form submission behavior
+											  event.preventDefault();
+										  
+											  // Get form data
+											  var formData = new FormData(document.getElementById('kt_modal_update_password_form'));
+										  
+											  // Submit form using AJAX
+											  fetch('/Clients-Profile-Details/', {
+												method: 'POST',
+												body: formData
+											  })
+											  .then(response => response.json())
+											  .then(data => {
+												// Handle response data
+												console.log(data['result']);
+										
+										if (data['result']==='ok'){
+										
+											redirecttourl('/Clients-Profile-Details/');
+										}
+										
+											  })
+											  .catch(error => {
+												// Handle errors
+												console.error(error);
+											  });
+											});
+										
+											
+										
+										
+										
+										  </script>
+										
+										<!--end::Modal dialog-->
+									</div>
+									<!--end::Modal - Update password-->
+									<!--begin::Modal - Update role-->
+									<div class="modal fade" id="kt_modal_update_role" tabindex="-1" aria-hidden="true">
+										<!--begin::Modal dialog-->
+										<div class="modal-dialog modal-dialog-centered mw-650px">
+											<!--begin::Modal content-->
+											<div class="modal-content">
+												<!--begin::Modal header-->
+												<div class="modal-header">
+													<!--begin::Modal title-->
+													<h2 class="fw-bold">Update User Role</h2>
+													<!--end::Modal title-->
+													<!--begin::Close-->
+													<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+														<span class="svg-icon svg-icon-1">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Close-->
+												</div>
+												<!--end::Modal header-->
+												<!--begin::Modal body-->
+												<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+													<!--begin::Form-->
+													<form id="kt_modal_update_role_form" class="form" method="post" action="" enctype="multipart/form-data" >
+														{% csrf_token %}
+														<!--begin::Notice-->
+														<!--begin::Notice-->
+														<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+															<!--begin::Icon-->
+															<!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+															<span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
+																	<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="currentColor" />
+																	<rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+															<!--end::Icon-->
+															<!--begin::Wrapper-->
+															<div class="d-flex flex-stack flex-grow-1">
+																<!--begin::Content-->
+																<div class="fw-semibold">
+																	<div class="fs-6 text-gray-700">Please note that reducing a user role rank, that user will lose all priviledges that was assigned to the previous role.</div>
+																</div>
+																<!--end::Content-->
+															</div>
+															<!--end::Wrapper-->
+														</div>
+														<!--end::Notice-->
+														<!--end::Notice-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold form-label mb-5">
+																<span class="required">Select a user role</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input row-->
+															<div class="d-flex">
+																<!--begin::Radio-->
+																<div class="form-check form-check-custom form-check-solid">
+																	<!--begin::Input-->
+																	<input class="form-check-input me-3" name="user_role" type="radio" value="0" id="kt_modal_update_role_option_0" checked='checked' />
+																	<!--end::Input-->
+																	<!--begin::Label-->
+																	<label class="form-check-label" for="kt_modal_update_role_option_0">
+																		<div class="fw-bold text-gray-800">Client</div>
+																		<div class="text-gray-600">Best for business owners and company administrators</div>
+																	</label>
+																	<!--end::Label-->
+																</div>
+																<!--end::Radio-->
+															</div>
+															<!--end::Input row-->
+															<div class='separator separator-dashed my-5'></div>
+															<!--begin::Input row-->
+															<div class="d-flex">
+																<!--begin::Radio-->
+																<div class="form-check form-check-custom form-check-solid">
+																	<!--begin::Input-->
+																	<input class="form-check-input me-3" name="user_role" type="radio" value="1" id="kt_modal_update_role_option_1" />
+																	<!--end::Input-->
+																	<!--begin::Label-->
+																	<label class="form-check-label" for="kt_modal_update_role_option_1">
+																		<div class="fw-bold text-gray-800">Brand</div>
+																		<div class="text-gray-600">Best for developers or people primarily using the API</div>
+																	</label>
+																	<!--end::Label-->
+																</div>
+																<!--end::Radio-->
+															</div>
+															<!--end::Input row-->
+															<div class='separator separator-dashed my-5'></div>
+															<!--begin::Input row-->
+															<div class="d-flex">
+																<!--begin::Radio-->
+																<div class="form-check form-check-custom form-check-solid">
+																	<!--begin::Input-->
+																	<input class="form-check-input me-3" name="user_role" type="radio" value="2" id="kt_modal_update_role_option_2" />
+																	<!--end::Input-->
+																	<!--begin::Label-->
+																	<label class="form-check-label" for="kt_modal_update_role_option_2">
+																		<div class="fw-bold text-gray-800">Agency</div>
+																		<div class="text-gray-600">Best for people who need full access to analytics data, but don't need to update business settings</div>
+																	</label>
+																	<!--end::Label-->
+																</div>
+																<!--end::Radio-->
+															</div>
+															<!--end::Input row-->
+															<div class='separator separator-dashed my-5'></div>
+															<!--begin::Input row-->
+															<div class="d-flex">
+																<!--begin::Radio-->
+																<div class="form-check form-check-custom form-check-solid">
+																	<!--begin::Input-->
+																	<input class="form-check-input me-3" name="user_role" type="radio" value="3" id="kt_modal_update_role_option_3" />
+																	<!--end::Input-->
+																	<!--begin::Label-->
+																	<label class="form-check-label" for="kt_modal_update_role_option_3">
+																		<div class="fw-bold text-gray-800">Influencer</div>
+																		<div class="text-gray-600">Best for employees who regularly refund payments and respond to disputes</div>
+																	</label>
+																	<!--end::Label-->
+																</div>
+																<!--end::Radio-->
+															</div>
+															<!--end::Input row-->
+															<div class='separator separator-dashed my-5'></div>
+														</div>
+														<!--end::Input group-->
+														<!--begin::Actions-->
+														<div class="text-center pt-15">
+															<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button>
+															<button type="submit" id="submit-btn2" class="btn btn-primary" data-kt-users-modal-action="submit">
+																<span class="indicator-label">Submit</span>
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+															</button>
+														</div>
+														<!--end::Actions-->
+													</form>
+													<!--end::Form-->
+												</div>
+												<!--end::Modal body-->
+											</div>
+											<!--end::Modal content-->
+											<script>
+												// Attach event listener to submit button
+												document.getElementById('submit-btn2').addEventListener('click', function(event) {
+												  // Prevent default form submission behavior
+												  event.preventDefault();
+											  
+												  // Get form data
+												  var formData = new FormData(document.getElementById('kt_modal_update_role_form'));
+											  
+												  // Submit form using AJAX
+												  fetch('/Clients-Profile-Details/', {
+													method: 'POST',
+													body: formData
+												  })
+												  .then(response => response.json())
+												  .then(data => {
+													// Handle response data
+													console.log(data['result']);
+											
+											if (data['result']==='ok'){
+											
+												redirecttourl('/Clients-Profile-Details/');
+											}
+											
+												  })
+												  .catch(error => {
+													// Handle errors
+													console.error(error);
+												  });
+												});
+
+											  </script>
+											
+										</div>
+										<!--end::Modal dialog-->
+									</div>
+									<!--end::Modal - Update role-->
+									<!--begin::Modal - Add task-->
+									<div class="modal fade" id="kt_modal_add_auth_app" tabindex="-1" aria-hidden="true">
+										<!--begin::Modal dialog-->
+										<div class="modal-dialog modal-dialog-centered mw-650px">
+											<!--begin::Modal content-->
+											<div class="modal-content">
+												<!--begin::Modal header-->
+												<div class="modal-header">
+													<!--begin::Modal title-->
+													<h2 class="fw-bold">Add Authenticator App</h2>
+													<!--end::Modal title-->
+													<!--begin::Close-->
+													<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+														<span class="svg-icon svg-icon-1">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Close-->
+												</div>
+												<!--end::Modal header-->
+												<!--begin::Modal body-->
+												<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+													<!--begin::Content-->
+													<div class="fw-bold d-flex flex-column justify-content-center mb-5">
+														<!--begin::Label-->
+														<div class="text-center mb-5" data-kt-add-auth-action="qr-code-label">Download the
+														<a href="#">Authenticator app</a>, add a new account, then scan this barcode to set up your account.</div>
+														<div class="text-center mb-5 d-none" data-kt-add-auth-action="text-code-label">Download the
+														<a href="#">Authenticator app</a>, add a new account, then enter this code to set up your account.</div>
+														<!--end::Label-->
+														<!--begin::QR code-->
+														<div class="d-flex flex-center" data-kt-add-auth-action="qr-code">
+															<img src="{%static 'asset/media/misc/qr.png'%}" alt="Scan this QR code" />
+														</div>
+														<!--end::QR code-->
+														<!--begin::Text code-->
+														<div class="border rounded p-5 d-flex flex-center d-none" data-kt-add-auth-action="text-code">
+															<div class="fs-1">gi2kdnb54is709j</div>
+														</div>
+														<!--end::Text code-->
+													</div>
+													<!--end::Content-->
+													<!--begin::Action-->
+													<div class="d-flex flex-center">
+														<div class="btn btn-light-primary" data-kt-add-auth-action="text-code-button">Enter code manually</div>
+														<div class="btn btn-light-primary d-none" data-kt-add-auth-action="qr-code-button">Scan barcode instead</div>
+													</div>
+													<!--end::Action-->
+												</div>
+												<!--end::Modal body-->
+											</div>
+											<!--end::Modal content-->
+										</div>
+										<!--end::Modal dialog-->
+									</div>
+									<!--end::Modal - Add task-->
+									<!--begin::Modal - Add task-->
+									<div class="modal fade" id="kt_modal_add_one_time_password" tabindex="-1" aria-hidden="true">
+										<!--begin::Modal dialog-->
+										<div class="modal-dialog modal-dialog-centered mw-650px">
+											<!--begin::Modal content-->
+											<div class="modal-content">
+												<!--begin::Modal header-->
+												<div class="modal-header">
+													<!--begin::Modal title-->
+													<h2 class="fw-bold">Enable One Time Password</h2>
+													<!--end::Modal title-->
+													<!--begin::Close-->
+													<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+														<span class="svg-icon svg-icon-1">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+													<!--end::Close-->
+												</div>
+												<!--end::Modal header-->
+												<!--begin::Modal body-->
+												<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+													<!--begin::Form-->
+													<form class="form" id="kt_modal_add_one_time_password_form">
+														<!--begin::Label-->
+														<div class="fw-bold mb-9">Enter the new phone number to receive an SMS to when you log in.</div>
+														<!--end::Label-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold form-label mb-2">
+																<span class="required">Mobile number</span>
+																<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="A valid mobile number is required to receive the one-time password to validate your account login."></i>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid" name="otp_mobile_number" placeholder="+6123 456 789" value="" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Separator-->
+														<div class="separator saperator-dashed my-5"></div>
+														<!--end::Separator-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold form-label mb-2">
+																<span class="required">Email</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="email" class="form-control form-control-solid" name="otp_email" value="smith@kpmg.com" readonly="readonly" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold form-label mb-2">
+																<span class="required">Confirm password</span>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input type="password" class="form-control form-control-solid" name="otp_confirm_password" value="" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Actions-->
+														<div class="text-center pt-15">
+															<button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Cancel</button>
+															<button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+																<span class="indicator-label">Submit</span>
+																<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+															</button>
+														</div>
+														<!--end::Actions-->
+													</form>
+													<!--end::Form-->
+												</div>
+												<!--end::Modal body-->
+											</div>
+											<!--end::Modal content-->
+										</div>
+										<!--end::Modal dialog-->
+									</div>
+									<!--end::Modal - Add task-->
+									<!--end::Modals-->
+								</div>
+								<!--end::Content container-->
+							</div>
+							<!--end::Content-->
+						</div>
+						<!--end::Content wrapper-->
+					</div>
+					<!--end:::Main-->
+
+                    <!--begin::Modal - Update user details-->
+                <div class="modal fade" id="kt_modal_update_details" tabindex="-1" aria-hidden="true">
+                    <!--begin::Modal dialog-->
+                    <div class="modal-dialog modal-dialog-centered mw-650px">
+                        <!--begin::Modal content-->
+                        <div class="modal-content">
+                            <!--begin::Form-->
+								<form id="kt_modal_update_user_form" class="form" method="post" action="" enctype="multipart/form-data" onsubmit="return validateForm();" >
+									{% csrf_token %}
+                                <!--begin::Modal header-->
+                                <div class="modal-header" id="kt_modal_update_user_header">
+                                    <!--begin::Modal title-->
+                                    <h2 class="fw-bold">Update User Details</h2>
+                                    <!--end::Modal title-->
+                                    <!--begin::Close-->
+                                    <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-users-modal-action="close">
+                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                        <span class="svg-icon svg-icon-1">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                                                <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </div>
+                                    <!--end::Close-->
+                                </div>
+                                <!--end::Modal header-->
+                                <!--begin::Modal body-->
+                                <div class="modal-body py-10 px-lg-17">
+                                    <!--begin::Scroll-->
+                                    <div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_update_user_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_update_user_header" data-kt-scroll-wrappers="#kt_modal_update_user_scroll" data-kt-scroll-offset="300px">
+                                        <!--begin::User toggle-->
+                                        <div class="fw-bolder fs-3 rotate collapsible mb-7" data-bs-toggle="collapse" href="#kt_modal_update_user_user_info" role="button" aria-expanded="false" aria-controls="kt_modal_update_user_user_info">User Information
+                                        <span class="ms-2 rotate-180">
+                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                            <span class="svg-icon svg-icon-3">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </span></div>
+                                        <!--end::User toggle-->
+                                        <!--begin::User form-->
+                                        <div id="kt_modal_update_user_user_info" class="collapse show">
+
+                                            <!--begin::Input group-->
+                                            <div class="mb-7">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">
+                                                    <span>Update Avatar</span>
+                                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Allowed file types: png, jpg, jpeg."></i>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Image input wrapper-->
+                                                <div class="mt-1">
+                                                    <!--begin::Image placeholder-->
+                                                    
+                                                    <!--end::Image placeholder-->
+                                                    <!--begin::Image input-->
+                                                    <div class="image-input image-input-outline image-input-placeholder" data-kt-image-input="true">
+                                                        <!--begin::Preview existing avatar-->
+                                                        <div class="image-input-wrapper w-125px h-125px" style="background-image: url(/media/{{cltdet.0.profileimage}})"></div>
+                                                        <!--end::Preview existing avatar-->
+                                                        <!--begin::Edit-->
+                                                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                                            <i class="bi bi-pencil-fill fs-7"></i>
+                                                            <!--begin::Inputs-->
+                                                            <input type="file" name="avatar" id="iamge" accept=".png, .jpg, .jpeg, .webp" />
+                                                            <input type="hidden" name="avatar_remove" />
+                                                            <!--end::Inputs-->
+                                                        </label>
+                                                        <!--end::Edit-->
+                                                        <!--begin::Cancel-->
+                                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                                            <i class="bi bi-x fs-2"></i>
+                                                        </span>
+                                                        <!--end::Cancel-->
+                                                        <!--begin::Remove-->
+                                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                                            <i class="bi bi-x fs-2"></i>
+                                                        </span>
+                                                        <!--end::Remove-->
+                                                    </div>
+                                                    <!--end::Image input-->
+                                                </div>
+                                                <!--end::Image input wrapper-->
+                                            </div>
+                                            <!--end::Input group-->
+
+
+											<script>
+
+												function validateForm() {
+													var fileInput = document.getElementById('iamge');
+													var filePath = fileInput.value;
+													console.log(filePath);
+													if (filePath.length >= 1){
+													var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.webp)$/i;
+													if (!allowedExtensions.exec(filePath)) {
+														alert('Please upload file having extensions .jpeg/.jpg/.png/ .wepb only.');
+														fileInput.value = '';
+														return false;
+													}
+													else {
+														var fileSize = fileInput.files[0].size;
+														// set maximum image size in bytes
+														var maxSize = 431 * 287; // 1MB
+														if (fileSize > maxSize) {
+															alert('The maximum file pixels is 431x287. Add the defined image.');
+															fileInput.value = '';
+															return false;
+														}
+													}
+													return true;
+												}
+			
+												}
+			
+											</script>
+
+
+                                            <!--begin::Input group-->
+                                            <div class="fv-row mb-7">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">Name</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control form-control-solid" placeholder="{{cltdet.0.fullname}}" name="name" value="" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Input group-->
+                                            <div class="fv-row mb-7">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">
+                                                    <span>Email</span>
+                                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Email address must be active"></i>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input type="email" class="form-control form-control-solid" placeholder="{{cltdet.0.client_userid.email}}" name="email" value="" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            
+                                           
+                                        </div>
+                                        <!--end::User form-->
+                                        <!--begin::Address toggle-->
+                                        <div class="fw-bolder fs-3 rotate collapsible mb-7" data-bs-toggle="collapse" href="#kt_modal_update_user_address" role="button" aria-expanded="false" aria-controls="kt_modal_update_user_address">Address Details
+                                        <span class="ms-2 rotate-180">
+                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                            <span class="svg-icon svg-icon-3">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                        </span></div>
+                                        <!--end::Address toggle-->
+                                        <!--begin::Address form-->
+                                        <div id="kt_modal_update_user_address" class="collapse show">
+                                            <!--begin::Input group-->
+                                            <div class="d-flex flex-column mb-7 fv-row">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">Address Line 1</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input class="form-control form-control-solid" placeholder="{{cltdet.0.address}}" name="address1" value="" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                          
+                                            <!--begin::Input group-->
+                                            <div class="d-flex flex-column mb-7 fv-row">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">City</label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <input class="form-control form-control-solid" placeholder="{{cltdet.0.city}}" name="city" value="" />
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Input group-->
+                                            <div class="row g-9 mb-7">
+                                                <!--begin::Col-->
+                                                <div class="col-md-6 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-semibold mb-2">State / Province</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input class="form-control form-control-solid" placeholder="{{cltdet.0.state}}" name="state" value="" />
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Col-->
+                                                <!--begin::Col-->
+                                                <div class="col-md-6 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-semibold mb-2">Post Code</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input class="form-control form-control-solid" placeholder="{{cltdet.0.postalcode}}" name="postcode" value="" />
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Col-->
+                                            </div>
+                                            <!--end::Input group-->
+                                            <!--begin::Input group-->
+                                            <div class="d-flex flex-column mb-7 fv-row">
+                                                <!--begin::Label-->
+                                                <label class="fs-6 fw-semibold mb-2">
+                                                    <span>Country</span>
+                                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+                                                </label>
+                                                <!--end::Label-->
+                                                <!--begin::Input-->
+                                                <select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a Country..." class="form-select form-select-solid" data-dropdown-parent="#kt_modal_update_details">
+                                                    <option value="">Select a Country...</option>
+													<option value="{{cltdet.0.country}}" selected>{{cltdet.0.country}}</option>
+                                                    <option value="Afghanistan">Afghanistan</option>
+                                                    <option value="Aland Islands">Aland Islands</option>
+                                                    <option value="Albania">Albania</option>
+                                                    <option value="Algeria">Algeria</option>
+                                                    <option value="American Samoa">American Samoa</option>
+                                                    <option value="Andorra">Andorra</option>
+                                                    <option value="Angola">Angola</option>
+                                                    <option value="Anguilla">Anguilla</option>
+                                                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                                    <option value="Argentina">Argentina</option>
+                                                    <option value="Armenia">Armenia</option>
+                                                    <option value="Aruba">Aruba</option>
+                                                    <option value="Australia">Australia</option>
+                                                    <option value="Austria">Austria</option>
+                                                    <option value="Azerbaijan">Azerbaijan</option>
+                                                    <option value="Bahamas">Bahamas</option>
+                                                    <option value="Bahrain">Bahrain</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="Barbados">Barbados</option>
+                                                    <option value="Belarus">Belarus</option>
+                                                    <option value="Belgium">Belgium</option>
+                                                    <option value="Belize">Belize</option>
+                                                    <option value="Benin">Benin</option>
+                                                    <option value="Bermuda">Bermuda</option>
+                                                    <option value="Bhutan">Bhutan</option>
+                                                    <option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+                                                    <option value="onaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+                                                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                                    <option value="Botswana">Botswana</option>
+                                                    <option value="Brazil">Brazil</option>
+                                                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                                    <option value="Bulgaria">Bulgaria</option>
+                                                    <option value="Burkina Faso">Burkina Faso</option>
+                                                    <option value="Burundi">Burundi</option>
+                                                    <option value="Cambodia">Cambodia</option>
+                                                    <option value="Cameroon">Cameroon</option>
+                                                    <option value="Canada">Canada</option>
+                                                    <option value="Cape Verde">Cape Verde</option>
+                                                    <option value="Cayman Islands">Cayman Islands</option>
+                                                    <option value="Central African Republic">Central African Republic</option>
+                                                    <option value="Chad">Chad</option>
+                                                    <option value="Chile">Chile</option>
+                                                    <option value="China">China</option>
+                                                    <option value="Christmas Island">Christmas Island</option>
+                                                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                                    <option value="Colombia">Colombia</option>
+                                                    <option value="Comoros">Comoros</option>
+                                                    <option value="Cook Islands">Cook Islands</option>
+                                                    <option value="Costa Rica">Costa Rica</option>
+                                                    <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                                                    <option value="Croatia">Croatia</option>
+                                                    <option value="Cuba">Cuba</option>
+                                                    <option value="Curaçao">Curaçao</option>
+                                                    <option value="Czech Republic">Czech Republic</option>
+                                                    <option value="Denmark">Denmark</option>
+                                                    <option value="Djibouti">Djibouti</option>
+                                                    <option value="Dominica">Dominica</option>
+                                                    <option value="Dominican Republic">Dominican Republic</option>
+                                                    <option value="Ecuador">Ecuador</option>
+                                                    <option value="Egypt">Egypt</option>
+                                                    <option value="El Salvador">El Salvador</option>
+                                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                    <option value="Eritrea">Eritrea</option>
+                                                    <option value="Estonia">Estonia</option>
+                                                    <option value="Ethiopia">Ethiopia</option>
+                                                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                                    <option value="Fiji">Fiji</option>
+                                                    <option value="Finland">Finland</option>
+                                                    <option value="France">France</option>
+                                                    <option value="French Polynesia">French Polynesia</option>
+                                                    <option value="Gabon">Gabon</option>
+                                                    <option value="Gambia">Gambia</option>
+                                                    <option value="Georgia">Georgia</option>
+                                                    <option value="Germany">Germany</option>
+                                                    <option value="Ghana">Ghana</option>
+                                                    <option value="Gibraltar">Gibraltar</option>
+                                                    <option value="Greece">Greece</option>
+                                                    <option value="Greenland">Greenland</option>
+                                                    <option value="Grenada">Grenada</option>
+                                                    <option value="Guam">Guam</option>
+                                                    <option value="Guatemala">Guatemala</option>
+                                                    <option value="Guernsey">Guernsey</option>
+                                                    <option value="Guinea">Guinea</option>
+                                                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                                    <option value="Haiti">Haiti</option>
+                                                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                                                    <option value="Honduras">Honduras</option>
+                                                    <option value="Hong Kong">Hong Kong</option>
+                                                    <option value="Hungary">Hungary</option>
+                                                    <option value="Iceland">Iceland</option>
+                                                    <option value="India">India</option>
+                                                    <option value="Indonesia">Indonesia</option>
+                                                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                                                    <option value="Iraq">Iraq</option>
+                                                    <option value="Ireland">Ireland</option>
+                                                    <option value="Isle of Man">Isle of Man</option>
+                                                    <option value="Israel">Israel</option>
+                                                    <option value="Italy">Italy</option>
+                                                    <option value="Jamaica">Jamaica</option>
+                                                    <option value="Japan">Japan</option>
+                                                    <option value="Jersey">Jersey</option>
+                                                    <option value="Jordan">Jordan</option>
+                                                    <option value="Kazakhstan">Kazakhstan</option>
+                                                    <option value="Kenya">Kenya</option>
+                                                    <option value="Kiribati">Kiribati</option>
+                                                    <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                                                    <option value="Kuwait">Kuwait</option>
+                                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                    <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                                                    <option value="Latvia">Latvia</option>
+                                                    <option value="Lebanon">Lebanon</option>
+                                                    <option value="Lesotho">Lesotho</option>
+                                                    <option value="Liberia">Liberia</option>
+                                                    <option value="Libya">Libya</option>
+                                                    <option value="Liechtenstein">Liechtenstein</option>
+                                                    <option value="Lithuania">Lithuania</option>
+                                                    <option value="Luxembourg">Luxembourg</option>
+                                                    <option value="Macao">Macao</option>
+                                                    <option value="Madagascar">Madagascar</option>
+                                                    <option value="Malawi">Malawi</option>
+                                                    <option value="Malaysia">Malaysia</option>
+                                                    <option value="Maldives">Maldives</option>
+                                                    <option value="Mali">Mali</option>
+                                                    <option value="Malta">Malta</option>
+                                                    <option value="Marshall Islands">Marshall Islands</option>
+                                                    <option value="Martinique">Martinique</option>
+                                                    <option value="Mauritania">Mauritania</option>
+                                                    <option value="Mauritius">Mauritius</option>
+                                                    <option value="Mexico">Mexico</option>
+                                                    <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                                                    <option value="Moldova, Republic of">Moldova, Republic of</option>
+                                                    <option value="Monaco">Monaco</option>
+                                                    <option value="Mongolia">Mongolia</option>
+                                                    <option value="Montenegro">Montenegro</option>
+                                                    <option value="Montserrat">Montserrat</option>
+                                                    <option value="Morocco">Morocco</option>
+                                                    <option value="Mozambique">Mozambique</option>
+                                                    <option value="Myanmar">Myanmar</option>
+                                                    <option value="Namibia">Namibia</option>
+                                                    <option value="Nauru">Nauru</option>
+                                                    <option value="Nepal">Nepal</option>
+                                                    <option value="Netherlands">Netherlands</option>
+                                                    <option value="New Zealand">New Zealand</option>
+                                                    <option value="Nicaragua">Nicaragua</option>
+                                                    <option value="Niger">Niger</option>
+                                                    <option value="Nigeria">Nigeria</option>
+                                                    <option value="Niue">Niue</option>
+                                                    <option value="Norfolk Island">Norfolk Island</option>
+                                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                                    <option value="Norway">Norway</option>
+                                                    <option value="Oman">Oman</option>
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Palau">Palau</option>
+                                                    <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                                                    <option value="Panama">Panama</option>
+                                                    <option value="Papua New Guinea">Papua New Guinea</option>
+                                                    <option value="Paraguay">Paraguay</option>
+                                                    <option value="Peru">Peru</option>
+                                                    <option value="Philippines">Philippines</option>
+                                                    <option value="Poland">Poland</option>
+                                                    <option value="Portugal">Portugal</option>
+                                                    <option value="Puerto Rico">Puerto Rico</option>
+                                                    <option value="Qatar">Qatar</option>
+                                                    <option value="Romania">Romania</option>
+                                                    <option value="Russian Federation">Russian Federation</option>
+                                                    <option value="Rwanda">Rwanda</option>
+                                                    <option value="Saint Barthélemy">Saint Barthélemy</option>
+                                                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                    <option value="Saint Lucia">Saint Lucia</option>
+                                                    <option value="Saint Martin (French part)">Saint Martin (French part)</option>
+                                                    <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                                                    <option value="Samoa">Samoa</option>
+                                                    <option value="San Marino">San Marino</option>
+                                                    <option value="Sao Tome and Principle">Sao Tome and Principle</option>
+                                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                                    <option value="Senegal">Senegal</option>
+                                                    <option value="Serbia">Serbia</option>
+                                                    <option value="Seychelles">Seychelles</option>
+                                                    <option value="Sierra Leone">Sierra Leone</option>
+                                                    <option value="Singapore">Singapore</option>
+                                                    <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+                                                    <option value="Slovakia">Slovakia</option>
+                                                    <option value="Slovenia">Slovenia</option>
+                                                    <option value="Solomon Islands">Solomon Islands</option>
+                                                    <option value="Somalia">Somalia</option>
+                                                    <option value="South Africa">South Africa</option>
+                                                    <option value="South Korea">South Korea</option>
+                                                    <option value="South Sudan">South Sudan</option>
+                                                    <option value="Spain">Spain</option>
+                                                    <option value="Sri Lanka">Sri Lanka</option>
+                                                    <option value="Sudan">Sudan</option>
+                                                    <option value="Suriname">Suriname</option>
+                                                    <option value="Swaziland">Swaziland</option>
+                                                    <option value="SESweden">Sweden</option>
+                                                    <option value="Switzerland">Switzerland</option>
+                                                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                                    <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+                                                    <option value="Tajikistan">Tajikistan</option>
+                                                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                                                    <option value="Thailand">Thailand</option>
+                                                    <option value="Togo">Togo</option>
+                                                    <option value="Tokelau">Tokelau</option>
+                                                    <option value="Tonga">Tonga</option>
+                                                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                                    <option value="Tunisia">Tunisia</option>
+                                                    <option value="Turkey">Turkey</option>
+                                                    <option value="Turkmenistan">Turkmenistan</option>
+                                                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                                    <option value="Tuvalu">Tuvalu</option>
+                                                    <option value="Uganda">Uganda</option>
+                                                    <option value="Ukraine">Ukraine</option>
+                                                    <option value="United Arab Emirates">United Arab Emirates</option>
+                                                    <option value="United Kingdom">United Kingdom</option>
+                                                    <option value="United States">United States</option>
+                                                    <option value="Uruguay">Uruguay</option>
+                                                    <option value="Uzbekistan">Uzbekistan</option>
+                                                    <option value="Vanuatu">Vanuatu</option>
+                                                    <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+                                                    <option value="Vietnam">Vietnam</option>
+                                                    <option value="Virgin Islands">Virgin Islands</option>
+                                                    <option value="Yemen">Yemen</option>
+                                                    <option value="Zambia">Zambia</option>
+                                                    <option value="Zimbabwe">Zimbabwe</option>
+                                                </select>
+                                                <!--end::Input-->
+                                            </div>
+                                            <!--end::Input group-->
+                                        </div>
+                                        <!--end::Address form-->
+                                    </div>
+                                    <!--end::Scroll-->
+                                </div>
+                                <!--end::Modal body-->
+                                <!--begin::Modal footer-->
+                                <div class="modal-footer flex-center">
+                                    <!--begin::Button-->
+                                    {% comment %} <button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">Discard</button> {% endcomment %}
+                                    <!--end::Button-->
+                                    <!--begin::Button-->
+                                    <button type="submit" name="profileid" value="{{cltdet.0.client_profile_id}}" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                        <span class="indicator-label">Submit</span>
+                                        <span class="indicator-progress">Please wait...
+                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                    </button>
+                                    <!--end::Button-->
+                                </div>
+                                <!--end::Modal footer-->
+                            </form>
+                            <!--end::Form-->
+                        </div>
+                    </div>
+                </div>
+                <!--end::Modal - Update user details-->
+{%endblock%}
+
+	
+	
+
