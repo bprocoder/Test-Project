@@ -6,25 +6,125 @@ from django.shortcuts import  HttpResponse,redirect
 from pushnotificationapp.models import *
 from inappnotifications.models import *
 from Creator.models import *
+from Account.models import *
+from affiliates.models import *
 import sys
 from django.db.models import Count, F, Case, When, DateTimeField
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta,date
 from threading import Thread
 from agora_chat.models import *
 from Account.models import *
 from emil_send.views import existing_user
 from inappnotifications.views import send_customer_email,sendusernotification,sendInfluencernotification,sendagencynotification,sendRMnotification
+import os
+import pandas as pd
+from django.conf import settings
 
 
 
-def Sendperdaytransactions():
+def GenratePerDayTransactionReport():
+    current_date = date.today()
+    current_date = '2023-10-16'
     
-    ordrpur=Payments.objects.all().order_by('-paymentsid')
+    # Filter Payments for the current date
+    queryset_payments = Payments.objects.filter(paymentdate__date=current_date).order_by('-paymentsid')
+
+    # Create a Pandas DataFrame from the Payments queryset
+    data_payments = {
+        'Payment ID': [payment.paymentsid for payment in queryset_payments],
+        'Payment Date': [(payment.paymentdate + timedelta(hours=5, minutes=30)).strftime('%Y-%m-%d %I:%M %p') for payment in queryset_payments], # Set timezone to Asia/Kolkata
+        'Order ID': [payment.ordersid.ordersid for payment in queryset_payments],
+        'Client Name': [payment.clientid.username for payment in queryset_payments],
+        'Payment Method': [payment.paymentmethod for payment in queryset_payments],
+        'Transaction Amount': [payment.amountpaid for payment in queryset_payments],
+        'Transaction ID': [payment.transactionid for payment in queryset_payments],
+        'Invoice ID': [payment.invoiceid.invoiceid for payment in queryset_payments],
+    }
+    df_payments = pd.DataFrame(data_payments)
     
+    current_date = '2023-10-14'
     
-    
-    pass
-    
+    # Filter PlatformPayoutRequest data
+    queryset_platform_payout = PlatformPayoutRequest.objects.filter(creationdate__date=current_date, isremoved=False).order_by('-id')
+
+    # Create a Pandas DataFrame from the PlatformPayoutRequest queryset
+    data_platform_payout = {
+        'Requested ID': [request.id for request in queryset_platform_payout],
+        'Requested Date': [(request.creationdate + timedelta(hours=5, minutes=30)).strftime('%Y-%m-%d %I:%M %p') for request in queryset_platform_payout], # Set timezone to Asia/Kolkata
+        'Offer ID': [request.for_offer_id for request in queryset_platform_payout],
+        'Requested Method': [request.requested_method for request in queryset_platform_payout],
+        'Requested Amount': [request.requested_amount for request in queryset_platform_payout],
+        'Assigned RM': [request.assigned_rm.username if request.assigned_rm else '' for request in queryset_platform_payout],
+        'Txn Amount': [request.transaction_amount for request in queryset_platform_payout],
+        'Advertiser Action': ['Completed' if request.advertiser_action else 'Pending' for request in queryset_platform_payout],
+    }
+    df_platform_payout = pd.DataFrame(data_platform_payout)
+
+    # Query the AffiliatePayoutRequest data
+    queryset_affiliate_payout = AffiliatePayoutRequest.objects.filter(creationdate__date=current_date).order_by('-id')
+
+    # Create a Pandas DataFrame from the AffiliatePayoutRequest queryset
+    data_affiliate_payout = {
+        'payout ID': [request.id for request in queryset_affiliate_payout],
+        'Requested Date': [(request.creationdate + timedelta(hours=5, minutes=30)).strftime('%Y-%m-%d %I:%M %p') for request in queryset_affiliate_payout], # Set timezone to Asia/Kolkata
+        'Affiliate Username': [request.affiliateid.username for request in queryset_affiliate_payout],
+        'Requested Amount': [f"{request.requested_currency} {request.requested_amount}" for request in queryset_affiliate_payout],
+        'Requested Method': [request.requested_method for request in queryset_affiliate_payout],
+        'Txn Amount': [f"{request.requested_currency} {request.transaction_amount}" for request in queryset_affiliate_payout],
+        'Action': ['Complete' if request.account_action else 'Pending' for request in queryset_affiliate_payout],
+    }
+    df_affiliate_payout = pd.DataFrame(data_affiliate_payout)
+
+    # Query the ClientPayoutHistory data
+    queryset_client_payout = ClientPayoutHistory.objects.filter(creationdate__date=current_date).order_by('-payouthistoryid')
+
+    # Create a Pandas DataFrame from the ClientPayoutHistory queryset
+    data_client_payout = {
+        'TXN ID': [history.payouthistoryid for history in queryset_client_payout],
+        'Transaction Date': [(history.creationdate + timedelta(hours=5, minutes=30)).strftime('%Y-%m-%d %I:%M %p') for history in queryset_client_payout], # Set timezone to Asia/Kolkata
+        'For Order ID': [history.paymentid.ordersid if history.paymentid else 'N/A' for history in queryset_client_payout],
+        'Client Name': [history.clientid.username for history in queryset_client_payout],
+        'Transaction Amount': [f"{history.requested_currency} {history.wallet_transaction_amount}" for history in queryset_client_payout],
+        'Remark': [history.remark for history in queryset_client_payout],
+        'Action': ['Credited' if history.remark in ['Cancel Order Refund', 'Order Completed', 'Refferal Reward'] else 'Debited' for history in queryset_client_payout],
+    }
+    df_client_payout = pd.DataFrame(data_client_payout)
+
+    # Query the ClientWithdrawalRequest data
+    queryset_withdrawal_request = ClientWithdrawalRequest.objects.filter(creationdate__date=current_date).order_by('-withdrawalrequestid')
+
+    # Create a Pandas DataFrame from the ClientWithdrawalRequest queryset
+    data_withdrawal_request = {
+        'Request ID': [request.withdrawalrequestid for request in queryset_withdrawal_request],
+        'Request Date': [(request.creationdate + timedelta(hours=5, minutes=30)).strftime('%Y-%m-%d %I:%M %p') for request in queryset_withdrawal_request], # Set timezone to Asia/Kolkata
+        'Client Name': [request.clientid.username for request in queryset_withdrawal_request],
+        'Request Amount': [f"{request.requested_currency} {request.requested_amount}" for request in queryset_withdrawal_request],
+        'Request Method': [request.requested_method for request in queryset_withdrawal_request],
+        'RM Action': ['Completed' if request.rm_action else 'Pending' for request in queryset_withdrawal_request],
+        'Account Status': ['Completed' if request.accountant_action else 'Pending' for request in queryset_withdrawal_request],
+    }
+    df_withdrawal_request = pd.DataFrame(data_withdrawal_request)
+
+    # Define the folder path where you want to save the Excel file
+    # folder_path = 'C:\\Users\\bol7t\\OneDrive - Ved Peth\\Desktop\\Live Original Project\\influencer\\media\\transaction_logs\\'  # Replace with the actual folder path
+
+    folder_path=str(settings.BASE_DIR) + '\\media\\transaction_logs\\'
+    # Generate a filename with the current date and time
+    current_datetime = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
+    file_name = f'Transactions_Report_{current_datetime}.xlsx'
+
+    # Define the full file path
+    file_path = os.path.join(folder_path, file_name)
+
+    # Create a Pandas Excel writer with multiple sheets
+    with pd.ExcelWriter(file_path, engine='openpyxl') as writer:
+        df_payments.to_excel(writer, sheet_name='order-purchase-txns', index=False)
+        df_platform_payout.to_excel(writer, sheet_name='advertiser-txns', index=False)
+        df_affiliate_payout.to_excel(writer, sheet_name='affiliate-txns', index=False)
+        df_client_payout.to_excel(writer, sheet_name='wallet-txns', index=False)
+        df_withdrawal_request.to_excel(writer, sheet_name='wallet-withdrawal-txns', index=False)
+    print('File',file_path)
+    return [file_path,file_name]
 
 
 
@@ -33,14 +133,15 @@ def Sendperdaytransactions():
 
 
 
+def DownloadPerDayTransactionLog(request):
+    logs=GenratePerDayTransactionReport()
+    file_path=logs[0]
+    file_name=logs[1]
+    with open(file_path, 'rb') as excel_file:
+        response = HttpResponse(excel_file.read(), content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        response['Content-Disposition'] = f'attachment; filename="{file_name}"'
 
-
-
-
-
-
-
-
+    return response
 
 
 

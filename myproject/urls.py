@@ -193,6 +193,7 @@ urlpatterns = [
     path('affiliate-transaction/',affiliate_txn),
     path('wallet-transaction/',wallet_txn),
     path('wallet-withdrawal-request/',wallet_withdrawal_req),
+    path('Sendperdaytransactions/',DownloadPerDayTransactionLog),
 
 
     #kyc dashboard
@@ -607,8 +608,9 @@ urlpatterns = [
     
     # path('schedule_zoom/<str:order_id>', schedule_zoom_meeting)
 
-    # user mobile varification 
+    # send notification data in json form api
     path('sendnotiaboutvc/', Notificationapi),
+
 ###### prfile link
     path('get_influencer_profile_links/',get_influencer_profilelink),
     path('post_influencer_profiledata/',post_influencer_profiledata),

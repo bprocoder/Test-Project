@@ -3608,7 +3608,6 @@ def user_wallet(request):
     return HttpResponseRedirect("/")
 
 
-
 from affiliates.models import AffiliatePayoutRequest, PlatformPayoutRequest
 @login_required(login_url='/login/')
 def orders_purchase_log(request):
