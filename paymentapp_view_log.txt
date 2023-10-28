@@ -2,3 +2,5 @@ C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\mypr
 C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\myproject\settings.py changed, reloading.
 C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\myproject\urls.py changed, reloading.
 C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\myproject\urls.py changed, reloading.
+C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\myproject\urls.py changed, reloading.
+C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\myproject\urls.py changed, reloading.

@@ -517,7 +517,49 @@ def send_customer_email(key,user_email,client,influencer,order_id,service_type,o
 
 
 
+#####################################################################
+#####daily mail send to accounts department #########################
+#####################################################################
+from mainapp.backgroundfunctions import GenratePerDayTransactionReport
+from datetime import date
+import os
+from django.conf import settings
 
 
-
+def send_accounts_email(request,user_email='manmohansingh771998@gmail.com'):
+    # # sys.stdout = open("sendrahulwithimanuu.txt", "a")
+    today_date = date.today()
+    amazon_backend = EmailBackend(
+        host='email-smtp.us-east-1.amazonaws.com',
+        port=587,
+        username='AKIAUUGAOKJTZCJPILPC',
+        password='BC8JvtCJK4ul/14LLeQK5kjQYkV0XQP5pwkVgWoEQfix',
+        use_tls=True
+    )
+    
+    object = EmailTemplate.objects.get(template_id = 'user-sendmailtoaccount')
+    subject = object.subject.format(today_date=today_date)
+    body = object.html_content.format(today_date=today_date)
+    from_email = 'no-reply@influencerhiring.com'
+    recipient_list = [user_email]
+    template = render_to_string('notification-basic.html',{'body':body})
+    email = EmailMultiAlternatives(subject, template, from_email, recipient_list, connection=amazon_backend)
+    email.attach_alternative(template, "text/html")
+    img_dir = str(Path(__file__).resolve().parent.parent/'mainapp/static/images')
+        
+    image_list = ["youtube.png","icon-facebook.png","icon-linkedin.png","icon-twitter.png","instagram.png"]
+    for image in image_list:
+        file_path = os.path.join(img_dir, image)
+        img_type = image[-3:]
+        with open(file_path, 'rb') as f:
+            img = MIMEImage(f.read(), _subtype=img_type)
+            img.add_header('Content-ID','<{name}>'.format(name=image))
+            img.add_header('Content-Disposition', 'inline', filename=image)
+        email.attach(img)
+        
+    file_path = GenratePerDayTransactionReport()[0]
+    print('file paht of xlsxxx--',file_path)
+    email.attach_file(file_path)
+    email.send()
+    return HttpResponse(f'Email sent successfully\n\n{file_path}')
 

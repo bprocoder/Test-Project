@@ -24,7 +24,7 @@ from django.conf import settings
 
 def GenratePerDayTransactionReport():
     current_date = date.today()
-    current_date = '2023-10-16'
+    current_date = '2023-10-22'
     
     # Filter Payments for the current date
     queryset_payments = Payments.objects.filter(paymentdate__date=current_date).order_by('-paymentsid')

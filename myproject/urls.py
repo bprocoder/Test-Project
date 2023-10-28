@@ -400,6 +400,13 @@ urlpatterns = [
     
     #marketingapp
     path('marketing-dashboard/', marketing_dashboard),
+    path('facebook-campaign/', facebook_campaign),
+    path('instagram-campaign/', instagram_campaign),
+    path('linkedin-campaign/',linkedin_campaign),
+    path('tiktok-campaign/',tiktok_campaign),
+    path('youtube-campaign/',youtube_campaign),
+    path('twitter-campaign/',twitter_campaign),
+    path('marketing-profile/', marketing_profile),
     
     
     #Super-Admin
@@ -615,6 +622,8 @@ urlpatterns = [
     path('get_influencer_profile_links/',get_influencer_profilelink),
     path('post_influencer_profiledata/',post_influencer_profiledata),
 
+    ## send mail to account
+    path('send_accounts_email/',send_accounts_email),
 ]
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
