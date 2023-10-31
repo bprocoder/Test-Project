@@ -1,3 +1,9 @@
 C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\myproject\settings.py changed, reloading.
 C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\myproject\urls.py changed, reloading.
 C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\myproject\urls.py changed, reloading.
+C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\Client\views.py changed, reloading.
+C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\Client\views.py changed, reloading.
+C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\Client\views.py changed, reloading.
+C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\Client\views.py changed, reloading.
+C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\Client\views.py changed, reloading.
+C:\Users\bol7t\OneDrive - Ved Peth\Desktop\Live Original Project\influencer\Client\views.py changed, reloading.

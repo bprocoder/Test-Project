@@ -615,8 +615,9 @@ urlpatterns = [
     
     # path('schedule_zoom/<str:order_id>', schedule_zoom_meeting)
 
-    # send notification data in json form api
+    # datatable implimentation
     path('sendnotiaboutvc/', Notificationapi),
+    path('Completed_Project_api/', Completed_Project_api),
 
 ###### prfile link
     path('get_influencer_profile_links/',get_influencer_profilelink),

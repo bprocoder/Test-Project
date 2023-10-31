@@ -240,6 +240,38 @@ def Completed_Project(request):
         return render(request, "User/complete-project.html", {'rmname':rmname,'image':image,'unread_status':unread_status,'channel_name':channel_name,'noti': noti, 'notcount': conoti, 'userdet': client_details, 'order': order, 'com': com, 'tot': tot, 'can': can, 'pan': pan})
     return HttpResponseRedirect("/")
 
+#################################### 
+### complete project api response function ###########
+
+def Completed_Project_api(request):
+    user = request.user.id
+    id = Allusers.objects.filter(id=user)
+    id = id[0]
+    permissionname = Permissions.objects.filter(permissionid=Userpermissions.objects.filter(
+        userid=user).values('permissionid')[0]['permissionid']).values('permission_name')[0]['permission_name']
+
+    # user=95773
+    client_details = ClientProfile.objects.select_related(
+        'client_userid').filter(client_userid=user)
+    order = Orders.objects.select_related(
+        'influencerid', 'clientid', 'orderstatus', 'serviceid').filter(clientid=user, paymentstatus=True).order_by('-ordersid')
+    com = order.filter(orderstatus=1).count()
+    can = order.filter(orderstatus=3).count()
+    pan = order.filter(orderstatus=5).count()
+    tot = order.count()
+    if permissionname == 'client_permission':
+        if 'feedratevalue' in request.POST:
+            feedratevalue=request.POST.get('feedratevalue')
+            feedmess=request.POST.get('feedmess')
+            Thread(target=lambda:SendRMreview(request,feedratevalue,feedmess)).start()
+            print('execute reviews')
+        
+        order_values = [{'id':i['ordersid'], 'date':i['orderdate'], 'influencer':i['influencerid_id'], 'service type':i['serviceid_id'],'Orders Value':i['orderamt'],'Orders Status':'Completed'} for i in order.values() if i['orderstatus_id'] == 1]
+        return JsonResponse({'data':order_values})
+    return HttpResponseRedirect("/")
+
+############### api function end#############
+
 @login_required(login_url='/login/')
 def Pending_Project(request):
     user = request.user.id
